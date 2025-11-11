@@ -1,0 +1,163 @@
+import Link from "next/link";
+import { LOCATIONS } from "@/lib/constants/locations";
+import { Phone, Mail, MapPin } from "lucide-react";
+
+export function Footer() {
+  return (
+    <footer className="bg-slate-900 text-white">
+      <div className="container py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div>
+            <h3 className="text-xl font-bold mb-4">HeizCenter</h3>
+            <p className="text-slate-400 mb-4">
+              Ihr Experte für Wärmepumpen, Heizung, Sanitär & Klimaanlagen in
+              Bayern.
+            </p>
+            <div className="flex flex-col space-y-2 text-sm">
+              <a
+                href="tel:+4982112345"
+                className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors"
+              >
+                <Phone className="h-4 w-4" />
+                0821 123456
+              </a>
+              <a
+                href="mailto:info@heizcenter.de"
+                className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors"
+              >
+                <Mail className="h-4 w-4" />
+                info@heizcenter.de
+              </a>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="font-semibold mb-4">Dienstleistungen</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  href="/waermepumpe"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Wärmepumpe
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/heizung"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Heizung
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/sanitaer"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Sanitär & Badsanierung
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/klimaanlage"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Klimaanlage
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/notdienst"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Notdienst
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Locations */}
+          <div>
+            <h4 className="font-semibold mb-4">Standorte</h4>
+            <ul className="space-y-3 text-sm">
+              {LOCATIONS.map((location) => (
+                <li key={location.id}>
+                  <Link
+                    href={`/standorte/${location.id}`}
+                    className="text-slate-400 hover:text-white transition-colors flex items-start gap-2"
+                  >
+                    <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <div className="font-medium text-white">{location.name}</div>
+                      <div className="text-xs">{location.phone}</div>
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-semibold mb-4">Rechtliches</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  href="/impressum"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Impressum
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/datenschutz"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Datenschutz
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/agb"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  AGB
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/cookie-hinweis"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Cookie-Hinweis
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-slate-800">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
+            <p>© 2025 HeizCenter. Alle Rechte vorbehalten.</p>
+            <p className="text-xs">
+              Entwickelt mit ❤️ von{" "}
+              <a
+                href="https://jedai.solutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                jedAI Solutions
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
