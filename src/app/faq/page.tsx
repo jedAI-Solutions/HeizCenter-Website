@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   keywords: ["FAQ", "Häufige Fragen", "Wärmepumpe FAQ", "Heizung FAQ", "Sanitär FAQ"],
 };
 
+export const dynamic = 'force-dynamic';
+
 const waermepumpeFAQs: FAQItem[] = [
   { question: "Was kostet eine Wärmepumpe?", answer: "Komplettsystem ab 25.000€ inkl. Installation. Mit BEG-Förderung (bis 40%) reduziert sich der Eigenanteil auf ca. 15.000€." },
   { question: "Wie hoch ist die Förderung?", answer: "Bis zu 40% durch BEG-Förderung: 25% Grundförderung + 20% Geschwindigkeitsbonus + bis zu 30% Einkommensbonus. Max. 70% Gesamtförderung möglich." },

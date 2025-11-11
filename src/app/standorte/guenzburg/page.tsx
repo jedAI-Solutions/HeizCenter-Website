@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   keywords: ["Wärmepumpe Günzburg", "Heizung Günzburg", "Sanitär Günzburg", "Klimaanlage Günzburg"],
 };
 
+export const dynamic = 'force-dynamic';
+
 const services: LocationService[] = [
   { title: "Wärmepumpe", description: "Moderne Wärmepumpen für Günzburg. BEG-Förderung bis 40%.", icon: Zap, href: "/waermepumpe" },
   { title: "Heizung", description: "Heizungsinstallation und Wartung. 24/7 Notdienst verfügbar.", icon: Flame, href: "/heizung" },

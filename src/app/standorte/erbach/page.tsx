@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   keywords: ["Wärmepumpe Erbach", "Heizung Erbach Donau"],
 };
 
+export const dynamic = 'force-dynamic';
+
 const services: LocationService[] = [
   { title: "Wärmepumpe", description: "Wärmepumpen-Service", icon: Zap, href: "/waermepumpe" },
   { title: "Heizung", description: "Heizung & Notdienst", icon: Flame, href: "/heizung" },

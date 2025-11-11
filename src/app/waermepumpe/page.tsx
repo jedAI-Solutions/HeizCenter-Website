@@ -32,6 +32,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const dynamic = 'force-dynamic';
+
 const benefits = [
   "Bis zu 70% niedrigere Energiekosten im Vergleich zur Gasheizung",
   "BEG-Förderung bis zu 40% der Investitionskosten",

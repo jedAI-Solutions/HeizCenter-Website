@@ -28,6 +28,8 @@ export const metadata: Metadata = {
   ],
 };
 
+export const dynamic = 'force-dynamic';
+
 const benefits = [
   "Angenehme Raumtemperatur auch an heißen Sommertagen",
   "Moderne Split-Klimaanlagen mit A+++-Energieeffizienz",

@@ -28,6 +28,8 @@ export const metadata: Metadata = {
   ],
 };
 
+export const dynamic = 'force-dynamic';
+
 const benefits = [
   "Komplette Badsanierung aus einer Hand",
   "3D-Badplanung für perfekte Visualisierung",

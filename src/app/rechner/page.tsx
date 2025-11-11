@@ -3,9 +3,9 @@ import { PriceCalculator } from "@/components/calculator/price-calculator";
 import { Calculator, CheckCircle, Info } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Wärmepumpen-Kostenrechner | HeizCenter",
-  description: "Berechnen Sie die Kosten Ihrer neuen Wärmepumpe inkl. Förderung. Kostenloser Online-Rechner mit detaillierter Aufschlüsselung.",
-  keywords: ["Wärmepumpe Kosten", "Kostenrechner", "BEG Förderung", "Heizung Rechner"],
+  title: "WÃ¤rmepumpen-Kostenrechner | HeizCenter",
+  description: "Berechnen Sie die Kosten Ihrer neuen WÃ¤rmepumpe inkl. FÃ¶rderung. Kostenloser Online-Rechner mit detaillierter AufschlÃ¼sselung.",
+  keywords: ["WÃ¤rmepumpe Kosten", "Kostenrechner", "BEG FÃ¶rderung", "Heizung Rechner"],
 };
 
 export default function RechnerPage() {
@@ -17,10 +17,10 @@ export default function RechnerPage() {
           <div className="max-w-4xl mx-auto text-center">
             <Calculator className="h-16 w-16 mx-auto mb-6" />
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Wärmepumpen-Kostenrechner
+              WÃ¤rmepumpen-Kostenrechner
             </h1>
             <p className="text-xl text-blue-100">
-              Berechnen Sie in wenigen Schritten die Kosten Ihrer neuen Wärmepumpe inkl. staatlicher Förderung
+              Berechnen Sie in wenigen Schritten die Kosten Ihrer neuen WÃ¤rmepumpe inkl. staatlicher FÃ¶rderung
             </p>
           </div>
         </div>
@@ -45,7 +45,7 @@ export default function RechnerPage() {
                 <ul className="space-y-2 text-slate-600">
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 mt-1"></span>
-                    <span>Wärmepumpen-Gerät (inkl. Außen- und Inneneinheit)</span>
+                    <span>WÃ¤rmepumpen-GerÃ¤t (inkl. AuÃŸen- und Inneneinheit)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 mt-1"></span>
@@ -68,15 +68,15 @@ export default function RechnerPage() {
 
               <div className="bg-white p-6 rounded-lg">
                 <Info className="h-10 w-10 text-blue-600 mb-4" />
-                <h3 className="text-xl font-bold mb-3">Zusätzliche Kosten möglich</h3>
+                <h3 className="text-xl font-bold mb-3">ZusÃ¤tzliche Kosten mÃ¶glich</h3>
                 <ul className="space-y-2 text-slate-600">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-600 mt-1">"</span>
-                    <span>Erdarbeiten (bei Erdwärmepumpen)</span>
+                    <span>Erdarbeiten (bei ErdwÃ¤rmepumpen)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-600 mt-1">"</span>
-                    <span>Zusätzliche Heizkörper oder Fußbodenheizung</span>
+                    <span>ZusÃ¤tzliche HeizkÃ¶rper oder FuÃŸbodenheizung</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-600 mt-1">"</span>
@@ -88,7 +88,7 @@ export default function RechnerPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-600 mt-1">"</span>
-                    <span>Dämmungsmaßnahmen bei Altbauten</span>
+                    <span>DÃ¤mmungsmaÃŸnahmen bei Altbauten</span>
                   </li>
                 </ul>
               </div>
@@ -97,20 +97,20 @@ export default function RechnerPage() {
         </div>
       </section>
 
-      {/* Förderung Info */}
+      {/* FÃ¶rderung Info */}
       <section className="container py-16">
         <div className="max-w-4xl mx-auto">
           <div className="bg-green-50 p-8 rounded-lg border-2 border-green-200">
             <h2 className="text-2xl font-bold mb-4 text-green-900">
-              BEG-Förderung: Bis zu 70% Zuschuss möglich
+              BEG-FÃ¶rderung: Bis zu 70% Zuschuss mÃ¶glich
             </h2>
             <p className="text-green-800 mb-6">
-              Die Bundesförderung für effiziente Gebäude (BEG) unterstützt Sie beim Umstieg auf eine Wärmepumpe mit attraktiven Zuschüssen:
+              Die BundesfÃ¶rderung fÃ¼r effiziente GebÃ¤ude (BEG) unterstÃ¼tzt Sie beim Umstieg auf eine WÃ¤rmepumpe mit attraktiven ZuschÃ¼ssen:
             </p>
             <div className="grid md:grid-cols-3 gap-4 mb-6">
               <div className="bg-white p-4 rounded-lg">
                 <div className="text-3xl font-bold text-green-600 mb-2">30%</div>
-                <div className="text-sm text-slate-600">Grundförderung für alle Wärmepumpen</div>
+                <div className="text-sm text-slate-600">GrundfÃ¶rderung fÃ¼r alle WÃ¤rmepumpen</div>
               </div>
               <div className="bg-white p-4 rounded-lg">
                 <div className="text-3xl font-bold text-green-600 mb-2">+20%</div>
@@ -118,12 +118,12 @@ export default function RechnerPage() {
               </div>
               <div className="bg-white p-4 rounded-lg">
                 <div className="text-3xl font-bold text-green-600 mb-2">+30%</div>
-                <div className="text-sm text-slate-600">Einkommensbonus (bis 40.000¬/Jahr)</div>
+                <div className="text-sm text-slate-600">Einkommensbonus (bis 40.000Â¬/Jahr)</div>
               </div>
             </div>
             <p className="text-sm text-green-700">
-              <strong>Hinweis:</strong> Der Rechner berücksichtigt die Standard-BEG-Förderung von 40% (Grundförderung + Geschwindigkeitsbonus).
-              Mit Einkommensbonus sind bis zu 70% möglich. Wir beraten Sie gerne zu allen Fördermöglichkeiten.
+              <strong>Hinweis:</strong> Der Rechner berÃ¼cksichtigt die Standard-BEG-FÃ¶rderung von 40% (GrundfÃ¶rderung + Geschwindigkeitsbonus).
+              Mit Einkommensbonus sind bis zu 70% mÃ¶glich. Wir beraten Sie gerne zu allen FÃ¶rdermÃ¶glichkeiten.
             </p>
           </div>
         </div>
@@ -134,10 +134,10 @@ export default function RechnerPage() {
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">
-              Persönliche Beratung gewünscht?
+              PersÃ¶nliche Beratung gewÃ¼nscht?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Unsere Experten erstellen Ihnen ein individuelles Angebot basierend auf Ihrer Immobilie und beraten Sie zu allen Fördermöglichkeiten.
+              Unsere Experten erstellen Ihnen ein individuelles Angebot basierend auf Ihrer Immobilie und beraten Sie zu allen FÃ¶rdermÃ¶glichkeiten.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -161,9 +161,9 @@ export default function RechnerPage() {
       <section className="container py-8">
         <div className="max-w-4xl mx-auto">
           <p className="text-sm text-slate-500 text-center">
-            <strong>Hinweis:</strong> Die berechneten Kosten sind Richtwerte und können je nach individuellen Gegebenheiten variieren.
-            Für ein verbindliches Angebot kontaktieren Sie uns bitte direkt. Förderinformationen ohne Gewähr,
-            bitte prüfen Sie die aktuellen Förderbedingungen beim BAFA.
+            <strong>Hinweis:</strong> Die berechneten Kosten sind Richtwerte und kÃ¶nnen je nach individuellen Gegebenheiten variieren.
+            FÃ¼r ein verbindliches Angebot kontaktieren Sie uns bitte direkt. FÃ¶rderinformationen ohne GewÃ¤hr,
+            bitte prÃ¼fen Sie die aktuellen FÃ¶rderbedingungen beim BAFA.
           </p>
         </div>
       </section>

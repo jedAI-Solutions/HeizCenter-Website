@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   keywords: ["Wärmepumpe Krumbach", "Heizung Krumbach", "Sanitär Krumbach"],
 };
 
+export const dynamic = 'force-dynamic';
+
 const services: LocationService[] = [
   { title: "Wärmepumpe", description: "Wärmepumpen mit BEG-Förderung", icon: Zap, href: "/waermepumpe" },
   { title: "Heizung", description: "Installation und 24/7 Notdienst", icon: Flame, href: "/heizung" },

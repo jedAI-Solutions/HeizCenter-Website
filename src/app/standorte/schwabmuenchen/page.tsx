@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   keywords: ["Wärmepumpe Schwabmünchen", "Heizung Schwabmünchen"],
 };
 
+export const dynamic = 'force-dynamic';
+
 const services: LocationService[] = [
   { title: "Wärmepumpe", description: "Wärmepumpen", icon: Zap, href: "/waermepumpe" },
   { title: "Heizung", description: "Heizungsservice", icon: Flame, href: "/heizung" },

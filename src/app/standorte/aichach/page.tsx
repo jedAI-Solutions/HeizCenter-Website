@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   keywords: ["Wärmepumpe Aichach", "Heizung Aichach", "Sanitär Aichach"],
 };
 
+export const dynamic = 'force-dynamic';
+
 const services: LocationService[] = [
   { title: "Wärmepumpe", description: "Wärmepumpen-Installation", icon: Zap, href: "/waermepumpe" },
   { title: "Heizung", description: "Heizungsservice & Notdienst", icon: Flame, href: "/heizung" },
