@@ -65,6 +65,14 @@ export const quoteFormSchema = z.object({
     .regex(/^\d+$/, "Bitte geben Sie eine Zahl ein")
     .optional()
     .or(z.literal("")),
+  // Calculator-specific fields (optional)
+  pumpType: z.enum(["air-water", "ground-water", "water-water"]).optional(),
+  heatingSurface: z.enum(["floor", "radiators", "mixed"]).optional(),
+  currentHeating: z.enum(["gas", "oil", "electric", "coal"]).optional(),
+  insulation: z.enum(["poor", "average", "good"]).optional(),
+  buildingYear: z.enum(["before-1980", "1980-2000", "2000-2010", "2010-2015", "after-2015"]).optional(),
+  residents: z.string().optional(),
+  estimatedCost: z.string().optional(),
   message: z.string().max(2000, "Nachricht ist zu lang").optional(),
   preferredContactTime: z
     .enum(["morning", "afternoon", "evening", "anytime"])

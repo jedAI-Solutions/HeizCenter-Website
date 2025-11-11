@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { quoteFormSchema, QuoteFormData } from "@/lib/validations/contact";
@@ -16,7 +17,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { CheckCircle2, AlertCircle, Loader2, Calculator } from "lucide-react";
 
 interface QuoteFormProps {
   defaultService?: string;
@@ -24,7 +25,9 @@ interface QuoteFormProps {
 
 export function QuoteForm(props: QuoteFormProps) {
   const { defaultService } = props;
+  const searchParams = useSearchParams();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hasCalculatorData, setHasCalculatorData] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null;
     message: string;
@@ -42,6 +45,33 @@ export function QuoteForm(props: QuoteFormProps) {
       serviceType: (defaultService as QuoteFormData["serviceType"]) || undefined,
     },
   });
+
+  // Pre-fill form from URL parameters (from calculator)
+  useEffect(() => {
+    const service = searchParams.get("service");
+    const houseSize = searchParams.get("houseSize");
+    const pumpType = searchParams.get("pumpType");
+    const heatingType = searchParams.get("heatingType");
+    const insulation = searchParams.get("insulation");
+    const buildingYear = searchParams.get("buildingYear");
+    const heatingSurface = searchParams.get("heatingSurface");
+    const residents = searchParams.get("residents");
+    const estimatedCost = searchParams.get("estimatedCost");
+
+    if (houseSize || pumpType) {
+      setHasCalculatorData(true);
+    }
+
+    if (service) setValue("serviceType", service as QuoteFormData["serviceType"]);
+    if (houseSize) setValue("heatingArea", houseSize);
+    if (pumpType) setValue("pumpType", pumpType as QuoteFormData["pumpType"]);
+    if (heatingType) setValue("currentHeating", heatingType as QuoteFormData["currentHeating"]);
+    if (insulation) setValue("insulation", insulation as QuoteFormData["insulation"]);
+    if (buildingYear) setValue("buildingYear", buildingYear as QuoteFormData["buildingYear"]);
+    if (heatingSurface) setValue("heatingSurface", heatingSurface as QuoteFormData["heatingSurface"]);
+    if (residents) setValue("residents", residents);
+    if (estimatedCost) setValue("estimatedCost", estimatedCost);
+  }, [searchParams, setValue]);
 
   const onSubmit = async (data: QuoteFormData) => {
     setIsSubmitting(true);
@@ -81,6 +111,22 @@ export function QuoteForm(props: QuoteFormProps) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      {/* Calculator Data Notice */}
+      {hasCalculatorData && (
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 flex items-start gap-3">
+          <Calculator className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+          <div className="flex-1">
+            <h4 className="font-semibold text-blue-900 mb-1">
+              Daten aus Rechner übernommen
+            </h4>
+            <p className="text-sm text-blue-800">
+              Ihre Angaben aus dem Wärmepumpen-Rechner wurden automatisch in dieses Formular übertragen.
+              Sie können alle Felder nach Bedarf anpassen.
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Success/Error Message */}
       {submitStatus.type && (
         <div
@@ -270,6 +316,129 @@ export function QuoteForm(props: QuoteFormProps) {
           )}
         </div>
       </div>
+
+      {/* Calculator-Specific Fields (only for heat pump quotes) */}
+      {hasCalculatorData && (
+        <div className="border-t border-slate-200 pt-6 space-y-6">
+          <h4 className="font-semibold text-lg text-slate-900">
+            Details aus Wärmepumpen-Rechner
+          </h4>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="pumpType">Wärmepumpen-Typ (optional)</Label>
+              <Select
+                onValueChange={(value) => setValue("pumpType", value as QuoteFormData["pumpType"])}
+                defaultValue={searchParams.get("pumpType") || undefined}
+              >
+                <SelectTrigger id="pumpType">
+                  <SelectValue placeholder="Bitte wählen..." />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="air-water">Luft-Wasser-Wärmepumpe</SelectItem>
+                  <SelectItem value="ground-water">Sole-Wasser-Wärmepumpe (Erdwärme)</SelectItem>
+                  <SelectItem value="water-water">Wasser-Wasser-Wärmepumpe</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div>
+              <Label htmlFor="heatingSurface">Art der Heizflächen (optional)</Label>
+              <Select
+                onValueChange={(value) => setValue("heatingSurface", value as QuoteFormData["heatingSurface"])}
+                defaultValue={searchParams.get("heatingSurface") || undefined}
+              >
+                <SelectTrigger id="heatingSurface">
+                  <SelectValue placeholder="Bitte wählen..." />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="floor">Fußbodenheizung</SelectItem>
+                  <SelectItem value="radiators">Heizkörper (Radiatoren)</SelectItem>
+                  <SelectItem value="mixed">Gemischt</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="currentHeating">Aktuelle Heizung (optional)</Label>
+              <Select
+                onValueChange={(value) => setValue("currentHeating", value as QuoteFormData["currentHeating"])}
+                defaultValue={searchParams.get("heatingType") || undefined}
+              >
+                <SelectTrigger id="currentHeating">
+                  <SelectValue placeholder="Bitte wählen..." />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="gas">Gasheizung</SelectItem>
+                  <SelectItem value="oil">Ölheizung</SelectItem>
+                  <SelectItem value="electric">Elektroheizung</SelectItem>
+                  <SelectItem value="coal">Kohleheizung</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div>
+              <Label htmlFor="insulation">Dämmzustand (optional)</Label>
+              <Select
+                onValueChange={(value) => setValue("insulation", value as QuoteFormData["insulation"])}
+                defaultValue={searchParams.get("insulation") || undefined}
+              >
+                <SelectTrigger id="insulation">
+                  <SelectValue placeholder="Bitte wählen..." />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="poor">Schlecht (Altbau unsaniert)</SelectItem>
+                  <SelectItem value="average">Durchschnittlich</SelectItem>
+                  <SelectItem value="good">Gut (Neubau/saniert)</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <Label htmlFor="buildingYear">Gebäude-Baujahr (optional)</Label>
+              <Select
+                onValueChange={(value) => setValue("buildingYear", value as QuoteFormData["buildingYear"])}
+                defaultValue={searchParams.get("buildingYear") || undefined}
+              >
+                <SelectTrigger id="buildingYear">
+                  <SelectValue placeholder="Bitte wählen..." />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="before-1980">Vor 1980</SelectItem>
+                  <SelectItem value="1980-2000">1980-2000</SelectItem>
+                  <SelectItem value="2000-2010">2000-2010</SelectItem>
+                  <SelectItem value="2010-2015">2010-2015</SelectItem>
+                  <SelectItem value="after-2015">Nach 2015</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div>
+              <Label htmlFor="residents">Anzahl Personen im Haushalt (optional)</Label>
+              <Input
+                id="residents"
+                {...register("residents")}
+                placeholder="3"
+                className={errors.residents ? "border-red-500" : ""}
+              />
+            </div>
+          </div>
+
+          {searchParams.get("estimatedCost") && (
+            <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+              <p className="text-sm text-green-800">
+                <strong>Geschätzte Kosten aus Rechner:</strong>{" "}
+                {parseInt(searchParams.get("estimatedCost") || "0").toLocaleString("de-DE")} €
+              </p>
+              <input type="hidden" {...register("estimatedCost")} />
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Additional Info */}
       <div>
