@@ -1,0 +1,50 @@
+import { Metadata } from "next";
+import { LocationHero } from "@/components/sections/location-hero";
+import { LocationServices, LocationService } from "@/components/sections/location-services";
+import { FAQSection, FAQItem } from "@/components/sections/faq-section";
+import { CTASection } from "@/components/sections/cta-section";
+import { Zap, Flame, Droplet, Wind } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "HeizCenter Krumbach - Wärmepumpe, Heizung & Sanitär",
+  description: "HeizCenter Service in Krumbach. Wärmepumpen, Heizung, Sanitär. Service aus Ulm - 35 km entfernt.",
+  keywords: ["Wärmepumpe Krumbach", "Heizung Krumbach", "Sanitär Krumbach"],
+};
+
+const services: LocationService[] = [
+  { title: "Wärmepumpe", description: "Wärmepumpen mit BEG-Förderung", icon: Zap, href: "/waermepumpe" },
+  { title: "Heizung", description: "Installation und 24/7 Notdienst", icon: Flame, href: "/heizung" },
+  { title: "Sanitär", description: "Badsanierung und Festpreisgarantie", icon: Droplet, href: "/sanitaer" },
+  { title: "Klimaanlage", description: "Split-Klimaanlagen Installation", icon: Wind, href: "/klimaanlage" },
+];
+
+const faqs: FAQItem[] = [
+  { question: "Anfahrtszeit nach Krumbach?", answer: "Von Ulm ca. 30-35 Minuten. Notdienst innerhalb 2-3 Stunden verfügbar." },
+  { question: "Leistungen in Krumbach?", answer: "Wärmepumpen, Heizung, Badsanierung, Klimaanlagen mit vollständigem Service." },
+  { question: "Anfahrtskosten?", answer: "25€ Pauschale. Bei größeren Projekten entfällt die Anfahrt." },
+];
+
+const schema = { "@context": "https://schema.org", "@type": "LocalBusiness", name: "HeizCenter Service Krumbach", address: { addressLocality: "Krumbach", addressCountry: "DE" }, geo: { latitude: 48.2397, longitude: 10.3625 }, telephone: "+49 821 123456", parentOrganization: { name: "HeizCenter Ulm" } };
+
+export default function KrumbachPage() {
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <LocationHero name="Krumbach (Schwaben)" address="Service-Gebiet: 35 km von Ulm" phone="+49 821 123456" email="info@heizcenter.de" description="HeizCenter Service für Krumbach. Wärmepumpen, Heizung und Sanitär mit professionellem Service." />
+      <LocationServices services={services} title="Unsere Leistungen in Krumbach" />
+      <section className="container py-16">
+        <div className="max-w-4xl mx-auto prose">
+          <h2 className="text-3xl font-bold mb-6">HeizCenter in Krumbach</h2>
+          <p className="text-lg mb-6">Service für Krumbach und die Umgebung mit allen Leistungen rund um Heizung und Sanitär.</p>
+          <h3 className="text-2xl font-bold mb-4">Wärmepumpen Krumbach</h3>
+          <p>Installation moderner Wärmepumpen mit bis zu 40% Förderung. Energieeffizient und umweltfreundlich.</p>
+          <div className="bg-blue-50 p-6 rounded-lg mt-8">
+            <p className="font-bold">Service-Radius: Krumbach, Breitenthal, Waltenhausen, Neuburg a.d. Kammel</p>
+          </div>
+        </div>
+      </section>
+      <FAQSection faqs={faqs} />
+      <CTASection variant="gradient" />
+    </>
+  );
+}

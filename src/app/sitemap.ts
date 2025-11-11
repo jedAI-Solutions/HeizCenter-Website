@@ -71,6 +71,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "ottobeuren",
     "laupheim",
     "blaustein",
+    // Micro-location pages (Day 18-19)
+    "landsberg",
+    "kaufbeuren",
+    "guenzburg",
+    "krumbach",
+    "aichach",
+    "erbach",
+    "bad-wurzach",
+    "leutkirch",
+    "schwabmuenchen",
   ];
 
   const locationPages = locations.map((location) => ({
