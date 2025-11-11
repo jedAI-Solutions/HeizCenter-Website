@@ -57,17 +57,29 @@ const locations: Location[] = [
 ];
 
 const allSubLocations = [
+  // Augsburg Region
   { name: "Königsbrunn", href: "/standorte/koenigsbrunn", mainLocation: "Augsburg" },
   { name: "Neusäß", href: "/standorte/neusaess", mainLocation: "Augsburg" },
   { name: "Friedberg", href: "/standorte/friedberg", mainLocation: "Augsburg" },
   { name: "Stadtbergen", href: "/standorte/stadtbergen", mainLocation: "Augsburg" },
   { name: "Gersthofen", href: "/standorte/gersthofen", mainLocation: "Augsburg" },
+  { name: "Landsberg am Lech", href: "/standorte/landsberg", mainLocation: "Augsburg" },
+  { name: "Aichach", href: "/standorte/aichach", mainLocation: "Augsburg" },
+  { name: "Schwabmünchen", href: "/standorte/schwabmuenchen", mainLocation: "Augsburg" },
+  // Ulm Region
   { name: "Neu-Ulm", href: "/standorte/neu-ulm", mainLocation: "Ulm" },
   { name: "Blaustein", href: "/standorte/blaustein", mainLocation: "Ulm" },
   { name: "Laupheim", href: "/standorte/laupheim", mainLocation: "Ulm" },
+  { name: "Günzburg", href: "/standorte/guenzburg", mainLocation: "Ulm" },
+  { name: "Krumbach", href: "/standorte/krumbach", mainLocation: "Ulm" },
+  { name: "Erbach (Donau)", href: "/standorte/erbach", mainLocation: "Ulm" },
+  // Memmingen Region
   { name: "Bad Wörishofen", href: "/standorte/bad-woerishofen", mainLocation: "Memmingen" },
   { name: "Mindelheim", href: "/standorte/mindelheim", mainLocation: "Memmingen" },
   { name: "Ottobeuren", href: "/standorte/ottobeuren", mainLocation: "Memmingen" },
+  { name: "Kaufbeuren", href: "/standorte/kaufbeuren", mainLocation: "Memmingen" },
+  { name: "Bad Wurzach", href: "/standorte/bad-wurzach", mainLocation: "Memmingen" },
+  { name: "Leutkirch", href: "/standorte/leutkirch", mainLocation: "Memmingen" },
 ];
 
 export default function StandortePage() {
@@ -82,7 +94,7 @@ export default function StandortePage() {
             </h1>
             <p className="text-xl text-blue-100 mb-8">
               HeizCenter betreut Sie an drei Hauptstandorten in Schwaben und Allgäu
-              sowie in über 30 weiteren Städten und Gemeinden. Schneller Service,
+              sowie in 20 weiteren Städten und Gemeinden. Schneller Service,
               kurze Anfahrtswege, lokale Expertise.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-lg">
