@@ -55,6 +55,80 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  // Additional pages (Day 25-26)
+  const additionalPages = [
+    {
+      url: `${baseUrl}/ueber-uns`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/karriere`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/notdienst`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/faq`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/foerderung`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/checklisten`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/wartungsvertrag`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    },
+  ];
+
+  // Legal pages (noindex in metadata, but included in sitemap with low priority)
+  const legalPages = [
+    {
+      url: `${baseUrl}/impressum`,
+      lastModified: new Date(),
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/datenschutz`,
+      lastModified: new Date(),
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/agb`,
+      lastModified: new Date(),
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/cookie-hinweis`,
+      lastModified: new Date(),
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    },
+  ];
+
   // Location pages
   const locations = [
     "augsburg",
@@ -121,5 +195,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...mainPages, ...locationPages, ...categoryPages, ...blogPosts];
+  return [
+    ...mainPages,
+    ...additionalPages,
+    ...legalPages,
+    ...locationPages,
+    ...categoryPages,
+    ...blogPosts,
+  ];
 }
