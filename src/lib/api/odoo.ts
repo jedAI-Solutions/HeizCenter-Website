@@ -91,7 +91,7 @@ class OdooClient {
   /**
    * Fetch blog posts from Odoo
    */
-  async getBlogPosts(limit: number = 10) {
+  async getBlogPosts(_limit: number = 10) {
     // This will be implemented once we have Odoo credentials
     // Typically uses /web/dataset/search_read endpoint
     return [];
@@ -100,7 +100,7 @@ class OdooClient {
   /**
    * Create a lead in Odoo CRM from contact form
    */
-  async createLead(data: {
+  async createLead(_data: {
     name: string;
     email: string;
     phone?: string;
