@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, MessageSquare, FileText, AlertCircle, MessageCircle } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ContactForm } from "@/components/forms/contact-form";
@@ -24,8 +25,20 @@ export default function ContactPage() {
       <LocalBusinessSchema location="bobingen" includeServices={true} />
       <LocalBusinessSchema location="gutenzell" includeServices={false} />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#0F5B78] to-[#0F5B78] text-white py-16">
-        <div className="container">
+      <section className="relative bg-gradient-to-br from-[#0F5B78] to-[#0F5B78] text-white py-16">
+        {/* Background Image */}
+        <div className="absolute inset-0 opacity-20">
+          <Image
+            src="/images/team.png"
+            alt="HeizCenter Team"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-[#0F5B78]/60"></div>
+
+        <div className="container relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Wir sind für Sie da
