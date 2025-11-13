@@ -60,7 +60,7 @@ export function CustomerReviews({
                 ))}
               </div>
             </div>
-            <p className="text-sm text-slate-600">Aus 60+ Bewertungen</p>
+            <p className="text-sm text-slate-600">Bei Google bewertet</p>
           </div>
           <div className="text-right">
             <p className="font-bold text-lg">100%</p>
@@ -140,8 +140,8 @@ interface ReviewStatsProps {
 }
 
 export function ReviewStats({
-  totalReviews = 60,
-  averageRating = 4.9,
+  totalReviews = 5,
+  averageRating = 4.8,
   recommendationRate = 100,
 }: ReviewStatsProps) {
   return (
@@ -158,7 +158,7 @@ export function ReviewStats({
             <Star key={i} className="h-4 w-4 fill-current" />
           ))}
         </div>
-        <p className="text-sm text-slate-600">{totalReviews}+ Bewertungen</p>
+        <p className="text-sm text-slate-600">Bei Google bewertet</p>
       </div>
 
       <div className="h-16 w-px bg-slate-300" />

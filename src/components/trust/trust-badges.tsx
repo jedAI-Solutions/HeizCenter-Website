@@ -30,8 +30,8 @@ export function TrustBadges({ variant = "horizontal", className }: TrustBadgesPr
     },
     {
       icon: <Star className="h-6 w-6" />,
-      title: "60+ Bewertungen",
-      description: "4.9 ★ Durchschnitt",
+      title: "Kundenbewertungen",
+      description: "4.8 ★ bei Google",
       color: "text-orange-600",
       bg: "bg-orange-50",
     },
