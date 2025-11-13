@@ -140,7 +140,7 @@ interface ReviewStatsProps {
 }
 
 export function ReviewStats({
-  totalReviews = 5,
+  totalReviews: _totalReviews = 5,
   averageRating = 4.8,
   recommendationRate = 100,
 }: ReviewStatsProps) {
