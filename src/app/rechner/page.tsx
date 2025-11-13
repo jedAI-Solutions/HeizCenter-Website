@@ -154,7 +154,7 @@ export default function RechnerPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/kontakt"
+                href="/kontakt?tab=quote"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#FFCA28] text-slate-900 font-semibold rounded-lg hover:bg-[#F5B800] transition-colors"
               >
                 Kostenlose Beratung anfragen

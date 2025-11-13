@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+"use client";
+
 import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, MessageSquare, FileText, AlertCircle, MessageCircle } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -6,19 +7,11 @@ import { ContactForm } from "@/components/forms/contact-form";
 import { QuoteForm } from "@/components/forms/quote-form";
 import { EmergencyForm } from "@/components/forms/emergency-form";
 import { LocalBusinessSchema } from "@/components/schema/local-business-schema";
-
-export const metadata: Metadata = {
-  title: "Kontakt - HeizCenter | Heizung, Sanitär & Wärmepumpen",
-  description:
-    "Kontaktieren Sie HeizCenter für Heizung, Sanitär, Wärmepumpen und Klimaanlagen in Bobingen und Gutenzell-Hürbel. Angebot anfragen oder Notdienst 24/7.",
-  openGraph: {
-    title: "Kontakt - HeizCenter",
-    description:
-      "Kontaktieren Sie uns für Beratung, Angebote oder Notdienst. Wir sind für Sie da!",
-  },
-};
+import { useSearchParams } from "next/navigation";
 
 export default function ContactPage() {
+  const searchParams = useSearchParams();
+  const defaultTab = searchParams.get("tab") || "contact";
   return (
     <>
       {/* Schema.org Structured Data for both locations */}
@@ -171,7 +164,7 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <Tabs defaultValue="contact" className="w-full">
+          <Tabs defaultValue={defaultTab} className="w-full">
             <TabsList className="grid w-full grid-cols-3 mb-10 bg-slate-100 p-2 rounded-xl h-auto">
               <TabsTrigger
                 value="contact"
