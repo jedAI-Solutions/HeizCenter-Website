@@ -7,6 +7,8 @@ import {
 import { LocationCoverage } from "@/components/sections/location-coverage";
 import { CTASection } from "@/components/sections/cta-section";
 import { Zap, Flame, Droplet, Wind } from "lucide-react";
+import { LocationPageSchema } from "@/components/schema/local-business-schema";
+import { locationData } from "@/lib/location-data";
 
 export const metadata: Metadata = {
   title:
@@ -78,94 +80,19 @@ const coverageAreas = [
   "Buxheim",
 ];
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://heizcenter.de/standorte/memmingen",
-  name: "HeizCenter Memmingen",
-  image: "https://heizcenter.de/images/memmingen-location.jpg",
-  description:
-    "Fachbetrieb für Wärmepumpen, Heizung, Sanitär und Klimaanlagen in Memmingen",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Musterstraße 3",
-    addressLocality: "Memmingen",
-    postalCode: "87700",
-    addressCountry: "DE",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 47.9833,
-    longitude: 10.1833,
-  },
-  telephone: "+49 8331 123456",
-  email: "memmingen@heizcenter.de",
-  url: "https://heizcenter.de/standorte/memmingen",
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "08:00",
-      closes: "17:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "09:00",
-      closes: "13:00",
-    },
-  ],
-  priceRange: "€€",
-  areaServed: {
-    "@type": "City",
-    name: "Memmingen",
-  },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Heizung, Sanitär und Klimatechnik Dienstleistungen",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Wärmepumpen Installation",
-          description: "Installation und Wartung von Wärmepumpen",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Heizungsinstallation",
-          description: "Installation und Wartung von Heizungsanlagen",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Badsanierung",
-          description: "Komplette Badsanierung und Sanitärinstallationen",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Klimaanlagen Installation",
-          description: "Installation von Split-Klimaanlagen",
-        },
-      },
-    ],
-  },
-};
-
 export default function MemmingenPage() {
+  const data = locationData["memmingen"];
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      {/* Schema.org LocalBusiness Structured Data */}
+      <LocationPageSchema
+        cityName={data.cityName}
+        postalCode={data.postalCode}
+        region={data.region}
+        latitude={data.latitude}
+        longitude={data.longitude}
+        serviceCities={data.serviceCities}
       />
 
       <LocationHero

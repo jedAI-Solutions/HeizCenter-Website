@@ -7,6 +7,8 @@ import {
 import { LocationCoverage } from "@/components/sections/location-coverage";
 import { CTASection } from "@/components/sections/cta-section";
 import { Zap, Flame, Droplet, Wind } from "lucide-react";
+import { LocationPageSchema } from "@/components/schema/local-business-schema";
+import { locationData } from "@/lib/location-data";
 
 export const metadata: Metadata = {
   title:
@@ -83,95 +85,19 @@ const coverageAreas = [
   "Weißenhorn",
 ];
 
-// Generate LocalBusiness JSON-LD schema
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://heizcenter.de/standorte/gutenzell-huerbel",
-  name: "HeizCenter Gutenzell-Hürbel",
-  image: "https://heizcenter.de/images/gutenzell-huerbel-location.jpg",
-  description:
-    "Hauptstandort Gutenzell-Hürbel - Fachbetrieb für Wärmepumpen, Heizung, Sanitär und Klimaanlagen im Raum Ulm und Memmingen",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Schlüsselbergstraße 5",
-    addressLocality: "Gutenzell-Hürbel",
-    postalCode: "88484",
-    addressCountry: "DE",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 48.0667,
-    longitude: 9.9667,
-  },
-  telephone: "+49 8234 966590",
-  email: "service@heizcenter.de",
-  url: "https://heizcenter.de/standorte/gutenzell-huerbel",
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "08:00",
-      closes: "17:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "09:00",
-      closes: "13:00",
-    },
-  ],
-  priceRange: "€€",
-  areaServed: {
-    "@type": "City",
-    name: "Gutenzell-Hürbel",
-  },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Heizung, Sanitär und Klimatechnik Dienstleistungen",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Wärmepumpen Installation",
-          description: "Installation und Wartung von Wärmepumpen",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Heizungsinstallation",
-          description: "Installation und Wartung von Heizungsanlagen",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Badsanierung",
-          description: "Komplette Badsanierung und Sanitärinstallationen",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Klimaanlagen Installation",
-          description: "Installation von Split-Klimaanlagen",
-        },
-      },
-    ],
-  },
-};
-
 export default function GutenzellHuerbelPage() {
+  const data = locationData["gutenzell-huerbel"];
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      {/* Schema.org LocalBusiness Structured Data */}
+      <LocationPageSchema
+        cityName={data.cityName}
+        postalCode={data.postalCode}
+        region={data.region}
+        latitude={data.latitude}
+        longitude={data.longitude}
+        serviceCities={data.serviceCities}
       />
 
       <LocationHero

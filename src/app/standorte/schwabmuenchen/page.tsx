@@ -4,6 +4,8 @@ import { LocationServices, LocationService } from "@/components/sections/locatio
 import { FAQSection, FAQItem } from "@/components/sections/faq-section";
 import { CTASection } from "@/components/sections/cta-section";
 import { Zap, Flame, Droplet, Wind } from "lucide-react";
+import { LocationPageSchema } from "@/components/schema/local-business-schema";
+import { locationData } from "@/lib/location-data";
 
 export const metadata: Metadata = {
   title: "HeizCenter Schwabmünchen - Wärmepumpe & Heizung",
@@ -26,12 +28,20 @@ const faqs: FAQItem[] = [
   { question: "Kosten Anfahrt?", answer: "15€, bei Projekten kostenlos." },
 ];
 
-const schema = { "@context": "https://schema.org", "@type": "LocalBusiness", name: "HeizCenter Schwabmünchen", address: { addressLocality: "Schwabmünchen", addressCountry: "DE" }, telephone: "+49 8234 96659 00" };
-
 export default function SchwabmuenchenPage() {
+  const data = locationData["schwabmuenchen"];
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      {/* Schema.org LocalBusiness Structured Data */}
+      <LocationPageSchema
+        cityName={data.cityName}
+        postalCode={data.postalCode}
+        region={data.region}
+        latitude={data.latitude}
+        longitude={data.longitude}
+        serviceCities={data.serviceCities}
+      />
       <LocationHero name="Schwabmünchen" address="Lechallee 28, 86399 Bobingen" phone="+49 8234 966590" email="service@heizcenter.de" description="HeizCenter Service Schwabmünchen. Wärmepumpen, Heizung, Sanitär."
         mainLocation="Bobingen" />
       <LocationServices services={services} title="Unsere Leistungen in Schwabmünchen" />

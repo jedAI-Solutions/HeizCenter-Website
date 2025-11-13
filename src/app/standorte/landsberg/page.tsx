@@ -7,6 +7,8 @@ import {
 import { FAQSection, FAQItem } from "@/components/sections/faq-section";
 import { CTASection } from "@/components/sections/cta-section";
 import { Zap, Flame, Droplet, Wind } from "lucide-react";
+import { LocationPageSchema } from "@/components/schema/local-business-schema";
+import { locationData } from "@/lib/location-data";
 
 export const metadata: Metadata = {
   title:
@@ -78,47 +80,19 @@ const faqs: FAQItem[] = [
   },
 ];
 
-// LocalBusiness schema referencing Augsburg office
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://heizcenter.de/standorte/landsberg",
-  name: "HeizCenter Service Landsberg am Lech",
-  image: "https://heizcenter.de/images/landsberg-service.jpg",
-  description:
-    "HeizCenter Service für Wärmepumpen, Heizung, Sanitär und Klimaanlagen in Landsberg am Lech",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Landsberg am Lech",
-    addressRegion: "Bayern",
-    addressCountry: "DE",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 48.0502,
-    longitude: 10.8744,
-  },
-  telephone: "+49 8234 96659 00",
-  email: "info@heizcenter.de",
-  url: "https://heizcenter.de/standorte/landsberg",
-  priceRange: "€€",
-  areaServed: {
-    "@type": "City",
-    name: "Landsberg am Lech",
-  },
-  parentOrganization: {
-    "@type": "Organization",
-    name: "HeizCenter Augsburg",
-    url: "https://heizcenter.de/standorte/augsburg",
-  },
-};
-
 export default function LandsbergPage() {
+  const data = locationData["landsberg"];
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      {/* Schema.org LocalBusiness Structured Data */}
+      <LocationPageSchema
+        cityName={data.cityName}
+        postalCode={data.postalCode}
+        region={data.region}
+        latitude={data.latitude}
+        longitude={data.longitude}
+        serviceCities={data.serviceCities}
       />
 
       <LocationHero

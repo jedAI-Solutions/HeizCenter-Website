@@ -7,6 +7,8 @@ import {
 import { LocationCoverage } from "@/components/sections/location-coverage";
 import { CTASection } from "@/components/sections/cta-section";
 import { Zap, Flame, Droplet, Wind } from "lucide-react";
+import { LocationPageSchema } from "@/components/schema/local-business-schema";
+import { locationData } from "@/lib/location-data";
 
 export const metadata: Metadata = {
   title:
@@ -78,95 +80,19 @@ const coverageAreas = [
   "Aichach",
 ];
 
-// Generate LocalBusiness JSON-LD schema
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://heizcenter.de/standorte/augsburg",
-  name: "HeizCenter Augsburg",
-  image: "https://heizcenter.de/images/augsburg-location.jpg",
-  description:
-    "Fachbetrieb für Wärmepumpen, Heizung, Sanitär und Klimaanlagen in Augsburg",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Musterstraße 1",
-    addressLocality: "Augsburg",
-    postalCode: "86150",
-    addressCountry: "DE",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 48.3705,
-    longitude: 10.8978,
-  },
-  telephone: "+49 8234 96659 00",
-  email: "augsburg@heizcenter.de",
-  url: "https://heizcenter.de/standorte/augsburg",
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "08:00",
-      closes: "17:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "09:00",
-      closes: "13:00",
-    },
-  ],
-  priceRange: "€€",
-  areaServed: {
-    "@type": "City",
-    name: "Augsburg",
-  },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Heizung, Sanitär und Klimatechnik Dienstleistungen",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Wärmepumpen Installation",
-          description: "Installation und Wartung von Wärmepumpen",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Heizungsinstallation",
-          description: "Installation und Wartung von Heizungsanlagen",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Badsanierung",
-          description: "Komplette Badsanierung und Sanitärinstallationen",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Klimaanlagen Installation",
-          description: "Installation von Split-Klimaanlagen",
-        },
-      },
-    ],
-  },
-};
-
 export default function AugsburgPage() {
+  const data = locationData["augsburg"];
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      {/* Schema.org LocalBusiness Structured Data */}
+      <LocationPageSchema
+        cityName={data.cityName}
+        postalCode={data.postalCode}
+        region={data.region}
+        latitude={data.latitude}
+        longitude={data.longitude}
+        serviceCities={data.serviceCities}
       />
 
       <LocationHero

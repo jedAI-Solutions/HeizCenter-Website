@@ -3,6 +3,8 @@ import { SubLocationHero } from "@/components/sections/sub-location-hero";
 import { LocationServices, LocationService } from "@/components/sections/location-services";
 import { CTASection } from "@/components/sections/cta-section";
 import { Zap, Flame, Droplet, Wind } from "lucide-react";
+import { LocationPageSchema } from "@/components/schema/local-business-schema";
+import { locationData } from "@/lib/location-data";
 
 export const metadata: Metadata = {
   title: "Wärmepumpe & Heizung Neusäß - HeizCenter | Ihr Fachbetrieb vor Ort",
@@ -44,27 +46,19 @@ const services: LocationService[] = [
   },
 ];
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Heizung, Sanitär und Klimatechnik",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "HeizCenter Augsburg",
-    "telephone": "+49 8234 96659 00",
-  },
-  "areaServed": {
-    "@type": "City",
-    "name": "Neusäß",
-  },
-};
-
 export default function NeusaessPage() {
+  const data = locationData["neusaess"];
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      {/* Schema.org LocalBusiness Structured Data */}
+      <LocationPageSchema
+        cityName={data.cityName}
+        postalCode={data.postalCode}
+        region={data.region}
+        latitude={data.latitude}
+        longitude={data.longitude}
+        serviceCities={data.serviceCities}
       />
 
       <SubLocationHero

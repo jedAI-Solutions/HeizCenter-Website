@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ContactForm } from "@/components/forms/contact-form";
 import { QuoteForm } from "@/components/forms/quote-form";
 import { EmergencyForm } from "@/components/forms/emergency-form";
+import { LocalBusinessSchema } from "@/components/schema/local-business-schema";
 
 export const metadata: Metadata = {
   title: "Kontakt - HeizCenter | Heizung, Sanitär & Wärmepumpen",
@@ -19,6 +20,9 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+      {/* Schema.org Structured Data for both locations */}
+      <LocalBusinessSchema location="bobingen" includeServices={true} />
+      <LocalBusinessSchema location="gutenzell" includeServices={false} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#0F5B78] to-[#0F5B78] text-white py-16">
         <div className="container">

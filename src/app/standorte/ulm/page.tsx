@@ -7,6 +7,8 @@ import {
 import { LocationCoverage } from "@/components/sections/location-coverage";
 import { CTASection } from "@/components/sections/cta-section";
 import { Zap, Flame, Droplet, Wind } from "lucide-react";
+import { LocationPageSchema } from "@/components/schema/local-business-schema";
+import { locationData } from "@/lib/location-data";
 
 export const metadata: Metadata = {
   title:
@@ -78,94 +80,19 @@ const coverageAreas = [
   "Senden",
 ];
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://heizcenter.de/standorte/ulm",
-  name: "HeizCenter Ulm",
-  image: "https://heizcenter.de/images/ulm-location.jpg",
-  description:
-    "Fachbetrieb für Wärmepumpen, Heizung, Sanitär und Klimaanlagen in Ulm",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Musterstraße 2",
-    addressLocality: "Ulm",
-    postalCode: "89073",
-    addressCountry: "DE",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 48.4011,
-    longitude: 9.9876,
-  },
-  telephone: "+49 731 123456",
-  email: "ulm@heizcenter.de",
-  url: "https://heizcenter.de/standorte/ulm",
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "08:00",
-      closes: "17:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "09:00",
-      closes: "13:00",
-    },
-  ],
-  priceRange: "€€",
-  areaServed: {
-    "@type": "City",
-    name: "Ulm",
-  },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Heizung, Sanitär und Klimatechnik Dienstleistungen",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Wärmepumpen Installation",
-          description: "Installation und Wartung von Wärmepumpen",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Heizungsinstallation",
-          description: "Installation und Wartung von Heizungsanlagen",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Badsanierung",
-          description: "Komplette Badsanierung und Sanitärinstallationen",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Klimaanlagen Installation",
-          description: "Installation von Split-Klimaanlagen",
-        },
-      },
-    ],
-  },
-};
-
 export default function UlmPage() {
+  const data = locationData["ulm"];
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      {/* Schema.org LocalBusiness Structured Data */}
+      <LocationPageSchema
+        cityName={data.cityName}
+        postalCode={data.postalCode}
+        region={data.region}
+        latitude={data.latitude}
+        longitude={data.longitude}
+        serviceCities={data.serviceCities}
       />
 
       <LocationHero

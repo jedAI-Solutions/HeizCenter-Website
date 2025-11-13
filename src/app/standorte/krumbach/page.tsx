@@ -4,6 +4,8 @@ import { LocationServices, LocationService } from "@/components/sections/locatio
 import { FAQSection, FAQItem } from "@/components/sections/faq-section";
 import { CTASection } from "@/components/sections/cta-section";
 import { Zap, Flame, Droplet, Wind } from "lucide-react";
+import { LocationPageSchema } from "@/components/schema/local-business-schema";
+import { locationData } from "@/lib/location-data";
 
 export const metadata: Metadata = {
   title: "HeizCenter Krumbach - Wärmepumpe, Heizung & Sanitär",
@@ -26,12 +28,20 @@ const faqs: FAQItem[] = [
   { question: "Anfahrtskosten?", answer: "25€ Pauschale. Bei größeren Projekten entfällt die Anfahrt." },
 ];
 
-const schema = { "@context": "https://schema.org", "@type": "LocalBusiness", name: "HeizCenter Service Krumbach", address: { addressLocality: "Krumbach", addressCountry: "DE" }, geo: { latitude: 48.2397, longitude: 10.3625 }, telephone: "+49 8234 96659 00", parentOrganization: { name: "HeizCenter Ulm" } };
-
 export default function KrumbachPage() {
+  const data = locationData["krumbach"];
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      {/* Schema.org LocalBusiness Structured Data */}
+      <LocationPageSchema
+        cityName={data.cityName}
+        postalCode={data.postalCode}
+        region={data.region}
+        latitude={data.latitude}
+        longitude={data.longitude}
+        serviceCities={data.serviceCities}
+      />
       <LocationHero name="Krumbach (Schwaben)" address="Schlüsselbergstraße 5, 88484 Gutenzell-Hürbel" phone="+49 8234 966590" email="service@heizcenter.de" description="HeizCenter Service für Krumbach. Wärmepumpen, Heizung und Sanitär mit professionellem Service."
         mainLocation="Gutenzell-Hürbel" />
       <LocationServices services={services} title="Unsere Leistungen in Krumbach" />

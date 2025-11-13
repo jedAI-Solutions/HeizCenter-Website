@@ -7,6 +7,8 @@ import {
 import { FAQSection, FAQItem } from "@/components/sections/faq-section";
 import { CTASection } from "@/components/sections/cta-section";
 import { Zap, Flame, Droplet, Wind } from "lucide-react";
+import { LocationPageSchema } from "@/components/schema/local-business-schema";
+import { locationData } from "@/lib/location-data";
 
 export const metadata: Metadata = {
   title:
@@ -78,45 +80,19 @@ const faqs: FAQItem[] = [
   },
 ];
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://heizcenter.de/standorte/kaufbeuren",
-  name: "HeizCenter Service Kaufbeuren",
-  description:
-    "HeizCenter Service für Wärmepumpen, Heizung, Sanitär und Klimaanlagen in Kaufbeuren",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Kaufbeuren",
-    addressRegion: "Bayern",
-    addressCountry: "DE",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 47.8809,
-    longitude: 10.6225,
-  },
-  telephone: "+49 8234 96659 00",
-  email: "info@heizcenter.de",
-  url: "https://heizcenter.de/standorte/kaufbeuren",
-  priceRange: "€€",
-  areaServed: {
-    "@type": "City",
-    name: "Kaufbeuren",
-  },
-  parentOrganization: {
-    "@type": "Organization",
-    name: "HeizCenter Memmingen",
-    url: "https://heizcenter.de/standorte/memmingen",
-  },
-};
-
 export default function KaufbeurenPage() {
+  const data = locationData["kaufbeuren"];
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      {/* Schema.org LocalBusiness Structured Data */}
+      <LocationPageSchema
+        cityName={data.cityName}
+        postalCode={data.postalCode}
+        region={data.region}
+        latitude={data.latitude}
+        longitude={data.longitude}
+        serviceCities={data.serviceCities}
       />
 
       <LocationHero

@@ -4,6 +4,8 @@ import { LocationServices, LocationService } from "@/components/sections/locatio
 import { FAQSection, FAQItem } from "@/components/sections/faq-section";
 import { CTASection } from "@/components/sections/cta-section";
 import { Zap, Flame, Droplet, Wind } from "lucide-react";
+import { LocationPageSchema } from "@/components/schema/local-business-schema";
+import { locationData } from "@/lib/location-data";
 
 export const metadata: Metadata = {
   title: "HeizCenter Günzburg - Wärmepumpe, Heizung & Sanitär | Service vor Ort",
@@ -26,12 +28,20 @@ const faqs: FAQItem[] = [
   { question: "Entstehen Anfahrtskosten für Günzburg?", answer: "Anfahrtspauschale 25€. Bei größeren Aufträgen kostenlos. Beratung vor Ort immer kostenlos." },
 ];
 
-const schema = { "@context": "https://schema.org", "@type": "LocalBusiness", name: "HeizCenter Service Günzburg", address: { "@type": "PostalAddress", addressLocality: "Günzburg", addressCountry: "DE" }, geo: { latitude: 48.4536, longitude: 10.2759 }, telephone: "+49 8234 96659 00", parentOrganization: { "@type": "Organization", name: "HeizCenter Ulm", url: "https://heizcenter.de/standorte/ulm" } };
-
 export default function GuenzbergPage() {
+  const data = locationData["guenzburg"];
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      {/* Schema.org LocalBusiness Structured Data */}
+      <LocationPageSchema
+        cityName={data.cityName}
+        postalCode={data.postalCode}
+        region={data.region}
+        latitude={data.latitude}
+        longitude={data.longitude}
+        serviceCities={data.serviceCities}
+      />
       <LocationHero name="Günzburg" address="Schlüsselbergstraße 5, 88484 Gutenzell-Hürbel" phone="+49 8234 966590" email="service@heizcenter.de" description="HeizCenter Service für Günzburg und Umgebung. Wärmepumpen, Heizung, Sanitär und Klimaanlagen mit professioneller Beratung."
         mainLocation="Gutenzell-Hürbel" />
       <LocationServices services={services} title="Unsere Leistungen in Günzburg" />

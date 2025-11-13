@@ -4,6 +4,8 @@ import { LocationServices, LocationService } from "@/components/sections/locatio
 import { FAQSection, FAQItem } from "@/components/sections/faq-section";
 import { CTASection } from "@/components/sections/cta-section";
 import { Zap, Flame, Droplet, Wind } from "lucide-react";
+import { LocationPageSchema } from "@/components/schema/local-business-schema";
+import { locationData } from "@/lib/location-data";
 
 export const metadata: Metadata = {
   title: "HeizCenter Aichach - Wärmepumpe, Heizung & Sanitär",
@@ -26,12 +28,20 @@ const faqs: FAQItem[] = [
   { question: "Anfahrt kostenpflichtig?", answer: "20€ Pauschale, bei Großaufträgen kostenlos." },
 ];
 
-const schema = { "@context": "https://schema.org", "@type": "LocalBusiness", name: "HeizCenter Aichach", address: { addressLocality: "Aichach", addressCountry: "DE" }, geo: { latitude: 48.4595, longitude: 11.1310 }, telephone: "+49 8234 96659 00" };
-
 export default function AichachPage() {
+  const data = locationData["aichach"];
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      {/* Schema.org LocalBusiness Structured Data */}
+      <LocationPageSchema
+        cityName={data.cityName}
+        postalCode={data.postalCode}
+        region={data.region}
+        latitude={data.latitude}
+        longitude={data.longitude}
+        serviceCities={data.serviceCities}
+      />
       <LocationHero name="Aichach" address="Lechallee 28, 86399 Bobingen" phone="+49 8234 966590" email="service@heizcenter.de" description="HeizCenter Service Aichach. Wärmepumpen, Heizung, Sanitär mit schnellem Service."
         mainLocation="Bobingen" />
       <LocationServices services={services} title="Unsere Leistungen in Aichach" />

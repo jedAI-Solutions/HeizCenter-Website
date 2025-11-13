@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Flame, Droplet, Wind, Zap, Star, Award, Users } from "lucide-react";
+import { LocalBusinessSchema } from "@/components/schema/local-business-schema";
 
 const services = [
   {
@@ -49,7 +50,12 @@ const stats = [
 
 export default function Home() {
   return (
-    <div>
+    <>
+      {/* Schema.org Structured Data for both locations */}
+      <LocalBusinessSchema location="bobingen" includeServices={true} />
+      <LocalBusinessSchema location="gutenzell" includeServices={false} />
+
+      <div>
       {/* Hero Section with Image Grid Background */}
       <section className="relative min-h-[600px] flex items-center">
         {/* Background Image Grid */}
@@ -216,6 +222,7 @@ export default function Home() {
           </Button>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
