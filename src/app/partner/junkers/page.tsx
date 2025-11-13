@@ -37,7 +37,7 @@ const faqs: FAQItem[] = [
 export default function JunkersPage() {
   return (
     <>
-      <ServiceHero title="Junkers Bosch Wärmepumpen" description="Teil der Bosch Thermotechnik Gruppe. Bewährte Qualität seit 1895. Die Compress und Supraeco Serien bieten solide Technik zu fairen Preisen." benefits={benefits} icon={Award} badge="Bosch Gruppe" imageSrc="/images/Waermepumpe.jpeg" />
+      <ServiceHero title="Junkers Bosch Wärmepumpen" description="Teil der Bosch Thermotechnik Gruppe. Bewährte Qualität seit 1895. Die Compress und Supraeco Serien bieten solide Technik zu fairen Preisen." benefits={benefits} icon={Award} badge="Bosch Gruppe" imageSrc="/images/Waermepumpe.jpeg" logoSrc="/images/partners/junkers.svg" />
       <FeaturesSection title="Warum Junkers Bosch? Bewährt. Zuverlässig." features={features} />
 
       <section className="container py-16">

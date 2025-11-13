@@ -11,6 +11,7 @@ interface ServiceHeroProps {
   icon: LucideIcon;
   badge?: string;
   imageSrc?: string;
+  logoSrc?: string;
 }
 
 export function ServiceHero({
@@ -20,18 +21,33 @@ export function ServiceHero({
   icon: Icon,
   badge,
   imageSrc,
+  logoSrc,
 }: ServiceHeroProps) {
   return (
     <section className="bg-gradient-to-br from-[#0F5B78]/5 to-slate-50 py-16 md:py-24">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-[#0F5B78] rounded-2xl">
-                <Icon className="h-12 w-12 text-white" />
+            {logoSrc ? (
+              <div className="flex items-center gap-4 mb-6">
+                <div className="bg-white p-4 rounded-xl border-2 border-slate-200">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={logoSrc}
+                    alt={`${title} Logo`}
+                    className="h-12 w-auto"
+                  />
+                </div>
+                {badge && <Badge variant="secondary" className="text-base">{badge}</Badge>}
               </div>
-              {badge && <Badge variant="secondary" className="text-base">{badge}</Badge>}
-            </div>
+            ) : (
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-4 bg-[#0F5B78] rounded-2xl">
+                  <Icon className="h-12 w-12 text-white" />
+                </div>
+                {badge && <Badge variant="secondary" className="text-base">{badge}</Badge>}
+              </div>
+            )}
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               {title}
             </h1>

@@ -104,6 +104,31 @@ export default function PartnerPage() {
         </div>
       </section>
 
+      {/* Partner Logos Grid */}
+      <section className="container py-12 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-8 text-slate-700">
+            Unsere Hersteller-Partner
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+            {partners.map((partner) => (
+              <Link
+                key={partner.slug}
+                href={`/partner/${partner.slug}`}
+                className="flex items-center justify-center p-4 hover:opacity-70 transition-opacity"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`/images/partners/${partner.slug}.svg`}
+                  alt={`${partner.name} Logo`}
+                  className="w-auto h-auto max-h-12"
+                />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Partner Grid */}
       <section className="container py-16">
         <div className="max-w-6xl mx-auto">

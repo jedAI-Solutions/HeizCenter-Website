@@ -126,6 +126,7 @@ export default function VaillantPage() {
         icon={Award}
         badge="Marktführer"
         imageSrc="/images/Waermepumpe.jpeg"
+        logoSrc="/images/partners/vaillant.svg"
       />
 
       <FeaturesSection

@@ -127,6 +127,7 @@ export default function BuderusPage() {
         icon={Award}
         badge="Testsieger 2024"
         imageSrc="/images/Waermepumpe.jpeg"
+        logoSrc="/images/partners/buderus.svg"
       />
 
       <FeaturesSection

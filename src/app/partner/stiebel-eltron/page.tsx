@@ -45,7 +45,7 @@ const faqs: FAQItem[] = [
 export default function StiebElEltronPage() {
   return (
     <>
-      <ServiceHero title="Stiebel Eltron Wärmepumpen" description="Made in Germany seit 1924. Die WPL Serie überzeugt durch Testsieger-Qualität, Cold Climate Technologie und höchste Zuverlässigkeit. Premium-Wärmepumpen für höchste Ansprüche." benefits={benefits} icon={Award} badge="Testsieger" imageSrc="/images/Waermepumpe.jpeg" />
+      <ServiceHero title="Stiebel Eltron Wärmepumpen" description="Made in Germany seit 1924. Die WPL Serie überzeugt durch Testsieger-Qualität, Cold Climate Technologie und höchste Zuverlässigkeit. Premium-Wärmepumpen für höchste Ansprüche." benefits={benefits} icon={Award} badge="Testsieger" imageSrc="/images/Waermepumpe.jpeg" logoSrc="/images/partners/stiebel-eltron.svg" />
       <FeaturesSection title="Warum Stiebel Eltron? 100 Jahre Erfahrung." features={features} />
 
       <section className="container py-16">

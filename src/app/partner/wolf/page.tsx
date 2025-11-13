@@ -127,6 +127,7 @@ export default function WolfPage() {
         icon={Award}
         badge="Made in Bavaria"
         imageSrc="/images/Waermepumpe.jpeg"
+        logoSrc="/images/partners/wolf.svg"
       />
 
       <FeaturesSection

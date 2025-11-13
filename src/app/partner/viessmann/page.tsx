@@ -127,6 +127,7 @@ export default function ViessmannPage() {
         icon={Award}
         badge="Testsieger 2024"
         imageSrc="/images/Waermepumpe.jpeg"
+        logoSrc="/images/partners/viessmann.svg"
       />
 
       <FeaturesSection
