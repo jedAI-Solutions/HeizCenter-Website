@@ -28,36 +28,36 @@ export function Header() {
   }, []);
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="container flex h-16 items-center justify-between">
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
+      <div className="container flex h-16 items-center">
+        {/* Desktop Navigation - Left Side */}
+        <nav className="hidden md:flex items-center space-x-4 lg:space-x-5">
           {navigation.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium transition-colors hover:text-[#0F5B78]"
+              className="text-sm font-medium transition-colors hover:text-[#0F5B78] whitespace-nowrap"
             >
               {item.name}
             </Link>
           ))}
         </nav>
 
-        {/* CTA Buttons */}
-        <div className="hidden md:flex items-center space-x-4 ml-auto">
-          <a href="tel:+4982349665900" className="flex items-center gap-2 text-sm">
+        {/* CTA Buttons - Right Side */}
+        <div className="hidden md:flex items-center space-x-3 lg:space-x-4 ml-auto">
+          <a href="tel:+4982349665900" className="flex items-center gap-1.5 text-sm hover:text-[#0F5B78] transition-colors">
             <Phone className="h-4 w-4" />
-            <span className="font-medium">+49 8234 96659 00</span>
+            <span className="font-medium whitespace-nowrap">+49 8234 96659 00</span>
           </a>
           <a
             href="https://wa.me/4915111100331"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm hover:text-[#0F5B78] transition-colors"
+            className="flex items-center gap-1.5 text-sm hover:text-[#0F5B78] transition-colors"
           >
             <MessageCircle className="h-4 w-4" />
-            <span className="font-medium">WhatsApp</span>
+            <span className="font-medium whitespace-nowrap">WhatsApp</span>
           </a>
-          <Button asChild className="bg-[#FFCA28] hover:bg-[#F5B800] text-slate-900 font-semibold">
+          <Button asChild className="bg-[#FFCA28] hover:bg-[#F5B800] text-slate-900 font-semibold whitespace-nowrap">
             <Link href="/kontakt">Beratung anfragen</Link>
           </Button>
         </div>
