@@ -10,6 +10,8 @@ import { AuthorBio } from "@/components/blog/author-bio";
 import { SocialShare } from "@/components/blog/social-share";
 import { RelatedPosts } from "@/components/blog/related-posts";
 import { TableOfContents } from "@/components/blog/table-of-contents";
+import { BlogPostingSchema } from "@/components/schema/blog-posting-schema";
+import { BreadcrumbSchema } from "@/components/schema/breadcrumb-schema";
 
 interface BlogPostPageProps {
   params: {
@@ -51,38 +53,27 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const relatedPosts = await getRelatedPosts(post.id, 3);
 
-  // Generate Article JSON-LD schema
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt,
-    author: {
-      "@type": "Person",
-      name: post.author,
-    },
-    datePublished: post.date,
-    dateModified: post.date,
-    publisher: {
-      "@type": "Organization",
-      name: "HeizCenter",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://heizcenter.de/logo.png",
-      },
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://heizcenter.de/blog/${params.slug}`,
-    },
-    keywords: post.tags.join(", "),
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      {/* Schema.org Breadcrumb Structured Data */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", url: "" },
+          { name: "Blog", url: "/blog" },
+          { name: post.title, url: `/blog/${post.slug}` },
+        ]}
+      />
+      {/* Schema.org BlogPosting Structured Data */}
+      <BlogPostingSchema
+        title={post.title}
+        excerpt={post.excerpt}
+        content={post.content}
+        author={post.author}
+        date={post.date}
+        slug={post.slug}
+        image={post.image}
+        tags={post.tags}
+        category={post.category}
       />
 
       {/* Back Button */}

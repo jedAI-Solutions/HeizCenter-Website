@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Flame, Droplet, Wind, Zap, Star, Award, Users } from "lucide-react";
 import { LocalBusinessSchema } from "@/components/schema/local-business-schema";
+import { OrganizationSchema } from "@/components/schema/organization-schema";
 
 const services = [
   {
@@ -51,7 +52,8 @@ const stats = [
 export default function Home() {
   return (
     <>
-      {/* Schema.org Structured Data for both locations */}
+      {/* Schema.org Structured Data */}
+      <OrganizationSchema />
       <LocalBusinessSchema location="bobingen" includeServices={true} />
       <LocalBusinessSchema location="gutenzell" includeServices={false} />
 

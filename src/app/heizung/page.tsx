@@ -4,6 +4,9 @@ import { FeaturesSection } from "@/components/sections/features-section";
 import { FAQSection, FAQItem } from "@/components/sections/faq-section";
 import { CTASection } from "@/components/sections/cta-section";
 import { Flame, Clock, Euro, Wrench, Shield, Thermometer } from "lucide-react";
+import { ServiceSchema } from "@/components/schema/service-schema";
+import { FAQSchema } from "@/components/schema/faq-schema";
+import { BreadcrumbSchema } from "@/components/schema/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Heizung Installation & Wartung in Bobingen & Gutenzell-Hürbel",
@@ -107,6 +110,17 @@ const faqs: FAQItem[] = [
 export default function HeizungPage() {
   return (
     <>
+      {/* Schema.org Breadcrumb Structured Data */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", url: "" },
+          { name: "Heizung", url: "/heizung" },
+        ]}
+      />
+      {/* Schema.org Service Structured Data */}
+      <ServiceSchema serviceType="heizung" />
+      <FAQSchema faqs={faqs} />
+
       <ServiceHero
         title="Heizungsinstallation & Wartung"
         description="Von der Planung über die Installation bis zur Wartung - Ihr Heizungsexperte mit über 20 Jahren Erfahrung in Bobingen und Gutenzell-Hürbel."

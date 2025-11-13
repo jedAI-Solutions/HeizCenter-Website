@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Users, Award, Heart, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { OrganizationSchema } from "@/components/schema/organization-schema";
 
 export const metadata: Metadata = {
   title: "Über uns - HeizCenter | Ihr regionaler Experte für Wärmepumpen & Heizung",
@@ -14,6 +15,9 @@ export const metadata: Metadata = {
 export default function UeberUnsPage() {
   return (
     <>
+      {/* Schema.org Organization Structured Data */}
+      <OrganizationSchema />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-[#0F5B78]/5 to-white py-20">
         <div className="container">

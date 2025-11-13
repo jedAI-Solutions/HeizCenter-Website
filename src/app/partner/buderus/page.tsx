@@ -12,6 +12,7 @@ import {
   Volume2,
   CheckCircle2,
 } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/schema/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Buderus Wärmepumpen & Heizungen | HeizCenter Partner",
@@ -120,6 +121,14 @@ const faqs: FAQItem[] = [
 export default function BuderusPage() {
   return (
     <>
+      {/* Schema.org Breadcrumb Structured Data */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", url: "" },
+          { name: "Partner", url: "/partner" },
+          { name: "uuderus", url: "/partner/buderus" },
+        ]}
+      />
       <ServiceHero
         title="Buderus Wärmepumpen & Heizungen"
         description="Testsieger 2024. Unerhört leise. Die Logatherm Serie vereint Bosch-Qualität mit innovativer Schalldämmung und höchster Effizienz. Deutsche Ingenieurskunst seit 1731."

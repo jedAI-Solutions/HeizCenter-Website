@@ -14,6 +14,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { ServiceSchema } from "@/components/schema/service-schema";
+import { FAQSchema } from "@/components/schema/faq-schema";
+import { BreadcrumbSchema } from "@/components/schema/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Wärmepumpe Installation in Bobingen & Gutenzell-Hürbel | HeizCenter",
@@ -131,6 +134,17 @@ const faqs: FAQItem[] = [
 export default function WaermepumpePage() {
   return (
     <>
+      {/* Schema.org Breadcrumb Structured Data */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", url: "" },
+          { name: "Wärmepumpe", url: "/waermepumpe" },
+        ]}
+      />
+      {/* Schema.org Service Structured Data */}
+      <ServiceSchema serviceType="waermepumpe" />
+      <FAQSchema faqs={faqs} />
+
       <ServiceHero
         title="Wärmepumpe Installation"
         description="Zukunftssicher heizen mit erneuerbarer Energie. Profitieren Sie von bis zu 40% staatlicher Förderung und sparen Sie bis zu 70% Ihrer Heizkosten."

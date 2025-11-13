@@ -12,6 +12,7 @@ import {
   Settings,
   CheckCircle2,
 } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/schema/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Viessmann Wärmepumpen & Heizungen | HeizCenter Partner",
@@ -120,6 +121,14 @@ const faqs: FAQItem[] = [
 export default function ViessmannPage() {
   return (
     <>
+      {/* Schema.org Breadcrumb Structured Data */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", url: "" },
+          { name: "Partner", url: "/partner" },
+          { name: "viessmann", url: "/partner/viessmann" },
+        ]}
+      />
       <ServiceHero
         title="Viessmann Wärmepumpen & Heizungen"
         description="Premium Qualität Made in Germany. Testsieger der Stiftung Warentest. Die Vitocal Serie überzeugt durch höchste Effizienz, Zuverlässigkeit und innovative Technologie."

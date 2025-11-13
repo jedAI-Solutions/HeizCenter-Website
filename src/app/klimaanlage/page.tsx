@@ -11,6 +11,9 @@ import {
   Volume2,
   Shield,
 } from "lucide-react";
+import { ServiceSchema } from "@/components/schema/service-schema";
+import { FAQSchema } from "@/components/schema/faq-schema";
+import { BreadcrumbSchema } from "@/components/schema/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Klimaanlage Installation in Bobingen & Gutenzell-Hürbel | HeizCenter",
@@ -124,6 +127,17 @@ const faqs: FAQItem[] = [
 export default function KlimaanlagePage() {
   return (
     <>
+      {/* Schema.org Breadcrumb Structured Data */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", url: "" },
+          { name: "Klimaanlage", url: "/klimaanlage" },
+        ]}
+      />
+      {/* Schema.org Service Structured Data */}
+      <ServiceSchema serviceType="klimaanlage" />
+      <FAQSchema faqs={faqs} />
+
       <ServiceHero
         title="Klimaanlage Installation"
         description="Angenehme Raumtemperatur das ganze Jahr. Moderne Split-Klimaanlagen kühlen im Sommer und heizen im Winter. Energieeffizient und flüsterleise."

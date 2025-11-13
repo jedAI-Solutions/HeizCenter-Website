@@ -11,6 +11,9 @@ import {
   Clock,
   Shield,
 } from "lucide-react";
+import { ServiceSchema } from "@/components/schema/service-schema";
+import { FAQSchema } from "@/components/schema/faq-schema";
+import { BreadcrumbSchema } from "@/components/schema/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Sanitär & Badsanierung in Bobingen & Gutenzell-Hürbel | HeizCenter",
@@ -119,6 +122,17 @@ const faqs: FAQItem[] = [
 export default function SanitaerPage() {
   return (
     <>
+      {/* Schema.org Breadcrumb Structured Data */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", url: "" },
+          { name: "Sanitär", url: "/sanitaer" },
+        ]}
+      />
+      {/* Schema.org Service Structured Data */}
+      <ServiceSchema serviceType="sanitaer" />
+      <FAQSchema faqs={faqs} />
+
       <ServiceHero
         title="Sanitär & Badsanierung"
         description="Verwandeln Sie Ihr Badezimmer in eine Wohlfühloase. Professionelle Planung und Umsetzung durch erfahrene Fachbetriebe. Von modern bis barrierefrei."

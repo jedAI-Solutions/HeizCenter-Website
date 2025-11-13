@@ -12,6 +12,7 @@ import {
   Settings,
   CheckCircle2,
 } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/schema/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Wolf Wärmepumpen & Heizungen | HeizCenter Partner",
@@ -120,6 +121,14 @@ const faqs: FAQItem[] = [
 export default function WolfPage() {
   return (
     <>
+      {/* Schema.org Breadcrumb Structured Data */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", url: "" },
+          { name: "Partner", url: "/partner" },
+          { name: "wolf", url: "/partner/wolf" },
+        ]}
+      />
       <ServiceHero
         title="Wolf Wärmepumpen & Heizungen"
         description="Kompakte Monoblock-Systeme mit modulierender Inverter-Technologie. Made in Mainburg, Bayern. Die CHA-Serie überzeugt durch Zuverlässigkeit und gutes Preis-Leistungs-Verhältnis."

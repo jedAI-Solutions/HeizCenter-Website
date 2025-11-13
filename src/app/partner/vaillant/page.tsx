@@ -12,6 +12,7 @@ import {
   Snowflake,
   CheckCircle2,
 } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/schema/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Vaillant Wärmepumpen & Heizungen | HeizCenter Partner",
@@ -119,6 +120,14 @@ const faqs: FAQItem[] = [
 export default function VaillantPage() {
   return (
     <>
+      {/* Schema.org Breadcrumb Structured Data */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", url: "" },
+          { name: "Partner", url: "/partner" },
+          { name: "vaillant", url: "/partner/vaillant" },
+        ]}
+      />
       <ServiceHero
         title="Vaillant Wärmepumpen & Heizungen"
         description="Marktführer mit über 150 Jahren Erfahrung. Die aroTHERM Serie kombiniert höchste Effizienz mit leisem Betrieb und Langlebigkeit. Green iQ für nachhaltiges Heizen."

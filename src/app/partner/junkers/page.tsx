@@ -5,6 +5,7 @@ import { FAQSection, FAQItem } from "@/components/sections/faq-section";
 import { CTASection } from "@/components/sections/cta-section";
 import Link from "next/link";
 import { Award, Zap, Shield, Thermometer, Settings, CheckCircle2 } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/schema/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Junkers Bosch Wärmepumpen & Heizungen | HeizCenter",
@@ -37,6 +38,14 @@ const faqs: FAQItem[] = [
 export default function JunkersPage() {
   return (
     <>
+      {/* Schema.org Breadcrumb Structured Data */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", url: "" },
+          { name: "Partner", url: "/partner" },
+          { name: "junkers", url: "/partner/junkers" },
+        ]}
+      />
       <ServiceHero title="Junkers Bosch Wärmepumpen" description="Teil der Bosch Thermotechnik Gruppe. Bewährte Qualität seit 1895. Die Compress und Supraeco Serien bieten solide Technik zu fairen Preisen." benefits={benefits} icon={Award} badge="Bosch Gruppe" imageSrc="/images/Waermepumpe.jpeg" logoSrc="/images/partners/junkers.svg" />
       <FeaturesSection title="Warum Junkers Bosch? Bewährt. Zuverlässig." features={features} />
 

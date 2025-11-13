@@ -5,6 +5,7 @@ import { FAQSection, FAQItem } from "@/components/sections/faq-section";
 import { CTASection } from "@/components/sections/cta-section";
 import Link from "next/link";
 import { Award, Zap, Shield, Thermometer, Snowflake, CheckCircle2 } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/schema/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "Stiebel Eltron Wärmepumpen | HeizCenter Partner",
@@ -45,6 +46,14 @@ const faqs: FAQItem[] = [
 export default function StiebElEltronPage() {
   return (
     <>
+      {/* Schema.org Breadcrumb Structured Data */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", url: "" },
+          { name: "Partner", url: "/partner" },
+          { name: "stieuel eltron", url: "/partner/stiebel-eltron" },
+        ]}
+      />
       <ServiceHero title="Stiebel Eltron Wärmepumpen" description="Made in Germany seit 1924. Die WPL Serie überzeugt durch Testsieger-Qualität, Cold Climate Technologie und höchste Zuverlässigkeit. Premium-Wärmepumpen für höchste Ansprüche." benefits={benefits} icon={Award} badge="Testsieger" imageSrc="/images/Waermepumpe.jpeg" logoSrc="/images/partners/stiebel-eltron.svg" />
       <FeaturesSection title="Warum Stiebel Eltron? 100 Jahre Erfahrung." features={features} />
 

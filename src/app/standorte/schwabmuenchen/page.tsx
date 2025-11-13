@@ -6,6 +6,7 @@ import { CTASection } from "@/components/sections/cta-section";
 import { Zap, Flame, Droplet, Wind } from "lucide-react";
 import { LocationPageSchema } from "@/components/schema/local-business-schema";
 import { locationData } from "@/lib/location-data";
+import { BreadcrumbSchema } from "@/components/schema/breadcrumb-schema";
 
 export const metadata: Metadata = {
   title: "HeizCenter Schwabmünchen - Wärmepumpe & Heizung",
@@ -33,6 +34,14 @@ export default function SchwabmuenchenPage() {
 
   return (
     <>
+      {/* Schema.org Breadcrumb Structured Data */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", url: "" },
+          { name: "Standorte", url: "/standorte" },
+          { name: "schwaumuenchen", url: "/standorte/schwabmuenchen" },
+        ]}
+      />
       {/* Schema.org LocalBusiness Structured Data */}
       <LocationPageSchema
         cityName={data.cityName}
