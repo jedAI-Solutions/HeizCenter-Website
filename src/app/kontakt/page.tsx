@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { Suspense } from "react";
 import { Phone, Mail, MapPin, Clock, MessageSquare, FileText, AlertCircle, MessageCircle } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ContactForm } from "@/components/forms/contact-form";
@@ -9,9 +10,91 @@ import { EmergencyForm } from "@/components/forms/emergency-form";
 import { LocalBusinessSchema } from "@/components/schema/local-business-schema";
 import { useSearchParams } from "next/navigation";
 
-export default function ContactPage() {
+function ContactTabs() {
   const searchParams = useSearchParams();
   const defaultTab = searchParams.get("tab") || "contact";
+
+  return (
+    <Tabs defaultValue={defaultTab} className="w-full">
+      <TabsList className="grid w-full grid-cols-3 mb-10 bg-slate-100 p-2 rounded-xl h-auto">
+        <TabsTrigger
+          value="contact"
+          className="flex flex-col items-center gap-2 py-4 px-6 data-[state=active]:bg-white data-[state=active]:shadow-md rounded-lg transition-all"
+        >
+          <MessageSquare className="h-6 w-6 text-[#0F5B78]" />
+          <span className="font-semibold">Kontakt</span>
+          <span className="text-xs text-slate-500 hidden sm:block">Allgemeine Anfrage</span>
+        </TabsTrigger>
+        <TabsTrigger
+          value="quote"
+          className="flex flex-col items-center gap-2 py-4 px-6 data-[state=active]:bg-white data-[state=active]:shadow-md rounded-lg transition-all"
+        >
+          <FileText className="h-6 w-6 text-[#0F5B78]" />
+          <span className="font-semibold">Angebot</span>
+          <span className="text-xs text-slate-500 hidden sm:block">Kostenlos anfragen</span>
+        </TabsTrigger>
+        <TabsTrigger
+          value="emergency"
+          className="flex flex-col items-center gap-2 py-4 px-6 data-[state=active]:bg-white data-[state=active]:shadow-md rounded-lg transition-all"
+        >
+          <AlertCircle className="h-6 w-6 text-[#0F5B78]" />
+          <span className="font-semibold">Notfall</span>
+          <span className="text-xs text-slate-500 hidden sm:block">24/7 Notdienst</span>
+        </TabsTrigger>
+      </TabsList>
+
+      {/* Contact Form Tab */}
+      <TabsContent value="contact">
+        <div className="bg-white rounded-xl shadow-lg p-8 border border-slate-200">
+          <div className="mb-6">
+            <h3 className="text-2xl font-bold mb-2">
+              Allgemeine Anfrage
+            </h3>
+            <p className="text-slate-600">
+              Haben Sie eine Frage oder möchten Sie mehr über unsere
+              Dienstleistungen erfahren? Kontaktieren Sie uns gerne.
+            </p>
+          </div>
+          <ContactForm />
+        </div>
+      </TabsContent>
+
+      {/* Quote Form Tab */}
+      <TabsContent value="quote">
+        <div className="bg-white rounded-xl shadow-lg p-8 border border-slate-200">
+          <div className="mb-6">
+            <h3 className="text-2xl font-bold mb-2">
+              Kostenloses Angebot anfordern
+            </h3>
+            <p className="text-slate-600">
+              Beschreiben Sie Ihr Projekt und erhalten Sie ein
+              unverbindliches Angebot von unseren Experten.
+            </p>
+          </div>
+          <QuoteForm />
+        </div>
+      </TabsContent>
+
+      {/* Emergency Form Tab */}
+      <TabsContent value="emergency">
+        <div className="bg-white rounded-xl shadow-lg p-8 border border-red-200">
+          <div className="mb-6">
+            <h3 className="text-2xl font-bold mb-2 text-red-600">
+              Notdienst 24/7
+            </h3>
+            <p className="text-slate-600">
+              Bei einem Heizungs- oder Sanitär-Notfall sind wir rund um
+              die Uhr für Sie da.
+            </p>
+          </div>
+          <EmergencyForm />
+        </div>
+      </TabsContent>
+    </Tabs>
+  );
+}
+
+export default function ContactPage() {
   return (
     <>
       {/* Schema.org Structured Data for both locations */}
@@ -164,82 +247,27 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <Tabs defaultValue={defaultTab} className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-10 bg-slate-100 p-2 rounded-xl h-auto">
-              <TabsTrigger
-                value="contact"
-                className="flex flex-col items-center gap-2 py-4 px-6 data-[state=active]:bg-white data-[state=active]:shadow-md rounded-lg transition-all"
-              >
-                <MessageSquare className="h-6 w-6 text-[#0F5B78]" />
-                <span className="font-semibold">Kontakt</span>
-                <span className="text-xs text-slate-500 hidden sm:block">Allgemeine Anfrage</span>
-              </TabsTrigger>
-              <TabsTrigger
-                value="quote"
-                className="flex flex-col items-center gap-2 py-4 px-6 data-[state=active]:bg-white data-[state=active]:shadow-md rounded-lg transition-all"
-              >
-                <FileText className="h-6 w-6 text-[#0F5B78]" />
-                <span className="font-semibold">Angebot</span>
-                <span className="text-xs text-slate-500 hidden sm:block">Kostenlos anfragen</span>
-              </TabsTrigger>
-              <TabsTrigger
-                value="emergency"
-                className="flex flex-col items-center gap-2 py-4 px-6 data-[state=active]:bg-white data-[state=active]:shadow-md rounded-lg transition-all"
-              >
-                <AlertCircle className="h-6 w-6 text-[#0F5B78]" />
-                <span className="font-semibold">Notfall</span>
-                <span className="text-xs text-slate-500 hidden sm:block">24/7 Notdienst</span>
-              </TabsTrigger>
-            </TabsList>
-
-            {/* Contact Form Tab */}
-            <TabsContent value="contact">
-              <div className="bg-white rounded-xl shadow-lg p-8 border border-slate-200">
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold mb-2">
-                    Allgemeine Anfrage
-                  </h3>
-                  <p className="text-slate-600">
-                    Haben Sie eine Frage oder möchten Sie mehr über unsere
-                    Dienstleistungen erfahren? Kontaktieren Sie uns gerne.
-                  </p>
+          <Suspense fallback={
+            <div className="w-full">
+              <div className="grid w-full grid-cols-3 mb-10 bg-slate-100 p-2 rounded-xl h-auto">
+                <div className="flex flex-col items-center gap-2 py-4 px-6 bg-white shadow-md rounded-lg">
+                  <MessageSquare className="h-6 w-6 text-[#0F5B78]" />
+                  <span className="font-semibold">Kontakt</span>
+                  <span className="text-xs text-slate-500 hidden sm:block">Allgemeine Anfrage</span>
                 </div>
-                <ContactForm />
-              </div>
-            </TabsContent>
-
-            {/* Quote Form Tab */}
-            <TabsContent value="quote">
-              <div className="bg-white rounded-xl shadow-lg p-8 border border-slate-200">
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold mb-2">
-                    Kostenloses Angebot anfordern
-                  </h3>
-                  <p className="text-slate-600">
-                    Beschreiben Sie Ihr Projekt und erhalten Sie ein
-                    unverbindliches Angebot von unseren Experten.
-                  </p>
+                <div className="flex flex-col items-center gap-2 py-4 px-6">
+                  <FileText className="h-6 w-6 text-[#0F5B78]" />
+                  <span className="font-semibold">Angebot</span>
                 </div>
-                <QuoteForm />
-              </div>
-            </TabsContent>
-
-            {/* Emergency Form Tab */}
-            <TabsContent value="emergency">
-              <div className="bg-white rounded-xl shadow-lg p-8 border border-red-200">
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold mb-2 text-red-600">
-                    Notdienst 24/7
-                  </h3>
-                  <p className="text-slate-600">
-                    Bei einem Heizungs- oder Sanitär-Notfall sind wir rund um
-                    die Uhr für Sie da.
-                  </p>
+                <div className="flex flex-col items-center gap-2 py-4 px-6">
+                  <AlertCircle className="h-6 w-6 text-[#0F5B78]" />
+                  <span className="font-semibold">Notfall</span>
                 </div>
-                <EmergencyForm />
               </div>
-            </TabsContent>
-          </Tabs>
+            </div>
+          }>
+            <ContactTabs />
+          </Suspense>
         </div>
       </section>
 
