@@ -21,9 +21,9 @@ import { FAQSchema } from "@/components/schema/faq-schema";
 import { BreadcrumbSchema } from "@/components/schema/breadcrumb-schema";
 
 export const metadata: Metadata = {
-  title: "Solarthermie Augsburg | Ulm | Memmingen - Bis 70% BAFA Förderung | HeizCenter",
+  title: "Solarthermie Installation in Bobingen & Gutenzell-Hürbel - Bis 70% BAFA Förderung | HeizCenter",
   description:
-    "Solarthermie-Anlagen vom Experten. Bis zu 70% BAFA-Förderung. Warmwasser & Heizungsunterstützung. Kostenlose Beratung in Augsburg, Ulm & Memmingen.",
+    "Solarthermie-Anlagen vom Experten. Bis zu 70% BAFA-Förderung. Warmwasser & Heizungsunterstützung. Kostenlose Beratung in Bobingen und Gutenzell-Hürbel.",
   keywords: [
     "Solarthermie",
     "Solarthermie Augsburg",
@@ -160,7 +160,7 @@ export default function SolarPage() {
       <FAQSchema faqs={faqs} />
 
       <ServiceHero
-        title="Solarthermie in Augsburg, Ulm & Memmingen"
+        title="Solarthermie in Bobingen & Gutenzell-Hürbel"
         description="Nutzen Sie die Kraft der Sonne! Mit einer Solarthermie-Anlage senken Sie Ihre Heizkosten um bis zu 30% und profitieren von bis zu 70% BAFA-Förderung. Kostenlose Sonnenenergie für Warmwasser und Heizung."
         benefits={benefits}
         icon={Sun}
