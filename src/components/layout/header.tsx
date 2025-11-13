@@ -12,6 +12,7 @@ const navigation = [
   { name: "Heizung", href: "/heizung" },
   { name: "Sanitär", href: "/sanitaer" },
   { name: "Klimaanlage", href: "/klimaanlage" },
+  { name: "Solar", href: "/solar" },
   { name: "Rechner", href: "/rechner" },
   { name: "Partner", href: "/partner" },
   { name: "Standorte", href: "/standorte" },

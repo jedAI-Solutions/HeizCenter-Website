@@ -79,6 +79,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/solar"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Solarthermie
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/notdienst"
                   className="text-slate-400 hover:text-white transition-colors"
                 >

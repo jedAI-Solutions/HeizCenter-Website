@@ -3,7 +3,9 @@ import { ServiceHero } from "@/components/sections/service-hero";
 import { FeaturesSection } from "@/components/sections/features-section";
 import { FAQSection, FAQItem } from "@/components/sections/faq-section";
 import { CTASection } from "@/components/sections/cta-section";
-import { Flame, Clock, Euro, Wrench, Shield, Thermometer } from "lucide-react";
+import { Flame, Clock, Euro, Wrench, Shield, Thermometer, Sun } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { ServiceSchema } from "@/components/schema/service-schema";
 import { FAQSchema } from "@/components/schema/faq-schema";
 import { BreadcrumbSchema } from "@/components/schema/breadcrumb-schema";
@@ -201,6 +203,63 @@ export default function HeizungPage() {
                   <li>Schrittweiser Umstieg auf erneuerbare Energien</li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solar Heating Support Section */}
+      <section className="container py-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-[#FFCA28] to-[#F5B800] rounded-2xl p-8 md:p-12 text-slate-900">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                <Sun className="h-8 w-8 text-[#0F5B78]" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Heizung + Solarthermie: Unschlagbare Kombination
+              </h2>
+            </div>
+            <p className="text-xl mb-6">
+              Reduzieren Sie Ihre Heizkosten um bis zu 30% durch die Kombination Ihrer bestehenden
+              oder neuen Heizung mit Solarthermie. Die kostenlose Sonnenenergie unterstützt Ihre
+              Heizung bei der Warmwasserbereitung und Heizungsunterstützung.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-white/80 rounded-lg p-6 backdrop-blur-sm">
+                <h3 className="font-bold text-lg mb-3">Perfekt kombinierbar mit:</h3>
+                <ul className="space-y-2">
+                  <li>✓ Gasheizung + Solarthermie</li>
+                  <li>✓ Ölheizung + Solarthermie</li>
+                  <li>✓ Pelletheizung + Solarthermie</li>
+                  <li>✓ Hybrid-System + Solarthermie</li>
+                </ul>
+              </div>
+              <div className="bg-white/80 rounded-lg p-6 backdrop-blur-sm">
+                <h3 className="font-bold text-lg mb-3">Einsparungen & Förderung:</h3>
+                <p className="mb-2">
+                  💰 Bis zu 30% weniger Heizkosten pro Jahr
+                </p>
+                <p className="mb-2">
+                  🌞 60% Warmwasser-Deckung durch Sonne
+                </p>
+                <p className="font-semibold text-[#0F5B78]">
+                  🎁 Bis zu 70% BAFA-Förderung
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg" className="bg-[#0F5B78] hover:bg-[#14789A] text-white font-semibold">
+                <Link href="/solar">
+                  <Sun className="h-5 w-5 mr-2" />
+                  Mehr zur Solarthermie
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-white hover:bg-white/90 text-[#0F5B78] border-2 border-[#0F5B78] font-semibold">
+                <Link href="/kontakt">
+                  Kombi-System anfragen
+                </Link>
+              </Button>
             </div>
           </div>
         </div>

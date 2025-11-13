@@ -3,7 +3,8 @@ interface ServiceSchemaProps {
     | "waermepumpe"
     | "heizung"
     | "sanitaer"
-    | "klimaanlage";
+    | "klimaanlage"
+    | "solar";
 }
 
 export function ServiceSchema({ serviceType }: ServiceSchemaProps) {
@@ -434,11 +435,147 @@ export function ServiceSchema({ serviceType }: ServiceSchemaProps) {
     },
   };
 
+  const solarSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Solarthermie-Installation",
+    name: "Solarthermie-Installation & Beratung",
+    description:
+      "Professionelle Solarthermie-Anlagen für Warmwasser und Heizungsunterstützung. Bis zu 70% BAFA-Förderung. Installation von Flach- und Vakuumröhrenkollektoren in Augsburg, Ulm und Memmingen.",
+    provider: {
+      "@type": "PlumbingHeatingContractor",
+      name: "HeizCenter GmbH",
+      url: "https://heizcenter.de",
+      telephone: "+49-8234-9665900",
+    },
+    areaServed: serviceCities,
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Solarthermie-Systeme",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Product",
+            name: "Warmwasser-System (Solarthermie)",
+            description:
+              "Solarthermie-Anlage zur Warmwasserbereitung. 4-6 m² Kollektorfläche, 300-400L Speicher. 60% solare Deckung des Warmwasserbedarfs.",
+            offers: {
+              "@type": "AggregateOffer",
+              priceCurrency: "EUR",
+              lowPrice: "5000",
+              highPrice: "10000",
+              eligibleQuantity: {
+                "@type": "QuantitativeValue",
+                value: "Nach 30% BAFA-Förderung: 3500-7000 EUR",
+              },
+            },
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Product",
+            name: "Kombi-System (Warmwasser + Heizung)",
+            description:
+              "Solarthermie-Anlage mit Heizungsunterstützung. 12-15 m² Kollektorfläche, 600-1000L Kombispeicher. 60% Warmwasser + 25% Heizungsunterstützung.",
+            offers: {
+              "@type": "AggregateOffer",
+              priceCurrency: "EUR",
+              lowPrice: "8000",
+              highPrice: "18000",
+              eligibleQuantity: {
+                "@type": "QuantitativeValue",
+                value: "Nach 70% BAFA-Förderung: 2400-5400 EUR",
+              },
+            },
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Product",
+            name: "Flachkollektor",
+            description:
+              "Bewährte Flachkollektoren mit 60-75% Wirkungsgrad. Ideal für Warmwasser-Systeme und Süddächer.",
+            offers: {
+              "@type": "AggregateOffer",
+              priceCurrency: "EUR",
+              lowPrice: "300",
+              highPrice: "500",
+              priceSpecification: {
+                "@type": "UnitPriceSpecification",
+                referenceQuantity: {
+                  "@type": "QuantitativeValue",
+                  value: "1",
+                  unitText: "m²",
+                },
+              },
+            },
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Product",
+            name: "Vakuumröhrenkollektor",
+            description:
+              "Hocheffiziente Vakuumröhren mit 70-85% Wirkungsgrad. Ideal für Heizungsunterstützung und Ost-West-Dächer.",
+            offers: {
+              "@type": "AggregateOffer",
+              priceCurrency: "EUR",
+              lowPrice: "500",
+              highPrice: "750",
+              priceSpecification: {
+                "@type": "UnitPriceSpecification",
+                referenceQuantity: {
+                  "@type": "QuantitativeValue",
+                  value: "1",
+                  unitText: "m²",
+                },
+              },
+            },
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Hybrid-System (Solarthermie + Wärmepumpe)",
+            description:
+              "Optimale Kombination aus Solarthermie und Wärmepumpe. Maximale Energieeffizienz und separate BAFA-Förderung möglich.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "BAFA-Förderberatung Solarthermie",
+            description:
+              "Kostenlose Beratung zur BAFA-Förderung. Bis zu 70% Zuschuss: 30% Basis + 20% Klimabonus + 30% Einkommensbonus.",
+          },
+        },
+      ],
+    },
+    termsOfService: "https://heizcenter.de/agb",
+    url: "https://heizcenter.de/solar",
+    audience: {
+      "@type": "Audience",
+      audienceType: "Hausbesitzer, Bauherren, Immobilienbesitzer",
+    },
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: "https://heizcenter.de/kontakt",
+      servicePhone: "+49-8234-9665900",
+    },
+  };
+
   const schemas = {
     waermepumpe: waermepumpeSchema,
     heizung: heizungSchema,
     sanitaer: sanitaerSchema,
     klimaanlage: klimaanlageSchema,
+    solar: solarSchema,
   };
 
   const schema = schemas[serviceType];

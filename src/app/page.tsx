@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Flame, Droplet, Wind, Zap, Star, Award, Users } from "lucide-react";
+import { Flame, Droplet, Wind, Zap, Sun, Star, Award, Users } from "lucide-react";
 import { LocalBusinessSchema } from "@/components/schema/local-business-schema";
 import { OrganizationSchema } from "@/components/schema/organization-schema";
 
@@ -35,6 +35,13 @@ const services = [
     href: "/klimaanlage",
     icon: Wind,
     badge: "Komfortabel",
+  },
+  {
+    title: "Solarthermie",
+    description: "Kostenlose Sonnenenergie für Warmwasser & Heizung",
+    href: "/solar",
+    icon: Sun,
+    badge: "Bis 70% Förderung",
   },
 ];
 
@@ -140,7 +147,7 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-center mb-12">
           Unsere Dienstleistungen
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {services.map((service) => {
             const Icon = service.icon;
             return (

@@ -11,6 +11,7 @@ import {
   Award,
   Wrench,
   Calculator,
+  Sun,
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -320,6 +321,65 @@ export default function WaermepumpePage() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hybrid Solution: Solar + Heat Pump */}
+      <section className="container py-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-[#0F5B78] to-[#14789A] rounded-2xl p-8 md:p-12 text-white">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-16 h-16 bg-[#FFCA28] rounded-full flex items-center justify-center">
+                <Sun className="h-8 w-8 text-slate-900" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Noch effizienter: Wärmepumpe + Solarthermie
+              </h2>
+            </div>
+            <p className="text-xl mb-6 text-white/95">
+              Maximieren Sie Ihre Energieeffizienz durch die Kombination von Wärmepumpe und Solarthermie.
+              Die Solarthermie-Anlage unterstützt Ihre Wärmepumpe direkt bei der Warmwasserbereitung
+              und reduziert den Stromverbrauch zusätzlich um bis zu 30%.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
+                <h3 className="font-bold text-lg mb-3">Ihre Vorteile:</h3>
+                <ul className="space-y-2 text-white/90">
+                  <li>✓ Bis zu 30% weniger Stromverbrauch der Wärmepumpe</li>
+                  <li>✓ 60% Warmwasser-Deckung durch kostenlose Sonnenenergie</li>
+                  <li>✓ Kombinierte BAFA-Förderung möglich</li>
+                  <li>✓ Maximale Energieunabhängigkeit</li>
+                </ul>
+              </div>
+              <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
+                <h3 className="font-bold text-lg mb-3">Investition:</h3>
+                <p className="text-white/90 mb-3">
+                  Solarthermie-System: €8.000 - €18.000
+                  <br />
+                  <span className="text-[#FFCA28] font-semibold">
+                    Nach 70% BAFA-Förderung: nur €2.400 - €5.400
+                  </span>
+                </p>
+                <p className="text-sm text-white/80">
+                  Die Kombination beider Systeme amortisiert sich durch die eingesparten
+                  Energiekosten bereits nach 8-12 Jahren.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg" className="bg-[#FFCA28] hover:bg-[#F5B800] text-slate-900 font-semibold">
+                <Link href="/solar">
+                  <Sun className="h-5 w-5 mr-2" />
+                  Mehr zur Solarthermie
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-white text-[#0F5B78] hover:bg-white/90 font-semibold border-2">
+                <Link href="/kontakt">
+                  Hybrid-System anfragen
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
