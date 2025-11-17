@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { PostCard } from "@/components/blog/post-card";
 import { getAllBlogPosts } from "@/lib/api/blog";
+import { Button } from "@/components/ui/button";
+import { HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Ratgeber - HeizCenter Bayern | Wärmepumpe, Heizung & mehr",
@@ -44,6 +46,12 @@ export default async function BlogPage() {
               Expertenwissen zu Wärmepumpen, Heizung, Sanitär und Klimaanlagen.
               Bleiben Sie informiert über Förderungen, Kosten und Best Practices.
             </p>
+            <Button asChild variant="outline" size="lg" className="gap-2">
+              <Link href="/faq">
+                <HelpCircle className="h-5 w-5" />
+                Häufig gestellte Fragen (FAQ)
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -111,8 +119,29 @@ export default async function BlogPage() {
         </div>
       </section>
 
+      {/* FAQ CTA */}
+      <section className="container py-12">
+        <div className="bg-gradient-to-br from-[#0F5B78] to-[#0D4A5E] rounded-2xl p-8 md:p-12 text-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <HelpCircle className="h-16 w-16 mx-auto mb-6 opacity-90" />
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Haben Sie noch Fragen?
+            </h2>
+            <p className="text-xl text-white/90 mb-8">
+              In unseren FAQ finden Sie Antworten auf die häufigsten Fragen zu Wärmepumpen,
+              Heizung, Förderungen und mehr.
+            </p>
+            <Button asChild size="lg" className="bg-[#FFCA28] hover:bg-[#F5B800] text-slate-900 font-semibold">
+              <Link href="/faq">
+                Zu den häufig gestellten Fragen
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter CTA */}
-      <section className="bg-[#0F5B78]/5 py-16 mt-12">
+      <section className="bg-[#0F5B78]/5 py-16">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">
