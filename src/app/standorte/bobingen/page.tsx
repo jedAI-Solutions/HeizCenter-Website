@@ -92,7 +92,7 @@ export default function BobingenPage() {
         items={[
           { name: "Startseite", url: "" },
           { name: "Standorte", url: "/standorte" },
-          { name: "uouingen", url: "/standorte/bobingen" },
+          { name: "Bobingen", url: "/standorte/bobingen" },
         ]}
       />
       {/* Schema.org LocalBusiness Structured Data */}

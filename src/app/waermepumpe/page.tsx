@@ -179,7 +179,7 @@ export default function WaermepumpePage() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-lg border-2 border-[#0F5B78] text-[#0F5B78] hover:bg-[#0F5B78] hover:text-white">
-                <Link href="/kontakt">
+                <Link href="/kontakt?tab=quote&service=waermepumpe&message=Ich interessiere mich für ein kostenloses Angebot für eine Wärmepumpe. Bitte kontaktieren Sie mich für eine unverbindliche Beratung.">
                   Kostenloses Angebot anfragen
                 </Link>
               </Button>
@@ -376,7 +376,7 @@ export default function WaermepumpePage() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-white text-[#0F5B78] hover:bg-white/90 font-semibold border-2">
-                <Link href="/kontakt">
+                <Link href="/kontakt?tab=quote&service=waermepumpe&message=Ich interessiere mich für ein Hybrid-System (Wärmepumpe + Solarthermie). Bitte erstellen Sie mir ein individuelles Angebot.">
                   Hybrid-System anfragen
                 </Link>
               </Button>
@@ -387,7 +387,11 @@ export default function WaermepumpePage() {
 
       <FAQSection faqs={faqs} />
 
-      <CTASection variant="gradient" />
+      <CTASection
+        variant="gradient"
+        service="waermepumpe"
+        message="Ich interessiere mich für eine Wärmepumpe. Bitte kontaktieren Sie mich für eine kostenlose Beratung."
+      />
     </>
   );
 }

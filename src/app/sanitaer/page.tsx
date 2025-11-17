@@ -263,7 +263,11 @@ export default function SanitaerPage() {
 
       <FAQSection faqs={faqs} />
 
-      <CTASection variant="gradient" />
+      <CTASection
+        variant="gradient"
+        service="sanitaer"
+        message="Ich interessiere mich für eine Badsanierung. Bitte kontaktieren Sie mich für eine kostenlose Beratung und 3D-Planung."
+      />
     </>
   );
 }

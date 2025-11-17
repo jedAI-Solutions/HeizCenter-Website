@@ -242,7 +242,11 @@ export default function KlimaanlagePage() {
 
       <FAQSection faqs={faqs} />
 
-      <CTASection variant="gradient" />
+      <CTASection
+        variant="gradient"
+        service="klimaanlage"
+        message="Ich interessiere mich für eine Klimaanlage. Bitte kontaktieren Sie mich für eine kostenlose Beratung."
+      />
     </>
   );
 }

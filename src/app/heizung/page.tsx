@@ -248,7 +248,7 @@ export default function HeizungPage() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#0F5B78] text-lg">
-                <Link href="/kontakt">
+                <Link href="/kontakt?tab=quote&service=heizung&message=Ich interessiere mich für einen Wartungsvertrag für meine Heizung. Bitte kontaktieren Sie mich für weitere Informationen.">
                   Beratung anfragen
                 </Link>
               </Button>
@@ -305,7 +305,7 @@ export default function HeizungPage() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-white hover:bg-white/90 text-[#0F5B78] border-2 border-[#0F5B78] font-semibold">
-                <Link href="/kontakt">
+                <Link href="/kontakt?tab=quote&service=heizung&message=Ich interessiere mich für ein Kombi-System (Heizung + Solarthermie). Bitte erstellen Sie mir ein individuelles Angebot.">
                   Kombi-System anfragen
                 </Link>
               </Button>
@@ -316,7 +316,11 @@ export default function HeizungPage() {
 
       <FAQSection faqs={faqs} />
 
-      <CTASection variant="gradient" />
+      <CTASection
+        variant="gradient"
+        service="heizung"
+        message="Ich interessiere mich für eine neue Heizung. Bitte kontaktieren Sie mich für eine kostenlose Beratung."
+      />
     </>
   );
 }

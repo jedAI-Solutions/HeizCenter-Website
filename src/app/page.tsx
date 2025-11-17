@@ -132,7 +132,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-[#FFCA28] hover:bg-[#F5B800] text-slate-900 font-semibold">
-                <Link href="/kontakt">Kostenlose Beratung</Link>
+                <Link href="/kontakt?tab=quote&message=Ich interessiere mich für eine kostenlose Beratung zu modernen Heizungslösungen. Bitte kontaktieren Sie mich.">Kostenlose Beratung</Link>
               </Button>
               <Button asChild size="lg" className="bg-white hover:bg-white/90 text-[#0F5B78] font-semibold">
                 <Link href="/waermepumpe">Mehr über Wärmepumpen</Link>
@@ -227,7 +227,7 @@ export default function Home() {
             Lassen Sie sich kostenlos und unverbindlich beraten!
           </p>
           <Button asChild size="lg" className="bg-[#FFCA28] hover:bg-[#F5B800] text-slate-900 text-lg">
-            <Link href="/kontakt">Jetzt Beratungstermin vereinbaren</Link>
+            <Link href="/kontakt?tab=quote&message=Ich möchte einen Beratungstermin für meine neue Heizung vereinbaren.">Jetzt Beratungstermin vereinbaren</Link>
           </Button>
         </div>
       </section>

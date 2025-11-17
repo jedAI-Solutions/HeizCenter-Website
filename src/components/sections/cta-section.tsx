@@ -7,13 +7,24 @@ interface CTASectionProps {
   title?: string;
   description?: string;
   variant?: "default" | "gradient";
+  message?: string;
+  service?: string;
 }
 
 export function CTASection({
   title = "Interesse geweckt?",
   description = "Lassen Sie sich jetzt kostenlos und unverbindlich beraten!",
   variant = "default",
+  message,
+  service,
 }: CTASectionProps) {
+  // Build contact URL with optional parameters
+  const buildContactUrl = () => {
+    const params = new URLSearchParams({ tab: "quote" });
+    if (service) params.set("service", service);
+    if (message) params.set("message", message);
+    return `/kontakt?${params.toString()}`;
+  };
   if (variant === "gradient") {
     return (
       <section className="bg-slate-100 text-slate-900 py-16">
@@ -22,7 +33,7 @@ export function CTASection({
           <p className="text-xl mb-8 text-slate-700">{description}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="text-lg bg-[#FFCA28] hover:bg-[#F5B800] text-slate-900 font-semibold">
-              <Link href="/kontakt">Beratungstermin vereinbaren</Link>
+              <Link href={buildContactUrl()}>Beratungstermin vereinbaren</Link>
             </Button>
             <Button
               asChild
@@ -75,7 +86,7 @@ export function CTASection({
               </Link>
             </div>
             <Button asChild size="lg" className="text-lg">
-              <Link href="/kontakt">Jetzt Beratungstermin vereinbaren</Link>
+              <Link href={buildContactUrl()}>Jetzt Beratungstermin vereinbaren</Link>
             </Button>
           </div>
         </CardContent>
