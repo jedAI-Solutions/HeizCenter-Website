@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, Shield } from "lucide-react";
@@ -20,9 +21,25 @@ export default function WartungsvertragPage() {
 
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {[
-            { name: "Basis", price: "149", features: ["1x jährliche Wartung", "Priorität im Notfall", "10% Rabatt auf Reparaturen"] },
-            { name: "Komfort", price: "249", features: ["2x jährliche Wartung", "Bevorzugter Notdienst", "15% Rabatt auf Reparaturen", "Kostenlose Anfahrt"], highlight: true },
-            { name: "Premium", price: "399", features: ["3x jährliche Wartung", "24/7 Notdienst Priorität", "20% Rabatt auf Reparaturen", "Kostenlose Anfahrt", "Ersatzteilgarantie"] },
+            {
+              name: "Basis",
+              price: "149",
+              features: ["1x jährliche Wartung", "Priorität im Notfall", "10% Rabatt auf Reparaturen"],
+              message: "Ich interessiere mich für den Wartungsvertrag BASIS (149€/Jahr) mit 1x jährlicher Wartung, Priorität im Notfall und 10% Rabatt auf Reparaturen. Bitte kontaktieren Sie mich für ein unverbindliches Angebot."
+            },
+            {
+              name: "Komfort",
+              price: "249",
+              features: ["2x jährliche Wartung", "Bevorzugter Notdienst", "15% Rabatt auf Reparaturen", "Kostenlose Anfahrt"],
+              highlight: true,
+              message: "Ich interessiere mich für den Wartungsvertrag KOMFORT (249€/Jahr) mit 2x jährlicher Wartung, bevorzugtem Notdienst, 15% Rabatt auf Reparaturen und kostenloser Anfahrt. Bitte kontaktieren Sie mich für ein unverbindliches Angebot."
+            },
+            {
+              name: "Premium",
+              price: "399",
+              features: ["3x jährliche Wartung", "24/7 Notdienst Priorität", "20% Rabatt auf Reparaturen", "Kostenlose Anfahrt", "Ersatzteilgarantie"],
+              message: "Ich interessiere mich für den Wartungsvertrag PREMIUM (399€/Jahr) mit 3x jährlicher Wartung, 24/7 Notdienst Priorität, 20% Rabatt auf Reparaturen, kostenloser Anfahrt und Ersatzteilgarantie. Bitte kontaktieren Sie mich für ein unverbindliches Angebot."
+            },
           ].map((plan, i) => (
             <Card key={i} className={`${plan.highlight ? "border-2 border-[#0F5B78]" : ""} flex flex-col h-full`}>
               <CardContent className="p-8 flex flex-col h-full">
@@ -59,8 +76,10 @@ export default function WartungsvertragPage() {
                 </ul>
 
                 {/* CTA Button - Fixed at Bottom */}
-                <Button className="w-full mt-auto" variant={plan.highlight ? "default" : "outline"}>
-                  Jetzt anfragen
+                <Button asChild className="w-full mt-auto" variant={plan.highlight ? "default" : "outline"}>
+                  <Link href={`/kontakt?tab=contact&message=${encodeURIComponent(plan.message)}`}>
+                    Jetzt anfragen
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
