@@ -39,6 +39,7 @@ export function QuoteForm(props: QuoteFormProps) {
     formState: { errors },
     reset,
     control,
+    setValue,
   } = useForm<QuoteFormData>({
     resolver: zodResolver(quoteFormSchema),
     mode: "onChange",
