@@ -72,8 +72,8 @@ export default function UeberUnsPage() {
             <span className="text-[#0F5B78] font-semibold text-sm uppercase tracking-wider">Unsere Geschichte</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">Wie alles begann</h2>
           </div>
-          <div className="grid md:grid-cols-5 gap-12 items-start">
-            <div className="md:col-span-2">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div>
               <div className="prose prose-slate max-w-none">
                 <p className="text-lg mb-6 text-slate-700 leading-relaxed">
                   HeizCenter wurde mit der Vision gegründet, modernes Heizen und Sanitär für jeden
@@ -87,21 +87,9 @@ export default function UeberUnsPage() {
                   und bleiben gleichzeitig Ihrem persönlichen Ansprechpartner vor Ort.
                 </p>
               </div>
-
-              {/* Vision Card */}
-              <div className="mt-8 bg-gradient-to-br from-[#0F5B78] to-[#0D4A61] p-6 rounded-2xl text-white">
-                <div className="flex items-center gap-3 mb-3">
-                  <Target className="h-10 w-10 text-blue-200" />
-                  <h3 className="text-xl font-bold">Unsere Vision</h3>
-                </div>
-                <p className="text-blue-50 leading-relaxed">
-                  Eine klimaneutrale Zukunft durch nachhaltige Heiztechnologie – für jedes Zuhause
-                  und jedes Budget erreichbar.
-                </p>
-              </div>
             </div>
 
-            <div className="md:col-span-3 relative">
+            <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/überuns.jpeg"
@@ -110,6 +98,19 @@ export default function UeberUnsPage() {
                   height={600}
                   className="object-cover w-full h-auto"
                 />
+                {/* Vision Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0F5B78]/95 via-[#0F5B78]/85 to-transparent p-8">
+                  <div className="flex items-start gap-3">
+                    <Target className="h-8 w-8 text-blue-200 flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-2">Unsere Vision</h3>
+                      <p className="text-blue-50 leading-relaxed">
+                        Eine klimaneutrale Zukunft durch nachhaltige Heiztechnologie – für jedes Zuhause
+                        und jedes Budget erreichbar.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-[#0F5B78] to-[#0D4A61] rounded-full opacity-20 blur-2xl"></div>
             </div>
@@ -303,9 +304,9 @@ export default function UeberUnsPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-[#0F5B78] text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#0F5B78] rounded-full blur-3xl opacity-20"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600 rounded-full blur-3xl opacity-20"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-500 rounded-full blur-3xl opacity-20"></div>
 
         <div className="container text-center relative">
@@ -318,7 +319,7 @@ export default function UeberUnsPage() {
             <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
               Werden Sie Teil unserer Erfolgsgeschichte
             </h2>
-            <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-blue-50 mb-10 max-w-2xl mx-auto leading-relaxed">
               Überzeugen Sie sich selbst von unserer Leistung. Vereinbaren Sie noch heute einen
               kostenlosen Beratungstermin.
             </p>
@@ -330,7 +331,7 @@ export default function UeberUnsPage() {
                   Jetzt Kontakt aufnehmen
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-bold transition-all hover:scale-105">
+              <Button asChild size="lg" className="bg-slate-800 text-white hover:bg-slate-700 border-2 border-white/20 font-bold transition-all hover:scale-105">
                 <Link href="/karriere">Karriere bei HeizCenter</Link>
               </Button>
             </div>
