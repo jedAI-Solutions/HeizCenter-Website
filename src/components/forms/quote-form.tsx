@@ -47,8 +47,9 @@ export function QuoteForm(props: QuoteFormProps) {
     },
   });
 
-  // Watch serviceType to sync with Select component
+  // Watch serviceType and propertyType to sync with Select components
   const selectedService = watch("serviceType");
+  const selectedPropertyType = watch("propertyType");
 
   // Pre-fill form from URL parameters (from calculator or other sources)
   useEffect(() => {
@@ -273,6 +274,7 @@ export function QuoteForm(props: QuoteFormProps) {
       <div>
         <Label htmlFor="propertyType">Objektart *</Label>
         <Select
+          value={selectedPropertyType}
           onValueChange={(value) => {
             setValue("propertyType", value as QuoteFormData["propertyType"]);
           }}
