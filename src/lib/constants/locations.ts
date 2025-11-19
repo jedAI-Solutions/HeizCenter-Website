@@ -6,7 +6,7 @@ export const LOCATIONS: Location[] = [
     name: "Bobingen",
     city: "Bobingen",
     address: "Lechallee 28, 86399 Bobingen",
-    phone: "+49 8234 966590",
+    phone: "+49 8234 9665900",
     email: "service@heizcenter.de",
     coordinates: {
       lat: 48.2764,
@@ -18,7 +18,7 @@ export const LOCATIONS: Location[] = [
     name: "Gutenzell-Hürbel",
     city: "Gutenzell-Hürbel",
     address: "Schlüsselbergstraße 5, 88484 Gutenzell-Hürbel",
-    phone: "+49 8234 966590",
+    phone: "+49 8234 9665900",
     email: "service@heizcenter.de",
     coordinates: {
       lat: 48.0667,
