@@ -14,6 +14,7 @@ function ContactTabs() {
   const searchParams = useSearchParams();
   const defaultTab = searchParams.get("tab") || "contact";
   const prefilledMessage = searchParams.get("message") || "";
+  const prefilledSubject = searchParams.get("subject") || "";
 
   return (
     <Tabs defaultValue={defaultTab} className="w-full">
@@ -56,7 +57,7 @@ function ContactTabs() {
               Dienstleistungen erfahren? Kontaktieren Sie uns gerne.
             </p>
           </div>
-          <ContactForm initialMessage={prefilledMessage} />
+          <ContactForm initialMessage={prefilledMessage} initialSubject={prefilledSubject} />
         </div>
       </TabsContent>
 

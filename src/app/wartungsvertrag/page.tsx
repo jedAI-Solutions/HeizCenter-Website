@@ -25,6 +25,7 @@ export default function WartungsvertragPage() {
               name: "Basis",
               price: "149",
               features: ["1x jährliche Wartung", "Priorität im Notfall", "10% Rabatt auf Reparaturen"],
+              subject: "Wartungsvertrag Basis",
               message: "Ich interessiere mich für den Wartungsvertrag BASIS (149€/Jahr) mit 1x jährlicher Wartung, Priorität im Notfall und 10% Rabatt auf Reparaturen. Bitte kontaktieren Sie mich für ein unverbindliches Angebot."
             },
             {
@@ -32,12 +33,14 @@ export default function WartungsvertragPage() {
               price: "249",
               features: ["2x jährliche Wartung", "Bevorzugter Notdienst", "15% Rabatt auf Reparaturen", "Kostenlose Anfahrt"],
               highlight: true,
+              subject: "Wartungsvertrag Komfort",
               message: "Ich interessiere mich für den Wartungsvertrag KOMFORT (249€/Jahr) mit 2x jährlicher Wartung, bevorzugtem Notdienst, 15% Rabatt auf Reparaturen und kostenloser Anfahrt. Bitte kontaktieren Sie mich für ein unverbindliches Angebot."
             },
             {
               name: "Premium",
               price: "399",
               features: ["3x jährliche Wartung", "24/7 Notdienst Priorität", "20% Rabatt auf Reparaturen", "Kostenlose Anfahrt", "Ersatzteilgarantie"],
+              subject: "Wartungsvertrag Premium",
               message: "Ich interessiere mich für den Wartungsvertrag PREMIUM (399€/Jahr) mit 3x jährlicher Wartung, 24/7 Notdienst Priorität, 20% Rabatt auf Reparaturen, kostenloser Anfahrt und Ersatzteilgarantie. Bitte kontaktieren Sie mich für ein unverbindliches Angebot."
             },
           ].map((plan, i) => (
@@ -77,7 +80,7 @@ export default function WartungsvertragPage() {
 
                 {/* CTA Button - Fixed at Bottom */}
                 <Button asChild className="w-full mt-auto" variant={plan.highlight ? "default" : "outline"}>
-                  <Link href={`/kontakt?tab=contact&message=${encodeURIComponent(plan.message)}`}>
+                  <Link href={`/kontakt?tab=contact&subject=${encodeURIComponent(plan.subject)}&message=${encodeURIComponent(plan.message)}`}>
                     Jetzt anfragen
                   </Link>
                 </Button>

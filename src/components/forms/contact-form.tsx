@@ -13,9 +13,10 @@ import { CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
 interface ContactFormProps {
   initialMessage?: string;
+  initialSubject?: string;
 }
 
-export function ContactForm({ initialMessage = "" }: ContactFormProps) {
+export function ContactForm({ initialMessage = "", initialSubject = "" }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null;
@@ -32,12 +33,15 @@ export function ContactForm({ initialMessage = "" }: ContactFormProps) {
     resolver: zodResolver(contactFormSchema),
   });
 
-  // Pre-fill message from prop
+  // Pre-fill subject and message from props
   useEffect(() => {
+    if (initialSubject) {
+      setValue("subject", initialSubject);
+    }
     if (initialMessage) {
       setValue("message", initialMessage);
     }
-  }, [initialMessage, setValue]);
+  }, [initialSubject, initialMessage, setValue]);
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
