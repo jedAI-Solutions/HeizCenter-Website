@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactFormSchema, ContactFormData } from "@/lib/validations/contact";
@@ -12,8 +11,11 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
-export function ContactForm() {
-  const searchParams = useSearchParams();
+interface ContactFormProps {
+  initialMessage?: string;
+}
+
+export function ContactForm({ initialMessage = "" }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null;
@@ -30,13 +32,12 @@ export function ContactForm() {
     resolver: zodResolver(contactFormSchema),
   });
 
-  // Pre-fill message from URL parameter
+  // Pre-fill message from prop
   useEffect(() => {
-    const message = searchParams.get("message");
-    if (message) {
-      setValue("message", decodeURIComponent(message));
+    if (initialMessage) {
+      setValue("message", initialMessage);
     }
-  }, [searchParams, setValue]);
+  }, [initialMessage, setValue]);
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
