@@ -170,7 +170,7 @@ export default function JunkersPage() {
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Product", name: "Junkers Bosch Compress Wärmepumpe", brand: { "@type": "Brand", name: "Junkers Bosch" }, description: "Junkers Bosch Wärmepumpen. Teil der Bosch Thermotechnik. Installation durch HeizCenter.", category: "Wärmepumpe", offers: { "@type": "AggregateOffer", priceCurrency: "EUR", lowPrice: "17500", highPrice: "29000", availability: "https://schema.org/InStock", seller: { "@type": "LocalBusiness", name: "HeizCenter GmbH", telephone: "+49 8234 96659 00" } }, aggregateRating: { "@type": "AggregateRating", ratingValue: "4.6", reviewCount: "60" }, manufacturer: { "@type": "Organization", name: "Bosch Thermotechnik GmbH", url: "https://www.bosch-thermotechnology.com" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Product", name: "Junkers Bosch Compress Wärmepumpe", brand: { "@type": "Brand", name: "Junkers Bosch" }, description: "Junkers Bosch Wärmepumpen. Teil der Bosch Thermotechnik. Installation durch HeizCenter.", category: "Wärmepumpe", offers: { "@type": "AggregateOffer", priceCurrency: "EUR", lowPrice: "17500", highPrice: "29000", availability: "https://schema.org/InStock", seller: { "@type": "LocalBusiness", name: "HeizCenter GmbH", telephone: "+49 8234 9665900" } }, aggregateRating: { "@type": "AggregateRating", ratingValue: "4.6", reviewCount: "60" }, manufacturer: { "@type": "Organization", name: "Bosch Thermotechnik GmbH", url: "https://www.bosch-thermotechnology.com" } }) }} />
     </>
   );
 }

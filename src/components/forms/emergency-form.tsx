@@ -68,7 +68,7 @@ export function EmergencyForm() {
       setSubmitStatus({
         type: "error",
         message:
-          "Ein Fehler ist aufgetreten. Bitte rufen Sie uns direkt an: +49 8234 96659 00",
+          "Ein Fehler ist aufgetreten. Bitte rufen Sie uns direkt an: +49 8234 9665900",
       });
     } finally {
       setIsSubmitting(false);
@@ -90,7 +90,7 @@ export function EmergencyForm() {
             href="tel:+4982349665900"
             className="inline-block bg-red-600 text-white font-bold px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
           >
-            +49 8234 96659 00
+            +49 8234 9665900
           </a>
         </div>
       </div>
@@ -134,7 +134,7 @@ export function EmergencyForm() {
             id="phone"
             type="tel"
             {...register("phone")}
-            placeholder="+49 8234 96659 00"
+            placeholder="+49 8234 9665900"
             className={errors.phone ? "border-red-500" : ""}
           />
           {errors.phone && (

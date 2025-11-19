@@ -29,7 +29,7 @@ export function Footer() {
                 className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                +49 8234 96659 00
+                +49 8234 9665900
               </a>
               <a
                 href="mailto:service@heizcenter.de"

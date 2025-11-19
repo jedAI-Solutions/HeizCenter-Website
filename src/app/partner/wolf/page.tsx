@@ -469,7 +469,7 @@ export default function WolfPage() {
               seller: {
                 "@type": "LocalBusiness",
                 name: "HeizCenter GmbH",
-                telephone: "+49 8234 96659 00",
+                telephone: "+49 8234 9665900",
               },
             },
             aggregateRating: {

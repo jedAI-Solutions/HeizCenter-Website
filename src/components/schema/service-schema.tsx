@@ -37,7 +37,7 @@ export function ServiceSchema({ serviceType }: ServiceSchemaProps) {
       "@type": "PlumbingHeatingContractor",
       name: "HeizCenter GmbH",
       url: "https://heizcenter.de",
-      telephone: "+49-8234-9665900",
+      telephone: "+4982349665900",
     },
     areaServed: serviceCities,
     hasOfferCatalog: {
@@ -124,7 +124,7 @@ export function ServiceSchema({ serviceType }: ServiceSchemaProps) {
     availableChannel: {
       "@type": "ServiceChannel",
       serviceUrl: "https://heizcenter.de/kontakt",
-      servicePhone: "+49-8234-9665900",
+      servicePhone: "+4982349665900",
     },
   };
 
@@ -139,7 +139,7 @@ export function ServiceSchema({ serviceType }: ServiceSchemaProps) {
       "@type": "PlumbingHeatingContractor",
       name: "HeizCenter GmbH",
       url: "https://heizcenter.de",
-      telephone: "+49-8234-9665900",
+      telephone: "+4982349665900",
     },
     areaServed: serviceCities,
     hasOfferCatalog: {
@@ -235,7 +235,7 @@ export function ServiceSchema({ serviceType }: ServiceSchemaProps) {
     availableChannel: {
       "@type": "ServiceChannel",
       serviceUrl: "https://heizcenter.de/kontakt",
-      servicePhone: "+49-8234-9665900",
+      servicePhone: "+4982349665900",
     },
   };
 
@@ -250,7 +250,7 @@ export function ServiceSchema({ serviceType }: ServiceSchemaProps) {
       "@type": "PlumbingHeatingContractor",
       name: "HeizCenter GmbH",
       url: "https://heizcenter.de",
-      telephone: "+49-8234-9665900",
+      telephone: "+4982349665900",
     },
     areaServed: serviceCities,
     hasOfferCatalog: {
@@ -322,7 +322,7 @@ export function ServiceSchema({ serviceType }: ServiceSchemaProps) {
     availableChannel: {
       "@type": "ServiceChannel",
       serviceUrl: "https://heizcenter.de/kontakt",
-      servicePhone: "+49-8234-9665900",
+      servicePhone: "+4982349665900",
     },
   };
 
@@ -337,7 +337,7 @@ export function ServiceSchema({ serviceType }: ServiceSchemaProps) {
       "@type": "PlumbingHeatingContractor",
       name: "HeizCenter GmbH",
       url: "https://heizcenter.de",
-      telephone: "+49-8234-9665900",
+      telephone: "+4982349665900",
     },
     areaServed: serviceCities,
     hasOfferCatalog: {
@@ -431,7 +431,7 @@ export function ServiceSchema({ serviceType }: ServiceSchemaProps) {
     availableChannel: {
       "@type": "ServiceChannel",
       serviceUrl: "https://heizcenter.de/kontakt",
-      servicePhone: "+49-8234-9665900",
+      servicePhone: "+4982349665900",
     },
   };
 
@@ -446,7 +446,7 @@ export function ServiceSchema({ serviceType }: ServiceSchemaProps) {
       "@type": "PlumbingHeatingContractor",
       name: "HeizCenter GmbH",
       url: "https://heizcenter.de",
-      telephone: "+49-8234-9665900",
+      telephone: "+4982349665900",
     },
     areaServed: serviceCities,
     hasOfferCatalog: {
@@ -566,7 +566,7 @@ export function ServiceSchema({ serviceType }: ServiceSchemaProps) {
     availableChannel: {
       "@type": "ServiceChannel",
       serviceUrl: "https://heizcenter.de/kontakt",
-      servicePhone: "+49-8234-9665900",
+      servicePhone: "+4982349665900",
     },
   };
 

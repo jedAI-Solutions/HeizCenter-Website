@@ -39,7 +39,7 @@ export function InlineCta({
       icon: <Phone className="h-6 w-6" />,
       defaultTitle: "Rufen Sie uns an",
       defaultDescription: "Wir beraten Sie gerne telefonisch.",
-      cta: "+49 8234 96659 00",
+      cta: "+49 8234 9665900",
       href: "tel:+4982349665900",
       bg: "bg-orange-600",
       hoverBg: "hover:bg-orange-700",

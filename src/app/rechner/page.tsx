@@ -163,7 +163,7 @@ export default function RechnerPage() {
                 href="tel:+4982349665900"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-[#FFCA28] text-[#FFCA28] font-semibold rounded-lg hover:bg-[#FFCA28] hover:text-slate-900 transition-colors"
               >
-                +49 8234 96659 00
+                +49 8234 9665900
               </a>
             </div>
           </div>

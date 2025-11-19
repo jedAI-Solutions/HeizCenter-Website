@@ -107,7 +107,7 @@ export default function NotFound() {
               className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-lg transition-colors"
             >
               <Phone className="h-5 w-5" />
-              +49 8234 96659 00
+              +49 8234 9665900
             </a>
           </div>
         </div>

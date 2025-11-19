@@ -1,3 +1,5 @@
+import { getSchemaRating } from "@/lib/config/reviews";
+
 export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
@@ -12,7 +14,7 @@ export function OrganizationSchema() {
     slogan: "Ihre Experten für moderne Heizsysteme",
 
     // Contact Information
-    telephone: "+49-8234-9665900",
+    telephone: "+4982349665900",
     email: "info@heizcenter.de",
 
     // Main Office Address (Bobingen)
@@ -66,21 +68,21 @@ export function OrganizationSchema() {
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: "+49-8234-9665900",
+        telephone: "+4982349665900",
         contactType: "customer service",
         areaServed: ["DE"],
         availableLanguage: ["German"],
       },
       {
         "@type": "ContactPoint",
-        telephone: "+49-8234-9665900",
+        telephone: "+4982349665900",
         contactType: "sales",
         areaServed: ["DE"],
         availableLanguage: ["German"],
       },
       {
         "@type": "ContactPoint",
-        telephone: "+49-8234-9665900",
+        telephone: "+4982349665900",
         contactType: "emergency",
         areaServed: ["DE"],
         availableLanguage: ["German"],
@@ -120,9 +122,7 @@ export function OrganizationSchema() {
 
     // Ratings
     aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "5",
+      ...getSchemaRating(),
       bestRating: "5",
       worstRating: "1",
     },

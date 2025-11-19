@@ -34,7 +34,7 @@ export default function ImpressumPage() {
           <h3 className="text-xl font-bold mb-4">Telefon</h3>
           <p className="mb-2">
             <a href="tel:+4982349665900" className="text-[#0F5B78] hover:underline">
-              +49 8234 96659 00
+              +49 8234 9665900
             </a>
           </p>
         </section>

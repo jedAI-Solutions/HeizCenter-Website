@@ -1,51 +1,16 @@
 import { Star, Quote } from "lucide-react";
-
-interface Review {
-  name: string;
-  location: string;
-  rating: number;
-  text: string;
-  service: string;
-  date: string;
-}
+import { REVIEWS } from "@/lib/config/reviews";
 
 interface CustomerReviewsProps {
   variant?: "cards" | "testimonial" | "compact";
   limit?: number;
 }
 
-const mockReviews: Review[] = [
-  {
-    name: "Familie Müller",
-    location: "Augsburg",
-    rating: 5,
-    text: "Sehr professionelle Beratung und Installation unserer neuen Wärmepumpe. Das Team war pünktlich und hat alles sauber hinterlassen. Top!",
-    service: "Wärmepumpe",
-    date: "Vor 2 Wochen",
-  },
-  {
-    name: "Thomas Schmidt",
-    location: "Ulm",
-    rating: 5,
-    text: "Notdienst am Sonntag - binnen 2 Stunden war der Techniker da und hat unsere defekte Heizung repariert. Absolut zuverlässig!",
-    service: "Notdienst Heizung",
-    date: "Vor 1 Monat",
-  },
-  {
-    name: "Anna Weber",
-    location: "Memmingen",
-    rating: 5,
-    text: "Komplette Badsanierung durchgeführt. Tolle Beratung, faire Preise und hervorragende Handwerksarbeit. Sehr empfehlenswert!",
-    service: "Badsanierung",
-    date: "Vor 3 Wochen",
-  },
-];
-
 export function CustomerReviews({
   variant = "cards",
   limit = 3,
 }: CustomerReviewsProps) {
-  const reviews = mockReviews.slice(0, limit);
+  const reviews = REVIEWS.testimonials.slice(0, limit);
 
   if (variant === "compact") {
     return (
@@ -53,7 +18,7 @@ export function CustomerReviews({
         <div className="flex items-center justify-between mb-4">
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-3xl font-bold">4.9</span>
+              <span className="text-3xl font-bold">{REVIEWS.google.rating}</span>
               <div className="flex text-yellow-500">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-5 w-5 fill-current" />
@@ -63,7 +28,7 @@ export function CustomerReviews({
             <p className="text-sm text-slate-600">Bei Google bewertet</p>
           </div>
           <div className="text-right">
-            <p className="font-bold text-lg">100%</p>
+            <p className="font-bold text-lg">{REVIEWS.stats.recommendationRate}%</p>
             <p className="text-sm text-slate-600">Weiterempfehlung</p>
           </div>
         </div>
@@ -133,23 +98,17 @@ export function CustomerReviews({
   );
 }
 
-interface ReviewStatsProps {
-  totalReviews?: number;
-  averageRating?: number;
-  recommendationRate?: number;
-}
 
-export function ReviewStats({
-  totalReviews: _totalReviews = 5,
-  averageRating = 4.8,
-  recommendationRate = 100,
-}: ReviewStatsProps) {
+export function ReviewStats() {
+  const rating = REVIEWS.google.rating;
+  const recommendationRate = REVIEWS.stats.recommendationRate;
+
   return (
     <div className="flex flex-wrap items-center justify-center gap-8">
       <div className="text-center">
         <div className="flex items-baseline justify-center gap-2 mb-1">
           <span className="text-4xl font-bold text-[#0F5B78]">
-            {averageRating}
+            {rating}
           </span>
           <span className="text-slate-600">/5</span>
         </div>

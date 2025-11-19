@@ -22,7 +22,7 @@ export function CtaBanner({ variant = "default", className }: CtaBannerProps) {
       icon: <AlertCircle className="h-6 w-6" />,
       title: "Notfall? Wir sind 24/7 für Sie da!",
       description: "Heizungsausfall, Rohrbruch oder Gasgeruch",
-      cta: "Jetzt anrufen: +49 8234 96659 00",
+      cta: "Jetzt anrufen: +49 8234 9665900",
       href: "tel:+4982349665900",
     },
     limited: {

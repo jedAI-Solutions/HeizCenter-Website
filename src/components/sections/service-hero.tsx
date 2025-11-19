@@ -79,7 +79,7 @@ export function ServiceHero({
                 <Link href="/kontakt">Kostenlose Beratung</Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="tel:+4982349665900">+49 8234 96659 00</Link>
+                <Link href="tel:+4982349665900">+49 8234 9665900</Link>
               </Button>
             </div>
           </div>

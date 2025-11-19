@@ -1,3 +1,4 @@
+import { getSchemaRating } from "@/lib/config/reviews";
 interface LocalBusinessSchemaProps {
   location: "bobingen" | "gutenzell";
   includeServices?: boolean;
@@ -14,7 +15,7 @@ export function LocalBusinessSchema({
     image: "https://heizcenter.de/images/logo.png",
     "@id": "https://heizcenter.de/#bobingen",
     url: "https://heizcenter.de",
-    telephone: "+49-8234-9665900",
+    telephone: "+4982349665900",
     priceRange: "€€",
     address: {
       "@type": "PostalAddress",
@@ -42,11 +43,7 @@ export function LocalBusinessSchema({
       "https://www.instagram.com/heizcentermb/",
       "https://www.linkedin.com/company/heizcenter/",
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "5",
-    },
+    aggregateRating: getSchemaRating(),
     areaServed: [
       { "@type": "City", name: "Augsburg" },
       { "@type": "City", name: "Bobingen" },
@@ -108,7 +105,7 @@ export function LocalBusinessSchema({
     image: "https://heizcenter.de/images/logo.png",
     "@id": "https://heizcenter.de/#gutenzell",
     url: "https://heizcenter.de/standorte/gutenzell-huerbel",
-    telephone: "+49-8234-9665900",
+    telephone: "+4982349665900",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Gutenzell-Hürbel",
@@ -126,11 +123,7 @@ export function LocalBusinessSchema({
       name: "HeizCenter GmbH",
       url: "https://heizcenter.de",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "5",
-    },
+    aggregateRating: getSchemaRating(),
     areaServed: [
       { "@type": "City", name: "Ulm" },
       { "@type": "City", name: "Memmingen" },
@@ -181,7 +174,7 @@ export function LocationPageSchema({
     image: "https://heizcenter.de/images/logo.png",
     "@id": `https://heizcenter.de/standorte/${cityName.toLowerCase().replace(/\s+/g, "-")}`,
     url: `https://heizcenter.de/standorte/${cityName.toLowerCase().replace(/\s+/g, "-")}`,
-    telephone: "+49-8234-9665900",
+    telephone: "+4982349665900",
     address: {
       "@type": "PostalAddress",
       addressLocality: cityName,
@@ -199,11 +192,7 @@ export function LocationPageSchema({
       name: "HeizCenter GmbH",
       url: "https://heizcenter.de",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "5",
-    },
+    aggregateRating: getSchemaRating(),
     areaServed: serviceCities.map((city) => ({
       "@type": "City",
       name: city,

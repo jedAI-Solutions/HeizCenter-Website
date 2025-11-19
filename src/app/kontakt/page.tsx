@@ -129,7 +129,7 @@ export default function ContactPage() {
                 className="inline-flex items-center gap-2 bg-white text-[#0F5B78] px-6 py-3 rounded-lg font-bold hover:bg-[#FFCA28] hover:text-slate-900 transition-colors"
               >
                 <Phone className="h-5 w-5" />
-                +49 8234 96659 00
+                +49 8234 9665900
               </a>
               <a
                 href="https://wa.me/4915111100331"
@@ -170,7 +170,7 @@ export default function ContactPage() {
                 href="tel:+4982349665900"
                 className="hover:text-[#0F5B78] transition-colors"
               >
-                +49 8234 96659 00
+                +49 8234 9665900
               </a>
             </div>
             <div className="flex items-start gap-2 text-sm text-slate-600 mb-2">
@@ -209,7 +209,7 @@ export default function ContactPage() {
                 href="tel:+4982349665900"
                 className="hover:text-[#0F5B78] transition-colors"
               >
-                +49 8234 96659 00
+                +49 8234 9665900
               </a>
             </div>
             <div className="flex items-start gap-2 text-sm text-slate-600 mb-2">
@@ -295,7 +295,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="font-bold mb-2">Google Bewertung</h3>
                 <p className="text-sm text-slate-600">
-                  5 positive Google Bewertungen sprechen für unsere Qualität
+                  Unsere Kunden bewerten uns durchschnittlich mit 4.8 Sternen
                 </p>
               </div>
 
@@ -328,7 +328,7 @@ export default function ContactPage() {
             provider: {
               "@type": "LocalBusiness",
               name: "HeizCenter GmbH",
-              telephone: "+49 8234 96659 00",
+              telephone: "+49 8234 9665900",
               email: "service@heizcenter.de",
               address: [
                 {

@@ -91,7 +91,7 @@ interface EmergencyHotlineProps {
 }
 
 export function EmergencyHotline({
-  phoneNumber = "+49 8234 96659 00",
+  phoneNumber = "+49 8234 9665900",
   className,
 }: EmergencyHotlineProps) {
   return (
@@ -131,7 +131,7 @@ interface LocationPhoneProps {
 
 export function LocationPhone({ location, variant = "compact" }: LocationPhoneProps) {
   const phones = {
-    Augsburg: "+49 8234 96659 00",
+    Augsburg: "+49 8234 9665900",
     Ulm: "+49 731 234567",
     Memmingen: "+49 8331 45678",
   };

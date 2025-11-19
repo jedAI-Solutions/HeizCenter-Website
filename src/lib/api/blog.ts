@@ -2350,7 +2350,7 @@ function getMockBlogPosts(): BlogPost[] {
         <div style="background-color: #0F5B78; color: white; padding: 20px; border-radius: 8px; margin: 30px 0;">
           <h4 style="color: white; margin-top: 0;">Jetzt kostenloses Angebot für Ihre Badsanierung anfordern!</h4>
           <p style="margin-bottom: 15px;">Lassen Sie sich von unseren Experten beraten und erhalten Sie ein individuelles, transparentes Angebot – inkl. Förderberatung!</p>
-          <p><strong>☎ Telefon: +49 8234 96659 00</strong><br>
+          <p><strong>☎ Telefon: +49 8234 9665900</strong><br>
           📧 E-Mail: service@heizcenter.de<br>
           🌐 Online-Anfrage: <a href="/kontakt?tab=quote" style="color: #FFCA28;">Angebot anfragen</a></p>
         </div>
@@ -2869,7 +2869,7 @@ function getMockBlogPosts(): BlogPost[] {
         <div style="background-color: #0F5B78; color: white; padding: 20px; border-radius: 8px; margin: 30px 0;">
           <h3 style="color: white; margin-top: 0;">Jetzt kostenlose Wärmepumpen-Beratung anfragen!</h3>
           <p style="margin-bottom: 15px;">Lassen Sie sich von unseren Experten beraten und erhalten Sie ein individuelles Angebot – inkl. Förderberatung und Wirtschaftlichkeitsberechnung!</p>
-          <p><strong>☎ Telefon: +49 8234 96659 00</strong><br>
+          <p><strong>☎ Telefon: +49 8234 9665900</strong><br>
           📧 E-Mail: service@heizcenter.de<br>
           🌐 Online-Anfrage: <a href="/kontakt?tab=quote" style="color: #FFCA28;">Angebot anfragen</a></p>
         </div>
@@ -3272,7 +3272,7 @@ function getMockBlogPosts(): BlogPost[] {
         <div style="background-color: #0F5B78; color: white; padding: 25px; border-radius: 8px; margin: 30px 0;">
           <h3 style="margin-top: 0; color: white;">💬 Persönliche Beratung bei HeizCenter</h3>
           <p>Sie sind unsicher, welche Heizung die richtige für Ihr Haus ist? Unsere Experten beraten Sie kostenlos und unverbindlich zu allen Optionen, Förderungen und der konkreten Umsetzung in Ihrem Gebäude.</p>
-          <p style="margin-bottom: 0;"><strong>Kontakt:</strong> ☎️ <a href="tel:+4982349665900" style="color: #FFCA28;">+49 8234 96659 00</a> | 📧 <a href="mailto:service@heizcenter.de" style="color: #FFCA28;">service@heizcenter.de</a> | <a href="/kontakt?tab=quote" style="color: #FFCA28; text-decoration: underline;">Jetzt Angebot anfragen</a></p>
+          <p style="margin-bottom: 0;"><strong>Kontakt:</strong> ☎️ <a href="tel:+4982349665900" style="color: #FFCA28;">+49 8234 9665900</a> | 📧 <a href="mailto:service@heizcenter.de" style="color: #FFCA28;">service@heizcenter.de</a> | <a href="/kontakt?tab=quote" style="color: #FFCA28; text-decoration: underline;">Jetzt Angebot anfragen</a></p>
         </div>
 
         <p><strong>Jetzt informieren, Förderung sichern und langfristig sparen!</strong></p>
@@ -3840,7 +3840,7 @@ function getMockBlogPosts(): BlogPost[] {
           <h3 style="margin-top: 0; color: white;">💬 Kostenlose Heizungsberatung bei HeizCenter</h3>
           <p>Unsere Experten analysieren Ihr Gebäude, berechnen die genauen Kosten für alle Systeme und unterstützen Sie bei der Förderbeantragung. Profitieren Sie von unserer 20-jährigen Erfahrung und über 500 installierten Wärmepumpen.</p>
           <p style="margin-bottom: 0;"><strong>Jetzt Kontakt aufnehmen:</strong><br>
-          ☎️ <a href="tel:+4982349665900" style="color: #FFCA28;">+49 8234 96659 00</a> |
+          ☎️ <a href="tel:+4982349665900" style="color: #FFCA28;">+49 8234 9665900</a> |
           📧 <a href="mailto:service@heizcenter.de" style="color: #FFCA28;">service@heizcenter.de</a> |
           <a href="/kontakt?tab=quote" style="color: #FFCA28; text-decoration: underline;">Angebot anfragen</a></p>
         </div>
@@ -4249,7 +4249,7 @@ function getMockBlogPosts(): BlogPost[] {
       <p style="font-size: 18px; margin-bottom: 20px;">Wir beraten Sie kostenlos zu den besten Alternativen, kalkulieren Ihre Förderung und erstellen ein maßgeschneidertes Angebot.</p>
       <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
         <a href="/kontakt?tab=quote" style="display: inline-block; background-color: #FFCA28; color: #0F5B78; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px;">Jetzt Angebot anfragen</a>
-        <a href="tel:+4982349665900" style="display: inline-block; background-color: transparent; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white; font-size: 16px;">☎ +49 8234 96659 00</a>
+        <a href="tel:+4982349665900" style="display: inline-block; background-color: transparent; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white; font-size: 16px;">☎ +49 8234 9665900</a>
       </div>
       <p style="margin-top: 15px; font-size: 14px; opacity: 0.9;">HeizCenter GmbH – Ihr zertifizierter Fachbetrieb für Wärmepumpen und Heizungstausch</p>
     </div>
@@ -4844,7 +4844,7 @@ function getMockBlogPosts(): BlogPost[] {
       <p style="font-size: 18px; margin-bottom: 20px;">Wir planen Ihre ideale Heizlösung – von der Beratung über Förderantrag bis zur Installation. Profitieren Sie von bis zu 70% BEG-Förderung!</p>
       <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
         <a href="/kontakt?tab=quote" style="display: inline-block; background-color: #FFCA28; color: #0F5B78; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px;">Jetzt Angebot anfragen</a>
-        <a href="tel:+4982349665900" style="display: inline-block; background-color: transparent; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white; font-size: 16px;">☎ +49 8234 96659 00</a>
+        <a href="tel:+4982349665900" style="display: inline-block; background-color: transparent; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white; font-size: 16px;">☎ +49 8234 9665900</a>
       </div>
       <p style="margin-top: 15px; font-size: 14px; opacity: 0.9;">HeizCenter GmbH – Ihr zertifizierter Fachpartner für Wärmepumpen und Flächenheizungen</p>
     </div>
@@ -5242,7 +5242,7 @@ function getMockBlogPosts(): BlogPost[] {
       <p style="font-size: 18px; margin-bottom: 20px;">Unsere Heizungsexperten helfen bei hartnäckigen Problemen, Wartung und Optimierung Ihres Heizsystems. Profitieren Sie von über 20 Jahren Erfahrung!</p>
       <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
         <a href="/kontakt?tab=contact" style="display: inline-block; background-color: #FFCA28; color: #0F5B78; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px;">Jetzt Beratung anfragen</a>
-        <a href="tel:+4982349665900" style="display: inline-block; background-color: transparent; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white; font-size: 16px;">☎ +49 8234 96659 00</a>
+        <a href="tel:+4982349665900" style="display: inline-block; background-color: transparent; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white; font-size: 16px;">☎ +49 8234 9665900</a>
       </div>
       <p style="margin-top: 15px; font-size: 14px; opacity: 0.9;">HeizCenter GmbH – Ihr Fachbetrieb für Heizungswartung und -optimierung</p>
     </div>
@@ -5749,7 +5749,7 @@ function getMockBlogPosts(): BlogPost[] {
         <h3 style="color: #0F5B78; margin-top: 0;">📞 Kostenlose Beratung vereinbaren</h3>
         <p style="margin-bottom: 15px;">Unsere Heizungs-Experten beraten Sie herstellerunabhängig zu Wärmepumpen, Hybridlösungen und Förderung:</p>
         <ul style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 10px;">📞 <strong>Telefon:</strong> <a href="tel:+4982349665900" style="color: #0F5B78; text-decoration: none; font-weight: bold;">+49 8234 96659 00</a></li>
+          <li style="margin-bottom: 10px;">📞 <strong>Telefon:</strong> <a href="tel:+4982349665900" style="color: #0F5B78; text-decoration: none; font-weight: bold;">+49 8234 9665900</a></li>
           <li style="margin-bottom: 10px;">✉️ <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de" style="color: #0F5B78; text-decoration: none;">service@heizcenter.de</a></li>
           <li style="margin-bottom: 10px;">🌐 <strong>Online:</strong> <a href="/kontakt?tab=quote" style="color: #0F5B78; text-decoration: none;">Angebot anfragen</a></li>
         </ul>
@@ -6239,7 +6239,7 @@ function getMockBlogPosts(): BlogPost[] {
         <h3 style="color: #0F5B78; margin-top: 0;">📞 Kostenlose Beratung vereinbaren</h3>
         <p style="margin-bottom: 15px;">Unsere Experten beraten Sie herstellerunabhängig zu Wärmepumpen, Pelletheizungen und Hybrid-Lösungen:</p>
         <ul style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 10px;">📞 <strong>Telefon:</strong> <a href="tel:+4982349665900" style="color: #0F5B78; text-decoration: none; font-weight: bold;">+49 8234 96659 00</a></li>
+          <li style="margin-bottom: 10px;">📞 <strong>Telefon:</strong> <a href="tel:+4982349665900" style="color: #0F5B78; text-decoration: none; font-weight: bold;">+49 8234 9665900</a></li>
           <li style="margin-bottom: 10px;">✉️ <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de" style="color: #0F5B78; text-decoration: none;">service@heizcenter.de</a></li>
           <li style="margin-bottom: 10px;">🌐 <strong>Online:</strong> <a href="/kontakt?tab=quote" style="color: #0F5B78; text-decoration: none;">Angebot anfragen</a></li>
         </ul>
@@ -6637,7 +6637,7 @@ function getMockBlogPosts(): BlogPost[] {
         <h3 style="color: #0F5B78; margin-top: 0;">📞 Kostenlose Beratung vereinbaren</h3>
         <p style="margin-bottom: 15px;">Unsere Klimatechnik-Experten beraten Sie zu Split-, Multisplit- und VRF-Systemen:</p>
         <ul style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 10px;">📞 <strong>Telefon:</strong> <a href="tel:+4982349665900" style="color: #0F5B78; text-decoration: none; font-weight: bold;">+49 8234 96659 00</a></li>
+          <li style="margin-bottom: 10px;">📞 <strong>Telefon:</strong> <a href="tel:+4982349665900" style="color: #0F5B78; text-decoration: none; font-weight: bold;">+49 8234 9665900</a></li>
           <li style="margin-bottom: 10px;">✉️ <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de" style="color: #0F5B78; text-decoration: none;">service@heizcenter.de</a></li>
           <li style="margin-bottom: 10px;">🌐 <strong>Online:</strong> <a href="/kontakt?tab=quote" style="color: #0F5B78; text-decoration: none;">Angebot anfragen</a></li>
         </ul>
@@ -7179,7 +7179,7 @@ function getMockBlogPosts(): BlogPost[] {
       </p>
       <div style="margin-top: 25px;">
         <a href="tel:+4982349665900" style="display: inline-block; background-color: #FFCA28; color: #000; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1em; margin: 10px;">
-          📞 +49 8234 96659 00
+          📞 +49 8234 9665900
         </a>
         <a href="mailto:service@heizcenter.de" style="display: inline-block; background-color: white; color: #0F5B78; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1em; margin: 10px;">
           ✉️ service@heizcenter.de

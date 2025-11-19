@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactFormSchema, ContactFormData } from "@/lib/validations/contact";
@@ -12,6 +13,7 @@ import { Label } from "@/components/ui/label";
 import { CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
 export function ContactForm() {
+  const searchParams = useSearchParams();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null;
@@ -23,9 +25,18 @@ export function ContactForm() {
     handleSubmit,
     formState: { errors },
     reset,
+    setValue,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
   });
+
+  // Pre-fill message from URL parameter
+  useEffect(() => {
+    const message = searchParams.get("message");
+    if (message) {
+      setValue("message", decodeURIComponent(message));
+    }
+  }, [searchParams, setValue]);
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
@@ -119,7 +130,7 @@ export function ContactForm() {
           id="phone"
           type="tel"
           {...register("phone")}
-          placeholder="+49 8234 96659 0078"
+          placeholder="+49 8234 966590078"
           className={errors.phone ? "border-red-500" : ""}
         />
         {errors.phone && (

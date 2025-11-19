@@ -1,25 +1,30 @@
 import { Star, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import { REVIEWS, shouldShowReviewCount } from "@/lib/config/reviews";
 
 interface ReviewWidgetProps {
   variant?: "compact" | "detailed";
   showLink?: boolean;
+  forceShowCount?: boolean;  // Override global setting if needed
 }
 
 export function ReviewWidget({
   variant = "compact",
   showLink = true,
+  forceShowCount = false,
 }: ReviewWidgetProps) {
+  const showCount = forceShowCount || shouldShowReviewCount();
+
   const stats = {
-    totalReviews: 5,
-    averageRating: 4.8,
+    totalReviews: REVIEWS.google.count,
+    averageRating: REVIEWS.google.rating,
     fiveStarCount: 4,
     fourStarCount: 1,
     threeStarCount: 0,
     twoStarCount: 0,
     oneStarCount: 0,
-    googleRating: 4.8,
-    recommendationRate: 100,
+    googleRating: REVIEWS.google.rating,
+    recommendationRate: REVIEWS.stats.recommendationRate,
   };
 
   if (variant === "compact") {
@@ -40,7 +45,9 @@ export function ReviewWidget({
             <p className="text-sm font-semibold text-slate-900">
               Bei Google bewertet
             </p>
-            <p className="text-xs text-slate-600">{stats.totalReviews} Bewertungen</p>
+            {showCount && (
+              <p className="text-xs text-slate-600">{stats.totalReviews} Bewertungen</p>
+            )}
           </div>
         </div>
         {showLink && (
@@ -71,37 +78,45 @@ export function ReviewWidget({
             <Star key={i} className="h-6 w-6 fill-current" />
           ))}
         </div>
-        <p className="text-slate-600">
-          Basierend auf {stats.totalReviews} Google Bewertungen
-        </p>
+        {showCount ? (
+          <p className="text-slate-600">
+            Basierend auf {stats.totalReviews} Google Bewertungen
+          </p>
+        ) : (
+          <p className="text-slate-600">
+            Bei Google bewertet
+          </p>
+        )}
       </div>
 
-      {/* Rating Distribution */}
-      <div className="space-y-2 mb-6">
-        {[
-          { stars: 5, count: stats.fiveStarCount },
-          { stars: 4, count: stats.fourStarCount },
-          { stars: 3, count: stats.threeStarCount },
-          { stars: 2, count: stats.twoStarCount },
-          { stars: 1, count: stats.oneStarCount },
-        ].map((item) => {
-          const percentage = (item.count / stats.totalReviews) * 100;
-          return (
-            <div key={item.stars} className="flex items-center gap-2">
-              <span className="text-sm font-medium w-8">{item.stars}★</span>
-              <div className="flex-1 bg-slate-200 rounded-full h-2 overflow-hidden">
-                <div
-                  className="bg-yellow-500 h-full"
-                  style={{ width: `${percentage}%` }}
-                />
+      {/* Rating Distribution - Only show if we're showing count */}
+      {showCount && (
+        <div className="space-y-2 mb-6">
+          {[
+            { stars: 5, count: stats.fiveStarCount },
+            { stars: 4, count: stats.fourStarCount },
+            { stars: 3, count: stats.threeStarCount },
+            { stars: 2, count: stats.twoStarCount },
+            { stars: 1, count: stats.oneStarCount },
+          ].map((item) => {
+            const percentage = (item.count / stats.totalReviews) * 100;
+            return (
+              <div key={item.stars} className="flex items-center gap-2">
+                <span className="text-sm font-medium w-8">{item.stars}★</span>
+                <div className="flex-1 bg-slate-200 rounded-full h-2 overflow-hidden">
+                  <div
+                    className="bg-yellow-500 h-full"
+                    style={{ width: `${percentage}%` }}
+                  />
+                </div>
+                <span className="text-sm text-slate-600 w-8 text-right">
+                  {item.count}
+                </span>
               </div>
-              <span className="text-sm text-slate-600 w-8 text-right">
-                {item.count}
-              </span>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      )}
 
       {/* Platforms */}
       <div className="grid grid-cols-2 gap-4 mb-4">
@@ -134,9 +149,17 @@ export function ReviewWidget({
 
 interface GoogleReviewBadgeProps {
   variant?: "small" | "large";
+  forceShowCount?: boolean;
 }
 
-export function GoogleReviewBadge({ variant = "small" }: GoogleReviewBadgeProps) {
+export function GoogleReviewBadge({
+  variant = "small",
+  forceShowCount = false
+}: GoogleReviewBadgeProps) {
+  const showCount = forceShowCount || shouldShowReviewCount();
+  const rating = REVIEWS.google.rating;
+  const count = REVIEWS.google.count;
+
   if (variant === "large") {
     return (
       <div className="inline-flex items-center gap-3 bg-white border-2 border-slate-200 rounded-lg px-4 py-3">
@@ -144,10 +167,12 @@ export function GoogleReviewBadge({ variant = "small" }: GoogleReviewBadgeProps)
         <div>
           <p className="text-sm text-slate-600">Google Bewertung</p>
           <div className="flex items-baseline gap-1">
-            <span className="text-2xl font-bold">4.8</span>
+            <span className="text-2xl font-bold">{rating}</span>
             <span className="text-slate-600">/5</span>
           </div>
-          <p className="text-xs text-slate-500">5 Bewertungen</p>
+          {showCount && (
+            <p className="text-xs text-slate-500">{count} Bewertungen</p>
+          )}
         </div>
       </div>
     );
@@ -156,8 +181,10 @@ export function GoogleReviewBadge({ variant = "small" }: GoogleReviewBadgeProps)
   return (
     <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-3 py-1.5">
       <span className="text-lg">⭐</span>
-      <span className="text-sm font-semibold">4.8</span>
-      <span className="text-xs text-slate-600">(5)</span>
+      <span className="text-sm font-semibold">{rating}</span>
+      {showCount && (
+        <span className="text-xs text-slate-600">({count})</span>
+      )}
     </div>
   );
 }

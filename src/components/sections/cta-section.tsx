@@ -43,7 +43,7 @@ export function CTASection({
             >
               <Link href="tel:+4982349665900">
                 <Phone className="mr-2 h-5 w-5" />
-                +49 8234 96659 00
+                +49 8234 9665900
               </Link>
             </Button>
           </div>
@@ -65,7 +65,7 @@ export function CTASection({
                 className="flex flex-col items-center gap-2 p-4 rounded-lg hover:bg-slate-50 transition-colors"
               >
                 <Phone className="h-8 w-8 text-[#0F5B78]" />
-                <span className="font-semibold">+49 8234 96659 00</span>
+                <span className="font-semibold">+49 8234 9665900</span>
                 <span className="text-sm text-slate-600">Anrufen</span>
               </a>
               <a

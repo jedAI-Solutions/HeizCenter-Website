@@ -177,8 +177,8 @@ export default function FoerderungPage() {
                 </div>
               ))}
             </div>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#0F5B78]">
-              <Link href="/kontakt?subject=Förderberatung">
+            <Button asChild size="lg" className="bg-[#FFCA28] hover:bg-[#F5B800] text-slate-900 font-semibold">
+              <Link href="/kontakt?tab=contact&message=Ich%20interessiere%20mich%20f%C3%BCr%20eine%20F%C3%B6rderberatung%20zu%20BEG%2C%20KfW%20und%20anderen%20F%C3%B6rderprogrammen.%20Bitte%20kontaktieren%20Sie%20mich%20f%C3%BCr%20ein%20unverbindliches%20Beratungsgespr%C3%A4ch.">
                 <FileText className="mr-2 h-5 w-5" />
                 Jetzt Förderberatung anfragen
               </Link>

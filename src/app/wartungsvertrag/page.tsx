@@ -13,7 +13,7 @@ export default function WartungsvertragPage() {
   return (
     <div className="container py-16">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8 text-center">Wartungsvertr äge</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center">Wartungsverträge</h1>
         <p className="text-xl text-slate-600 mb-12 text-center">
           Sorglos-Pakete für Ihre Heizung - damit Sie sich um nichts kümmern müssen
         </p>
@@ -24,15 +24,32 @@ export default function WartungsvertragPage() {
             { name: "Komfort", price: "249", features: ["2x jährliche Wartung", "Bevorzugter Notdienst", "15% Rabatt auf Reparaturen", "Kostenlose Anfahrt"], highlight: true },
             { name: "Premium", price: "399", features: ["3x jährliche Wartung", "24/7 Notdienst Priorität", "20% Rabatt auf Reparaturen", "Kostenlose Anfahrt", "Ersatzteilgarantie"] },
           ].map((plan, i) => (
-            <Card key={i} className={plan.highlight ? "border-2 border-[#0F5B78]" : ""}>
-              <CardContent className="p-8">
-                {plan.highlight && <div className="text-center mb-4"><span className="bg-[#0F5B78] text-white px-4 py-1 rounded-full text-sm font-bold">Beliebtester</span></div>}
-                <h3 className="text-2xl font-bold text-center mb-2">{plan.name}</h3>
-                <div className="text-center mb-6">
-                  <span className="text-4xl font-bold">{plan.price}€</span>
-                  <span className="text-slate-600">/Jahr</span>
+            <Card key={i} className={`${plan.highlight ? "border-2 border-[#0F5B78]" : ""} flex flex-col h-full`}>
+              <CardContent className="p-8 flex flex-col h-full">
+                {/* Badge Area - Fixed Height */}
+                <div className="h-8 mb-4 flex items-center justify-center">
+                  {plan.highlight && (
+                    <span className="bg-[#0F5B78] text-white px-4 py-1 rounded-full text-sm font-bold">
+                      Beliebtester
+                    </span>
+                  )}
                 </div>
-                <ul className="space-y-3 mb-6">
+
+                {/* Package Name - Fixed Height */}
+                <h3 className="text-2xl font-bold text-center mb-2 h-8 flex items-center justify-center">
+                  {plan.name}
+                </h3>
+
+                {/* Price - Fixed Height */}
+                <div className="text-center mb-6 h-16 flex flex-col items-center justify-center">
+                  <div>
+                    <span className="text-4xl font-bold">{plan.price}€</span>
+                    <span className="text-slate-600">/Jahr</span>
+                  </div>
+                </div>
+
+                {/* Features List - Flexible Height */}
+                <ul className="space-y-3 mb-6 flex-grow">
                   {plan.features.map((f, j) => (
                     <li key={j} className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -40,7 +57,9 @@ export default function WartungsvertragPage() {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full" variant={plan.highlight ? "default" : "outline"}>
+
+                {/* CTA Button - Fixed at Bottom */}
+                <Button className="w-full mt-auto" variant={plan.highlight ? "default" : "outline"}>
                   Jetzt anfragen
                 </Button>
               </CardContent>
