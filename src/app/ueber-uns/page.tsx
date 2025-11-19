@@ -27,10 +27,10 @@ export default function UeberUnsPage() {
             src="/images/team.png"
             alt="HeizCenter Team"
             fill
-            className="object-cover opacity-20"
+            className="object-cover opacity-40"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0F5B78]/90 via-[#0D4A61]/85 to-[#0A3A4D]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0F5B78]/70 via-[#0D4A61]/65 to-[#0A3A4D]/70"></div>
         </div>
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5"></div>
 
@@ -72,8 +72,8 @@ export default function UeberUnsPage() {
             <span className="text-[#0F5B78] font-semibold text-sm uppercase tracking-wider">Unsere Geschichte</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">Wie alles begann</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid md:grid-cols-5 gap-12 items-start">
+            <div className="md:col-span-2">
               <div className="prose prose-slate max-w-none">
                 <p className="text-lg mb-6 text-slate-700 leading-relaxed">
                   HeizCenter wurde mit der Vision gegründet, modernes Heizen und Sanitär für jeden
@@ -87,29 +87,29 @@ export default function UeberUnsPage() {
                   und bleiben gleichzeitig Ihrem persönlichen Ansprechpartner vor Ort.
                 </p>
               </div>
+
+              {/* Vision Card */}
+              <div className="mt-8 bg-gradient-to-br from-[#0F5B78] to-[#0D4A61] p-6 rounded-2xl text-white">
+                <div className="flex items-center gap-3 mb-3">
+                  <Target className="h-10 w-10 text-blue-200" />
+                  <h3 className="text-xl font-bold">Unsere Vision</h3>
+                </div>
+                <p className="text-blue-50 leading-relaxed">
+                  Eine klimaneutrale Zukunft durch nachhaltige Heiztechnologie – für jedes Zuhause
+                  und jedes Budget erreichbar.
+                </p>
+              </div>
             </div>
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+
+            <div className="md:col-span-3 relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/überuns.jpeg"
                   alt="HeizCenter Unternehmen"
-                  width={600}
-                  height={400}
+                  width={800}
+                  height={600}
                   className="object-cover w-full h-auto"
                 />
-                {/* Text Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F5B78]/95 via-[#0F5B78]/70 to-transparent flex items-end p-8">
-                  <div className="text-white">
-                    <div className="flex items-center gap-3 mb-3">
-                      <Target className="h-8 w-8 text-blue-200" />
-                      <h3 className="text-2xl font-bold">Unsere Vision</h3>
-                    </div>
-                    <p className="text-blue-50 leading-relaxed">
-                      Eine klimaneutrale Zukunft durch nachhaltige Heiztechnologie – für jedes Zuhause
-                      und jedes Budget erreichbar.
-                    </p>
-                  </div>
-                </div>
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-[#0F5B78] to-[#0D4A61] rounded-full opacity-20 blur-2xl"></div>
             </div>
