@@ -186,15 +186,21 @@ export default function SolarPage() {
           <div className="grid gap-8 md:grid-cols-3">
             {/* Warmwasser System */}
             <Card className="border-2 border-slate-200 transition-all hover:border-primary hover:shadow-lg flex flex-col">
-              <CardContent className="p-6 flex flex-col flex-1">
+              <CardContent className="p-8 flex flex-col h-full">
+                {/* Badge Area - Fixed Height */}
+                <div className="h-8 mb-4"></div>
+
+                {/* Title - Fixed Height */}
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
                   <Home className="h-6 w-6 text-blue-600" />
                 </div>
-                <h3 className="mb-2 text-xl font-bold">Warmwasser-System</h3>
-                <p className="mb-4 text-slate-600">
+                <h3 className="mb-2 text-xl font-bold h-14 flex items-center">Warmwasser-System</h3>
+                <p className="mb-4 text-slate-600 h-12 flex items-center">
                   Ideal für die solare Warmwasserbereitung
                 </p>
-                <ul className="mb-6 space-y-2 text-sm">
+
+                {/* Features List - Flexible Height */}
+                <ul className="mb-6 space-y-2 text-sm flex-grow">
                   <li className="flex items-start">
                     <span className="mr-2 text-green-600">✓</span>
                     <span>4-6 m² Kollektorfläche</span>
@@ -212,6 +218,8 @@ export default function SolarPage() {
                     <span>Für 4-Personen-Haushalt</span>
                   </li>
                 </ul>
+
+                {/* Kosten - Fixed Height */}
                 <div className="mb-4 rounded-lg bg-slate-100 p-4">
                   <div className="mb-2 text-sm font-medium text-slate-600">Kosten</div>
                   <div className="text-2xl font-bold">5.000 - 10.000 €</div>
@@ -219,28 +227,37 @@ export default function SolarPage() {
                     Nach 30% Förderung: <span className="font-semibold text-green-600">3.500 - 7.000 €</span>
                   </div>
                 </div>
-                <div className="mt-auto">
-                  <Link href="/kontakt?tab=quote&message=Ich interessiere mich für ein Warmwasser-Solarthermie-System. Bitte kontaktieren Sie mich für eine kostenlose Beratung.">
-                    <Button className="w-full">Jetzt beraten lassen</Button>
+
+                {/* CTA Button - Fixed at Bottom */}
+                <Button asChild className="w-full mt-auto">
+                  <Link href="/kontakt?tab=quote&service=solar&message=Ich interessiere mich für ein Warmwasser-Solarthermie-System. Bitte kontaktieren Sie mich für eine kostenlose Beratung.">
+                    Jetzt beraten lassen
                   </Link>
-                </div>
+                </Button>
               </CardContent>
             </Card>
 
             {/* Kombi System */}
             <Card className="border-2 border-primary shadow-lg flex flex-col">
-              <div className="bg-primary px-4 py-2 text-center text-sm font-semibold text-white">
-                Empfohlen
-              </div>
-              <CardContent className="p-6 flex flex-col flex-1">
+              <CardContent className="p-8 flex flex-col h-full">
+                {/* Badge Area - Fixed Height */}
+                <div className="h-8 mb-4 flex items-center justify-center">
+                  <span className="bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">
+                    Empfohlen
+                  </span>
+                </div>
+
+                {/* Title - Fixed Height */}
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                   <ThermometerSun className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="mb-2 text-xl font-bold">Kombi-System</h3>
-                <p className="mb-4 text-slate-600">
+                <h3 className="mb-2 text-xl font-bold h-14 flex items-center">Kombi-System</h3>
+                <p className="mb-4 text-slate-600 h-12 flex items-center">
                   Warmwasser + Heizungsunterstützung
                 </p>
-                <ul className="mb-6 space-y-2 text-sm">
+
+                {/* Features List - Flexible Height */}
+                <ul className="mb-6 space-y-2 text-sm flex-grow">
                   <li className="flex items-start">
                     <span className="mr-2 text-green-600">✓</span>
                     <span>12-15 m² Kollektorfläche</span>
@@ -258,6 +275,8 @@ export default function SolarPage() {
                     <span>Für Einfamilienhaus (150 m²)</span>
                   </li>
                 </ul>
+
+                {/* Kosten - Fixed Height */}
                 <div className="mb-4 rounded-lg bg-primary/5 p-4">
                   <div className="mb-2 text-sm font-medium text-slate-600">Kosten</div>
                   <div className="text-2xl font-bold">8.000 - 18.000 €</div>
@@ -265,25 +284,33 @@ export default function SolarPage() {
                     Nach 70% Förderung: <span className="font-semibold text-green-600">2.400 - 5.400 €</span>
                   </div>
                 </div>
-                <div className="mt-auto">
-                  <Link href="/kontakt?tab=quote&message=Ich interessiere mich für ein Kombi-Solarthermie-System (Warmwasser + Heizungsunterstützung). Bitte kontaktieren Sie mich für eine kostenlose Beratung.">
-                    <Button className="w-full">Jetzt beraten lassen</Button>
+
+                {/* CTA Button - Fixed at Bottom */}
+                <Button asChild className="w-full mt-auto">
+                  <Link href="/kontakt?tab=quote&service=solar&message=Ich interessiere mich für ein Kombi-Solarthermie-System (Warmwasser + Heizungsunterstützung). Bitte kontaktieren Sie mich für eine kostenlose Beratung.">
+                    Jetzt beraten lassen
                   </Link>
-                </div>
+                </Button>
               </CardContent>
             </Card>
 
             {/* Hybrid System */}
             <Card className="border-2 border-slate-200 transition-all hover:border-primary hover:shadow-lg flex flex-col">
-              <CardContent className="p-6 flex flex-col flex-1">
+              <CardContent className="p-8 flex flex-col h-full">
+                {/* Badge Area - Fixed Height */}
+                <div className="h-8 mb-4"></div>
+
+                {/* Title - Fixed Height */}
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
                   <Zap className="h-6 w-6 text-green-600" />
                 </div>
-                <h3 className="mb-2 text-xl font-bold">Hybrid-System</h3>
-                <p className="mb-4 text-slate-600">
+                <h3 className="mb-2 text-xl font-bold h-14 flex items-center">Hybrid-System</h3>
+                <p className="mb-4 text-slate-600 h-12 flex items-center">
                   Solarthermie + Wärmepumpe
                 </p>
-                <ul className="mb-6 space-y-2 text-sm">
+
+                {/* Features List - Flexible Height */}
+                <ul className="mb-6 space-y-2 text-sm flex-grow">
                   <li className="flex items-start">
                     <span className="mr-2 text-green-600">✓</span>
                     <span>Optimale Energieausnutzung</span>
@@ -301,6 +328,8 @@ export default function SolarPage() {
                     <span>Kombinierte BAFA-Förderung</span>
                   </li>
                 </ul>
+
+                {/* Kosten - Fixed Height */}
                 <div className="mb-4 rounded-lg bg-slate-100 p-4">
                   <div className="mb-2 text-sm font-medium text-slate-600">Kosten</div>
                   <div className="text-2xl font-bold">Auf Anfrage</div>
@@ -308,11 +337,13 @@ export default function SolarPage() {
                     Individuelle Planung erforderlich
                   </div>
                 </div>
-                <div className="mt-auto">
-                  <Link href="/kontakt?tab=quote&message=Ich interessiere mich für ein Hybrid-System (Solarthermie + Wärmepumpe). Bitte kontaktieren Sie mich für eine kostenlose Beratung.">
-                    <Button className="w-full" variant="outline">Jetzt beraten lassen</Button>
+
+                {/* CTA Button - Fixed at Bottom */}
+                <Button asChild className="w-full mt-auto" variant="outline">
+                  <Link href="/kontakt?tab=quote&service=solar&message=Ich interessiere mich für ein Hybrid-System (Solarthermie + Wärmepumpe). Bitte kontaktieren Sie mich für eine kostenlose Beratung.">
+                    Jetzt beraten lassen
                   </Link>
-                </div>
+                </Button>
               </CardContent>
             </Card>
           </div>

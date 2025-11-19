@@ -33,12 +33,13 @@ export function PriceCalculator() {
   const [heatingSurface, setHeatingSurface] = useState<string>("radiators");
   const [residents, setResidents] = useState<number>(3);
   const [pumpType, setPumpType] = useState<string>("air-water");
+  const [propertyType, setPropertyType] = useState<string>("einfamilienhaus");
   const [breakdown, setBreakdown] = useState<PriceBreakdown | null>(null);
 
   useEffect(() => {
     calculatePrice();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [houseSize, heatingType, insulation, buildingYear, heatingSurface, residents, pumpType]);
+  }, [houseSize, heatingType, insulation, buildingYear, heatingSurface, residents, pumpType, propertyType]);
 
   const calculatePrice = () => {
     // Base equipment cost based on pump type
@@ -98,6 +99,14 @@ export function PriceCalculator() {
     const hotWaterCost = residents * 300; // €300 per person for hot water system
     baseCost += hotWaterCost;
 
+    // Property type adjustment (based on complexity and requirements)
+    const propertyTypeMultiplier: Record<string, number> = {
+      einfamilienhaus: 1.0,      // Base case
+      mehrfamilienhaus: 1.3,     // Higher complexity, cascade systems needed
+      gewerbe: 1.45,             // Specialized requirements, higher performance needs
+    };
+    baseCost *= propertyTypeMultiplier[propertyType] || 1.0;
+
     // Installation cost (20-30% of equipment cost)
     const installationCost = Math.round(baseCost * 0.25);
     const equipmentCost = Math.round(baseCost);
@@ -106,11 +115,20 @@ export function PriceCalculator() {
     // Calculate subsidy (BEG: up to 40%)
     let subsidyRate = 0.3; // Base 30%
 
-    // Speed bonus (Geschwindigkeitsbonus) for replacing old heating
-    if (heatingType === "oil" || heatingType === "coal") {
-      subsidyRate = 0.4; // +10% for oil/coal replacement
-    } else if (heatingType === "gas") {
-      subsidyRate = 0.35; // +5% for gas replacement
+    // Property type affects subsidy (Einfamilienhaus gets more bonuses)
+    if (propertyType === "einfamilienhaus") {
+      // Speed bonus (Geschwindigkeitsbonus) for replacing old heating
+      if (heatingType === "oil" || heatingType === "coal") {
+        subsidyRate = 0.4; // +10% for oil/coal replacement
+      } else if (heatingType === "gas") {
+        subsidyRate = 0.35; // +5% for gas replacement
+      }
+    } else if (propertyType === "mehrfamilienhaus") {
+      // Mehrfamilienhaus: Only base subsidy (no speed bonus for landlords)
+      subsidyRate = 0.3;
+    } else if (propertyType === "gewerbe") {
+      // Commercial: 40% base subsidy
+      subsidyRate = 0.4;
     }
 
     const subsidyAmount = Math.round(totalCost * subsidyRate);
@@ -193,6 +211,23 @@ export function PriceCalculator() {
                 </Label>
               </div>
             </RadioGroup>
+          </div>
+
+          {/* Property Type */}
+          <div>
+            <Label htmlFor="propertyType" className="text-base font-semibold mb-3 block">
+              Objektart
+            </Label>
+            <Select value={propertyType} onValueChange={setPropertyType}>
+              <SelectTrigger id="propertyType">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="einfamilienhaus">Einfamilienhaus</SelectItem>
+                <SelectItem value="mehrfamilienhaus">Mehrfamilienhaus</SelectItem>
+                <SelectItem value="gewerbe">Gewerbe</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
 
           {/* House Size */}
@@ -377,7 +412,7 @@ export function PriceCalculator() {
                 </p>
               </div>
 
-              <Link href={`/kontakt?tab=quote&service=waermepumpe&houseSize=${houseSize}&pumpType=${pumpType}&heatingType=${heatingType}&insulation=${insulation}&buildingYear=${buildingYear}&heatingSurface=${heatingSurface}&residents=${residents}&estimatedCost=${breakdown.netCost}`}>
+              <Link href={`/kontakt?tab=quote&service=waermepumpe&propertyType=${propertyType}&houseSize=${houseSize}&pumpType=${pumpType}&heatingType=${heatingType}&insulation=${insulation}&buildingYear=${buildingYear}&heatingSurface=${heatingSurface}&residents=${residents}&estimatedCost=${breakdown.netCost}`}>
                 <Button className="w-full bg-[#0F5B78] hover:bg-[#0F5B78] text-white font-bold">
                   Genaues Angebot anfragen
                   <ArrowRight className="h-4 w-4 ml-2" />

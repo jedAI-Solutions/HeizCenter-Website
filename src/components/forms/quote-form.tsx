@@ -53,6 +53,7 @@ export function QuoteForm(props: QuoteFormProps) {
   // Pre-fill form from URL parameters (from calculator or other sources)
   useEffect(() => {
     const service = searchParams.get("service");
+    const propertyType = searchParams.get("propertyType");
     const houseSize = searchParams.get("houseSize");
     const pumpType = searchParams.get("pumpType");
     const heatingType = searchParams.get("heatingType");
@@ -68,6 +69,7 @@ export function QuoteForm(props: QuoteFormProps) {
     }
 
     if (service) setValue("serviceType", service as QuoteFormData["serviceType"]);
+    if (propertyType) setValue("propertyType", propertyType as QuoteFormData["propertyType"]);
     if (houseSize) setValue("heatingArea", houseSize);
     if (pumpType) setValue("pumpType", pumpType as QuoteFormData["pumpType"]);
     if (heatingType) setValue("currentHeating", heatingType as QuoteFormData["currentHeating"]);
@@ -257,6 +259,7 @@ export function QuoteForm(props: QuoteFormProps) {
             <SelectItem value="heizung">Heizung</SelectItem>
             <SelectItem value="sanitaer">Sanitär & Bad</SelectItem>
             <SelectItem value="klimaanlage">Klimaanlage</SelectItem>
+            <SelectItem value="solar">Solarthermie</SelectItem>
             <SelectItem value="sonstiges">Sonstiges</SelectItem>
           </SelectContent>
         </Select>

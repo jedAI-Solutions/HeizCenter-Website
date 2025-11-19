@@ -52,6 +52,7 @@ export const quoteFormSchema = z.object({
     "heizung",
     "sanitaer",
     "klimaanlage",
+    "solar",
     "sonstiges",
   ]),
   propertyType: z.enum(["einfamilienhaus", "mehrfamilienhaus", "gewerbe"]),
