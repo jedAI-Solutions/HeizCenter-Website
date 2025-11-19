@@ -42,8 +42,10 @@ export function QuoteForm(props: QuoteFormProps) {
     watch,
   } = useForm<QuoteFormData>({
     resolver: zodResolver(quoteFormSchema),
+    mode: "onChange",
     defaultValues: {
-      serviceType: (defaultService as QuoteFormData["serviceType"]) || undefined,
+      serviceType: undefined,
+      propertyType: undefined,
     },
   });
 
@@ -53,7 +55,7 @@ export function QuoteForm(props: QuoteFormProps) {
 
   // Pre-fill form from URL parameters (from calculator or other sources)
   useEffect(() => {
-    const service = searchParams.get("service");
+    const service = searchParams.get("service") || defaultService;
     const propertyType = searchParams.get("propertyType");
     const houseSize = searchParams.get("houseSize");
     const pumpType = searchParams.get("pumpType");
@@ -80,7 +82,7 @@ export function QuoteForm(props: QuoteFormProps) {
     if (residents) setValue("residents", residents);
     if (estimatedCost) setValue("estimatedCost", estimatedCost);
     if (message) setValue("message", message);
-  }, [searchParams, setValue]);
+  }, [searchParams, setValue, defaultService]);
 
   const onSubmit = async (data: QuoteFormData) => {
     setIsSubmitting(true);
