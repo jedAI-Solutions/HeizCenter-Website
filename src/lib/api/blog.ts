@@ -45,6 +45,46 @@ function calculateReadingTime(content: string): number {
 }
 
 /**
+ * Enhance HTML content with professional formatting
+ * Adds visual breaks, callouts, and improved spacing
+ */
+function enhanceBlogContent(htmlContent: string): string {
+  let enhanced = htmlContent;
+
+  // Add horizontal rules between major sections (before H2 headings, but not the first one)
+  enhanced = enhanced.replace(/(<h2(?![^>]*class))/g, (match, p1, offset) => {
+    // Don't add HR before the very first H2
+    if (offset < 100) return match;
+    return `<hr />${match}`;
+  });
+
+  // Wrap important paragraphs with <strong>Wichtig:</strong> or <strong>Hinweis:</strong> in callout divs
+  enhanced = enhanced.replace(
+    /<p><strong>(Wichtig|Hinweis|Tipp|Achtung):<\/strong>([^<]+(?:<[^>]+>[^<]*<\/[^>]+>)*[^<]*)<\/p>/gi,
+    '<div class="callout callout-$1">$&</div>'
+  );
+
+  // Add visual spacing after lists
+  enhanced = enhanced.replace(/<\/ul>/g, '</ul>\n\n');
+  enhanced = enhanced.replace(/<\/ol>/g, '</ol>\n\n');
+
+  // Convert key statistics/numbers into highlighted spans
+  enhanced = enhanced.replace(/(\d+\.?\d*)\s*(%|€|Euro|Prozent)/g, '<strong class="highlight-stat">$1 $2</strong>');
+
+  // Add blockquote styling to summary paragraphs (paragraphs with "Zusammenfassung" or "Fazit")
+  enhanced = enhanced.replace(
+    /<p><strong>(Zusammenfassung|Fazit):<\/strong>/gi,
+    '<blockquote><p><strong>$1:</strong>'
+  );
+  enhanced = enhanced.replace(
+    /(<blockquote><p><strong>(?:Zusammenfassung|Fazit):<\/strong>[^<]+(?:<[^>]+>[^<]*<\/[^>]+>)*[^<]*)<\/p>/gi,
+    '$1</p></blockquote>'
+  );
+
+  return enhanced;
+}
+
+/**
  * Clean and transform HTML content from Odoo
  * TODO: Use this when processing actual Odoo content
  */
@@ -61,6 +101,9 @@ function transformOdooContent(htmlContent: string): string {
   cleaned = cleaned
     .replace(/<h1/g, '<h2')
     .replace(/<\/h1>/g, '</h2>');
+
+  // Apply professional formatting enhancements
+  cleaned = enhanceBlogContent(cleaned);
 
   return cleaned;
 }
@@ -96,7 +139,14 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
     // ], ['*']);
 
     const posts = getMockBlogPosts();
-    return posts.find(post => post.slug === slug) || null;
+    const post = posts.find(post => post.slug === slug) || null;
+
+    // Apply professional formatting enhancements to content
+    if (post) {
+      post.content = enhanceBlogContent(post.content);
+    }
+
+    return post;
   } catch (error) {
     console.error(`Error fetching blog post ${slug}:`, error);
     return null;
