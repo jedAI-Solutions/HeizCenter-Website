@@ -87,17 +87,9 @@ export default function UeberUnsPage() {
                   und bleiben gleichzeitig Ihrem persönlichen Ansprechpartner vor Ort.
                 </p>
               </div>
-              <div className="mt-8 bg-gradient-to-br from-[#0F5B78] to-[#0D4A61] p-6 rounded-2xl text-white">
-                <Target className="h-10 w-10 mb-3 text-blue-200" />
-                <h3 className="text-xl font-bold mb-3">Unsere Vision</h3>
-                <p className="text-blue-50 leading-relaxed text-sm">
-                  Eine klimaneutrale Zukunft durch nachhaltige Heiztechnologie – für jedes Zuhause
-                  und jedes Budget erreichbar.
-                </p>
-              </div>
             </div>
             <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
                 <Image
                   src="/images/überuns.jpeg"
                   alt="HeizCenter Unternehmen"
@@ -105,6 +97,19 @@ export default function UeberUnsPage() {
                   height={400}
                   className="object-cover w-full h-auto"
                 />
+                {/* Text Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F5B78]/95 via-[#0F5B78]/70 to-transparent flex items-end p-8">
+                  <div className="text-white">
+                    <div className="flex items-center gap-3 mb-3">
+                      <Target className="h-8 w-8 text-blue-200" />
+                      <h3 className="text-2xl font-bold">Unsere Vision</h3>
+                    </div>
+                    <p className="text-blue-50 leading-relaxed">
+                      Eine klimaneutrale Zukunft durch nachhaltige Heiztechnologie – für jedes Zuhause
+                      und jedes Budget erreichbar.
+                    </p>
+                  </div>
+                </div>
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-[#0F5B78] to-[#0D4A61] rounded-full opacity-20 blur-2xl"></div>
             </div>
