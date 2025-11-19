@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { quoteFormSchema, QuoteFormData } from "@/lib/validations/contact";
 import { Button } from "@/components/ui/button";
@@ -39,7 +39,7 @@ export function QuoteForm(props: QuoteFormProps) {
     formState: { errors },
     reset,
     setValue,
-    watch,
+    control,
   } = useForm<QuoteFormData>({
     resolver: zodResolver(quoteFormSchema),
     mode: "onChange",
@@ -48,10 +48,6 @@ export function QuoteForm(props: QuoteFormProps) {
       propertyType: undefined,
     },
   });
-
-  // Watch serviceType and propertyType to sync with Select components
-  const selectedService = watch("serviceType");
-  const selectedPropertyType = watch("propertyType");
 
   // Pre-fill form from URL parameters (from calculator or other sources)
   useEffect(() => {
@@ -248,24 +244,25 @@ export function QuoteForm(props: QuoteFormProps) {
       {/* Service Details */}
       <div>
         <Label htmlFor="serviceType">Gewünschte Leistung *</Label>
-        <Select
-          value={selectedService || ""}
-          onValueChange={(value) => {
-            setValue("serviceType", value as QuoteFormData["serviceType"]);
-          }}
-        >
-          <SelectTrigger className={errors.serviceType ? "border-red-500" : ""}>
-            <SelectValue placeholder="Bitte wählen..." />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="waermepumpe">Wärmepumpe</SelectItem>
-            <SelectItem value="heizung">Heizung</SelectItem>
-            <SelectItem value="sanitaer">Sanitär & Bad</SelectItem>
-            <SelectItem value="klimaanlage">Klimaanlage</SelectItem>
-            <SelectItem value="solar">Solarthermie</SelectItem>
-            <SelectItem value="sonstiges">Sonstiges</SelectItem>
-          </SelectContent>
-        </Select>
+        <Controller
+          name="serviceType"
+          control={control}
+          render={({ field }) => (
+            <Select value={field.value || ""} onValueChange={field.onChange}>
+              <SelectTrigger className={errors.serviceType ? "border-red-500" : ""}>
+                <SelectValue placeholder="Bitte wählen..." />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="waermepumpe">Wärmepumpe</SelectItem>
+                <SelectItem value="heizung">Heizung</SelectItem>
+                <SelectItem value="sanitaer">Sanitär & Bad</SelectItem>
+                <SelectItem value="klimaanlage">Klimaanlage</SelectItem>
+                <SelectItem value="solar">Solarthermie</SelectItem>
+                <SelectItem value="sonstiges">Sonstiges</SelectItem>
+              </SelectContent>
+            </Select>
+          )}
+        />
         {errors.serviceType && (
           <p className="text-red-500 text-sm mt-1">
             {errors.serviceType.message}
@@ -275,21 +272,22 @@ export function QuoteForm(props: QuoteFormProps) {
 
       <div>
         <Label htmlFor="propertyType">Objektart *</Label>
-        <Select
-          value={selectedPropertyType || ""}
-          onValueChange={(value) => {
-            setValue("propertyType", value as QuoteFormData["propertyType"]);
-          }}
-        >
-          <SelectTrigger className={errors.propertyType ? "border-red-500" : ""}>
-            <SelectValue placeholder="Bitte wählen..." />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="einfamilienhaus">Einfamilienhaus</SelectItem>
-            <SelectItem value="mehrfamilienhaus">Mehrfamilienhaus</SelectItem>
-            <SelectItem value="gewerbe">Gewerbe</SelectItem>
-          </SelectContent>
-        </Select>
+        <Controller
+          name="propertyType"
+          control={control}
+          render={({ field }) => (
+            <Select value={field.value || ""} onValueChange={field.onChange}>
+              <SelectTrigger className={errors.propertyType ? "border-red-500" : ""}>
+                <SelectValue placeholder="Bitte wählen..." />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="einfamilienhaus">Einfamilienhaus</SelectItem>
+                <SelectItem value="mehrfamilienhaus">Mehrfamilienhaus</SelectItem>
+                <SelectItem value="gewerbe">Gewerbe</SelectItem>
+              </SelectContent>
+            </Select>
+          )}
+        />
         {errors.propertyType && (
           <p className="text-red-500 text-sm mt-1">
             {errors.propertyType.message}
