@@ -33,6 +33,19 @@ export function QuoteForm(props: QuoteFormProps) {
     message: string;
   }>({ type: null, message: "" });
 
+  // Extract URL parameters before form initialization
+  const service = searchParams.get("service") || defaultService;
+  const propertyType = searchParams.get("propertyType");
+  const houseSize = searchParams.get("houseSize");
+  const pumpType = searchParams.get("pumpType");
+  const heatingType = searchParams.get("heatingType");
+  const insulation = searchParams.get("insulation");
+  const buildingYear = searchParams.get("buildingYear");
+  const heatingSurface = searchParams.get("heatingSurface");
+  const residents = searchParams.get("residents");
+  const estimatedCost = searchParams.get("estimatedCost");
+  const message = searchParams.get("message");
+
   const {
     register,
     handleSubmit,
@@ -42,51 +55,27 @@ export function QuoteForm(props: QuoteFormProps) {
     setValue,
   } = useForm<QuoteFormData>({
     resolver: zodResolver(quoteFormSchema),
-    mode: "onChange",
     defaultValues: {
-      serviceType: undefined,
-      propertyType: undefined,
+      serviceType: service as QuoteFormData["serviceType"] | undefined,
+      propertyType: propertyType as QuoteFormData["propertyType"] | undefined,
+      heatingArea: houseSize || "",
+      pumpType: pumpType as QuoteFormData["pumpType"] | undefined,
+      currentHeating: heatingType as QuoteFormData["currentHeating"] | undefined,
+      insulation: insulation as QuoteFormData["insulation"] | undefined,
+      buildingYear: buildingYear as QuoteFormData["buildingYear"] | undefined,
+      heatingSurface: heatingSurface as QuoteFormData["heatingSurface"] | undefined,
+      residents: residents || "",
+      estimatedCost: estimatedCost || "",
+      message: message || "",
     },
   });
 
-  // Pre-fill form from URL parameters (from calculator or other sources)
+  // Set calculator data flag
   useEffect(() => {
-    const service = searchParams.get("service") || defaultService;
-    const propertyType = searchParams.get("propertyType");
-    const houseSize = searchParams.get("houseSize");
-    const pumpType = searchParams.get("pumpType");
-    const heatingType = searchParams.get("heatingType");
-    const insulation = searchParams.get("insulation");
-    const buildingYear = searchParams.get("buildingYear");
-    const heatingSurface = searchParams.get("heatingSurface");
-    const residents = searchParams.get("residents");
-    const estimatedCost = searchParams.get("estimatedCost");
-    const message = searchParams.get("message");
-
     if (houseSize || pumpType) {
       setHasCalculatorData(true);
     }
-
-    // Use reset to set all initial values at once to avoid validation issues
-    const initialValues: Partial<QuoteFormData> = {};
-
-    if (service) initialValues.serviceType = service as QuoteFormData["serviceType"];
-    if (propertyType) initialValues.propertyType = propertyType as QuoteFormData["propertyType"];
-    if (houseSize) initialValues.heatingArea = houseSize;
-    if (pumpType) initialValues.pumpType = pumpType as QuoteFormData["pumpType"];
-    if (heatingType) initialValues.currentHeating = heatingType as QuoteFormData["currentHeating"];
-    if (insulation) initialValues.insulation = insulation as QuoteFormData["insulation"];
-    if (buildingYear) initialValues.buildingYear = buildingYear as QuoteFormData["buildingYear"];
-    if (heatingSurface) initialValues.heatingSurface = heatingSurface as QuoteFormData["heatingSurface"];
-    if (residents) initialValues.residents = residents;
-    if (estimatedCost) initialValues.estimatedCost = estimatedCost;
-    if (message) initialValues.message = message;
-
-    // Only reset if we have values to set
-    if (Object.keys(initialValues).length > 0) {
-      reset(initialValues as QuoteFormData);
-    }
-  }, [searchParams, reset, defaultService]);
+  }, [houseSize, pumpType]);
 
   const onSubmit = async (data: QuoteFormData) => {
     setIsSubmitting(true);
@@ -256,7 +245,7 @@ export function QuoteForm(props: QuoteFormProps) {
           name="serviceType"
           control={control}
           render={({ field }) => (
-            <Select value={field.value || ""} onValueChange={field.onChange}>
+            <Select value={field.value} onValueChange={field.onChange}>
               <SelectTrigger className={errors.serviceType ? "border-red-500" : ""}>
                 <SelectValue placeholder="Bitte wählen..." />
               </SelectTrigger>
@@ -284,7 +273,7 @@ export function QuoteForm(props: QuoteFormProps) {
           name="propertyType"
           control={control}
           render={({ field }) => (
-            <Select value={field.value || ""} onValueChange={field.onChange}>
+            <Select value={field.value} onValueChange={field.onChange}>
               <SelectTrigger className={errors.propertyType ? "border-red-500" : ""}>
                 <SelectValue placeholder="Bitte wählen..." />
               </SelectTrigger>
@@ -346,94 +335,109 @@ export function QuoteForm(props: QuoteFormProps) {
           <div className="grid md:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="pumpType">Wärmepumpen-Typ (optional)</Label>
-              <Select
-                onValueChange={(value) => setValue("pumpType", value as QuoteFormData["pumpType"])}
-                defaultValue={searchParams.get("pumpType") || undefined}
-              >
-                <SelectTrigger id="pumpType">
-                  <SelectValue placeholder="Bitte wählen..." />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="air-water">Luft-Wasser-Wärmepumpe</SelectItem>
-                  <SelectItem value="ground-water">Sole-Wasser-Wärmepumpe (Erdwärme)</SelectItem>
-                  <SelectItem value="water-water">Wasser-Wasser-Wärmepumpe</SelectItem>
-                </SelectContent>
-              </Select>
+              <Controller
+                name="pumpType"
+                control={control}
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger id="pumpType">
+                      <SelectValue placeholder="Bitte wählen..." />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="air-water">Luft-Wasser-Wärmepumpe</SelectItem>
+                      <SelectItem value="ground-water">Sole-Wasser-Wärmepumpe (Erdwärme)</SelectItem>
+                      <SelectItem value="water-water">Wasser-Wasser-Wärmepumpe</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
             </div>
 
             <div>
               <Label htmlFor="heatingSurface">Art der Heizflächen (optional)</Label>
-              <Select
-                onValueChange={(value) => setValue("heatingSurface", value as QuoteFormData["heatingSurface"])}
-                defaultValue={searchParams.get("heatingSurface") || undefined}
-              >
-                <SelectTrigger id="heatingSurface">
-                  <SelectValue placeholder="Bitte wählen..." />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="floor">Fußbodenheizung</SelectItem>
-                  <SelectItem value="radiators">Heizkörper (Radiatoren)</SelectItem>
-                  <SelectItem value="mixed">Gemischt</SelectItem>
-                </SelectContent>
-              </Select>
+              <Controller
+                name="heatingSurface"
+                control={control}
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger id="heatingSurface">
+                      <SelectValue placeholder="Bitte wählen..." />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="floor">Fußbodenheizung</SelectItem>
+                      <SelectItem value="radiators">Heizkörper (Radiatoren)</SelectItem>
+                      <SelectItem value="mixed">Gemischt</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="currentHeating">Aktuelle Heizung (optional)</Label>
-              <Select
-                onValueChange={(value) => setValue("currentHeating", value as QuoteFormData["currentHeating"])}
-                defaultValue={searchParams.get("heatingType") || undefined}
-              >
-                <SelectTrigger id="currentHeating">
-                  <SelectValue placeholder="Bitte wählen..." />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="gas">Gasheizung</SelectItem>
-                  <SelectItem value="oil">Ölheizung</SelectItem>
-                  <SelectItem value="electric">Elektroheizung</SelectItem>
-                  <SelectItem value="coal">Kohleheizung</SelectItem>
-                </SelectContent>
-              </Select>
+              <Controller
+                name="currentHeating"
+                control={control}
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger id="currentHeating">
+                      <SelectValue placeholder="Bitte wählen..." />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="gas">Gasheizung</SelectItem>
+                      <SelectItem value="oil">Ölheizung</SelectItem>
+                      <SelectItem value="electric">Elektroheizung</SelectItem>
+                      <SelectItem value="coal">Kohleheizung</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
             </div>
 
             <div>
               <Label htmlFor="insulation">Dämmzustand (optional)</Label>
-              <Select
-                onValueChange={(value) => setValue("insulation", value as QuoteFormData["insulation"])}
-                defaultValue={searchParams.get("insulation") || undefined}
-              >
-                <SelectTrigger id="insulation">
-                  <SelectValue placeholder="Bitte wählen..." />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="poor">Schlecht (Altbau unsaniert)</SelectItem>
-                  <SelectItem value="average">Durchschnittlich</SelectItem>
-                  <SelectItem value="good">Gut (Neubau/saniert)</SelectItem>
-                </SelectContent>
-              </Select>
+              <Controller
+                name="insulation"
+                control={control}
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger id="insulation">
+                      <SelectValue placeholder="Bitte wählen..." />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="poor">Schlecht (Altbau unsaniert)</SelectItem>
+                      <SelectItem value="average">Durchschnittlich</SelectItem>
+                      <SelectItem value="good">Gut (Neubau/saniert)</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="buildingYear">Gebäude-Baujahr (optional)</Label>
-              <Select
-                onValueChange={(value) => setValue("buildingYear", value as QuoteFormData["buildingYear"])}
-                defaultValue={searchParams.get("buildingYear") || undefined}
-              >
-                <SelectTrigger id="buildingYear">
-                  <SelectValue placeholder="Bitte wählen..." />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="before-1980">Vor 1980</SelectItem>
-                  <SelectItem value="1980-2000">1980-2000</SelectItem>
-                  <SelectItem value="2000-2010">2000-2010</SelectItem>
-                  <SelectItem value="2010-2015">2010-2015</SelectItem>
-                  <SelectItem value="after-2015">Nach 2015</SelectItem>
-                </SelectContent>
-              </Select>
+              <Controller
+                name="buildingYear"
+                control={control}
+                render={({ field }) => (
+                  <Select value={field.value} onValueChange={field.onChange}>
+                    <SelectTrigger id="buildingYear">
+                      <SelectValue placeholder="Bitte wählen..." />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="before-1980">Vor 1980</SelectItem>
+                      <SelectItem value="1980-2000">1980-2000</SelectItem>
+                      <SelectItem value="2000-2010">2000-2010</SelectItem>
+                      <SelectItem value="2010-2015">2010-2015</SelectItem>
+                      <SelectItem value="after-2015">Nach 2015</SelectItem>
+                    </SelectContent>
+                  </Select>
+                )}
+              />
             </div>
 
             <div>
@@ -478,24 +482,23 @@ export function QuoteForm(props: QuoteFormProps) {
         <Label htmlFor="preferredContactTime">
           Bevorzugte Kontaktzeit (optional)
         </Label>
-        <Select
-          onValueChange={(value) => {
-            setValue(
-              "preferredContactTime",
-              value as QuoteFormData["preferredContactTime"]
-            );
-          }}
-        >
-          <SelectTrigger>
-            <SelectValue placeholder="Bitte wählen..." />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="morning">Morgens (8-12 Uhr)</SelectItem>
-            <SelectItem value="afternoon">Nachmittags (12-17 Uhr)</SelectItem>
-            <SelectItem value="evening">Abends (17-20 Uhr)</SelectItem>
-            <SelectItem value="anytime">Jederzeit</SelectItem>
-          </SelectContent>
-        </Select>
+        <Controller
+          name="preferredContactTime"
+          control={control}
+          render={({ field }) => (
+            <Select value={field.value} onValueChange={field.onChange}>
+              <SelectTrigger>
+                <SelectValue placeholder="Bitte wählen..." />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="morning">Morgens (8-12 Uhr)</SelectItem>
+                <SelectItem value="afternoon">Nachmittags (12-17 Uhr)</SelectItem>
+                <SelectItem value="evening">Abends (17-20 Uhr)</SelectItem>
+                <SelectItem value="anytime">Jederzeit</SelectItem>
+              </SelectContent>
+            </Select>
+          )}
+        />
       </div>
 
       {/* GDPR Consent */}
