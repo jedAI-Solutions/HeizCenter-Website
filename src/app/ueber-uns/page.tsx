@@ -87,17 +87,26 @@ export default function UeberUnsPage() {
                   und bleiben gleichzeitig Ihrem persönlichen Ansprechpartner vor Ort.
                 </p>
               </div>
-            </div>
-            <div className="relative">
-              <div className="bg-gradient-to-br from-[#0F5B78] to-[#0D4A61] p-8 rounded-2xl text-white">
-                <Target className="h-12 w-12 mb-4 text-blue-200" />
-                <h3 className="text-2xl font-bold mb-4">Unsere Vision</h3>
-                <p className="text-blue-50 leading-relaxed">
+              <div className="mt-8 bg-gradient-to-br from-[#0F5B78] to-[#0D4A61] p-6 rounded-2xl text-white">
+                <Target className="h-10 w-10 mb-3 text-blue-200" />
+                <h3 className="text-xl font-bold mb-3">Unsere Vision</h3>
+                <p className="text-blue-50 leading-relaxed text-sm">
                   Eine klimaneutrale Zukunft durch nachhaltige Heiztechnologie – für jedes Zuhause
                   und jedes Budget erreichbar.
                 </p>
               </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-green-400 to-green-600 rounded-full opacity-20 blur-2xl"></div>
+            </div>
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/überuns.jpeg"
+                  alt="HeizCenter Unternehmen"
+                  width={600}
+                  height={400}
+                  className="object-cover w-full h-auto"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-[#0F5B78] to-[#0D4A61] rounded-full opacity-20 blur-2xl"></div>
             </div>
           </div>
         </div>
