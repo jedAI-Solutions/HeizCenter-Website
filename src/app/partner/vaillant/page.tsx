@@ -33,7 +33,7 @@ export const dynamic = "force-dynamic";
 
 const benefits = [
   "Marktführer mit über 150 Jahren Erfahrung",
-  "aroTHERM plus mit A+++-Effizienz (SCOP bis 5,4)",
+  "aroTHERM plus mit höchster Effizienz (SCOP bis 5,4)",
   "Bis zu 75°C Vorlauftemperatur",
   "Extrem leise ab 19 dB(A) Innengerät",
   "Green iQ Label - Nachhaltig & Effizient",
@@ -54,7 +54,7 @@ const features = [
     icon: Thermometer,
   },
   {
-    title: "A+++-Effizienz",
+    title: "Höchste Energieeffizienz",
     description:
       "SCOP-Werte bis 5,4 bei aroTHERM pro. Bis zu 75% Energieeinsparung und niedrigste Betriebskosten.",
     icon: Zap,
@@ -215,7 +215,7 @@ export default function VaillantPage() {
                   <li>SCOP: bis 5,4 (höchste Effizienz)</li>
                   <li>Vorlauftemperatur: bis 75°C</li>
                   <li>Optimiert für Niedertemperatur-Anwendungen</li>
-                  <li>A+++-Energieeffizienz</li>
+                  <li>Höchste Energieeffizienz</li>
                 </ul>
                 <p className="font-semibold text-[#0F5B78]">
                   Preis ab: 10.000€ (Gerät) | Komplett ab 23.000€
@@ -321,7 +321,7 @@ export default function VaillantPage() {
                   <ul className="space-y-2 text-slate-700">
                     <li>✓ Kostenlose Erstberatung vor Ort</li>
                     <li>✓ Heizlastberechnung DIN EN 12831</li>
-                    <li>✓ Förderantrag BAFA/KfW Unterstützung</li>
+                    <li>✓ Förderantrag KfW BEG Unterstützung</li>
                     <li>✓ Installation in 2-3 Tagen</li>
                   </ul>
                 </div>
@@ -356,7 +356,7 @@ export default function VaillantPage() {
               <ul className="text-sm text-slate-600 space-y-1">
                 <li>• Austausch Gasheizung gegen Wärmepumpe</li>
                 <li>• 300L Warmwasserspeicher uniSTOR</li>
-                <li>• Förderung: 14.400€ (BAFA 45%)</li>
+                <li>• Förderung: bis 70% KfW BEG möglich</li>
                 <li>• JAZ: 4,2 | Einsparung: ~2.100€/Jahr</li>
               </ul>
             </div>

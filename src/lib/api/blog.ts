@@ -4136,7 +4136,7 @@ function getMockBlogPosts(): BlogPost[] {
 
     <h3>📋 Voraussetzungen für BEG-Förderung</h3>
     <ul>
-      <li>✅ Antrag <strong>vor Auftragsvergabe</strong> beim BAFA stellen</li>
+      <li>✅ Antrag <strong>vor Auftragsvergabe</strong> bei der KfW stellen</li>
       <li>✅ Durchführung durch <strong>zertifizierten Fachbetrieb</strong> (wie HeizCenter)</li>
       <li>✅ <strong>Hydraulischer Abgleich</strong> nach Verfahren B</li>
       <li>✅ Wärmepumpe mit <strong>JAZ ≥ 3,0</strong> (Luft) bzw. 4,0 (Erdwärme)</li>
@@ -4150,7 +4150,7 @@ function getMockBlogPosts(): BlogPost[] {
       <li><strong>Energieberatung:</strong> Analyse Ihrer Immobilie (Kosten: 800–1.500 €, Förderung: 80%)</li>
       <li><strong>Heizsystem wählen:</strong> Basierend auf Gebäudezustand, Budget und Platzverhältnissen</li>
       <li><strong>Angebote einholen:</strong> Mindestens 3 Fachbetriebe vergleichen</li>
-      <li><strong>Förderantrag:</strong> BAFA-Antrag <strong>vor</strong> Auftragserteilung stellen</li>
+      <li><strong>Förderantrag:</strong> KfW-Antrag <strong>vor</strong> Auftragserteilung stellen</li>
     </ol>
 
     <h3>Phase 2: Installation (1–3 Wochen)</h3>
@@ -4164,7 +4164,7 @@ function getMockBlogPosts(): BlogPost[] {
 
     <h3>Phase 3: Förderabwicklung (8–12 Wochen)</h3>
     <ol>
-      <li><strong>Verwendungsnachweis:</strong> Rechnungen und Nachweise beim BAFA einreichen</li>
+      <li><strong>Verwendungsnachweis:</strong> Rechnungen und Nachweise bei der KfW einreichen</li>
       <li><strong>Auszahlung:</strong> Förderbetrag wird auf Ihr Konto überwiesen</li>
     </ol>
 
@@ -4179,7 +4179,7 @@ function getMockBlogPosts(): BlogPost[] {
     <p><strong>Lösung:</strong> Mindestens Dachbodendämmung (U-Wert < 0,24 W/m²K) nachrüsten</p>
 
     <h3>3. ❌ Förderantrag nach Auftragserteilung</h3>
-    <p><strong>Problem:</strong> BAFA lehnt Antrag ab → Verlust von bis zu 21.000 €</p>
+    <p><strong>Problem:</strong> KfW lehnt Antrag ab → Verlust von bis zu 21.000 €</p>
     <p><strong>Lösung:</strong> <strong>Immer erst Antrag stellen, dann Auftrag erteilen!</strong></p>
 
     <h3>4. ❌ Keine Energieberatung</h3>
@@ -4195,7 +4195,7 @@ function getMockBlogPosts(): BlogPost[] {
     <p><strong>Lösung:</strong> Flächenheizung (Fußboden/Wand) oder größere Heizkörper (35–45°C Vorlauf → JAZ 4,0+)</p>
 
     <h3>7. ❌ Billigstanbieter ohne Zertifizierung</h3>
-    <p><strong>Problem:</strong> Keine BAFA-Förderung, schlechte Installation, keine Garantie</p>
+    <p><strong>Problem:</strong> Keine KfW-Förderung, schlechte Installation, keine Garantie</p>
     <p><strong>Lösung:</strong> Nur zertifizierte Fachbetriebe beauftragen (wie HeizCenter GmbH)</p>
 
     <h2>🏢 Sonderfälle: Mietwohnung & Eigentumswohnung</h2>
@@ -5684,7 +5684,7 @@ function getMockBlogPosts(): BlogPost[] {
         <li><strong>Langfristige Investition</strong> (Planung 15+ Jahre)</li>
         <li><strong>Umweltbewusste Hausbesitzer</strong></li>
         <li><strong>Zugang zu günstigen Stromtarifen</strong> (WP-Tarif, PV-Anlage)</li>
-        <li><strong>Verfügbare Fördermittel</strong> (BAFA-Antrag möglich)</li>
+        <li><strong>Verfügbare Fördermittel</strong> (KfW-Antrag möglich)</li>
       </ul>
 
       <h3>⚠️ Gasheizung kann sinnvoll sein für:</h3>
@@ -6623,10 +6623,10 @@ function getMockBlogPosts(): BlogPost[] {
 
       <h2>6. Förderung & Steuervorteile</h2>
 
-      <h3>BAFA-Förderung</h3>
+      <h3>KfW-Förderung</h3>
       <p>Klimaanlagen sind <strong>nicht direkt förderfähig</strong>, aber:</p>
       <ul>
-        <li>✅ <strong>Wärmepumpen mit Kühlfunktion</strong> erhalten BEG-Förderung (bis 70%)</li>
+        <li>✅ <strong>Wärmepumpen mit Kühlfunktion</strong> erhalten BEG-Förderung über KfW (bis 70%)</li>
         <li>✅ <strong>Reversible Split-Geräte</strong> (Kühlen + Heizen) können unter Umständen als "Luft-Luft-Wärmepumpe" gefördert werden</li>
         <li>❌ <strong>Reine Klimageräte</strong> (nur Kühlen) sind nicht förderfähig</li>
       </ul>

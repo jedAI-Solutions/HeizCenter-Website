@@ -35,9 +35,9 @@ export const dynamic = "force-dynamic";
 const benefits = [
   "Testsieger Stiftung Warentest 2024",
   "Unerhört leise - ab 32 dB(A) in 3m",
-  "Logatherm WLW186i mit A+++-Effizienz",
+  "Logatherm WLW186i mit höchster Energieeffizienz",
   "Bis zu 75°C Vorlauftemperatur",
-  "Bosch-Qualität seit über 295 Jahren",
+  "Bosch-Qualität seit über 290 Jahren",
   "5 Jahre Garantie auf Wärmepumpen",
 ];
 
@@ -61,7 +61,7 @@ const features = [
     icon: Thermometer,
   },
   {
-    title: "A+++-Effizienz",
+    title: "Höchste Energieeffizienz",
     description:
       "SCOP-Werte bis 5,2. Bis zu 75% Energieeinsparung gegenüber Öl- und Gasheizungen.",
     icon: Zap,
@@ -297,7 +297,7 @@ export default function BuderusPage() {
             <div className="prose prose-slate max-w-none">
               <p className="text-lg text-slate-700 mb-6">
                 Als autorisierter <strong>Buderus Fachpartner</strong> verbinden
-                wir die Traditionsmarke mit über 295 Jahren Erfahrung mit unserem
+                wir die Traditionsmarke mit über 290 Jahren Erfahrung mit unserem
                 modernen Service. Von der Planung über die Installation bis zur
                 langfristigen Wartung Ihrer Buderus-Heizung sind wir Ihr Partner
                 in Augsburg, Ulm und Umgebung.
@@ -357,7 +357,7 @@ export default function BuderusPage() {
               <ul className="text-sm text-slate-600 space-y-1">
                 <li>• Austausch Ölheizung gegen Wärmepumpe</li>
                 <li>• Testsieger-Modell extrem leise</li>
-                <li>• Förderung: 13.500€ (BAFA 45%)</li>
+                <li>• Förderung: bis 70% KfW BEG möglich</li>
                 <li>• Jährliche Einsparung: ~2.200€</li>
               </ul>
             </div>

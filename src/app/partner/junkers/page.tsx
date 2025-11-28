@@ -138,7 +138,7 @@ export default function JunkersPage() {
               <ul className="text-sm text-slate-600 space-y-1">
                 <li>• Austausch Gasheizung</li>
                 <li>• Gutes Preis-Leistungs-Verhältnis</li>
-                <li>• Förderung: 10.800€ (BAFA 40%)</li>
+                <li>• Förderung: bis 70% KfW BEG möglich</li>
                 <li>• JAZ: 4,0 | Einsparung: ~1.800€/Jahr</li>
               </ul>
             </div>

@@ -28,7 +28,7 @@ const features = [
   { title: "Testsieger-Qualität", description: "WPL-A 10.2 Plus HK 400 Testsieger bei Stiftung Warentest mit GUT (2,2). Deutsche Qualität seit 1924.", icon: Award },
   { title: "Cold Climate Technologie", description: "Zuverlässig bis -25°C Außentemperatur. Ideal für Kaltregionen und Höhenlagen in Deutschland.", icon: Snowflake },
   { title: "Hohe Vorlauftemperaturen", description: "Bis 70°C möglich für Altbau-Eignung. Auch mit klassischen Heizkörpern effizient heizbar.", icon: Thermometer },
-  { title: "A+++-Effizienz", description: "SCOP bis 4,9. Höchste Energieeffizienz und niedrigste Betriebskosten.", icon: Zap },
+  { title: "Höchste Energieeffizienz", description: "SCOP bis 4,9. Höchste Energieeffizienz und niedrigste Betriebskosten.", icon: Zap },
   { title: "Natürliches R290", description: "Umweltfreundliches Kältemittel Propan mit GWP 3. Zukunftssicher ohne F-Gase.", icon: Shield },
   { title: "Made in Germany", description: "Entwicklung und Produktion in Deutschland. 100 Jahre Erfahrung in Wärmetechnik.", icon: CheckCircle2 },
 ];
@@ -149,7 +149,7 @@ export default function StiebElEltronPage() {
               <ul className="text-sm text-slate-600 space-y-1">
                 <li>• Testsieger-Modell installiert</li>
                 <li>• Austausch Ölheizung</li>
-                <li>• Förderung: 13.200€ (BAFA 45%)</li>
+                <li>• Förderung: bis 70% KfW BEG möglich</li>
                 <li>• JAZ: 4,3 | Einsparung: ~2.300€/Jahr</li>
               </ul>
             </div>

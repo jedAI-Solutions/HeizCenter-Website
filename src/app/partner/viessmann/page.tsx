@@ -35,7 +35,7 @@ export const dynamic = "force-dynamic";
 const benefits = [
   "Testsieger Stiftung Warentest 2024 & 2025",
   "Made in Germany - Höchste Qualitätsstandards",
-  "Vitocal Wärmepumpen mit A+++-Effizienz",
+  "Vitocal Wärmepumpen mit höchster Energieeffizienzklasse",
   "Bis zu 75°C Vorlauftemperatur für Altbau",
   "10 Jahre Garantie auf Wärmepumpen",
   "Professionelle Fachpartner-Installation",
@@ -55,7 +55,7 @@ const features = [
     icon: Thermometer,
   },
   {
-    title: "Energieeffizienz A+++",
+    title: "Höchste Energieeffizienz",
     description:
       "SCOP-Werte bis 5,1 bei der Vitocal 250-A. Bis zu 75% Energieeinsparung gegenüber Öl- und Gasheizungen.",
     icon: Zap,
@@ -319,7 +319,7 @@ export default function ViessmannPage() {
                   <ul className="space-y-2 text-slate-700">
                     <li>✓ Kostenlose Vor-Ort-Beratung</li>
                     <li>✓ Heizlastberechnung nach DIN EN 12831</li>
-                    <li>✓ Fördermittel-Beratung (BAFA, KfW)</li>
+                    <li>✓ Fördermittel-Beratung (KfW BEG)</li>
                     <li>✓ Komplette Installation in 2-3 Tagen</li>
                   </ul>
                 </div>
@@ -354,7 +354,7 @@ export default function ViessmannPage() {
               <ul className="text-sm text-slate-600 space-y-1">
                 <li>• Austausch Ölheizung gegen Wärmepumpe</li>
                 <li>• Warmwasserspeicher 300L integriert</li>
-                <li>• Förderung: 12.600€ (BAFA 40%)</li>
+                <li>• Förderung: bis 70% KfW BEG möglich</li>
                 <li>• Jährliche Einsparung: ~1.800€</li>
               </ul>
             </div>

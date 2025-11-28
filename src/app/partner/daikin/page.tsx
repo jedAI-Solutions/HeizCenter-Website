@@ -19,7 +19,7 @@ const features = [
   { title: "Weltmarktführer", description: "Daikin ist Weltmarktführer in Klimatechnik. Japanische Qualität und Innovation seit 1924.", icon: Award },
   { title: "Heizen & Kühlen", description: "Altherma Serie für Heizen im Winter, Kühlen im Sommer. Ein System für ganzjährigen Komfort.", icon: Snowflake },
   { title: "Hohe Vorlauftemperaturen", description: "Altherma 3 H HT erreicht bis 70°C für Altbau-Eignung. Auch mit Heizkörpern effizient.", icon: Thermometer },
-  { title: "A+++-Effizienz", description: "SCOP-Werte bis 5,15 bei Altherma 3. Höchste Energieeffizienz und niedrigste Betriebskosten.", icon: Zap },
+  { title: "Höchste Energieeffizienz", description: "SCOP-Werte bis 5,15 bei Altherma 3. Höchste Energieeffizienz und niedrigste Betriebskosten.", icon: Zap },
   { title: "Klimaanlagen-Expertise", description: "Daikin-Know-how aus der Klimatechnik. Perfekte Raumklimatisierung auch im Sommer.", icon: Wind },
   { title: "Smart Control", description: "Madoka-Regelung und App-Steuerung. Integration mit Smart Home Systemen.", icon: CheckCircle2 },
 ];
