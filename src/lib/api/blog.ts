@@ -828,7 +828,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p>Komplett klimaneutrale Alternative mit bis zu 70% BEG-Förderung. Höhere Anfangsinvestition, aber deutlich niedrigere Betriebskosten und staatliche Unterstützung.</p>
 
         <h4>Pelletheizung</h4>
-        <p>CO₂-neutrale Biomasseheizung mit bis zu 50% BEG-Förderung. Lokaler, nachhaltiger Brennstoff, aber mehr Platzbedarf als Gasheizung.</p>
+        <p>CO₂-neutrale Biomasseheizung mit bis zu 70% BEG-Förderung (inkl. Einkommensbonus). Für den Klimageschwindigkeitsbonus ist eine Kombination mit Solar/PV erforderlich. Lokaler, nachhaltiger Brennstoff, aber mehr Platzbedarf als Gasheizung.</p>
 
         <h3>Wann lohnt sich eine Gasheizung noch?</h3>
 
@@ -869,11 +869,11 @@ function getMockBlogPosts(): BlogPost[] {
       id: 5,
       slug: 'pelletheizung-kosten-2025',
       title: 'Pelletheizung Kosten 2025: Anschaffung, Betrieb & Förderung',
-      excerpt: 'Was kostet eine Pelletheizung 2025? Kompletter Überblick über Anschaffung, Betriebskosten und bis zu 50% BEG-Förderung.',
+      excerpt: 'Was kostet eine Pelletheizung 2025? Kompletter Überblick über Anschaffung, Betriebskosten und bis zu 70% BEG-Förderung.',
       content: `
         <h2>Pelletheizung Kosten 2025: Der komplette Kostenüberblick</h2>
 
-        <p>Pelletheizungen sind eine klimaneutrale Alternative zu fossilen Brennstoffen und werden 2025 mit attraktiven Zuschüssen bis zu 50% gefördert. Doch was kostet eine Pelletheizung wirklich? Dieser Ratgeber gibt Ihnen alle Informationen zu Anschaffung, Betrieb, Förderung und Wirtschaftlichkeit.</p>
+        <p>Pelletheizungen sind eine klimaneutrale Alternative zu fossilen Brennstoffen und werden 2025 mit attraktiven Zuschüssen bis zu 70% gefördert (inkl. Einkommensbonus). Doch was kostet eine Pelletheizung wirklich? Dieser Ratgeber gibt Ihnen alle Informationen zu Anschaffung, Betrieb, Förderung und Wirtschaftlichkeit.</p>
 
         <h3>Anschaffungskosten: Was kostet eine neue Pelletheizung?</h3>
 
@@ -943,13 +943,12 @@ function getMockBlogPosts(): BlogPost[] {
 
         <ul>
           <li><strong>30% Grundförderung:</strong> Für alle Pelletheizungen als klimafreundliche Heizung</li>
-          <li><strong>20% Klimageschwindigkeits-Bonus:</strong> Beim Austausch alter Öl-, Gas- oder Kohleheizungen (bis Ende 2028)</li>
+          <li><strong>20% Klimageschwindigkeits-Bonus:</strong> Beim Austausch alter Öl-, Gas- oder Kohleheizungen (bis Ende 2028). <strong>Wichtig:</strong> Bei neuen Biomasseheizungen nur in Kombination mit Solarthermie, PV oder Wärmepumpe</li>
+          <li><strong>30% Einkommensbonus:</strong> Für selbstnutzende Eigentümer mit zu versteuerndem Haushaltseinkommen bis 40.000 €</li>
           <li><strong>2.500 € Emissionsbonus:</strong> Für besonders emissionsarme Systeme (max. 2,5 mg/m³ Feinstaub)</li>
         </ul>
 
-        <p><strong>Hinweis:</strong> Der Einkommensbonus (30%) gilt <u>nicht</u> für Biomasse-Heizungen wie Pelletheizungen - nur für Wärmepumpen!</p>
-
-        <p><strong>Maximale Förderung:</strong> Bis zu 50% Zuschuss auf maximal 30.000 € förderfähige Kosten = <strong>15.000 € Förderung</strong></p>
+        <p><strong>Maximale Förderung:</strong> Bis zu 70% Zuschuss auf maximal 30.000 € förderfähige Kosten = <strong>21.000 € Förderung</strong> + 2.500 € Emissionsbonus</p>
 
         <h4>Fördervoraussetzungen:</h4>
 
@@ -966,13 +965,13 @@ function getMockBlogPosts(): BlogPost[] {
         <p>Mit der BEG-Förderung reduzieren sich die Kosten erheblich:</p>
 
         <h4>Beispiel 1: Standard-Förderung (50%)</h4>
-        <p>Pelletheizung: 30.000 € × 50% Förderung (Grundförderung + Geschwindigkeitsbonus) = <strong>15.000 € Eigenanteil</strong></p>
+        <p>Pelletheizung: 30.000 € × 50% Förderung (Grundförderung + Geschwindigkeitsbonus mit Solar-Kombi) = <strong>15.000 € Eigenanteil</strong></p>
 
-        <h4>Beispiel 2: Maximale Förderung (50%) + Emissionsbonus</h4>
-        <p>Pelletheizung: 30.000 € × 50% Förderung + 2.500 € Emissionsbonus = <strong>12.500 € Eigenanteil</strong></p>
+        <h4>Beispiel 2: Mit Einkommensbonus (70%)</h4>
+        <p>Pelletheizung: 30.000 € × 70% Förderung (bei Einkommen ≤40.000€) = <strong>9.000 € Eigenanteil</strong></p>
 
-        <h4>Beispiel 3: Mit Solarthermie-Kombination</h4>
-        <p>Pelletheizung + Solarthermie: 38.000 € × 50% Förderung = <strong>19.000 € Eigenanteil</strong></p>
+        <h4>Beispiel 3: Maximale Förderung (70%) + Emissionsbonus</h4>
+        <p>Pelletheizung: 30.000 € × 70% Förderung + 2.500 € Emissionsbonus = <strong>6.500 € Eigenanteil</strong></p>
 
         <h3>Alternative Förderung: KfW-Kredit und Steuerbonus</h3>
 
@@ -1086,7 +1085,7 @@ function getMockBlogPosts(): BlogPost[] {
 
         <h3>Fazit: Pelletheizung als nachhaltige Investition</h3>
 
-        <p>Pelletheizungen sind 2025 eine wirtschaftlich attraktive und klimafreundliche Alternative zu fossilen Heizungen. Mit bis zu 50% BEG-Förderung sinken die Anschaffungskosten auf 12.500-17.500 €. Die niedrigen Betriebskosten und stabile Pelletpreise sorgen für langfristige Planungssicherheit.</p>
+        <p>Pelletheizungen sind 2025 eine wirtschaftlich attraktive und klimafreundliche Alternative zu fossilen Heizungen. Mit bis zu 70% BEG-Förderung (inkl. Einkommensbonus) sinken die Anschaffungskosten auf 9.000-17.500 €. Die niedrigen Betriebskosten und stabile Pelletpreise sorgen für langfristige Planungssicherheit.</p>
 
         <p><strong>Wichtig:</strong> Prüfen Sie die Platzverhältnisse für die Lagerung und beachten Sie die Fördervoraussetzung zur erneuerbaren Warmwasserbereitung. Lassen Sie sich umfassend beraten und holen Sie mehrere Angebote ein.</p>
 
@@ -1730,21 +1729,23 @@ function getMockBlogPosts(): BlogPost[] {
           <li><strong>Voraussetzung:</strong> Mindest-JAZ 3,5, Smart-Meter-Gateway, Geräuschemission 5 dB unter EU-Grenzwert</li>
         </ul>
 
-        <h4>2. Biomasseheizungen (30-50% Förderung + 2.500 € Emissionsbonus):</h4>
+        <h4>2. Biomasseheizungen (30-70% Förderung + 2.500 € Emissionsbonus):</h4>
 
         <ul>
-          <li><strong>Pelletheizung:</strong> Mit Solarthermie/PV/Wärmepumpe für Warmwasser kombiniert</li>
+          <li><strong>Pelletheizung:</strong> Mit Solarthermie/PV/Wärmepumpe für Warmwasser kombiniert (für Klimabonus)</li>
           <li><strong>Scheitholzvergaser:</strong> Gleiche Anforderungen</li>
           <li><strong>Hackschnitzelheizung:</strong> Gleiche Anforderungen</li>
+          <li><strong>Einkommensbonus:</strong> +30% auch für Biomasse berechtigt (bei Haushaltseinkommen ≤40.000 €)</li>
           <li><strong>Emissionsbonus:</strong> +2.500 € bei max. 2,5 mg/m³ Feinstaub</li>
         </ul>
 
-        <h4>3. Solarthermie (30-35% Förderung):</h4>
+        <h4>3. Solarthermie (30-70% Förderung):</h4>
 
         <ul>
           <li>Für Warmwasser und/oder Heizungsunterstützung</li>
           <li>Kombinierbar mit allen anderen Heizsystemen</li>
           <li>Solar Keymark-Zertifikat erforderlich</li>
+          <li>Gleiche Boni wie Wärmepumpe/Pellet möglich (Klima- und Einkommensbonus)</li>
         </ul>
 
         <h4>4. Brennstoffzellenheizungen (30-70% Förderung):</h4>
@@ -3349,7 +3350,7 @@ function getMockBlogPosts(): BlogPost[] {
           <ul style="margin-bottom: 0;">
             <li><strong>Günstigste Betriebskosten:</strong> Wärmepumpe (715 €/Jahr) & Pellets (740 €/Jahr)</li>
             <li><strong>Teuerste Betriebskosten:</strong> Fernwärme (1.245 €/Jahr) & Gas (1.180 €/Jahr)</li>
-            <li><strong>Höchste Förderung:</strong> Bis zu 70% für Wärmepumpe, bis zu 50% für Pellets</li>
+            <li><strong>Höchste Förderung:</strong> Bis zu 70% für Wärmepumpe und Pellets (inkl. Einkommensbonus)</li>
             <li><strong>Keine Förderung:</strong> Gas & Öl (Auslaufmodelle)</li>
             <li><strong>20-Jahre-Gesamtkosten:</strong> Wärmepumpe 45.000 € vs. Gas 65.000 €</li>
           </ul>
@@ -4311,7 +4312,7 @@ function getMockBlogPosts(): BlogPost[] {
     <p>Im Durchschnitt <strong>1.780 € pro Jahr</strong> bei einem 150 m²-Haus (Nachtspeicher: 2.880 €/Jahr vs. Wärmepumpe: 1.100 €/Jahr). Über 20 Jahre sind das <strong>35.600 € Ersparnis</strong>.</p>
 
     <h3>Welche Förderung gibt es 2025?</h3>
-    <p>Für Wärmepumpen: <strong>30% Grundförderung + 20% Geschwindigkeitsbonus + ggf. 30% Einkommensbonus = bis 70%</strong> (max. 21.000 €). Für Pelletheizungen: 30% Grundförderung + 20% Geschwindigkeitsbonus = max. 50% (kein Einkommensbonus für Biomasse).</p>
+    <p>Für Wärmepumpen und Pelletheizungen: <strong>30% Grundförderung + 20% Geschwindigkeitsbonus + ggf. 30% Einkommensbonus = bis 70%</strong> (max. 21.000 €). Bei Biomasse erfordert der Klimabonus eine Kombination mit Solar/PV.</p>
 
     <h3>Ist eine Wärmepumpe auch im Altbau sinnvoll?</h3>
     <p><strong>Ja</strong>, wenn das Gebäude mindestens eine Dachbodendämmung hat (U-Wert < 0,24 W/m²K). Bei sehr schlechter Dämmung sollte zuerst die Gebäudehülle verbessert werden. Erdwärmepumpen funktionieren auch bei höheren Vorlauftemperaturen gut.</p>
@@ -6036,13 +6037,14 @@ function getMockBlogPosts(): BlogPost[] {
       <h3>BEG-Förderung Pelletheizung</h3>
       <ul>
         <li><strong>Grundförderung:</strong> 30% für Biomasse-Heizungen</li>
-        <li><strong>Klimageschwindigkeitsbonus:</strong> +20% beim Austausch alter Öl-/Gas-Heizungen</li>
+        <li><strong>Klimageschwindigkeitsbonus:</strong> +20% beim Austausch alter Öl-/Gas-Heizungen (nur mit Solar/PV-Kombination)</li>
+        <li><strong>Einkommensbonus:</strong> +30% (Haushaltseinkommen ≤40.000 €) – auch für Biomasse berechtigt!</li>
         <li><strong>Emissionsbonus:</strong> +2.500 € bei Feinstaubgrenzwert unter 2,5 mg/m³</li>
-        <li><strong>Maximal:</strong> 50% (kein Einkommensbonus für Biomasse!)</li>
+        <li><strong>Maximal:</strong> 70% (wie bei Wärmepumpe)</li>
       </ul>
 
       <div style="background-color: #d4edda; padding: 15px; border-left: 4px solid #28a745; margin: 20px 0;">
-        <p style="margin: 0;"><strong>💰 Förder-Vorteil Wärmepumpe:</strong> Bis zu 20 Prozentpunkte mehr Förderung! Bei 25.000 € Kosten → 17.500 € Förderung (WP, max. 70%) vs. 12.500 € (Pellets, max. 50%).</p>
+        <p style="margin: 0;"><strong>💰 Gleiche Förderung für beide:</strong> Sowohl Wärmepumpen als auch Pelletheizungen können bis zu 70% Förderung erhalten (bei Biomasse: Klimabonus nur mit Solar/PV-Kombination).</p>
       </div>
 
       <h2>4. Platzbedarf & Lagerung</h2>
