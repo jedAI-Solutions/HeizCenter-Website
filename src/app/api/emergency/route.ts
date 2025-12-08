@@ -42,9 +42,11 @@ export async function POST(request: NextRequest) {
     // Submit to n8n webhook with high priority
     const result = await submitEmergencyRequest({
       name: validatedData.name,
+      email: validatedData.email,
       phone: validatedData.phone,
       address: validatedData.address,
       postalCode: validatedData.postalCode,
+      city: validatedData.city,
       emergencyType: validatedData.emergencyType,
       description: validatedData.description,
     });

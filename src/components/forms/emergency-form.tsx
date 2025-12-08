@@ -38,6 +38,13 @@ export function EmergencyForm() {
   } = useForm<EmergencyFormData>({
     resolver: zodResolver(emergencyFormSchema),
     defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      address: "",
+      postalCode: "",
+      city: "",
+      description: "",
       gdprConsent: false,
       honeypot: "",
     },
@@ -133,22 +140,38 @@ export function EmergencyForm() {
           )}
         </div>
 
-        <div>
-          <Label htmlFor="phone">Telefon *</Label>
-          <Input
-            id="phone"
-            type="tel"
-            {...register("phone")}
-            placeholder="+49 8234 9665900"
-            className={errors.phone ? "border-red-500" : ""}
-          />
-          {errors.phone && (
-            <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
-          )}
-          <p className="text-xs text-slate-500 mt-1">
-            Wir rufen Sie umgehend zurück
-          </p>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <Label htmlFor="email">E-Mail (optional)</Label>
+            <Input
+              id="email"
+              type="email"
+              {...register("email")}
+              placeholder="ihre.email@example.com"
+              className={errors.email ? "border-red-500" : ""}
+            />
+            {errors.email && (
+              <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+            )}
+          </div>
+
+          <div>
+            <Label htmlFor="phone">Telefon *</Label>
+            <Input
+              id="phone"
+              type="tel"
+              {...register("phone")}
+              placeholder="+49 8234 9665900"
+              className={errors.phone ? "border-red-500" : ""}
+            />
+            {errors.phone && (
+              <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
+            )}
+          </div>
         </div>
+        <p className="text-xs text-slate-500 -mt-4">
+          Wir rufen Sie umgehend zurück
+        </p>
 
         {/* Address */}
         <div>
@@ -164,20 +187,35 @@ export function EmergencyForm() {
           )}
         </div>
 
-        <div>
-          <Label htmlFor="postalCode">PLZ *</Label>
-          <Input
-            id="postalCode"
-            {...register("postalCode")}
-            placeholder="86150"
-            maxLength={5}
-            className={errors.postalCode ? "border-red-500" : ""}
-          />
-          {errors.postalCode && (
-            <p className="text-red-500 text-sm mt-1">
-              {errors.postalCode.message}
-            </p>
-          )}
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <Label htmlFor="postalCode">PLZ *</Label>
+            <Input
+              id="postalCode"
+              {...register("postalCode")}
+              placeholder="86150"
+              maxLength={5}
+              className={errors.postalCode ? "border-red-500" : ""}
+            />
+            {errors.postalCode && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.postalCode.message}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <Label htmlFor="city">Ort *</Label>
+            <Input
+              id="city"
+              {...register("city")}
+              placeholder="Augsburg"
+              className={errors.city ? "border-red-500" : ""}
+            />
+            {errors.city && (
+              <p className="text-red-500 text-sm mt-1">{errors.city.message}</p>
+            )}
+          </div>
         </div>
 
         {/* Emergency Type */}

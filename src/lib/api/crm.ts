@@ -117,9 +117,11 @@ export async function submitQuoteRequest(data: {
  */
 export async function submitEmergencyRequest(data: {
   name: string;
+  email?: string;
   phone: string;
   address: string;
   postalCode: string;
+  city: string;
   emergencyType: string;
   description: string;
 }): Promise<{ success: boolean; leadId?: string; error?: string }> {
@@ -128,9 +130,11 @@ export async function submitEmergencyRequest(data: {
 
     const result = await submitEmergencyToN8n({
       name: data.name,
+      email: data.email,
       phone: data.phone,
       address: data.address,
       postalCode: data.postalCode,
+      city: data.city,
       emergencyType: data.emergencyType,
       description: data.description,
     });

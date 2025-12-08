@@ -97,11 +97,17 @@ export type QuoteFormData = z.infer<typeof quoteFormSchema>;
  */
 export const emergencyFormSchema = z.object({
   name: z.string().min(2, "Name ist erforderlich").max(100),
+  email: z
+    .string()
+    .email("Bitte geben Sie eine gültige E-Mail-Adresse ein")
+    .optional()
+    .or(z.literal("")),
   phone: z.string().min(5, "Telefonnummer ist erforderlich"),
   address: z.string().min(5, "Adresse ist erforderlich").max(200),
   postalCode: z
     .string()
     .regex(/^\d{5}$/, "Bitte geben Sie eine gültige PLZ ein"),
+  city: z.string().min(2, "Ort ist erforderlich").max(100),
   emergencyType: z.enum([
     "heizung-ausfall",
     "rohrbruch",
