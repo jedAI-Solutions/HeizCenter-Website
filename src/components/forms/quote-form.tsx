@@ -55,8 +55,15 @@ export function QuoteForm(props: QuoteFormProps) {
   } = useForm<QuoteFormData>({
     resolver: zodResolver(quoteFormSchema),
     defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      address: "",
+      postalCode: "",
+      city: "",
       serviceType: service as QuoteFormData["serviceType"] | undefined,
       propertyType: propertyType as QuoteFormData["propertyType"] | undefined,
+      constructionYear: "",
       heatingArea: houseSize || "",
       pumpType: pumpType as QuoteFormData["pumpType"] | undefined,
       currentHeating: heatingType as QuoteFormData["currentHeating"] | undefined,
@@ -66,10 +73,18 @@ export function QuoteForm(props: QuoteFormProps) {
       residents: residents || "",
       estimatedCost: estimatedCost || "",
       message: message || "",
+      preferredContactTime: undefined,
       gdprConsent: false,
       honeypot: "",
     },
   });
+
+  // Debug: Log form errors in development
+  useEffect(() => {
+    if (Object.keys(errors).length > 0) {
+      console.log("Form validation errors:", errors);
+    }
+  }, [errors]);
 
   // Set calculator data flag
   useEffect(() => {

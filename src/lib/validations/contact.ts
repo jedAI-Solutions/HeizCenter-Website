@@ -27,7 +27,7 @@ export const contactFormSchema = z.object({
     .refine((val) => val === true, {
       message: "Bitte akzeptieren Sie die Datenschutzerklärung",
     }),
-  honeypot: z.string().max(0), // Anti-spam field
+  honeypot: z.string().max(0).optional().default(""), // Anti-spam field
 });
 
 export type ContactFormData = z.infer<typeof contactFormSchema>;
@@ -54,8 +54,14 @@ export const quoteFormSchema = z.object({
     "klimaanlage",
     "solar",
     "sonstiges",
-  ]),
-  propertyType: z.enum(["einfamilienhaus", "mehrfamilienhaus", "gewerbe"]),
+  ], {
+    required_error: "Bitte wählen Sie eine Leistung aus",
+    invalid_type_error: "Bitte wählen Sie eine Leistung aus",
+  }),
+  propertyType: z.enum(["einfamilienhaus", "mehrfamilienhaus", "gewerbe"], {
+    required_error: "Bitte wählen Sie eine Objektart aus",
+    invalid_type_error: "Bitte wählen Sie eine Objektart aus",
+  }),
   constructionYear: z
     .string()
     .regex(/^\d{4}$/, "Bitte geben Sie ein gültiges Jahr ein")
@@ -81,7 +87,7 @@ export const quoteFormSchema = z.object({
   gdprConsent: z.boolean().refine((val) => val === true, {
     message: "Bitte akzeptieren Sie die Datenschutzerklärung",
   }),
-  honeypot: z.string().max(0),
+  honeypot: z.string().max(0).optional().default(""),
 });
 
 export type QuoteFormData = z.infer<typeof quoteFormSchema>;
@@ -110,7 +116,7 @@ export const emergencyFormSchema = z.object({
   gdprConsent: z.boolean().refine((val) => val === true, {
     message: "Bitte akzeptieren Sie die Datenschutzerklärung",
   }),
-  honeypot: z.string().max(0),
+  honeypot: z.string().max(0).optional().default(""),
 });
 
 export type EmergencyFormData = z.infer<typeof emergencyFormSchema>;
@@ -123,7 +129,7 @@ export const newsletterSchema = z.object({
   gdprConsent: z.boolean().refine((val) => val === true, {
     message: "Bitte akzeptieren Sie die Datenschutzerklärung",
   }),
-  honeypot: z.string().max(0),
+  honeypot: z.string().max(0).optional().default(""),
 });
 
 export type NewsletterData = z.infer<typeof newsletterSchema>;
