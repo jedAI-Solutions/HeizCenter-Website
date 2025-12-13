@@ -37,6 +37,21 @@ export const locationData: Record<string, LocationData> = {
       "Landsberg am Lech",
     ],
   },
+  klosterlechfeld: {
+    cityName: "Klosterlechfeld",
+    postalCode: "86836",
+    region: "Bayern",
+    latitude: 48.1547,
+    longitude: 10.8308,
+    serviceCities: [
+      "Klosterlechfeld",
+      "Augsburg",
+      "Landsberg am Lech",
+      "Schwabmünchen",
+      "Kaufering",
+      "Buchloe",
+    ],
+  },
   ulm: {
     cityName: "Ulm",
     postalCode: "89073",

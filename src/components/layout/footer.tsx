@@ -21,7 +21,7 @@ export function Footer() {
             </div>
             <p className="text-slate-400 mb-4">
               Ihr Experte für Wärmepumpen, Heizung, Sanitär & Klimaanlagen in
-              Bobingen und Gutenzell-Hürbel.
+              Bobingen, Klosterlechfeld und Gutenzell-Hürbel.
             </p>
             <div className="flex flex-col space-y-2 text-sm">
               <a

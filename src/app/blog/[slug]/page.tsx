@@ -6,7 +6,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft } from "lucide-react";
 import { getBlogPostBySlug, getRelatedPosts } from "@/lib/api/blog";
 import { PostHeader } from "@/components/blog/post-header";
-import { AuthorBio } from "@/components/blog/author-bio";
 import { SocialShare } from "@/components/blog/social-share";
 import { RelatedPosts } from "@/components/blog/related-posts";
 import { TableOfContents } from "@/components/blog/table-of-contents";
@@ -68,7 +67,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         title={post.title}
         excerpt={post.excerpt}
         content={post.content}
-        author={post.author}
         date={post.date}
         slug={post.slug}
         image={post.image}
@@ -130,13 +128,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 description={post.excerpt}
               />
 
-              {/* Author Bio */}
-              <div className="mt-8">
-                <AuthorBio
-                  name={post.author}
-                  bio={post.authorBio}
-                />
-              </div>
 
               {/* CTA */}
               <Card className="bg-gradient-to-br from-[#0F5B78] to-[#0F5B78] text-white mt-8">

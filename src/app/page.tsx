@@ -47,13 +47,14 @@ const services = [
 
 const locations = [
   { name: "Bobingen", phone: "+49 8234 9665900" },
+  { name: "Klosterlechfeld", phone: "+49 8234 9665900" },
   { name: "Gutenzell-Hürbel", phone: "+49 8234 9665900" },
 ];
 
 const stats = [
   { icon: Star, number: "4.8★", label: "Google Bewertung" },
   { icon: Award, number: "20+", label: "Jahre Erfahrung" },
-  { icon: Users, number: "2", label: "Standorte" },
+  { icon: Users, number: "3", label: "Standorte" },
 ];
 
 export default function Home() {
@@ -63,6 +64,7 @@ export default function Home() {
       <OrganizationSchema />
       <LocalBusinessSchema location="bobingen" includeServices={true} />
       <LocalBusinessSchema location="gutenzell" includeServices={false} />
+      <LocalBusinessSchema location="klosterlechfeld" includeServices={false} />
 
       <div>
       {/* Hero Section with Image Grid Background */}
@@ -194,11 +196,11 @@ export default function Home() {
           <CardHeader className="text-center">
             <CardTitle className="text-3xl mb-2">Unsere Standorte</CardTitle>
             <CardDescription>
-              HeizCenter GmbH - Ihr Experte in Bobingen und Gutenzell-Hürbel
+              HeizCenter GmbH - Ihr Experte in Bobingen, Klosterlechfeld und Gutenzell-Hürbel
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {locations.map((location) => (
                 <div key={location.name} className="text-center p-6">
                   <h3 className="text-xl font-semibold text-slate-900 mb-2">

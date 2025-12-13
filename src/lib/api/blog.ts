@@ -325,8 +325,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p>Lassen Sie sich von HeizCenter kostenlos und unverbindlich beraten. Wir erstellen Ihnen ein individuelles Angebot und unterstützen Sie bei der Förderantragstellung – für maximale Kostentransparenz von Anfang an.</p>
       `,
       category: 'Wärmepumpe',
-      author: 'Thomas Müller',
-      authorBio: 'Heizungsexperte mit über 15 Jahren Erfahrung in der Wärmepumpen-Installation.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-10',
       readingTime: 8,
       image: '/images/Waermepumpe.jpeg',
@@ -469,8 +468,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p><strong>HeizCenter berät Sie gerne</strong> zu allen Fragen rund um das Heizungsgesetz, passende Heizsysteme und maximale Förderung. Kontaktieren Sie uns für eine kostenlose Erstberatung.</p>
       `,
       category: 'Heizung',
-      author: 'Sarah Schmidt',
-      authorBio: 'Energieberaterin und Expertin für Gebäudesanierung mit Fokus auf erneuerbare Energien.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-08',
       readingTime: 7,
       image: '/images/Heizung_Modernisierung.webp',
@@ -682,8 +680,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p>Kontaktieren Sie uns jetzt und sichern Sie sich Ihre maximale Förderung für 2025!</p>
       `,
       category: 'Förderung',
-      author: 'Michael Weber',
-      authorBio: 'Fördermittelberater mit Spezialisierung auf energetische Gebäudesanierung.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-05',
       readingTime: 12,
       image: '/images/Heizung_Modernisierung.webp',
@@ -857,8 +854,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p><strong>Jetzt Kontakt aufnehmen und Kosten vergleichen!</strong></p>
       `,
       category: 'Heizung',
-      author: 'Stefan Hartmann',
-      authorBio: 'Heizungsexperte mit über 18 Jahren Erfahrung in Gas- und Brennwerttechnik.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-08',
       readingTime: 9,
       image: '/images/HeizCenter_Heizung.webp',
@@ -1096,8 +1092,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p><strong>Jetzt Beratungstermin vereinbaren und maximale Förderung sichern!</strong></p>
       `,
       category: 'Heizung',
-      author: 'Andreas Klein',
-      authorBio: 'Biomasse-Heizungsexperte mit Spezialisierung auf Pellet- und Hackschnitzelheizungen.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-07',
       readingTime: 10,
       image: '/images/Heizung_Modernisierung.webp',
@@ -1372,8 +1367,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p><strong>Jetzt Beratungstermin vereinbaren und Sonnenenergie nutzen!</strong></p>
       `,
       category: 'Solar',
-      author: 'Julia Schneider',
-      authorBio: 'Solar-Expertin mit über 12 Jahren Erfahrung in Solarthermie und Photovoltaik.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-06',
       readingTime: 10,
       image: '/images/Solaranlage.webp',
@@ -1683,8 +1677,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p><strong>Kontaktieren Sie uns für eine kostenlose Erstberatung!</strong></p>
       `,
       category: 'Sanitär & Bad',
-      author: 'Markus Fischer',
-      authorBio: 'Sanitär- und Badexperte mit über 15 Jahren Erfahrung in Badsanierung und barrierefreiem Umbau.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-05',
       readingTime: 11,
       image: '/images/HeizCenter_Badgestaltung.webp',
@@ -2050,8 +2043,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p><strong>Jetzt Beratungstermin vereinbaren und maximale Förderung sichern!</strong></p>
       `,
       category: 'Förderung',
-      author: 'Dr. Martin Schneider',
-      authorBio: 'Energieberater und Fördermittelexperte mit Spezialisierung auf BEG und KfW-Programme.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-04',
       readingTime: 12,
       image: '/images/Heizung_Modernisierung.webp',
@@ -2422,8 +2414,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p><strong>Jetzt Beratungstermin vereinbaren und Ihr Traumbad realisieren!</strong></p>
       `,
       category: 'Sanitär',
-      author: 'Stefan Hartmann',
-      authorBio: 'Heizungsexperte mit über 18 Jahren Erfahrung in Sanitär- und Badsanierung bei HeizCenter.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-09',
       readingTime: 14,
       image: '/images/HeizCenter_Badgestaltung.webp',
@@ -2950,8 +2941,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p><strong>Jetzt beraten lassen und von allen Vorteilen profitieren!</strong></p>
       `,
       category: 'Wärmepumpe',
-      author: 'Stefan Hartmann',
-      authorBio: 'Heizungsexperte mit über 18 Jahren Erfahrung in Wärmepumpen-Installation und -Beratung bei HeizCenter.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-10',
       readingTime: 16,
       image: '/images/Waermepumpe.jpeg',
@@ -3327,8 +3317,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p><strong>Jetzt informieren, Förderung sichern und langfristig sparen!</strong></p>
       `,
       category: 'Heizung',
-      author: 'Thomas Müller',
-      authorBio: 'Energieberater und Heizungsfachmann mit 15 Jahren Erfahrung in der Beratung zu GEG, Förderungen und modernen Heizsystemen.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-12',
       readingTime: 14,
       image: '/images/HeizCenter_Heizung.webp',
@@ -3897,8 +3886,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p><strong>Handeln Sie jetzt und sichern Sie sich die 70% Förderung – der Geschwindigkeitsbonus läuft bis Ende 2028!</strong></p>
       `,
       category: 'Heizung',
-      author: 'Stefan Hartmann',
-      authorBio: 'Heizungsexperte mit über 18 Jahren Erfahrung. Spezialist für Heizsystem-Vergleiche, Wirtschaftlichkeitsberechnungen und Förderberatung.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-13',
       readingTime: 18,
       image: '/images/Heizung_Modernisierung.webp',
@@ -4330,8 +4318,7 @@ function getMockBlogPosts(): BlogPost[] {
     <p>Fachgerechte Entsorgung: <strong>50–150 € pro Gerät</strong> (asbesthaltige Geräte vor 1984: 200–400 €). Dies ist im Installationspreis meist enthalten.</p>
       `,
       category: 'Heizung',
-      author: 'Thomas Müller',
-      authorBio: 'Energieberater und Heizungsfachmann mit 15 Jahren Erfahrung. Spezialist für Altbausanierung, Fördermittelberatung und Wärmepumpen-Optimierung.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-13',
       readingTime: 14,
       image: '/images/HeizCenter_Heizung.webp',
@@ -4925,8 +4912,7 @@ function getMockBlogPosts(): BlogPost[] {
     <p>Moderne PE-Xa/PE-RT-Rohre sind sehr robust (Lebensdauer 30–50 Jahre). Bei Leckage: Leckage-Ortung per Thermografie (500–1.500 €), Reparatur durch punktuelles Öffnen des Estrichs (1.000–3.000 €). <strong>Vorbeugung:</strong> Nur zertifizierte Fachbetriebe beauftragen!</p>
       `,
       category: 'Heizung',
-      author: 'Stefan Hartmann',
-      authorBio: 'Heizungsexperte mit über 18 Jahren Erfahrung. Spezialist für Flächenheizungen, Wärmepumpen-Integration und energetische Altbausanierung.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-13',
       readingTime: 16,
       image: '/images/Heizung_Modernisierung.webp',
@@ -5323,8 +5309,7 @@ function getMockBlogPosts(): BlogPost[] {
     <p><strong>Technisch ja, aber Vorsicht:</strong> Wärmepumpen-Systeme nutzen oft entsalztes/demineralisiertes Wasser. Das Nachfüllen mit Leitungswasser kann Kalkablagerungen verursachen (JAZ sinkt). <strong>Empfehlung:</strong> Fachmann beauftragen oder destilliertes Wasser verwenden.</p>
       `,
       category: 'Heizung',
-      author: 'Thomas Müller',
-      authorBio: 'Energieberater und Heizungsfachmann mit 15 Jahren Erfahrung. Spezialist für Heizungswartung, Troubleshooting und Systemoptimierung.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-14',
       readingTime: 12,
       image: '/images/HeizCenter_Heizung.webp',
@@ -5810,8 +5795,7 @@ function getMockBlogPosts(): BlogPost[] {
       </div>
       `,
       category: 'Wärmepumpe',
-      author: 'Thomas Müller',
-      authorBio: 'Energieberater und Heizungsfachmann mit 15 Jahren Erfahrung. Spezialist für Wärmepumpen, Heizsystemvergleiche und BEG-Förderberatung.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-15',
       readingTime: 14,
       image: '/images/Waermepumpe.jpeg',
@@ -6302,8 +6286,7 @@ function getMockBlogPosts(): BlogPost[] {
       </div>
       `,
       category: 'Wärmepumpe',
-      author: 'Thomas Müller',
-      authorBio: 'Energieberater und Heizungsfachmann mit 15 Jahren Erfahrung. Spezialist für Wärmepumpen, Biomasse-Heizungen und Heizsystemvergleiche.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-16',
       readingTime: 13,
       image: '/images/Waermepumpe.jpeg',
@@ -6700,8 +6683,7 @@ function getMockBlogPosts(): BlogPost[] {
       </div>
       `,
       category: 'Klimaanlage',
-      author: 'Stefan Weber',
-      authorBio: 'Klimatechnik-Experte mit 12 Jahren Erfahrung. Spezialist für Split-Systeme, Multisplit-Anlagen und energieeffiziente Klimatisierung.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-17',
       readingTime: 12,
       image: '/images/HeizCenter_Klimaanlage.webp',
@@ -7253,8 +7235,7 @@ function getMockBlogPosts(): BlogPost[] {
     </p>
       `,
       category: 'Sanitär',
-      author: 'Michael Schneider',
-      authorBio: 'Badplaner und Sanitärmeister mit 18 Jahren Erfahrung. Spezialist für barrierefreie Bäder, altersgerechte Sanierung und DIN 18040-2 konforme Planung.',
+      author: 'HeizCenter Redaktion',
       date: '2025-11-18',
       readingTime: 15,
       image: '/images/HeizCenter_Badgestaltung.webp',
@@ -7585,8 +7566,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p>Benötigen Sie professionelle Unterstützung bei der Planung? Unsere Experten beraten Sie kostenlos zu Solarthermie, Photovoltaik und Hybrid-Lösungen – inklusive Förderberatung und Wirtschaftlichkeitsberechnung.</p>
       `,
       category: 'Solar',
-      author: 'Thomas Weber',
-      authorBio: 'Energieberater und Solartechnik-Spezialist mit 16 Jahren Erfahrung. Experte für Photovoltaik, Solarthermie und hybride Energiesysteme. Zertifizierter BAFA-Energieberater.',
+      author: 'HeizCenter Redaktion',
       date: '2025-01-15',
       readingTime: 18,
       image: '/images/HeizCenter_Solar.webp',
@@ -7936,8 +7916,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p>Benötigen Sie Unterstützung bei Planung und Antragstellung? Unsere BAFA-zertifizierten Energieberater helfen Ihnen kostenlos bei der Maximierung Ihrer Förderung und begleiten Sie durch den gesamten Prozess.</p>
       `,
       category: 'Solar',
-      author: 'Thomas Weber',
-      authorBio: 'Energieberater und Solartechnik-Spezialist mit 16 Jahren Erfahrung. Experte für Photovoltaik, Solarthermie und hybride Energiesysteme. Zertifizierter BAFA-Energieberater.',
+      author: 'HeizCenter Redaktion',
       date: '2025-01-14',
       readingTime: 16,
       image: '/images/HeizCenter_Solar.webp',
@@ -8362,8 +8341,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p>Benötigen Sie professionelle Beratung für Ihre Hybrid-Heizung? Unsere Experten planen Ihre optimale Kombination aus Wärmepumpe und Solarthermie – inklusive Heizlastberechnung, Fördermittelberatung und hydraulischem Abgleich.</p>
       `,
       category: 'Solar',
-      author: 'Thomas Weber',
-      authorBio: 'Energieberater und Solartechnik-Spezialist mit 16 Jahren Erfahrung. Experte für Photovoltaik, Solarthermie und hybride Energiesysteme. Zertifizierter BAFA-Energieberater.',
+      author: 'HeizCenter Redaktion',
       date: '2025-01-13',
       readingTime: 17,
       image: '/images/HeizCenter_Solar.webp',
@@ -8767,8 +8745,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p>Benötigen Sie eine detaillierte Wirtschaftlichkeitsberechnung für Ihr Projekt? Unsere Energieberater erstellen Ihnen kostenlos eine individuelle Kosten-Nutzen-Analyse – inklusive aktueller Förderungen, Einsparungspotenzial und Amortisationsrechnung.</p>
       `,
       category: 'Solar',
-      author: 'Thomas Weber',
-      authorBio: 'Energieberater und Solartechnik-Spezialist mit 16 Jahren Erfahrung. Experte für Photovoltaik, Solarthermie und hybride Energiesysteme. Zertifizierter BAFA-Energieberater.',
+      author: 'HeizCenter Redaktion',
       date: '2025-01-12',
       readingTime: 19,
       image: '/images/HeizCenter_Solar.webp',
@@ -9182,8 +9159,7 @@ function getMockBlogPosts(): BlogPost[] {
         </div>
       `,
       category: 'Solar',
-      author: 'Thomas Weber',
-      authorBio: 'Energieberater und Solartechnik-Spezialist mit 16 Jahren Erfahrung. Experte für Photovoltaik, Solarthermie und hybride Energiesysteme. Zertifizierter BAFA-Energieberater.',
+      author: 'HeizCenter Redaktion',
       date: '2025-01-13',
       readingTime: 17,
       image: '/images/HeizCenter_Solar.webp',
@@ -9698,8 +9674,7 @@ function getMockBlogPosts(): BlogPost[] {
         </div>
       `,
       category: 'Solar',
-      author: 'Thomas Weber',
-      authorBio: 'Energieberater und Solartechnik-Spezialist mit 16 Jahren Erfahrung. Experte für Photovoltaik, Solarthermie und hybride Energiesysteme. Zertifizierter BAFA-Energieberater.',
+      author: 'HeizCenter Redaktion',
       date: '2025-01-14',
       readingTime: 16,
       image: '/images/HeizCenter_Solar.webp',

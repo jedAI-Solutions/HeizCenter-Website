@@ -2,7 +2,6 @@ interface BlogPostingSchemaProps {
   title: string;
   excerpt: string;
   content: string;
-  author: string;
   date: string;
   slug: string;
   image?: string;
@@ -14,7 +13,6 @@ export function BlogPostingSchema({
   title,
   excerpt,
   content,
-  author,
   date,
   slug,
   image,
@@ -39,7 +37,7 @@ export function BlogPostingSchema({
       : "https://heizcenter.de/images/logo.png",
     author: {
       "@type": "Organization",
-      name: author || "HeizCenter GmbH",
+      name: "HeizCenter Redaktion",
       url: "https://heizcenter.de",
     },
     publisher: {

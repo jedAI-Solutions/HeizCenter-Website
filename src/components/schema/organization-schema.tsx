@@ -62,6 +62,23 @@ export function OrganizationSchema() {
           longitude: 9.95,
         },
       },
+      {
+        "@type": "Place",
+        name: "HeizCenter GmbH Standort Klosterlechfeld",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Schulstraße 40",
+          addressLocality: "Klosterlechfeld",
+          postalCode: "86836",
+          addressRegion: "Bayern",
+          addressCountry: "DE",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 48.1547,
+          longitude: 10.8308,
+        },
+      },
     ],
 
     // Contact Points

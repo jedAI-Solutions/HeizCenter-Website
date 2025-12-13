@@ -1,6 +1,6 @@
 import { getSchemaRating } from "@/lib/config/reviews";
 interface LocalBusinessSchemaProps {
-  location: "bobingen" | "gutenzell";
+  location: "bobingen" | "gutenzell" | "klosterlechfeld";
   includeServices?: boolean;
 }
 
@@ -140,7 +140,60 @@ export function LocalBusinessSchema({
     ],
   };
 
-  const schema = location === "bobingen" ? bobingenSchema : gutenzellSchema;
+  const klosterlechfeldSchema = {
+    "@context": "https://schema.org",
+    "@type": "PlumbingHeatingContractor",
+    name: "HeizCenter GmbH - Klosterlechfeld",
+    image: "https://heizcenter.de/images/logo.png",
+    "@id": "https://heizcenter.de/#klosterlechfeld",
+    url: "https://heizcenter.de/standorte/klosterlechfeld",
+    telephone: "+4982349665900",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Schulstraße 40",
+      addressLocality: "Klosterlechfeld",
+      postalCode: "86836",
+      addressCountry: "DE",
+      addressRegion: "Bayern",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 48.1547,
+      longitude: 10.8308,
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "17:00",
+      },
+    ],
+    parentOrganization: {
+      "@type": "Organization",
+      name: "HeizCenter GmbH",
+      url: "https://heizcenter.de",
+    },
+    aggregateRating: getSchemaRating(),
+    areaServed: [
+      { "@type": "City", name: "Klosterlechfeld" },
+      { "@type": "City", name: "Augsburg" },
+      { "@type": "City", name: "Landsberg am Lech" },
+      { "@type": "City", name: "Schwabmünchen" },
+      { "@type": "City", name: "Kaufering" },
+      { "@type": "City", name: "Buchloe" },
+      { "@type": "City", name: "Königsbrunn" },
+      { "@type": "City", name: "Bobingen" },
+    ],
+  };
+
+  const schemaMap = {
+    bobingen: bobingenSchema,
+    gutenzell: gutenzellSchema,
+    klosterlechfeld: klosterlechfeldSchema,
+  };
+
+  const schema = schemaMap[location];
 
   return (
     <script
@@ -167,13 +220,15 @@ export function LocationPageSchema({
   longitude,
   serviceCities,
 }: LocationPageSchemaProps) {
+  const citySlug = cityName.toLowerCase().replace(/\s+/g, "-");
+  
   const schema = {
     "@context": "https://schema.org",
     "@type": "PlumbingHeatingContractor",
-    name: `HeizCenter GmbH - ${cityName}`,
+    name: "HeizCenter GmbH - " + cityName,
     image: "https://heizcenter.de/images/logo.png",
-    "@id": `https://heizcenter.de/standorte/${cityName.toLowerCase().replace(/\s+/g, "-")}`,
-    url: `https://heizcenter.de/standorte/${cityName.toLowerCase().replace(/\s+/g, "-")}`,
+    "@id": "https://heizcenter.de/standorte/" + citySlug,
+    url: "https://heizcenter.de/standorte/" + citySlug,
     telephone: "+4982349665900",
     address: {
       "@type": "PostalAddress",

@@ -135,7 +135,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Location pages
+  // Main location pages (physical offices)
+  const mainLocationPages = [
+    {
+      url: `${baseUrl}/standorte/bobingen`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/standorte/gutenzell-huerbel`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/standorte/klosterlechfeld`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+  ];
+
+  // Service area location pages
   const locations = [
     "augsburg",
     "ulm",
@@ -205,6 +227,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...mainPages,
     ...additionalPages,
     ...legalPages,
+    ...mainLocationPages,
     ...locationPages,
     ...categoryPages,
     ...blogPosts,

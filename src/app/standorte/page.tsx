@@ -6,13 +6,14 @@ import { MapPin, Clock, Phone } from "lucide-react";
 export const metadata: Metadata = {
   title: "Standorte - HeizCenter Bayern | Wärmepumpe, Heizung, Sanitär",
   description:
-    "HeizCenter Standorte in Bayern: Bobingen und Gutenzell-Hürbel. Wir betreuen Städte und Gemeinden in Schwaben und Allgäu. Kostenlose Beratung vor Ort.",
+    "HeizCenter Standorte in Bayern: Bobingen, Klosterlechfeld und Gutenzell-Hürbel. Wir betreuen Städte und Gemeinden in Schwaben und Allgäu. Kostenlose Beratung vor Ort.",
   keywords: [
     "HeizCenter Standorte",
     "Wärmepumpe Bayern",
     "Heizung Schwaben",
     "Sanitär Allgäu",
     "Bobingen",
+    "Klosterlechfeld",
     "Gutenzell-Hürbel",
   ],
 };
@@ -40,9 +41,21 @@ const locations: Location[] = [
       "Friedberg",
       "Stadtbergen",
       "Gersthofen",
-      "Landsberg am Lech",
       "Aichach",
+    ],
+  },
+  {
+    name: "Klosterlechfeld",
+    href: "/standorte/klosterlechfeld",
+    region: "Raum Landsberg am Lech",
+    phone: "+49 8234 9665900",
+    isMain: true,
+    subLocations: [
+      "Landsberg am Lech",
       "Schwabmünchen",
+      "Kaufering",
+      "Buchloe",
+      "Untermeitingen",
     ],
   },
   {
@@ -74,9 +87,10 @@ const allSubLocations = [
   { name: "Friedberg", href: "/standorte/friedberg", mainLocation: "Bobingen" },
   { name: "Stadtbergen", href: "/standorte/stadtbergen", mainLocation: "Bobingen" },
   { name: "Gersthofen", href: "/standorte/gersthofen", mainLocation: "Bobingen" },
-  { name: "Landsberg am Lech", href: "/standorte/landsberg", mainLocation: "Bobingen" },
   { name: "Aichach", href: "/standorte/aichach", mainLocation: "Bobingen" },
-  { name: "Schwabmünchen", href: "/standorte/schwabmuenchen", mainLocation: "Bobingen" },
+  // Klosterlechfeld Region (Raum Landsberg)
+  { name: "Landsberg am Lech", href: "/standorte/landsberg", mainLocation: "Klosterlechfeld" },
+  { name: "Schwabmünchen", href: "/standorte/schwabmuenchen", mainLocation: "Klosterlechfeld" },
   // Gutenzell-Hürbel Region (Raum Ulm/Memmingen)
   { name: "Ulm", href: "/standorte/ulm", mainLocation: "Gutenzell-Hürbel" },
   { name: "Neu-Ulm", href: "/standorte/neu-ulm", mainLocation: "Gutenzell-Hürbel" },
@@ -117,17 +131,17 @@ export default function StandortePage() {
         <div className="relative z-10 container py-12 md:py-16">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">
-              Unsere Standorte in Bayern
+              Unsere Standorte in Bayern und Baden-Württemberg
             </h1>
             <p className="text-lg text-white/95 mb-6">
-              HeizCenter betreut Sie an zwei Hauptstandorten in Bobingen und Gutenzell-Hürbel
+              HeizCenter betreut Sie an drei Hauptstandorten in Bobingen, Klosterlechfeld und Gutenzell-Hürbel
               sowie in über 20 weiteren Städten und Gemeinden in Schwaben und Allgäu. Schneller Service,
               kurze Anfahrtswege, lokale Expertise.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-base">
               <div className="flex items-center gap-2">
                 <MapPin className="h-5 w-5" />
-                <span>2 Hauptstandorte</span>
+                <span>3 Hauptstandorte</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="h-5 w-5" />
@@ -148,7 +162,7 @@ export default function StandortePage() {
           <h2 className="text-3xl font-bold text-center mb-12">
             Unsere Hauptstandorte
           </h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {locations.map((location) => (
               <Link
                 key={location.name}
@@ -208,7 +222,7 @@ export default function StandortePage() {
             Unser Servicegebiet
           </h2>
           <p className="text-center text-lg text-slate-600 mb-12 max-w-3xl mx-auto">
-            Von unseren beiden Hauptstandorten in Bobingen und Gutenzell-Hürbel erreichen wir Sie schnell in der gesamten Region Schwaben und Allgäu.
+            Von unseren drei Hauptstandorten in Bobingen, Klosterlechfeld und Gutenzell-Hürbel erreichen wir Sie schnell in der gesamten Region Schwaben und Allgäu.
           </p>
           <div className="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-xl">
             <Image
@@ -261,7 +275,7 @@ export default function StandortePage() {
             Flächendeckende Betreuung in Schwaben und Allgäu
           </h2>
           <p className="text-lg text-slate-700 mb-6">
-            Mit unseren zwei Hauptstandorten in Bobingen und Gutenzell-Hürbel
+            Mit unseren drei Hauptstandorten in Bobingen, Klosterlechfeld und Gutenzell-Hürbel
             decken wir ein großes Gebiet in Schwaben und Allgäu ab. Kurze
             Anfahrtswege bedeuten für Sie schnelle Reaktionszeiten - besonders
             wichtig bei Heizungsausfällen im Winter oder dringenden
@@ -313,7 +327,7 @@ export default function StandortePage() {
             Ihr Service in der Region
           </h3>
           <p className="text-slate-700 mb-4">
-            Jeder unserer zwei Hauptstandorte betreut mehrere Städte und
+            Jeder unserer drei Hauptstandorte betreut mehrere Städte und
             Gemeinden in der Umgebung. So garantieren wir kurze Anfahrtswege
             und schnelle Reaktionszeiten. Unsere Techniker wohnen in der Region
             und kennen die lokalen Besonderheiten - von historischen

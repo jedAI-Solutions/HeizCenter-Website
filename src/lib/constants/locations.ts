@@ -25,4 +25,16 @@ export const LOCATIONS: Location[] = [
       lng: 9.9667,
     },
   },
+  {
+    id: "klosterlechfeld",
+    name: "Klosterlechfeld",
+    city: "Klosterlechfeld",
+    address: "Schulstraße 40, 86836 Klosterlechfeld",
+    phone: "+49 8234 9665900",
+    email: "service@heizcenter.de",
+    coordinates: {
+      lat: 48.1547,
+      lng: 10.8308,
+    },
+  },
 ];
