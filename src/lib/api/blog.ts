@@ -484,7 +484,7 @@ function getMockBlogPosts(): BlogPost[] {
             <li class="flex gap-3"><span class="flex-shrink-0 w-6 h-6 bg-[#0F5B78] text-white rounded-full flex items-center justify-center text-sm font-bold">3</span><span><strong>Entscheidung</strong> – Sie entscheiden in Ruhe – ohne Verkaufsdruck</span></li>
           </ol>
           <div class="flex flex-col sm:flex-row gap-3">
-            <a href="tel:+4982349665900" class="inline-flex items-center justify-center gap-2 bg-[#0F5B78] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#0D4A5F] transition-colors">📞 Jetzt Termin vereinbaren</a>
+            <a href="tel:+49 8234 9665900" class="inline-flex items-center justify-center gap-2 bg-[#0F5B78] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#0D4A5F] transition-colors">📞 Jetzt Termin vereinbaren</a>
             <a href="/kontakt" class="inline-flex items-center justify-center gap-2 bg-white border border-slate-300 text-slate-700 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 transition-colors">Online anfragen →</a>
           </div>
           <p class="text-sm text-slate-600 mt-4">✓ Die Beratung bleibt kostenlos – auch wenn Sie sich gegen eine Wärmepumpe entscheiden.</p>
@@ -717,7 +717,7 @@ function getMockBlogPosts(): BlogPost[] {
           <div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
             <p class="font-bold text-amber-900 mb-2">Heizung über 25 Jahre</p>
             <p class="text-sm text-amber-800 mb-3">Handeln Sie proaktiv. Ein geplanter Austausch ist immer besser als ein Notfall im Januar.</p>
-            <a href="tel:+4982349665900" class="text-sm text-amber-900 font-medium hover:underline">📞 Jetzt anrufen →</a>
+            <a href="tel:+49 8234 9665900" class="text-sm text-amber-900 font-medium hover:underline">📞 Jetzt anrufen →</a>
           </div>
         </div>
 
@@ -738,7 +738,7 @@ function getMockBlogPosts(): BlogPost[] {
             <li class="flex items-start gap-2">✓ <span>Welche Heizung passt zu Ihrem Haus?</span></li>
           </ul>
           <div class="flex flex-col sm:flex-row gap-3">
-            <a href="tel:+4982349665900" class="inline-flex items-center justify-center gap-2 bg-[#0F5B78] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#0D4A5F] transition-colors">📞 Jetzt anrufen</a>
+            <a href="tel:+49 8234 9665900" class="inline-flex items-center justify-center gap-2 bg-[#0F5B78] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#0D4A5F] transition-colors">📞 Jetzt anrufen</a>
             <a href="/kontakt" class="inline-flex items-center justify-center gap-2 bg-white border border-slate-300 text-slate-700 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 transition-colors">Online-Termin vereinbaren →</a>
           </div>
           <p class="text-sm text-slate-500 mt-4">Kostenlose Beratung – auch wenn Sie sich gegen eine neue Heizung entscheiden.</p>
@@ -968,7 +968,7 @@ function getMockBlogPosts(): BlogPost[] {
             <li class="flex items-start gap-2">✓ <span>Hilfe beim KfW-Portal</span></li>
           </ul>
           <div class="flex flex-col sm:flex-row gap-3">
-            <a href="tel:+4982349665900" class="inline-flex items-center justify-center gap-2 bg-[#0F5B78] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#0D4A5F] transition-colors">📞 Jetzt anrufen</a>
+            <a href="tel:+49 8234 9665900" class="inline-flex items-center justify-center gap-2 bg-[#0F5B78] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#0D4A5F] transition-colors">📞 Jetzt anrufen</a>
             <a href="/kontakt" class="inline-flex items-center justify-center gap-2 bg-white border border-slate-300 text-slate-700 px-6 py-3 rounded-lg font-medium hover:bg-slate-50 transition-colors">Kostenlose Beratung anfragen →</a>
           </div>
           <p class="text-sm text-slate-500 mt-4">Die Erstberatung ist kostenlos – auch wenn Sie sich danach gegen einen Wechsel entscheiden.</p>
@@ -1267,7 +1267,7 @@ function getMockBlogPosts(): BlogPost[] {
           </div>
 
           <div class="flex flex-col sm:flex-row gap-3">
-            <a href="tel:+4982349665900" class="inline-flex items-center justify-center gap-2 bg-white text-[#0F5B78] font-semibold px-5 py-3 rounded-lg hover:bg-slate-100 transition-colors">
+            <a href="tel:+49 8234 9665900" class="inline-flex items-center justify-center gap-2 bg-white text-[#0F5B78] font-semibold px-5 py-3 rounded-lg hover:bg-slate-100 transition-colors">
               <span>📞</span> 08234 / 967 975 0
             </a>
             <a href="/kontakt" class="inline-flex items-center justify-center gap-2 bg-white/10 text-white font-semibold px-5 py-3 rounded-lg border border-white/30 hover:bg-white/20 transition-colors">
@@ -1584,7 +1584,7 @@ function getMockBlogPosts(): BlogPost[] {
           <p class="text-white/90 mb-4">Wir beraten Sie ehrlich, welches System zu Ihrem Haus passt – Pellet, Wärmepumpe oder Hybrid. Kostenlose Vor-Ort-Beratung inkl. Förderberechnung.</p>
 
           <div class="flex flex-col sm:flex-row gap-3">
-            <a href="tel:+4982349665900" class="inline-flex items-center justify-center gap-2 bg-white text-[#0F5B78] font-semibold px-5 py-3 rounded-lg hover:bg-slate-100 transition-colors">
+            <a href="tel:+49 8234 9665900" class="inline-flex items-center justify-center gap-2 bg-white text-[#0F5B78] font-semibold px-5 py-3 rounded-lg hover:bg-slate-100 transition-colors">
               <span>📞</span> 08234 / 967 975 0
             </a>
             <a href="/kontakt" class="inline-flex items-center justify-center gap-2 bg-white/10 text-white font-semibold px-5 py-3 rounded-lg border border-white/30 hover:bg-white/20 transition-colors">
@@ -1907,7 +1907,7 @@ function getMockBlogPosts(): BlogPost[] {
           <p class="text-white/90 mb-4">Wir schauen uns Ihr Dach an und sagen Ihnen ehrlich, ob Solarthermie bei Ihnen Sinn macht – oder ob PV die bessere Wahl ist.</p>
 
           <div class="flex flex-col sm:flex-row gap-3">
-            <a href="tel:+4982349665900" class="inline-flex items-center justify-center gap-2 bg-white text-[#0F5B78] font-semibold px-5 py-3 rounded-lg hover:bg-slate-100 transition-colors">
+            <a href="tel:+49 8234 9665900" class="inline-flex items-center justify-center gap-2 bg-white text-[#0F5B78] font-semibold px-5 py-3 rounded-lg hover:bg-slate-100 transition-colors">
               <span>📞</span> 08234 / 967 975 0
             </a>
             <a href="/kontakt" class="inline-flex items-center justify-center gap-2 bg-white/10 text-white font-semibold px-5 py-3 rounded-lg border border-white/30 hover:bg-white/20 transition-colors">
@@ -2217,7 +2217,7 @@ function getMockBlogPosts(): BlogPost[] {
             <a href="/kontakt" class="inline-flex items-center gap-2 bg-white text-[#0F5B78] px-5 py-2.5 rounded-lg font-medium hover:bg-slate-100 transition-colors">
               Beratungstermin vereinbaren
             </a>
-            <a href="tel:+4982349665900" class="inline-flex items-center gap-2 border border-white/30 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-white/10 transition-colors">
+            <a href="tel:+49 8234 9665900" class="inline-flex items-center gap-2 border border-white/30 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-white/10 transition-colors">
               08234 / 90 89 70
             </a>
           </div>
@@ -2543,7 +2543,7 @@ function getMockBlogPosts(): BlogPost[] {
             <a href="/kontakt" class="inline-flex items-center gap-2 bg-white text-[#0F5B78] px-5 py-2.5 rounded-lg font-medium hover:bg-slate-100 transition-colors">
               Beratungstermin buchen
             </a>
-            <a href="tel:+4982349665900" class="inline-flex items-center gap-2 border border-white/30 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-white/10 transition-colors">
+            <a href="tel:+49 8234 9665900" class="inline-flex items-center gap-2 border border-white/30 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-white/10 transition-colors">
               08234 / 90 89 70
             </a>
           </div>
@@ -3818,7 +3818,7 @@ function getMockBlogPosts(): BlogPost[] {
         <div style="background-color: #0F5B78; color: white; padding: 25px; border-radius: 8px; margin: 30px 0;">
           <h3 style="margin-top: 0; color: white;">💬 Persönliche Beratung bei HeizCenter</h3>
           <p>Sie sind unsicher, welche Heizung die richtige für Ihr Haus ist? Unsere Experten beraten Sie kostenlos und unverbindlich zu allen Optionen, Förderungen und der konkreten Umsetzung in Ihrem Gebäude.</p>
-          <p style="margin-bottom: 0;"><strong>Kontakt:</strong> ☎️ <a href="tel:+4982349665900" style="color: #FFCA28;">+49 8234 9665900</a> | 📧 <a href="mailto:service@heizcenter.de" style="color: #FFCA28;">service@heizcenter.de</a> | <a href="/kontakt?tab=quote" style="color: #FFCA28; text-decoration: underline;">Jetzt Angebot anfragen</a></p>
+          <p style="margin-bottom: 0;"><strong>Kontakt:</strong> ☎️ <a href="tel:+49 8234 9665900" style="color: #FFCA28;">+49 8234 9665900</a> | 📧 <a href="mailto:service@heizcenter.de" style="color: #FFCA28;">service@heizcenter.de</a> | <a href="/kontakt?tab=quote" style="color: #FFCA28; text-decoration: underline;">Jetzt Angebot anfragen</a></p>
         </div>
 
         <p><strong>Jetzt informieren, Förderung sichern und langfristig sparen!</strong></p>
@@ -4385,7 +4385,7 @@ function getMockBlogPosts(): BlogPost[] {
           <h3 style="margin-top: 0; color: white;">💬 Kostenlose Heizungsberatung bei HeizCenter</h3>
           <p>Unsere Experten analysieren Ihr Gebäude, berechnen die genauen Kosten für alle Systeme und unterstützen Sie bei der Förderbeantragung. Profitieren Sie von unserer 20-jährigen Erfahrung und über 500 installierten Wärmepumpen.</p>
           <p style="margin-bottom: 0;"><strong>Jetzt Kontakt aufnehmen:</strong><br>
-          ☎️ <a href="tel:+4982349665900" style="color: #FFCA28;">+49 8234 9665900</a> |
+          ☎️ <a href="tel:+49 8234 9665900" style="color: #FFCA28;">+49 8234 9665900</a> |
           📧 <a href="mailto:service@heizcenter.de" style="color: #FFCA28;">service@heizcenter.de</a> |
           <a href="/kontakt?tab=quote" style="color: #FFCA28; text-decoration: underline;">Angebot anfragen</a></p>
         </div>
@@ -4793,7 +4793,7 @@ function getMockBlogPosts(): BlogPost[] {
       <p style="font-size: 18px; margin-bottom: 20px;">Wir beraten Sie kostenlos zu den besten Alternativen, kalkulieren Ihre Förderung und erstellen ein maßgeschneidertes Angebot.</p>
       <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
         <a href="/kontakt?tab=quote" style="display: inline-block; background-color: #FFCA28; color: #0F5B78; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px;">Jetzt Angebot anfragen</a>
-        <a href="tel:+4982349665900" style="display: inline-block; background-color: transparent; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white; font-size: 16px;">☎ +49 8234 9665900</a>
+        <a href="tel:+49 8234 9665900" style="display: inline-block; background-color: transparent; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white; font-size: 16px;">☎ +49 8234 9665900</a>
       </div>
       <p style="margin-top: 15px; font-size: 14px; opacity: 0.9;">HeizCenter GmbH – Ihr zertifizierter Fachbetrieb für Wärmepumpen und Heizungstausch</p>
     </div>
@@ -5387,7 +5387,7 @@ function getMockBlogPosts(): BlogPost[] {
       <p style="font-size: 18px; margin-bottom: 20px;">Wir planen Ihre ideale Heizlösung – von der Beratung über Förderantrag bis zur Installation. Profitieren Sie von bis zu 70% BEG-Förderung!</p>
       <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
         <a href="/kontakt?tab=quote" style="display: inline-block; background-color: #FFCA28; color: #0F5B78; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px;">Jetzt Angebot anfragen</a>
-        <a href="tel:+4982349665900" style="display: inline-block; background-color: transparent; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white; font-size: 16px;">☎ +49 8234 9665900</a>
+        <a href="tel:+49 8234 9665900" style="display: inline-block; background-color: transparent; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white; font-size: 16px;">☎ +49 8234 9665900</a>
       </div>
       <p style="margin-top: 15px; font-size: 14px; opacity: 0.9;">HeizCenter GmbH – Ihr zertifizierter Fachpartner für Wärmepumpen und Flächenheizungen</p>
     </div>
@@ -5784,7 +5784,7 @@ function getMockBlogPosts(): BlogPost[] {
       <p style="font-size: 18px; margin-bottom: 20px;">Unsere Heizungsexperten helfen bei hartnäckigen Problemen, Wartung und Optimierung Ihres Heizsystems. Profitieren Sie von über 20 Jahren Erfahrung!</p>
       <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
         <a href="/kontakt?tab=contact" style="display: inline-block; background-color: #FFCA28; color: #0F5B78; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px;">Jetzt Beratung anfragen</a>
-        <a href="tel:+4982349665900" style="display: inline-block; background-color: transparent; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white; font-size: 16px;">☎ +49 8234 9665900</a>
+        <a href="tel:+49 8234 9665900" style="display: inline-block; background-color: transparent; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white; font-size: 16px;">☎ +49 8234 9665900</a>
       </div>
       <p style="margin-top: 15px; font-size: 14px; opacity: 0.9;">HeizCenter GmbH – Ihr Fachbetrieb für Heizungswartung und -optimierung</p>
     </div>
@@ -6290,7 +6290,7 @@ function getMockBlogPosts(): BlogPost[] {
         <h3 style="color: #0F5B78; margin-top: 0;">📞 Kostenlose Beratung vereinbaren</h3>
         <p style="margin-bottom: 15px;">Unsere Heizungs-Experten beraten Sie herstellerunabhängig zu Wärmepumpen, Hybridlösungen und Förderung:</p>
         <ul style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 10px;">📞 <strong>Telefon:</strong> <a href="tel:+4982349665900" style="color: #0F5B78; text-decoration: none; font-weight: bold;">+49 8234 9665900</a></li>
+          <li style="margin-bottom: 10px;">📞 <strong>Telefon:</strong> <a href="tel:+49 8234 9665900" style="color: #0F5B78; text-decoration: none; font-weight: bold;">+49 8234 9665900</a></li>
           <li style="margin-bottom: 10px;">✉️ <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de" style="color: #0F5B78; text-decoration: none;">service@heizcenter.de</a></li>
           <li style="margin-bottom: 10px;">🌐 <strong>Online:</strong> <a href="/kontakt?tab=quote" style="color: #0F5B78; text-decoration: none;">Angebot anfragen</a></li>
         </ul>
@@ -6781,7 +6781,7 @@ function getMockBlogPosts(): BlogPost[] {
         <h3 style="color: #0F5B78; margin-top: 0;">📞 Kostenlose Beratung vereinbaren</h3>
         <p style="margin-bottom: 15px;">Unsere Experten beraten Sie herstellerunabhängig zu Wärmepumpen, Pelletheizungen und Hybrid-Lösungen:</p>
         <ul style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 10px;">📞 <strong>Telefon:</strong> <a href="tel:+4982349665900" style="color: #0F5B78; text-decoration: none; font-weight: bold;">+49 8234 9665900</a></li>
+          <li style="margin-bottom: 10px;">📞 <strong>Telefon:</strong> <a href="tel:+49 8234 9665900" style="color: #0F5B78; text-decoration: none; font-weight: bold;">+49 8234 9665900</a></li>
           <li style="margin-bottom: 10px;">✉️ <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de" style="color: #0F5B78; text-decoration: none;">service@heizcenter.de</a></li>
           <li style="margin-bottom: 10px;">🌐 <strong>Online:</strong> <a href="/kontakt?tab=quote" style="color: #0F5B78; text-decoration: none;">Angebot anfragen</a></li>
         </ul>
@@ -7178,7 +7178,7 @@ function getMockBlogPosts(): BlogPost[] {
         <h3 style="color: #0F5B78; margin-top: 0;">📞 Kostenlose Beratung vereinbaren</h3>
         <p style="margin-bottom: 15px;">Unsere Klimatechnik-Experten beraten Sie zu Split-, Multisplit- und VRF-Systemen:</p>
         <ul style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 10px;">📞 <strong>Telefon:</strong> <a href="tel:+4982349665900" style="color: #0F5B78; text-decoration: none; font-weight: bold;">+49 8234 9665900</a></li>
+          <li style="margin-bottom: 10px;">📞 <strong>Telefon:</strong> <a href="tel:+49 8234 9665900" style="color: #0F5B78; text-decoration: none; font-weight: bold;">+49 8234 9665900</a></li>
           <li style="margin-bottom: 10px;">✉️ <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de" style="color: #0F5B78; text-decoration: none;">service@heizcenter.de</a></li>
           <li style="margin-bottom: 10px;">🌐 <strong>Online:</strong> <a href="/kontakt?tab=quote" style="color: #0F5B78; text-decoration: none;">Angebot anfragen</a></li>
         </ul>
@@ -7718,7 +7718,7 @@ function getMockBlogPosts(): BlogPost[] {
         Unsere Sanitär-Experten planen Ihr barrierefreies Traumbad – inkl. Fördermittelcheck.
       </p>
       <div style="margin-top: 25px;">
-        <a href="tel:+4982349665900" style="display: inline-block; background-color: #FFCA28; color: #000; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1em; margin: 10px;">
+        <a href="tel:+49 8234 9665900" style="display: inline-block; background-color: #FFCA28; color: #000; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1em; margin: 10px;">
           📞 +49 8234 9665900
         </a>
         <a href="mailto:service@heizcenter.de" style="display: inline-block; background-color: white; color: #0F5B78; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1em; margin: 10px;">
