@@ -685,7 +685,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p>Die BEG-Förderung ist der große Pluspunkt beim Heizungstausch 2024/2025:</p>
 
         <div class="highlight-quote">
-          Bis zu 70% der Kosten für eine neue Wärmepumpe werden vom Staat übernommen. Das macht den Umstieg so attraktiv wie nie.
+          Bis zu 70% der Kosten für eine neue Wärmepumpe werden vom Staat übernommen. Das reduziert eine 35.000-€-Investition auf 10.500 €.
         </div>
 
         <p>Die Förderung setzt sich zusammen aus:</p>
@@ -7220,10 +7220,10 @@ function getMockBlogPosts(): BlogPost[] {
     </div>
 
     <p>
-      Ein <strong>barrierefreies Bad</strong> ermöglicht komfortables und selbstständiges Wohnen bis ins hohe Alter.
-      Ob präventiv für die Zukunft, nach einem Unfall oder für Menschen mit Behinderung – ein altersgerechtes Badezimmer
-      erhöht die Lebensqualität erheblich und steigert den Immobilienwert. In diesem Ratgeber erfahren Sie alles über
-      Kosten, Planung, gesetzliche Anforderungen nach DIN 18040-2 und Fördermöglichkeiten.
+      „Wir wollen das Bad umbauen, bevor wir es <em>müssen</em>." – Das hören wir immer häufiger. Und es ist klug:
+      Ein <strong>barrierefreies Bad</strong> ist nicht nur für Rollstuhlfahrer. Bodengleiche Duschen sind bequemer,
+      Haltegriffe geben Sicherheit nach Operationen, und ein gut geplantes Bad steigert den Immobilienwert.
+      Hier erfahren Sie, was ein Umbau kostet, welche Förderungen es gibt und worauf Sie bei der Planung achten müssen.
     </p>
 
     <h2>1. Was bedeutet „barrierefrei" nach DIN 18040-2?</h2>
@@ -7744,7 +7744,7 @@ function getMockBlogPosts(): BlogPost[] {
       title: 'Solarthermie vs. Photovoltaik 2025: Der große Vergleich',
       excerpt: 'Solarthermie oder Photovoltaik? Wir vergleichen beide Technologien hinsichtlich Kosten, Förderung, Wirtschaftlichkeit und Einsatzbereichen für 2025. Mit aktuellen BAFA-Förderungen und Preisentwicklungen.',
       content: `
-        <p>Die Nutzung von Solarenergie für Eigenheime wird 2025 attraktiver denn je – dank hoher staatlicher Förderungen und sinkender Systemkosten. Doch welche Technologie passt zu Ihrem Zuhause: Solarthermie für Warmwasser und Heizung oder Photovoltaik für Stromerzeugung? In diesem umfassenden Vergleich erfahren Sie alles über Kosten, Förderungen, Wirtschaftlichkeit und die optimale Entscheidung für Ihre Situation.</p>
+        <p>Solarthermie oder Photovoltaik? Diese Frage stellen uns Hausbesitzer fast täglich. Beide Technologien nutzen die Sonne – aber auf völlig unterschiedliche Weise. Kurz gesagt: <strong>Solarthermie macht Wärme, Photovoltaik macht Strom.</strong> Was für Sie besser passt, hängt von Ihrem Gebäude, Ihrem Energiebedarf und Ihren Zielen ab.</p>
 
         <h2>Grundlegende Unterschiede der Technologien</h2>
 
@@ -8074,9 +8074,9 @@ function getMockBlogPosts(): BlogPost[] {
       id: 21,
       slug: 'bafa-foerderung-solarthermie-2025',
       title: 'BAFA Förderung für Solarthermie 2025: Bis zu 70% Zuschuss sichern',
-      excerpt: 'Umfassender Leitfaden zur BAFA-Förderung für Solarthermieanlagen 2025. Erfahren Sie alles über Fördersätze, Antragstellung, Voraussetzungen und wie Sie bis zu 70% Zuschuss für Ihre Solaranlage erhalten.',
+      excerpt: 'BAFA-Förderung Solarthermie 2025: Bis 70% Zuschuss möglich. Wir zeigen Ihnen die Fördersätze, Antragsschritte und typische Fallstricke – aus unserer täglichen Praxis.',
       content: `
-        <p>Die Bundesförderung für effiziente Gebäude (BEG) macht Solarthermieanlagen 2025 so attraktiv wie nie zuvor. Mit bis zu 70% staatlichem Zuschuss können Sie eine hochmoderne Solaranlage zu einem Bruchteil der ursprünglichen Kosten installieren. In diesem umfassenden Ratgeber erfahren Sie alles über Fördersätze, Antragstellung, Voraussetzungen und wie Sie die maximale Förderung für Ihr Projekt erhalten.</p>
+        <p>70% Förderung für Solarthermie – klingt verlockend, oder? Die gute Nachricht: Ja, das ist 2025 tatsächlich möglich. Die weniger gute: Nicht jeder bekommt den vollen Satz. Was Sie wirklich bekommen können und wie der Antrag funktioniert, zeigen wir Ihnen hier – Schritt für Schritt.</p>
 
         <h2>Übersicht: BAFA-Förderung für Solarthermie 2025</h2>
 
@@ -8440,9 +8440,9 @@ function getMockBlogPosts(): BlogPost[] {
       id: 22,
       slug: 'hybrid-heizung-waermepumpe-solarthermie',
       title: 'Hybrid-Heizung: Wärmepumpe + Solarthermie - Die perfekte Kombination 2025',
-      excerpt: 'Wärmepumpe und Solarthermie kombiniert: Erfahren Sie, wie Sie durch die ideale Kombination bis zu 30% Stromkosten sparen, maximale Förderung erhalten und Ihre Heizkosten langfristig senken.',
+      excerpt: 'Wärmepumpe + Solarthermie: Weniger Stromverbrauch, mehr Förderung. Wir erklären, wann sich die Kombination wirklich lohnt – und wann nicht.',
       content: `
-        <p>Die Kombination von Wärmepumpe und Solarthermie gilt als eine der effizientesten Heizsysteme für moderne Eigenheime. Durch die intelligente Kopplung beider Technologien reduzieren Sie nicht nur Ihre Heizkosten um bis zu 60%, sondern profitieren auch von hohen Fördersätzen bis zu 70%. In diesem umfassenden Ratgeber erfahren Sie alles über Funktionsweise, Kosten, Wirtschaftlichkeit und optimale Auslegung dieser zukunftssicheren Heizkombination.</p>
+        <p>Eine Wärmepumpe allein ist gut. Aber in Kombination mit Solarthermie wird sie besser: Die Sonne erwärmt den Pufferspeicher vor, die Wärmepumpe muss weniger arbeiten, der Stromverbrauch sinkt. Klingt logisch – aber rechnet sich das auch? Hier sind die Zahlen.</p>
 
         <h2>Warum Wärmepumpe und Solarthermie kombinieren?</h2>
 
@@ -8884,9 +8884,9 @@ function getMockBlogPosts(): BlogPost[] {
       id: 23,
       slug: 'solarthermie-kosten-wirtschaftlichkeit-2025',
       title: 'Solarthermie Kosten und Wirtschaftlichkeit 2025: Lohnt sich die Investition?',
-      excerpt: 'Detaillierte Kostenanalyse für Solarthermieanlagen 2025: Anschaffungskosten, Förderungen, Betriebskosten, Amortisation und Renditeberechnung. Mit konkreten Beispielen für verschiedene Haushaltsgrößen.',
+      excerpt: 'Was kostet Solarthermie wirklich? Anschaffung, Montage, Wartung – und ab wann Sie im Plus sind. Mit konkreten Zahlen für 2025.',
       content: `
-        <p>Eine Solarthermieanlage ist eine Investition in die Zukunft – aber lohnt sie sich wirtschaftlich? In diesem umfassenden Ratgeber erfahren Sie alles über Kosten, Fördermöglichkeiten, Einsparungen und die Amortisationszeit von Solarthermieanlagen im Jahr 2025. Mit konkreten Rechenbeispielen für verschiedene Systemgrößen und Haushaltstypen.</p>
+        <p>Solarthermie für 8.000 €? Oder doch 20.000 €? Die Preisspanne ist riesig – und genau das verunsichert viele Hausbesitzer. Hier finden Sie echte Preise aus unserer Region, ehrliche Amortisationsrechnungen und eine klare Antwort: <strong>Wann lohnt sich Solarthermie – und wann nicht?</strong></p>
 
         <h2>Anschaffungskosten im Überblick</h2>
 
