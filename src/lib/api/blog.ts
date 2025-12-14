@@ -2908,9 +2908,11 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p>Selbst Altbauanlagen ohne vollständige Sanierung zeigen annehmbare Werte, wie Feldtests des Fraunhofer-Instituts belegen.</p>
 
-        <h2>✅ Die 10 größten Vorteile von Wärmepumpen</h2>
+        <h2>Was spricht für eine Wärmepumpe?</h2>
 
-        <h3>1. Massive CO₂-Einsparung und Klimaschutz</h3>
+        <p>Die Vorteile einer Wärmepumpe sind vielfältig – von Umweltschutz über Kostenersparnis bis zur Unabhängigkeit von fossilen Brennstoffen. Hier die wichtigsten Argumente.</p>
+
+        <h3>Klimaschutz: 2.620 kg CO₂ weniger pro Jahr</h3>
 
         <p>Eine einzelne Wärmepumpe spart pro Jahr durchschnittlich <strong>2.620 kg CO₂</strong> gegenüber Öl oder Gas ein. Über 20 Jahre Lebensdauer bedeutet dies eine Emissionsminderung von etwa <strong>52 Tonnen CO₂</strong>.</p>
 
@@ -2922,7 +2924,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Eine WP bewahrt ca. 8 m² Eis pro Jahr</li>
         </ul>
 
-        <h3>2. Deutlich niedrigere Betriebskosten</h3>
+        <h3>Betriebskosten: 41% günstiger als Gas</h3>
 
         <p>Die Betriebskosten moderner Wärmepumpen fallen <strong>41% günstiger aus</strong> als bei Gasheizungen (Verivox-Analyse 2025).</p>
 
@@ -2959,7 +2961,7 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p><strong>Mit WP-Stromtarif:</strong> Wärmepumpenstrom kostet durchschnittlich nur 27 ct/kWh (statt 36 ct/kWh), was die Ersparnis auf bis zu <strong>1.530 €/Jahr erhöht</strong>.</p>
 
-        <h3>3. Bis zu 70% staatliche Förderung</h3>
+        <h3>Förderung: Bis zu 70% vom Staat</h3>
 
         <p>Die KfW-Förderung 2025 macht Wärmepumpen in vielen Fällen günstiger als Gasheizungen:</p>
 
@@ -2973,7 +2975,7 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p><strong>Rechenbeispiel:</strong> Bei Anschaffungskosten von 32.000 € werden maximal 30.000 € gefördert. Mit 70% Förderung erhalten Sie 21.000 € Zuschuss – Ihr Eigenanteil beträgt nur <strong>11.000 €</strong>. Das ist günstiger als eine neue Gasheizung!</p>
 
-        <h3>4. Langfristige Kostenersparnis über 15 Jahre</h3>
+        <h3>Langfristige Ersparnis: 26.000 € über 15 Jahre</h3>
 
         <p>Eine Luft-Wasser-Wärmepumpe kann eine Familie über 15 Jahre <strong>rund 26.000 € sparen</strong>. Im Gegensatz dazu:</p>
         <ul>
@@ -2987,17 +2989,11 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Gebäude mit Radiatoren: <strong>8-11 Jahre</strong></li>
         </ul>
 
-        <h3>5. Unabhängigkeit von fossilen Brennstoffen</h3>
+        <h3>Unabhängigkeit von fossilen Brennstoffen</h3>
 
-        <p>Umweltwärme aus Luft, Erde oder Grundwasser ist:</p>
-        <ul>
-          <li>✅ <strong>Unbegrenzt verfügbar</strong></li>
-          <li>✅ <strong>Kostenlos</strong> (nur Strom für Betrieb nötig)</li>
-          <li>✅ <strong>Kein Rohstoffrisiko</strong> durch Geopolitik</li>
-          <li>✅ <strong>Zukunftssicher</strong> für 20-30 Jahre</li>
-        </ul>
+        <p>Umweltwärme aus Luft, Erde oder Grundwasser ist unbegrenzt verfügbar und kostenlos – Sie zahlen nur den Strom für den Betrieb. Das bedeutet kein Rohstoffrisiko durch geopolitische Krisen und Zukunftssicherheit für 20-30 Jahre.</p>
 
-        <h3>6. Perfekte Kombination mit Photovoltaik</h3>
+        <h3>Perfekte Kombination mit Photovoltaik</h3>
 
         <p>Die Kombination WP + PV wird zum <strong>"Goldstandard" der deutschen Wärmewende</strong>:</p>
 
@@ -3015,7 +3011,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Ersparnis: 2.080 €/Jahr</li>
         </ul>
 
-        <h3>7. Heizen UND Kühlen in einem System</h3>
+        <h3>Heizen und Kühlen in einem System</h3>
 
         <p>Moderne Wärmepumpen können <strong>reversibel</strong> arbeiten:</p>
 
@@ -3028,7 +3024,7 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p>Besonders effektiv mit Fußbodenheizung oder Wand-/Deckenheizung.</p>
 
-        <h3>8. Wertsteigerung der Immobilie</h3>
+        <h3>Wertsteigerung der Immobilie</h3>
 
         <p>Immobilien mit Wärmepumpe werden <strong>10-43% höher bewertet</strong> als mit konventioneller Heizung:</p>
 
@@ -3038,7 +3034,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Mit PV-Kombination: bis zu <strong>50% Wertzuwachs</strong> möglich</li>
         </ul>
 
-        <h3>9. Wartungsarm und zuverlässig</h3>
+        <h3>Wartungsarm und zuverlässig</h3>
 
         <p>Wärmepumpen sind entgegen Befürchtungen <strong>sehr wartungsarm</strong>:</p>
 
@@ -3049,19 +3045,15 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Moderne Anlagen: hochgradig zuverlässig</li>
         </ul>
 
-        <h3>10. Erfüllung der GEG-Anforderungen</h3>
+        <h3>Erfüllung der GEG-Anforderungen</h3>
 
-        <p>Seit 2024 gilt das neue Gebäudeenergiegesetz (GEG) mit der <strong>65%-Erneuerbare-Energien-Regel</strong>:</p>
+        <p>Seit 2024 gilt das neue Gebäudeenergiegesetz (GEG) mit der <strong>65%-Erneuerbare-Energien-Regel</strong>. Wärmepumpen erfüllen diese automatisch und sind damit zukunftssicher bis 2045 – ohne teure Nachrüstungen.</p>
 
-        <ul>
-          <li>✅ Wärmepumpen erfüllen automatisch die 65%-Regel</li>
-          <li>✅ Zukunftssicher bis 2045 (Klimaneutralitätspflicht)</li>
-          <li>✅ Keine Nachrüstung nötig</li>
-        </ul>
+        <h2>Die Nachteile – und wie Sie damit umgehen</h2>
 
-        <h2>❌ Die 7 wichtigsten Nachteile von Wärmepumpen</h2>
+        <p>Fairerweise muss man auch die Kehrseite betrachten. Die gute Nachricht: Die meisten Nachteile sind lösbar oder werden durch Förderungen ausgeglichen.</p>
 
-        <h3>1. Hohe Anschaffungskosten</h3>
+        <h3>Hohe Anschaffungskosten</h3>
 
         <p>Der offensichtlichste Nachteil sind die initialen Investitionskosten:</p>
 
@@ -3094,7 +3086,7 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p><strong>ABER:</strong> Mit 70% Förderung reduziert sich der Eigenanteil auf 8.100-12.000 €, also vergleichbar mit Gasheizung (die keine Förderung erhält)!</p>
 
-        <h3>2. Anforderungen an Vorlauftemperatur und Dämmung</h3>
+        <h3>Anforderungen an Vorlauftemperatur und Dämmung</h3>
 
         <p>Wärmepumpen arbeiten am effizientesten bei <strong>niedrigen Vorlauftemperaturen</strong>:</p>
 
@@ -3114,7 +3106,7 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p><strong>Wichtig:</strong> Fraunhofer-Feldtests zeigen, dass auch <strong>teilsanierte Altbauten</strong> mit JAZ 3,4-4,3 gut funktionieren!</p>
 
-        <h3>3. Höherer Stromverbrauch im Winter</h3>
+        <h3>Höherer Stromverbrauch im Winter</h3>
 
         <p>Wintermonate haben höheren Energiebedarf:</p>
 
@@ -3132,7 +3124,7 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p>→ Trotz höherem Winterverbrauch bleibt die WP günstiger!</p>
 
-        <h3>4. Lautstärke (vor allem Luftwärmepumpen)</h3>
+        <h3>Lautstärke bei Luftwärmepumpen</h3>
 
         <p>Außeneinheiten erzeugen Betriebsgeräusche:</p>
 
@@ -3165,7 +3157,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Erdwärmepumpen: nahezu geräuschlos</li>
         </ul>
 
-        <h3>5. Komplexe Installation</h3>
+        <h3>Komplexe Installation</h3>
 
         <p>Die Installation erfordert hochspezialisierte Fachkompetenz:</p>
 
@@ -3183,7 +3175,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Schlechte Speicherhydraulik</li>
         </ul>
 
-        <h3>6. Platzbedarf</h3>
+        <h3>Platzbedarf</h3>
 
         <p>Aufstellungsanforderungen beachten:</p>
 
@@ -3196,7 +3188,7 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p>In dicht bebauten Gebieten kann dies zur Herausforderung werden.</p>
 
-        <h3>7. Abhängigkeit vom Stromnetz</h3>
+        <h3>Abhängigkeit vom Stromnetz</h3>
 
         <p>Im Gegensatz zu Gas-/Ölheizungen benötigt die WP:</p>
 
@@ -3206,11 +3198,13 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Lösung: Kombination mit PV + Batteriespeicher</li>
         </ul>
 
-        <h2>🔍 Mythen vs. Fakten: Was stimmt wirklich?</h2>
+        <h2>Hartnäckige Mythen – und die Fakten</h2>
 
-        <h3>Mythos 1: "Wärmepumpen funktionieren nicht im Altbau"</h3>
+        <p>Um Wärmepumpen ranken sich viele Gerüchte. Hier räumen wir mit den häufigsten Missverständnissen auf.</p>
 
-        <p><strong>❌ FALSCH!</strong> Fraunhofer-Feldtests zeigen:</p>
+        <h3>"Wärmepumpen funktionieren nicht im Altbau"</h3>
+
+        <p><strong>Das stimmt nicht.</strong> Fraunhofer-Feldtests zeigen:</p>
         <ul>
           <li>Altbauten (15-170 Jahre): JAZ 3,4-4,3 möglich</li>
           <li>Auch ohne vollständige Sanierung effizient</li>
@@ -3218,9 +3212,9 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Baujahr weniger wichtig als Planung und Vorlauftemperatur</li>
         </ul>
 
-        <h3>Mythos 2: "Fußbodenheizung ist Pflicht"</h3>
+        <h3>"Fußbodenheizung ist Pflicht"</h3>
 
-        <p><strong>❌ FALSCH!</strong> Auch mit Radiatoren möglich:</p>
+        <p><strong>Auch das ist falsch.</strong> Wärmepumpen funktionieren auch mit Radiatoren:</p>
         <ul>
           <li>Fußbodenheizung = optimal, aber nicht Pflicht</li>
           <li>Konventionelle Heizkörper funktionieren</li>
@@ -3228,9 +3222,9 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Günstiger als Fußbodenheizung nachrüsten</li>
         </ul>
 
-        <h3>Mythos 3: "Wärmepumpen versagen bei Kälte"</h3>
+        <h3>"Wärmepumpen versagen bei Kälte"</h3>
 
-        <p><strong>❌ FALSCH!</strong> Wärmepumpen funktionieren bis -20°C:</p>
+        <p><strong>Falsch.</strong> Moderne Wärmepumpen funktionieren bis -20°C:</p>
         <ul>
           <li>Kein Ausfall bei Frost</li>
           <li>Bei extremer Kälte: weniger effizient, aber funktionsfähig</li>
@@ -3238,9 +3232,9 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Erdwärme-/Grundwasser-WP: sehr effizient auch bei Kälte</li>
         </ul>
 
-        <h3>Mythos 4: "Wärmepumpen sind Stromfresser"</h3>
+        <h3>"Wärmepumpen sind Stromfresser"</h3>
 
-        <p><strong>❌ FALSCH!</strong> Das Gegenteil ist der Fall:</p>
+        <p><strong>Im Gegenteil:</strong></p>
         <ul>
           <li>1 kWh Strom → 3-5 kWh Wärme</li>
           <li>2/3 der Wärme kommt kostenlos aus der Umwelt</li>
@@ -3248,9 +3242,9 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Bei JAZ 3: nur 1/3 des Energiebedarfs vs. Brennwertheizung</li>
         </ul>
 
-        <h3>Mythos 5: "Wärmepumpen sind teuer und lohnen sich nicht"</h3>
+        <h3>"Wärmepumpen sind teuer und lohnen sich nicht"</h3>
 
-        <p><strong>❌ TEILWEISE FALSCH!</strong> Mit Förderung sehr wirtschaftlich:</p>
+        <p><strong>Mit Förderung ist das anders:</strong></p>
         <ul>
           <li>Höhere Anschaffung, aber 41% niedrigere Betriebskosten</li>
           <li>Mit 70% Förderung oft günstiger als Gasheizung</li>
@@ -3258,9 +3252,9 @@ function getMockBlogPosts(): BlogPost[] {
           <li>15-Jahres-Ersparnis: bis zu 26.000 €</li>
         </ul>
 
-        <h2>📋 Entscheidungshilfe: Für wen lohnt sich eine Wärmepumpe?</h2>
+        <h2>Für wen lohnt sich eine Wärmepumpe?</h2>
 
-        <h3>✅ Sehr gut geeignet:</h3>
+        <h3>Sehr gut geeignet</h3>
 
         <p><strong>Neubauten:</strong></p>
         <ul>
@@ -3284,7 +3278,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li>JAZ 3,4+ erreichbar</li>
         </ul>
 
-        <h3>⚠️ Bedingt geeignet:</h3>
+        <h3>Bedingt geeignet</h3>
 
         <p><strong>Unsanierte Altbauten:</strong></p>
         <ul>
@@ -3294,7 +3288,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Besser: Erst sanieren, dann WP</li>
         </ul>
 
-        <h2>💰 Kosten-Nutzen-Rechnung 2025</h2>
+        <h2>Kosten-Nutzen-Rechnung 2025</h2>
 
         <h3>Beispiel: Einfamilienhaus 150 m² (20.000 kWh Wärmebedarf)</h3>
 
@@ -3344,19 +3338,9 @@ function getMockBlogPosts(): BlogPost[] {
           </tbody>
         </table>
 
-        <h2>🏆 HeizCenter: Ihr Wärmepumpen-Experte</h2>
+        <h2>HeizCenter: Ihr Wärmepumpen-Experte</h2>
 
-        <p>Bei HeizCenter unterstützen wir Sie vom ersten Beratungsgespräch bis zur erfolgreichen Installation Ihrer Wärmepumpe:</p>
-
-        <ul>
-          <li>✅ <strong>Kostenlose Vor-Ort-Beratung</strong> mit Heizlastberechnung</li>
-          <li>✅ <strong>Individuelle Planung</strong> für Neubau und Altbau</li>
-          <li>✅ <strong>Förderservice</strong>: Wir unterstützen bei KfW-Anträgen</li>
-          <li>✅ <strong>Professionelle Installation</strong> durch zertifizierte Fachbetriebe</li>
-          <li>✅ <strong>Hydraulischer Abgleich</strong> für optimale Effizienz</li>
-          <li>✅ <strong>Wartung & Service</strong> aus einer Hand</li>
-          <li>✅ <strong>5 Jahre Garantie</strong> auf alle Arbeiten</li>
-        </ul>
+        <p>Bei HeizCenter unterstützen wir Sie vom ersten Beratungsgespräch bis zur erfolgreichen Installation Ihrer Wärmepumpe. Unser Service umfasst kostenlose Vor-Ort-Beratung mit Heizlastberechnung, individuelle Planung für Neubau und Altbau, Unterstützung bei KfW-Anträgen, professionelle Installation durch zertifizierte Fachbetriebe, hydraulischen Abgleich für optimale Effizienz sowie Wartung und Service aus einer Hand – mit 5 Jahren Garantie auf alle Arbeiten.</p>
 
         <div class="cta-box">
           <p class="cta-locations">📍 <strong>Unsere Standorte:</strong> Bobingen (Augsburg) · Gutenzell-Hürbel (Ulm/Memmingen) · Klosterlechfeld</p>
@@ -3372,23 +3356,9 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p>Die Analyse zeigt eindeutig: <strong>Wärmepumpen sind 2025 für die allermeisten Haushalte sowohl ökologisch als auch ökonomisch sinnvoll.</strong></p>
 
-        <p><strong>Klare Vorteile überwiegen:</strong></p>
-        <ul>
-          <li>✅ 41% niedrigere Betriebskosten vs. Gas</li>
-          <li>✅ 2,6 Tonnen CO₂-Einsparung pro Jahr</li>
-          <li>✅ Bis zu 70% Förderung verfügbar</li>
-          <li>✅ Wertsteigerung der Immobilie um 10-43%</li>
-          <li>✅ Kombination mit PV: Energiekosten -60-70%</li>
-          <li>✅ 15-Jahre-Ersparnis: bis zu 26.000 €</li>
-        </ul>
+        <p>Die klaren Vorteile überwiegen: 41% niedrigere Betriebskosten als Gas, 2,6 Tonnen CO₂-Einsparung pro Jahr, bis zu 70% Förderung, Wertsteigerung der Immobilie um 10-43%, und in Kombination mit PV sogar 60-70% geringere Energiekosten. Über 15 Jahre können Sie bis zu 26.000 € sparen.</p>
 
-        <p><strong>Nachteile sind beherrschbar:</strong></p>
-        <ul>
-          <li>⚠️ Höhere Anschaffung → durch Förderung ausgeglichen</li>
-          <li>⚠️ Dämmungsanforderung → oft schon erfüllt oder mit kleinen Maßnahmen lösbar</li>
-          <li>⚠️ Lautstärke → moderne Geräte sehr leise</li>
-          <li>⚠️ Komplexe Installation → durch Fachbetriebe lösbar</li>
-        </ul>
+        <p>Die Nachteile sind beherrschbar: Die höhere Anschaffung wird durch Förderung ausgeglichen, Dämmungsanforderungen sind oft schon erfüllt oder mit kleinen Maßnahmen lösbar, moderne Geräte sind sehr leise, und die komplexe Installation übernehmen zertifizierte Fachbetriebe.</p>
 
         <p>Mit der staatlichen Förderung von bis zu 70%, den massiven Betriebskosteneinsparungen und der GEG-Konformität sind Wärmepumpen nicht nur zukunftssicher, sondern bereits heute die wirtschaftlich attraktivste Heizlösung für Neubau und die meisten Bestandsgebäude.</p>
 
@@ -3460,23 +3430,18 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p><strong>Wichtig:</strong> Die 65%-Regel greift erst, wenn die <strong>kommunale Wärmeplanung</strong> vorliegt. Diese zeigt auf, wo Wärmenetze oder Wasserstoffnetze geplant sind – wichtige Informationen für Ihre Heizungsentscheidung.</p>
 
-        <h2>✅ Bestandsschutz: Ihre alte Gasheizung darf bleiben</h2>
+        <h2>Bestandsschutz: Ihre alte Gasheizung darf bleiben</h2>
 
-        <p>Das ist die wichtigste Information für Millionen Hausbesitzer: <strong>Bestehende Gas- und Ölheizungen genießen vollständigen Bestandsschutz.</strong> Konkret bedeutet das:</p>
+        <p>Das ist die wichtigste Information für Millionen Hausbesitzer: <strong>Bestehende Gas- und Ölheizungen genießen vollständigen Bestandsschutz.</strong></p>
 
-        <ul>
-          <li>✅ <strong>Weiterbetrieb erlaubt:</strong> Funktionstüchtige Heizungen dürfen unbegrenzt weiterlaufen</li>
-          <li>✅ <strong>Reparaturen erlaubt:</strong> Defekte Teile dürfen repariert und ausgetauscht werden</li>
-          <li>✅ <strong>Keine Austauschpflicht:</strong> Nur weil die Heizung alt ist, muss sie nicht raus (Ausnahme: siehe unten)</li>
-          <li>✅ <strong>Kein Zeitdruck:</strong> Sie können in Ruhe planen und auf bessere Förderkonditionen warten</li>
-        </ul>
+        <p>Konkret bedeutet das: Funktionstüchtige Heizungen dürfen unbegrenzt weiterlaufen, defekte Teile dürfen repariert und ausgetauscht werden, und nur weil die Heizung alt ist, muss sie nicht raus (Ausnahme: siehe unten). Sie haben keinen Zeitdruck und können in Ruhe planen und auf bessere Förderkonditionen warten.</p>
 
         <h3>Wann muss eine alte Gasheizung raus?</h3>
 
         <p>Eine <strong>Austauschpflicht</strong> besteht nur in diesen Fällen:</p>
 
         <div style="background-color: #ffe6e6; padding: 15px; border-left: 4px solid #dc3545; margin: 15px 0;">
-          <p style="margin: 0;"><strong>⚠️ Austauschpflicht für Konstanttemperaturkessel</strong></p>
+          <p style="margin: 0;"><strong>Austauschpflicht für Konstanttemperaturkessel</strong></p>
           <p style="margin: 10px 0 0 0;">Heizkessel, die <strong>älter als 30 Jahre</strong> sind und als <strong>Konstanttemperaturkessel</strong> betrieben werden, müssen ausgetauscht werden. <strong>Aber:</strong> Moderne Niedertemperatur- und Brennwertkessel sind ausgenommen – diese dürfen weiterlaufen!</p>
         </div>
 
@@ -3492,7 +3457,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li><strong>Gasheizung mit Biogas-Anteil:</strong> In der Übergangsphase bis zur Wärmeplanung möglich (siehe unten)</li>
         </ol>
 
-        <h2>📅 Zeitplan: Wann gilt was?</h2>
+        <h2>Zeitplan: Wann gilt was?</h2>
 
         <p>Der Umstieg auf erneuerbare Energien erfolgt <strong>schrittweise</strong>. Hier der komplette Zeitplan:</p>
 
@@ -3535,7 +3500,7 @@ function getMockBlogPosts(): BlogPost[] {
           </tbody>
         </table>
 
-        <h2>🏢 Sonderregelungen für Etagenheizungen</h2>
+        <h2>Sonderregelungen für Etagenheizungen</h2>
 
         <p>Besitzer von Mehrfamilienhäusern mit <strong>Etagenheizungen</strong> erhalten deutlich längere Fristen:</p>
 
@@ -3545,11 +3510,11 @@ function getMockBlogPosts(): BlogPost[] {
           <li><strong>Bis zu 13 Jahre gesamt:</strong> Maximale Übergangsfrist für komplexe Mehrfamilienhäuser</li>
         </ul>
 
-        <h2>🔄 Welche Alternativen zur Gasheizung gibt es?</h2>
+        <h2>Welche Alternativen zur Gasheizung gibt es?</h2>
 
         <p>Das GEG ist <strong>technologieneutral</strong> – Sie können aus mehreren Erfüllungsoptionen wählen:</p>
 
-        <h3>1. Wärmepumpe (häufigste Lösung)</h3>
+        <h3>Wärmepumpe – die häufigste Lösung</h3>
 
         <ul>
           <li><strong>Funktion:</strong> Nutzt Umweltwärme aus Luft, Erde oder Wasser</li>
@@ -3559,7 +3524,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li><strong>Förderung:</strong> Bis zu 70% (Grundförderung 30% + Geschwindigkeitsbonus 20% + Einkommensbonus 30%)</li>
         </ul>
 
-        <h3>2. Pelletheizung</h3>
+        <h3>Pelletheizung</h3>
 
         <ul>
           <li><strong>Funktion:</strong> Verbrennung von Holzpellets (klimaneutral)</li>
@@ -3568,7 +3533,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li><strong>Förderung:</strong> Bis zu 70% + 2.500 € Emissionsminderungszuschlag</li>
         </ul>
 
-        <h3>3. Fernwärme (wo verfügbar)</h3>
+        <h3>Fernwärme (wo verfügbar)</h3>
 
         <ul>
           <li><strong>Funktion:</strong> Anschluss an kommunales Wärmenetz</li>
@@ -3577,7 +3542,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li><strong>Vorteil:</strong> Keine eigene Heizanlage, wartungsarm</li>
         </ul>
 
-        <h3>4. Hybridheizung (Übergang)</h3>
+        <h3>Hybridheizung als Übergangslösung</h3>
 
         <ul>
           <li><strong>Funktion:</strong> Kombination Wärmepumpe + Gasheizung</li>
@@ -3586,7 +3551,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li><strong>Hinweis:</strong> Nur die Wärmepumpen-Komponente wird gefördert</li>
         </ul>
 
-        <h3>5. H2-ready Gasheizung (mit Vorsicht)</h3>
+        <h3>H2-ready Gasheizung – mit Vorsicht</h3>
 
         <ul>
           <li><strong>Funktion:</strong> Gasheizung, die später auf Wasserstoff umrüstbar ist</li>
@@ -3595,7 +3560,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li><strong>Expertenrat:</strong> Nur sinnvoll in ausgewiesenen H₂-Netzgebieten</li>
         </ul>
 
-        <h2>💰 Kosten & Förderung: Bis zu 70% Zuschuss</h2>
+        <h2>Kosten und Förderung: Bis zu 70% Zuschuss</h2>
 
         <p>Die größte Sorge vieler Hausbesitzer sind die Kosten. Die gute Nachricht: <strong>Der Staat fördert massiv!</strong></p>
 
@@ -3655,73 +3620,37 @@ function getMockBlogPosts(): BlogPost[] {
           <li><strong>Steuerbonus:</strong> 20% über 3 Jahre absetzbar (alternativ zur BEG)</li>
         </ul>
 
-        <h2>❌ Mythen vs. ✅ Fakten: Was stimmt wirklich?</h2>
+        <h2>Häufige Irrtümer zum Gasheizungsverbot</h2>
 
-        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <thead>
-            <tr style="background-color: #0F5B78; color: white;">
-              <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Mythos</th>
-              <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Fakt</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="background-color: #f8f9fa;">
-              <td style="padding: 10px; border: 1px solid #ddd;">❌ "Ab 2024 sind Gasheizungen verboten"</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">✅ Bestehende Gasheizungen dürfen weiterlaufen. Nur neue Heizungen müssen in Neubauten seit 2024 die 65%-Regel erfüllen</td>
-            </tr>
-            <tr>
-              <td style="padding: 10px; border: 1px solid #ddd;">❌ "Ich muss sofort meine Heizung austauschen"</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">✅ Nur bei Defekt oder 30+ Jahren (Konstanttemperaturkessel). Sonst kein Zeitdruck</td>
-            </tr>
-            <tr style="background-color: #f8f9fa;">
-              <td style="padding: 10px; border: 1px solid #ddd;">❌ "Wärmepumpen brauchen Fußbodenheizung"</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">✅ Moderne Wärmepumpen funktionieren auch mit normalen Heizkörpern (evtl. Austausch einzelner Heizkörper nötig)</td>
-            </tr>
-            <tr>
-              <td style="padding: 10px; border: 1px solid #ddd;">❌ "Wasserstoff wird bald massenhaft verfügbar"</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">✅ Experten zweifeln stark daran. Wasserstoff bleibt teuer und ist für Industrie reserviert</td>
-            </tr>
-            <tr style="background-color: #f8f9fa;">
-              <td style="padding: 10px; border: 1px solid #ddd;">❌ "Das Gesetz wurde abgemildert"</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">✅ Falsch. Das GEG 2024 ist in vielen Punkten strenger als vorher</td>
-            </tr>
-          </tbody>
-        </table>
+        <p>Um das GEG ranken sich viele Missverständnisse. Hier die häufigsten Mythen – und was wirklich stimmt:</p>
 
-        <h2>📋 Was sollten Sie jetzt tun?</h2>
+        <p><strong>"Ab 2024 sind Gasheizungen verboten"</strong> – Falsch. Bestehende Gasheizungen dürfen weiterlaufen. Nur neue Heizungen müssen in Neubauten seit 2024 die 65%-Regel erfüllen.</p>
+
+        <p><strong>"Ich muss sofort meine Heizung austauschen"</strong> – Falsch. Nur bei Defekt oder 30+ Jahren (Konstanttemperaturkessel). Sonst kein Zeitdruck.</p>
+
+        <p><strong>"Wärmepumpen brauchen Fußbodenheizung"</strong> – Falsch. Moderne Wärmepumpen funktionieren auch mit normalen Heizkörpern (evtl. Austausch einzelner Heizkörper nötig).</p>
+
+        <p><strong>"Wasserstoff wird bald massenhaft verfügbar"</strong> – Unwahrscheinlich. Experten zweifeln stark daran. Wasserstoff bleibt teuer und ist für die Industrie reserviert.</p>
+
+        <p><strong>"Das Gesetz wurde abgemildert"</strong> – Falsch. Das GEG 2024 ist in vielen Punkten strenger als vorher.</p>
+
+        <h2>Was sollten Sie jetzt tun?</h2>
 
         <p>Je nach Ihrer Situation empfehlen wir folgende Schritte:</p>
 
-        <h3>Wenn Ihre Heizung noch funktioniert:</h3>
+        <h3>Wenn Ihre Heizung noch funktioniert</h3>
 
-        <ol>
-          <li>✅ <strong>Entspannen Sie sich</strong> – kein Handlungsdruck durch Bestandsschutz</li>
-          <li>✅ <strong>Verfolgen Sie die kommunale Wärmeplanung</strong> Ihrer Stadt/Gemeinde</li>
-          <li>✅ <strong>Informieren Sie sich</strong> über Alternativen und Förderungen</li>
-          <li>✅ <strong>Planen Sie langfristig</strong> – nutzen Sie den Zeitpuffer bis 2026/2028</li>
-          <li>✅ <strong>Sparen Sie</strong> – legen Sie Geld für den späteren Austausch zurück</li>
-        </ol>
+        <p>Entspannen Sie sich – durch den Bestandsschutz haben Sie keinen Handlungsdruck. Verfolgen Sie die kommunale Wärmeplanung Ihrer Stadt oder Gemeinde und informieren Sie sich über Alternativen und Förderungen. Nutzen Sie den Zeitpuffer bis 2026/2028 für eine langfristige Planung und legen Sie Geld für den späteren Austausch zurück.</p>
 
-        <h3>Wenn Ihre Heizung bald kaputt geht oder >30 Jahre alt ist:</h3>
+        <h3>Wenn Ihre Heizung bald kaputt geht oder älter als 30 Jahre ist</h3>
 
-        <ol>
-          <li>✅ <strong>Energieberatung beauftragen</strong> (50–80% gefördert)</li>
-          <li>✅ <strong>Kostenvoranschläge einholen</strong> für Wärmepumpe, Pellets, Fernwärme</li>
-          <li>✅ <strong>Förderantrag vorbereiten</strong> bei KfW/BAFA (vor Vertragsschluss!)</li>
-          <li>✅ <strong>Gebäudedämmung prüfen</strong> – macht Wärmepumpe effizienter</li>
-          <li>✅ <strong>Zeitplan nutzen</strong> – Geschwindigkeitsbonus läuft bis Ende 2028</li>
-        </ol>
+        <p>Beauftragen Sie eine Energieberatung (50–80% gefördert) und holen Sie Kostenvoranschläge für Wärmepumpe, Pellets und Fernwärme ein. Bereiten Sie den Förderantrag bei KfW/BAFA vor – wichtig ist, dass dieser <em>vor</em> Vertragsschluss gestellt wird. Prüfen Sie die Gebäudedämmung, denn diese macht die Wärmepumpe effizienter. Nutzen Sie den Zeitplan: Der Geschwindigkeitsbonus läuft bis Ende 2028.</p>
 
-        <h3>Wenn Ihre Heizung akut kaputt ist:</h3>
+        <h3>Wenn Ihre Heizung akut kaputt ist</h3>
 
-        <ol>
-          <li>✅ <strong>Übergangslösung nutzen:</strong> Gebrauchte/gemietete Gasheizung + 5 Jahre Frist</li>
-          <li>✅ <strong>Oder direkt umsteigen:</strong> Wärmepumpe mit 70% Förderung</li>
-          <li>✅ <strong>Beratungspflicht beachten:</strong> Verpflichtend bei neuem Gas-/Ölkessel</li>
-          <li>✅ <strong>Schnell handeln bei Förderung:</strong> Antrag vor Vertragsschluss stellen</li>
-        </ol>
+        <p>Sie haben zwei Optionen: Entweder eine Übergangslösung mit gebrauchter oder gemieteter Gasheizung plus 5 Jahre Frist, oder Sie steigen direkt um auf eine Wärmepumpe mit bis zu 70% Förderung. Beachten Sie die Beratungspflicht bei neuem Gas- oder Ölkessel und handeln Sie bei Förderung schnell – der Antrag muss vor Vertragsschluss gestellt werden.</p>
 
-        <h2>⚖️ Rechtliche Konsequenzen bei Verstößen</h2>
+        <h2>Rechtliche Konsequenzen bei Verstößen</h2>
 
         <p>Das GEG ist kein zahnloser Tiger. Bei Verstößen drohen <strong>Bußgelder bis 50.000 €</strong>:</p>
 
@@ -3734,31 +3663,15 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p>Kontrollen führen Schornsteinfeger und Bauaufsichtsbehörden durch.</p>
 
-        <h2>🏆 Warum jetzt handeln lohnt</h2>
+        <h2>Warum jetzt handeln lohnt</h2>
 
-        <p>Auch wenn Sie Zeit haben – es gibt gute Gründe, <strong>jetzt</strong> aktiv zu werden:</p>
-
-        <ul>
-          <li>💰 <strong>Geschwindigkeitsbonus</strong> läuft bis Ende 2028 (zusätzliche 20%)</li>
-          <li>📈 <strong>CO₂-Preis steigt:</strong> Gas wird jährlich teurer (aktuell 55 €/Tonne, Tendenz steigend)</li>
-          <li>🔧 <strong>Handwerker verfügbar:</strong> Noch keine Engpässe durch Ansturm</li>
-          <li>💡 <strong>Planungssicherheit:</strong> Frühzeitig beste Lösung für Ihr Haus finden</li>
-          <li>🌍 <strong>Klimaschutz:</strong> Jedes Jahr mit erneuerbarer Energie spart 2,6 t CO₂</li>
-        </ul>
+        <p>Auch wenn Sie Zeit haben – es gibt gute Gründe, <strong>jetzt</strong> aktiv zu werden: Der Geschwindigkeitsbonus läuft bis Ende 2028 und bringt zusätzliche 20%. Der CO₂-Preis steigt kontinuierlich (aktuell 55 €/Tonne), was Gas jährlich teurer macht. Handwerker sind noch verfügbar ohne Engpässe durch Ansturm. Und frühzeitige Planung gibt Ihnen Sicherheit, die beste Lösung für Ihr Haus zu finden – jedes Jahr mit erneuerbarer Energie spart außerdem 2,6 Tonnen CO₂.</p>
 
         <h2>Fazit: Kein Grund zur Panik, aber Handeln lohnt sich</h2>
 
         <p>Das sogenannte "Gasheizungsverbot" ist in Wahrheit ein <strong>geordneter, schrittweiser Übergang</strong> mit großzügigen Fristen bis 2045. Bestehende Gasheizungen genießen Bestandsschutz und dürfen weiterlaufen. Hausbesitzer haben ausreichend Zeit, sich zu informieren und die beste Lösung für ihr Gebäude zu finden.</p>
 
-        <p><strong>Die wichtigsten Eckpunkte:</strong></p>
-
-        <ul>
-          <li>✅ Keine Austauschpflicht für funktionierende Heizungen (außer >30 Jahre Konstanttemperaturkessel)</li>
-          <li>✅ 65%-Regel greift erst 2026/2028 nach kommunaler Wärmeplanung</li>
-          <li>✅ Bis zu 70% staatliche Förderung für Wärmepumpen & Co.</li>
-          <li>✅ Mehrere Erfüllungsoptionen: Wärmepumpe, Pellets, Fernwärme, Hybrid</li>
-          <li>✅ Vollständiger Umstieg erst bis 2045 erforderlich</li>
-        </ul>
+        <p><strong>Die wichtigsten Eckpunkte:</strong> Keine Austauschpflicht für funktionierende Heizungen (außer Konstanttemperaturkessel über 30 Jahre). Die 65%-Regel greift erst 2026/2028 nach kommunaler Wärmeplanung. Bis zu 70% staatliche Förderung für Wärmepumpen und Co. sind verfügbar. Sie haben mehrere Erfüllungsoptionen: Wärmepumpe, Pellets, Fernwärme oder Hybrid. Der vollständige Umstieg ist erst bis 2045 erforderlich.</p>
 
         <p>Wer jetzt handelt, profitiert von hohen Förderungen, sinkenden Betriebskosten und steigender Unabhängigkeit von fossilen Energiepreisen.</p>
 
@@ -3803,7 +3716,7 @@ function getMockBlogPosts(): BlogPost[] {
           </ul>
         </div>
 
-        <h2>📊 Übersicht aller Heizsysteme 2025</h2>
+        <h2>Übersicht aller Heizsysteme 2025</h2>
 
         <p>Im Jahr 2025 stehen Hausbesitzern folgende Hauptsysteme zur Verfügung:</p>
 
@@ -3854,7 +3767,7 @@ function getMockBlogPosts(): BlogPost[] {
           </tbody>
         </table>
 
-        <h2>💰 Anschaffungskosten 2025 im Detail</h2>
+        <h2>Anschaffungskosten 2025 im Detail</h2>
 
         <p>Die Investitionskosten unterscheiden sich erheblich – aber Förderungen ändern das Bild drastisch:</p>
 
@@ -3915,7 +3828,7 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p><strong>Wichtig:</strong> Die 70% Förderung für Wärmepumpen setzt sich zusammen aus: 30% Grundförderung + 20% Geschwindigkeitsbonus (bis Ende 2028) + 30% Einkommensbonus (bei Einkommen <40.000 €/Jahr). Diese addieren sich auf max. 80%, sind aber auf 70% gedeckelt.</p>
 
-        <h2>🔥 Betriebskosten pro Jahr: Der entscheidende Faktor</h2>
+        <h2>Betriebskosten pro Jahr: Der entscheidende Faktor</h2>
 
         <p>Für eine typische 70-m²-Wohnung zeigt der <strong>Heizspiegel 2025</strong> folgende jährliche Heizkosten:</p>
 
@@ -3994,7 +3907,7 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p><strong>Der Unterschied:</strong> Eine Gasheizung wandelt 1 kWh Gas in ~1 kWh Wärme um. Eine Wärmepumpe erzeugt aus 1 kWh Strom <strong>3–5 kWh Wärme</strong> – das ist 300–500% Effizienz!</p>
 
-        <h2>🌍 CO₂-Bilanz: Klimafreundlichkeit im Vergleich</h2>
+        <h2>CO₂-Bilanz: Klimafreundlichkeit im Vergleich</h2>
 
         <p>Für ein typisches Einfamilienhaus mit 20.000 kWh Jahreswärmebedarf ergeben sich folgende <strong>jährliche CO₂-Emissionen</strong>:</p>
 
@@ -4037,7 +3950,7 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p><strong>Einsparung:</strong> Durch Umstieg von Gas auf Wärmepumpe sparen Sie <strong>3,2 t CO₂ pro Jahr</strong> oder <strong>64 t über 20 Jahre</strong> – das entspricht 400.000 km Autofahrt!</p>
 
-        <h2>💡 Wartungskosten und Lebensdauer</h2>
+        <h2>Wartungskosten und Lebensdauer</h2>
 
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
           <thead>
@@ -4078,13 +3991,13 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p><strong>Vorteil Wärmepumpe:</strong> Kein Schornsteinfeger nötig (spart 50–100 €/Jahr), keine Abgasmessung, weniger mechanischer Verschleiß.</p>
 
-        <h2>📋 Vor- und Nachteile im direkten Vergleich</h2>
+        <h2>Vor- und Nachteile im direkten Vergleich</h2>
 
-        <h3>🏆 Wärmepumpe (Luft-Wasser)</h3>
+        <h3>Wärmepumpe (Luft-Wasser)</h3>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
           <div style="background-color: #d4edda; padding: 15px; border-radius: 5px;">
-            <strong>✅ Vorteile</strong>
+            <strong>Vorteile</strong>
             <ul style="margin: 5px 0;">
               <li>Niedrigste Betriebskosten (715 €/Jahr)</li>
               <li>Bis zu 70% Förderung (21.000 €)</li>
@@ -4095,7 +4008,7 @@ function getMockBlogPosts(): BlogPost[] {
             </ul>
           </div>
           <div style="background-color: #f8d7da; padding: 15px; border-radius: 5px;">
-            <strong>❌ Nachteile</strong>
+            <strong>Nachteile</strong>
             <ul style="margin: 5px 0;">
               <li>Höhere Anschaffung vor Förderung</li>
               <li>Benötigt niedrige Vorlauftemperatur</li>
@@ -4105,11 +4018,11 @@ function getMockBlogPosts(): BlogPost[] {
           </div>
         </div>
 
-        <h3>🔥 Gasheizung</h3>
+        <h3>Gasheizung</h3>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
           <div style="background-color: #d4edda; padding: 15px; border-radius: 5px;">
-            <strong>✅ Vorteile</strong>
+            <strong>Vorteile</strong>
             <ul style="margin: 5px 0;">
               <li>Günstige Anschaffung (9.000–15.500 €)</li>
               <li>Platzsparend</li>
@@ -4118,7 +4031,7 @@ function getMockBlogPosts(): BlogPost[] {
             </ul>
           </div>
           <div style="background-color: #f8d7da; padding: 15px; border-radius: 5px;">
-            <strong>❌ Nachteile</strong>
+            <strong>Nachteile</strong>
             <ul style="margin: 5px 0;">
               <li>KEINE Förderung (0 €)</li>
               <li>Hohe Betriebskosten (1.180 €/Jahr)</li>
@@ -4134,7 +4047,7 @@ function getMockBlogPosts(): BlogPost[] {
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;">
           <div style="background-color: #d4edda; padding: 15px; border-radius: 5px;">
-            <strong>✅ Vorteile</strong>
+            <strong>Vorteile</strong>
             <ul style="margin: 5px 0;">
               <li>Niedrige Betriebskosten (740 €/Jahr)</li>
               <li>Bis zu 70% + 2.500 € Förderung</li>
@@ -4144,7 +4057,7 @@ function getMockBlogPosts(): BlogPost[] {
             </ul>
           </div>
           <div style="background-color: #f8d7da; padding: 15px; border-radius: 5px;">
-            <strong>❌ Nachteile</strong>
+            <strong>Nachteile</strong>
             <ul style="margin: 5px 0;">
               <li>Großer Platzbedarf für Lager</li>
               <li>Höhere Wartung (215 €/Jahr)</li>
@@ -4154,7 +4067,7 @@ function getMockBlogPosts(): BlogPost[] {
           </div>
         </div>
 
-        <h2>🏠 Entscheidungshilfe: Welche Heizung für welches Gebäude?</h2>
+        <h2>Entscheidungshilfe: Welche Heizung für welches Gebäude?</h2>
 
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
           <thead>
@@ -4198,12 +4111,12 @@ function getMockBlogPosts(): BlogPost[] {
           </tbody>
         </table>
 
-        <h2>💰 Total Cost of Ownership (TCO) über 20 Jahre</h2>
+        <h2>Total Cost of Ownership (TCO) über 20 Jahre</h2>
 
         <p>Die entscheidende Frage: <strong>Was kostet meine Heizung über 20 Jahre wirklich?</strong></p>
 
         <div style="background-color: #fff3cd; padding: 20px; border-left: 4px solid #ffc107; margin: 20px 0;">
-          <h3 style="margin-top: 0;">📊 20-Jahre-Gesamtkosten (Einfamilienhaus, 15.000 kWh/Jahr)</h3>
+          <h3 style="margin-top: 0;">20-Jahre-Gesamtkosten (Einfamilienhaus, 15.000 kWh/Jahr)</h3>
 
           <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
             <thead>
@@ -4250,7 +4163,7 @@ function getMockBlogPosts(): BlogPost[] {
           <p style="margin: 15px 0 0 0;"><strong>Ersparnis Wärmepumpe vs. Gas über 20 Jahre: 19.900 €!</strong></p>
         </div>
 
-        <h3>💡 Wärmepumpe + Photovoltaik: Das Optimum</h3>
+        <h3>Wärmepumpe + Photovoltaik: Das Optimum</h3>
 
         <p>Mit 70% Eigenversorgung durch PV sinken die Stromkosten um weitere 30%:</p>
 
@@ -4310,20 +4223,13 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p><strong>Warnung:</strong> Wer 2025 eine neue Gasheizung einbaut, muss ab 2029 bereits teure Umbauten vornehmen (Biogas-Anteil) – eine Kostenfalle!</p>
 
-        <h2>✅ Fazit: Klare Empfehlung für 2025</h2>
+        <h2>Fazit: Klare Empfehlung für 2025</h2>
 
         <p>Die Zahlen sprechen eine eindeutige Sprache:</p>
 
         <div style="background-color: #d4edda; padding: 20px; border-left: 4px solid #28a745; margin: 20px 0;">
-          <h3 style="margin-top: 0; color: #155724;">🏆 Wärmepumpe ist 2025 die beste Wahl</h3>
-          <ul>
-            <li>✅ <strong>Günstigste Betriebskosten:</strong> 715 €/Jahr (vs. 1.180 € Gas)</li>
-            <li>✅ <strong>Höchste Förderung:</strong> Bis zu 21.000 € Zuschuss</li>
-            <li>✅ <strong>20-Jahre-TCO:</strong> 45.000 € (vs. 65.000 € Gas) = 20.000 € Ersparnis</li>
-            <li>✅ <strong>0 kg CO₂ mit Ökostrom</strong> (vs. 4.000 kg Gas)</li>
-            <li>✅ <strong>GEG-konform bis 2045</strong> – keine teuren Umbauten</li>
-            <li>✅ <strong>Amortisation bereits nach 4–6 Jahren</strong></li>
-          </ul>
+          <h3 style="margin-top: 0; color: #155724;">Wärmepumpe ist 2025 die beste Wahl</h3>
+          <p>Mit den <strong>günstigsten Betriebskosten</strong> von nur 715 Euro pro Jahr (gegenüber 1.180 Euro bei Gas) und der <strong>höchsten Förderung</strong> bis zu 21.000 Euro Zuschuss überzeugt die Wärmepumpe auf ganzer Linie. Die 20-Jahre-Gesamtkosten liegen bei 45.000 Euro – das sind <strong>20.000 Euro Ersparnis</strong> gegenüber Gas. Mit Ökostrom entstehen 0 kg CO₂ (vs. 4.000 kg Gas). Das System ist GEG-konform bis 2045, erfordert keine teuren Umbauten und amortisiert sich bereits nach 4 bis 6 Jahren.</p>
         </div>
 
         <p><strong>Gasheizungen sind 2025 eine Kostenfalle:</strong> Keine Förderung, steigende CO₂-Steuer, ab 2029 teure Biogas-Pflicht, höchste 20-Jahres-Kosten. Selbst die niedrigen Anschaffungskosten können die enormen Betriebskosten nicht ausgleichen.</p>
@@ -4361,7 +4267,7 @@ function getMockBlogPosts(): BlogPost[] {
     <h2>Nachtspeicherheizung ersetzen 2025: Der umfassende Ratgeber</h2>
 
     <div style="background-color: #e8f4f8; padding: 20px; border-left: 4px solid #0F5B78; margin: 20px 0;">
-      <h3 style="margin-top: 0;">📊 Schnellübersicht: Nachtspeicherheizung 2025</h3>
+      <h3 style="margin-top: 0;">Schnellübersicht: Nachtspeicherheizung 2025</h3>
       <ul style="margin-bottom: 0;">
         <li><strong>Aktuelle Kosten:</strong> 2.500–3.600 €/Jahr (150 m²-Haus)</li>
         <li><strong>Wirkungsgrad:</strong> 30–40% (vs. Wärmepumpe 300–500%)</li>
@@ -4373,7 +4279,7 @@ function getMockBlogPosts(): BlogPost[] {
       </ul>
     </div>
 
-    <h2>❌ Warum sollten Sie Ihre Nachtspeicherheizung ersetzen?</h2>
+    <h2>Warum sollten Sie Ihre Nachtspeicherheizung ersetzen?</h2>
 
     <h3>1. Extrem hohe Betriebskosten</h3>
     <p>Nachtspeicherheizungen gehören zu den <strong>teuersten Heizsystemen</strong> auf dem Markt:</p>
@@ -4431,13 +4337,13 @@ function getMockBlogPosts(): BlogPost[] {
       <li>Moderne Systeme bieten Smart-Home-Integration, App-Steuerung und Einzelraumregelung</li>
     </ul>
 
-    <h2>⚖️ Gesetzliche Lage 2025: Müssen Nachtspeicherheizungen ersetzt werden?</h2>
+    <h2>Gesetzliche Lage 2025: Müssen Nachtspeicherheizungen ersetzt werden?</h2>
 
-    <h3>✅ Klare Antwort: Nein, es gibt KEIN generelles Austauschverbot</h3>
+    <h3>Gibt es ein Austauschverbot? Nein.</h3>
     <p>Die wichtigsten rechtlichen Fakten:</p>
 
     <div style="background-color: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; margin: 20px 0;">
-      <h4 style="margin-top: 0;">📋 Gesetzeslage nach GEG 2024</h4>
+      <h4 style="margin-top: 0;">Gesetzeslage nach GEG 2024</h4>
       <ul style="margin-bottom: 0;">
         <li><strong>Bestandsschutz:</strong> Funktionierende Nachtspeicher dürfen weiterbetrieben werden</li>
         <li><strong>Keine Austauschpflicht:</strong> Auch bei Defekt kein Zwang zum Wechsel des Systems</li>
@@ -4446,7 +4352,7 @@ function getMockBlogPosts(): BlogPost[] {
       </ul>
     </div>
 
-    <h3>⚠️ Ausnahmen und Sonderfälle</h3>
+    <h3>Ausnahmen und Sonderfälle</h3>
     <ul>
       <li><strong>Asbesthaltige Geräte:</strong> Austauschpflicht bei Gefährdung (nur sehr alte Modelle vor 1984)</li>
       <li><strong>Kommunale Satzungen:</strong> Einzelne Gemeinden können strengere Regeln erlassen</li>
@@ -4455,7 +4361,7 @@ function getMockBlogPosts(): BlogPost[] {
 
     <h2>🔄 Die 5 besten Alternativen zur Nachtspeicherheizung 2025</h2>
 
-    <h3>1. 🏆 Luft-Wasser-Wärmepumpe (Testsieger)</h3>
+    <h3>Luft-Wasser-Wärmepumpe – unser Favorit</h3>
     <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
       <tr style="background-color: #0F5B78; color: white;">
         <th style="padding: 12px; text-align: left;">Kriterium</th>
@@ -4494,21 +4400,21 @@ function getMockBlogPosts(): BlogPost[] {
         <td style="padding: 12px;">20–25 Jahre</td>
       </tr>
     </table>
-    <p><strong>✅ Vorteile:</strong> Höchste Effizienz, kühlt im Sommer, unabhängig von fossilen Brennstoffen, höchste Förderung</p>
-    <p><strong>❌ Nachteile:</strong> Hohe Anschaffungskosten, Außengerät benötigt Platz, nicht für unsanierte Altbauten geeignet</p>
+    <p><strong>Vorteile:</strong> Höchste Effizienz, kühlt im Sommer, unabhängig von fossilen Brennstoffen, höchste Förderung</p>
+    <p><strong>Nachteile:</strong> Hohe Anschaffungskosten, Außengerät benötigt Platz, nicht für unsanierte Altbauten geeignet</p>
 
-    <h3>2. 🔥 Infrarotheizung</h3>
+    <h3>Infrarotheizung</h3>
     <ul>
       <li><strong>Kosten:</strong> 5.000–7.500 € (Komplettsystem für 150 m²)</li>
       <li><strong>Mit Förderung:</strong> Keine direkte BEG-Förderung (nur in Kombination mit PV möglich)</li>
       <li><strong>Jährliche Heizkosten:</strong> 2.100–2.500 € (ähnlich wie Nachtspeicher!)</li>
       <li><strong>JAZ:</strong> 0,95–1,0 (95–100% des Stroms wird in Wärme umgewandelt)</li>
     </ul>
-    <p><strong>✅ Vorteile:</strong> Geringe Anschaffungskosten, schnelle Installation, gesunde Strahlungswärme, ideal für Einzelräume</p>
-    <p><strong>❌ Nachteile:</strong> Hohe Betriebskosten (ähnlich Nachtspeicher), keine Förderung, nicht für Hauptheizsystem geeignet</p>
-    <p><strong>💡 Empfehlung:</strong> Nur als Übergangs- oder Zusatzheizung, nicht als Hauptsystem!</p>
+    <p><strong>Vorteile:</strong> Geringe Anschaffungskosten, schnelle Installation, gesunde Strahlungswärme, ideal für Einzelräume</p>
+    <p><strong>Nachteile:</strong> Hohe Betriebskosten (ähnlich Nachtspeicher), keine Förderung, nicht für Hauptheizsystem geeignet</p>
+    <p><strong>Empfehlung:</strong> Nur als Übergangs- oder Zusatzheizung, nicht als Hauptsystem!</p>
 
-    <h3>3. 🌳 Pelletheizung</h3>
+    <h3>Pelletheizung</h3>
     <ul>
       <li><strong>Kosten:</strong> 25.000–45.000 € (inkl. Pelletlager)</li>
       <li><strong>Mit BEG-Förderung (30%):</strong> 17.500–31.500 €</li>
@@ -4516,34 +4422,34 @@ function getMockBlogPosts(): BlogPost[] {
       <li><strong>Wirkungsgrad:</strong> 90–95%</li>
       <li><strong>CO₂-Bilanz:</strong> Nahezu klimaneutral</li>
     </ul>
-    <p><strong>✅ Vorteile:</strong> CO₂-neutral, niedrige Betriebskosten, Förderung verfügbar, unabhängig von Öl/Gas</p>
-    <p><strong>❌ Nachteile:</strong> Hohe Investition, Lagerraum benötigt (6–8 m³), regelmäßige Wartung nötig</p>
+    <p><strong>Vorteile:</strong> CO₂-neutral, niedrige Betriebskosten, Förderung verfügbar, unabhängig von Öl/Gas</p>
+    <p><strong>Nachteile:</strong> Hohe Investition, Lagerraum benötigt (6–8 m³), regelmäßige Wartung nötig</p>
 
-    <h3>4. 🔧 Gas-Brennwertheizung</h3>
+    <h3>Gas-Brennwertheizung</h3>
     <ul>
       <li><strong>Kosten:</strong> 9.000–15.500 € (inkl. Installation)</li>
       <li><strong>Förderung 2025:</strong> Keine BEG-Förderung mehr (nur noch "H2-ready"-Geräte gefördert)</li>
       <li><strong>Jährliche Heizkosten:</strong> 1.600–2.000 € (Gaspreis 2025: ca. 11 ct/kWh)</li>
       <li><strong>Wirkungsgrad:</strong> 96–98%</li>
     </ul>
-    <p><strong>✅ Vorteile:</strong> Bewährte Technik, moderate Anschaffungskosten, geringer Platzbedarf</p>
-    <p><strong>❌ Nachteile:</strong> Keine Förderung, fossiler Brennstoff, CO₂-Preis steigt (2025: 55 €/Tonne)</p>
-    <p><strong>⚠️ Achtung:</strong> Ab 2029 65% Erneuerbare-Pflicht auch bei Austausch (Biogas erforderlich)</p>
+    <p><strong>Vorteile:</strong> Bewährte Technik, moderate Anschaffungskosten, geringer Platzbedarf</p>
+    <p><strong>Nachteile:</strong> Keine Förderung, fossiler Brennstoff, CO₂-Preis steigt (2025: 55 €/Tonne)</p>
+    <p><strong>Achtung:</strong> Ab 2029 65% Erneuerbare-Pflicht auch bei Austausch (Biogas erforderlich)</p>
 
-    <h3>5. 🌍 Sole-Wasser-Wärmepumpe (Erdwärme)</h3>
+    <h3>Sole-Wasser-Wärmepumpe (Erdwärme)</h3>
     <ul>
       <li><strong>Kosten:</strong> 35.000–50.000 € (inkl. Erdarbeiten)</li>
       <li><strong>Mit BEG-Förderung (bis zu 70%):</strong> 10.500–15.000 €</li>
       <li><strong>Jährliche Heizkosten:</strong> 900–1.000 € (JAZ 4,5–5,0)</li>
       <li><strong>Effizienz:</strong> Höchste JAZ aller Systeme</li>
     </ul>
-    <p><strong>✅ Vorteile:</strong> Höchste Effizienz, sehr niedrige Betriebskosten, auch für Altbau geeignet</p>
-    <p><strong>❌ Nachteile:</strong> Sehr hohe Anfangsinvestition, Genehmigung erforderlich, Erdarbeiten nötig</p>
+    <p><strong>Vorteile:</strong> Höchste Effizienz, sehr niedrige Betriebskosten, auch für Altbau geeignet</p>
+    <p><strong>Nachteile:</strong> Sehr hohe Anfangsinvestition, Genehmigung erforderlich, Erdarbeiten nötig</p>
 
-    <h2>💰 BEG-Förderung 2025: Bis zu 70% Zuschuss für den Heizungstausch</h2>
+    <h2>BEG-Förderung 2025: Bis zu 70% Zuschuss für den Heizungstausch</h2>
 
     <div style="background-color: #d4edda; padding: 20px; border-left: 4px solid #28a745; margin: 20px 0;">
-      <h3 style="margin-top: 0;">✅ Förderbausteine im Überblick</h3>
+      <h3 style="margin-top: 0;">Förderbausteine im Überblick</h3>
       <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
         <tr style="background-color: #28a745; color: white;">
           <th style="padding: 10px; text-align: left;">Förderart</th>
@@ -4573,7 +4479,7 @@ function getMockBlogPosts(): BlogPost[] {
       </table>
     </div>
 
-    <h3>💡 Praxisbeispiel: Förderung für Wärmepumpe</h3>
+    <h3>Praxisbeispiel: Förderung für Wärmepumpe</h3>
     <ul>
       <li><strong>Kosten Wärmepumpe:</strong> 32.000 €</li>
       <li><strong>Grundförderung (30%):</strong> -9.600 €</li>
@@ -4583,16 +4489,10 @@ function getMockBlogPosts(): BlogPost[] {
       <li><strong>Amortisation:</strong> 9 Jahre (durch 1.780 € Ersparnis/Jahr)</li>
     </ul>
 
-    <h3>📋 Voraussetzungen für BEG-Förderung</h3>
-    <ul>
-      <li>✅ Antrag <strong>vor Auftragsvergabe</strong> bei der KfW stellen</li>
-      <li>✅ Durchführung durch <strong>zertifizierten Fachbetrieb</strong> (wie HeizCenter)</li>
-      <li>✅ <strong>Hydraulischer Abgleich</strong> nach Verfahren B</li>
-      <li>✅ Wärmepumpe mit <strong>JAZ ≥ 3,0</strong> (Luft) bzw. 4,0 (Erdwärme)</li>
-      <li>✅ <strong>Energieberatung</strong> empfohlen (wird zusätzlich mit 80% gefördert)</li>
-    </ul>
+    <h3>Voraussetzungen für BEG-Förderung</h3>
+    <p>Folgende Bedingungen müssen erfüllt sein: Der Antrag muss <strong>vor Auftragsvergabe</strong> bei der KfW gestellt werden. Die Durchführung erfolgt durch einen <strong>zertifizierten Fachbetrieb</strong> (wie HeizCenter). Ein <strong>hydraulischer Abgleich</strong> nach Verfahren B ist Pflicht. Die Wärmepumpe muss eine <strong>JAZ von mindestens 3,0</strong> (Luft) bzw. 4,0 (Erdwärme) erreichen. Eine <strong>Energieberatung</strong> wird empfohlen und zusätzlich mit 80% gefördert.</p>
 
-    <h2>🏗️ Schritt-für-Schritt: So ersetzen Sie Ihre Nachtspeicherheizung</h2>
+    <h2>Schritt-für-Schritt: So ersetzen Sie Ihre Nachtspeicherheizung</h2>
 
     <h3>Phase 1: Vorbereitung (3–6 Wochen)</h3>
     <ol>
@@ -4617,37 +4517,37 @@ function getMockBlogPosts(): BlogPost[] {
       <li><strong>Auszahlung:</strong> Förderbetrag wird auf Ihr Konto überwiesen</li>
     </ol>
 
-    <h2>⚠️ Die 7 häufigsten Fehler beim Austausch (und wie Sie sie vermeiden)</h2>
+    <h2>Die 7 häufigsten Fehler beim Austausch (und wie Sie sie vermeiden)</h2>
 
-    <h3>1. ❌ Infrarotheizung als Hauptheizsystem</h3>
+    <h3>Infrarotheizung als Hauptheizsystem</h3>
     <p><strong>Problem:</strong> Betriebskosten fast genauso hoch wie Nachtspeicher (2.100–2.500 €/Jahr)</p>
     <p><strong>Lösung:</strong> Infrarot nur als Zusatz- oder Übergangsheizung nutzen</p>
 
-    <h3>2. ❌ Wärmepumpe ohne Dämmung im Altbau</h3>
+    <h3>Wärmepumpe ohne Dämmung im Altbau</h3>
     <p><strong>Problem:</strong> Hohe Vorlauftemperaturen nötig → JAZ sinkt auf 2,5–3,0 → höhere Kosten</p>
     <p><strong>Lösung:</strong> Mindestens Dachbodendämmung (U-Wert < 0,24 W/m²K) nachrüsten</p>
 
-    <h3>3. ❌ Förderantrag nach Auftragserteilung</h3>
+    <h3>Förderantrag nach Auftragserteilung</h3>
     <p><strong>Problem:</strong> KfW lehnt Antrag ab → Verlust von bis zu 21.000 €</p>
     <p><strong>Lösung:</strong> <strong>Immer erst Antrag stellen, dann Auftrag erteilen!</strong></p>
 
-    <h3>4. ❌ Keine Energieberatung</h3>
+    <h3>Keine Energieberatung</h3>
     <p><strong>Problem:</strong> Falsches System gewählt → schlechte Effizienz oder zu hohe Kosten</p>
     <p><strong>Lösung:</strong> Energieberatung nutzen (800 € Eigenanteil, spart oft 5.000+ € Mehrkosten)</p>
 
-    <h3>5. ❌ Zu kleine Wärmepumpe</h3>
+    <h3>Zu kleine Wärmepumpe</h3>
     <p><strong>Problem:</strong> Elektrischer Heizstab springt oft an → Stromkosten steigen um 40%</p>
     <p><strong>Lösung:</strong> Heizlastberechnung nach DIN EN 12831 durch Fachbetrieb</p>
 
-    <h3>6. ❌ Alte Heizkörper behalten</h3>
+    <h3>Alte Heizkörper behalten</h3>
     <p><strong>Problem:</strong> Wärmepumpe braucht 55–60°C Vorlauf → JAZ sinkt auf 2,8</p>
     <p><strong>Lösung:</strong> Flächenheizung (Fußboden/Wand) oder größere Heizkörper (35–45°C Vorlauf → JAZ 4,0+)</p>
 
-    <h3>7. ❌ Billigstanbieter ohne Zertifizierung</h3>
+    <h3>Billigstanbieter ohne Zertifizierung</h3>
     <p><strong>Problem:</strong> Keine KfW-Förderung, schlechte Installation, keine Garantie</p>
     <p><strong>Lösung:</strong> Nur zertifizierte Fachbetriebe beauftragen (wie HeizCenter GmbH)</p>
 
-    <h2>🏢 Sonderfälle: Mietwohnung & Eigentumswohnung</h2>
+    <h2>Sonderfälle: Mietwohnung & Eigentumswohnung</h2>
 
     <h3>Mietwohnung mit Nachtspeicher</h3>
     <ul>
@@ -4664,7 +4564,7 @@ function getMockBlogPosts(): BlogPost[] {
       <li><strong>Förderung:</strong> Jeder Eigentümer kann individuell BEG beantragen</li>
     </ul>
 
-    <h2>📊 Wirtschaftlichkeitsvergleich: 20-Jahres-Gesamtkosten</h2>
+    <h2>Wirtschaftlichkeitsvergleich: 20-Jahres-Gesamtkosten</h2>
 
     <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
       <thead>
@@ -4689,7 +4589,7 @@ function getMockBlogPosts(): BlogPost[] {
           <td style="padding: 12px; border: 1px solid #ddd;">16.000 €</td>
           <td style="padding: 12px; border: 1px solid #ddd;">22.000 €</td>
           <td style="padding: 12px; border: 1px solid #ddd;">5.000 €</td>
-          <td style="padding: 12px; border: 1px solid #ddd;"><strong>43.000 €</strong> ✅</td>
+          <td style="padding: 12px; border: 1px solid #ddd;"><strong>43.000 €</strong></td>
         </tr>
         <tr style="background-color: #f9f9f9;">
           <td style="padding: 12px; border: 1px solid #ddd;">Infrarot</td>
@@ -4715,24 +4615,13 @@ function getMockBlogPosts(): BlogPost[] {
       </tbody>
     </table>
 
-    <p><strong>💡 Fazit:</strong> Trotz höherer Anschaffungskosten ist die Wärmepumpe über 20 Jahre <strong>16.600 € günstiger</strong> als die Nachtspeicherheizung!</p>
+    <p><strong>Fazit:</strong> Trotz höherer Anschaffungskosten ist die Wärmepumpe über 20 Jahre <strong>16.600 € günstiger</strong> als die Nachtspeicherheizung!</p>
 
-    <h2>✅ Fazit: Nachtspeicherheizung ersetzen – lohnt sich 2025 mehr denn je</h2>
+    <h2>Fazit: Nachtspeicherheizung ersetzen – lohnt sich 2025 mehr denn je</h2>
 
-    <div style="background-color: #e8f4f8; padding: 20px; border-left: 4px solid #0F5B78; margin: 20px 0;">
-      <h3 style="margin-top: 0;">🎯 Die wichtigsten Erkenntnisse</h3>
-      <ul style="margin-bottom: 0;">
-        <li>✅ <strong>Keine Austauschpflicht</strong>, aber wirtschaftlich hochgradig sinnvoll</li>
-        <li>✅ <strong>1.780 € Ersparnis/Jahr</strong> mit Wärmepumpe gegenüber Nachtspeicher</li>
-        <li>✅ <strong>Bis zu 70% Förderung</strong> (max. 21.000 €) verfügbar bis Ende 2028</li>
-        <li>✅ <strong>Amortisation in 7–11 Jahren</strong>, danach nur noch Kostenersparnis</li>
-        <li>✅ <strong>CO₂-Einsparung:</strong> 2.700–3.700 kg/Jahr (entspricht 20.000 km Autofahrt)</li>
-        <li>❌ <strong>Infrarot keine echte Alternative</strong> (ähnlich hohe Betriebskosten)</li>
-        <li>⚠️ <strong>Jetzt handeln:</strong> Geschwindigkeitsbonus (20%) nur bis Ende 2028</li>
-      </ul>
-    </div>
+    <p>Die wichtigsten Erkenntnisse auf einen Blick: Es besteht <strong>keine Austauschpflicht</strong>, der Wechsel ist aber wirtschaftlich hochgradig sinnvoll. Mit einer Wärmepumpe sparen Sie rund <strong>1.780 Euro pro Jahr</strong>. Dank <strong>bis zu 70 Prozent Förderung</strong> (maximal 21.000 Euro) erreichen Sie eine Amortisation in 7 bis 11 Jahren. Die <strong>CO₂-Einsparung</strong> beträgt 2.700 bis 3.700 kg pro Jahr – das entspricht 20.000 Kilometer Autofahrt. Infrarotheizungen sind keine echte Alternative, da sie ähnlich hohe Betriebskosten verursachen. Wichtig: Der Geschwindigkeitsbonus von 20 Prozent gilt nur noch bis Ende 2028.</p>
 
-    <h3>👉 Unsere Empfehlung für 2025</h3>
+    <h3>Unsere Empfehlung für 2025</h3>
     <ol>
       <li><strong>Beste Wahl:</strong> Luft-Wasser-Wärmepumpe (höchste Förderung, niedrigste Betriebskosten)</li>
       <li><strong>Alternative Erdwärme:</strong> Bei gut gedämmtem Haus und ausreichend Grundstücksfläche</li>
@@ -4750,7 +4639,7 @@ function getMockBlogPosts(): BlogPost[] {
       </p>
     </div>
 
-    <h2>❓ Häufig gestellte Fragen (FAQ)</h2>
+    <h2>Häufig gestellte Fragen (FAQ)</h2>
 
     <h3>Muss ich meine Nachtspeicherheizung gesetzlich ersetzen?</h3>
     <p><strong>Nein.</strong> Es gibt kein generelles Austauschverbot für Nachtspeicherheizungen. Sie dürfen funktionierende Geräte weiterbetrieben. Nur bei Neuinstallation gilt die 65%-Erneuerbare-Pflicht nach GEG 2024.</p>
@@ -4793,7 +4682,7 @@ function getMockBlogPosts(): BlogPost[] {
     <h2>Fußbodenheizung 2025: Der komplette Ratgeber</h2>
 
     <div style="background-color: #e8f4f8; padding: 20px; border-left: 4px solid #0F5B78; margin: 20px 0;">
-      <h3 style="margin-top: 0;">📊 Schnellübersicht: Fußbodenheizung 2025</h3>
+      <h3 style="margin-top: 0;">Schnellübersicht: Fußbodenheizung 2025</h3>
       <ul style="margin-bottom: 0;">
         <li><strong>Kosten Neubau:</strong> 40–100 €/m² (Material + Installation)</li>
         <li><strong>Kosten Nachrüstung:</strong> 80–150 €/m²</li>
@@ -4805,7 +4694,7 @@ function getMockBlogPosts(): BlogPost[] {
       </ul>
     </div>
 
-    <h2>🏠 Wie funktioniert eine Fußbodenheizung?</h2>
+    <h2>Wie funktioniert eine Fußbodenheizung?</h2>
 
     <h3>Grundprinzip: Flächenheizung statt Punktwärme</h3>
     <p>Eine Fußbodenheizung ist ein <strong>Flächenheizsystem</strong>, das die gesamte Bodenfläche als Wärmequelle nutzt. Im Gegensatz zu Heizkörpern, die nur an einer Stelle hohe Temperaturen erzeugen (55–75°C), arbeitet die Fußbodenheizung mit <strong>niedrigen Vorlauftemperaturen von 28–35°C</strong> und verteilt die Wärme gleichmäßig im Raum.</p>
@@ -4880,9 +4769,9 @@ function getMockBlogPosts(): BlogPost[] {
       <li><strong>Kosten:</strong> 80–150 €/m²</li>
     </ul>
 
-    <h2>✅ Die 7 größten Vorteile von Fußbodenheizungen</h2>
+    <h2>Die 7 größten Vorteile von Fußbodenheizungen</h2>
 
-    <h3>1. 🔋 10–15% niedrigere Heizkosten</h3>
+    <h3>10–15% niedrigere Heizkosten</h3>
     <ul>
       <li><strong>Niedrige Vorlauftemperatur:</strong> 28–35°C vs. 55–75°C bei Heizkörpern</li>
       <li><strong>Gleichmäßige Wärmeverteilung:</strong> Keine Überhitzung einzelner Zonen</li>
@@ -4890,7 +4779,7 @@ function getMockBlogPosts(): BlogPost[] {
       <li><strong>Optimale Effizienz:</strong> Geringere Systemtemperatur = weniger Wärmeverluste</li>
     </ul>
 
-    <h3>2. 🏆 Perfekte Kombination mit Wärmepumpen</h3>
+    <h3>Perfekte Kombination mit Wärmepumpen</h3>
     <p>Fußbodenheizungen sind <strong>die ideale Ergänzung zu Wärmepumpen</strong>:</p>
     <ul>
       <li><strong>JAZ-Steigerung:</strong> Mit Fußbodenheizung JAZ 4,5–5,0 (vs. 3,5–4,0 mit Heizkörpern)</li>
@@ -4926,7 +4815,7 @@ function getMockBlogPosts(): BlogPost[] {
       </tr>
     </table>
 
-    <h3>3. 🌡️ Höchster Wohnkomfort</h3>
+    <h3>Höchster Wohnkomfort</h3>
     <ul>
       <li><strong>Gleichmäßige Wärmeverteilung:</strong> Kein "kalte Füße, warmer Kopf"-Effekt</li>
       <li><strong>Ideales Temperaturprofil:</strong> Am Boden 22–24°C, auf Kopfhöhe 20–21°C</li>
@@ -4934,7 +4823,7 @@ function getMockBlogPosts(): BlogPost[] {
       <li><strong>Angenehme Strahlungswärme:</strong> Fühlt sich 2°C wärmer an als Konvektionswärme</li>
     </ul>
 
-    <h3>4. 💨 Gesünder für Allergiker</h3>
+    <h3>Gesünder für Allergiker</h3>
     <ul>
       <li><strong>Weniger Staubaufwirbelung:</strong> Keine starke Luftzirkulation wie bei Heizkörpern</li>
       <li><strong>Niedrigere Milbenbelastung:</strong> Trockener, warmer Boden (Milben bevorzugen 20–25°C + Feuchtigkeit)</li>
@@ -4942,7 +4831,7 @@ function getMockBlogPosts(): BlogPost[] {
       <li><strong>Empfohlen von Allergologen:</strong> Für Asthma- und Allergie-Patienten</li>
     </ul>
 
-    <h3>5. 🏡 Platzgewinn & Designfreiheit</h3>
+    <h3>Platzgewinn & Designfreiheit</h3>
     <ul>
       <li><strong>Keine Heizkörper:</strong> 1–2 m² mehr nutzbare Fläche pro Raum</li>
       <li><strong>Freie Möbelstellung:</strong> Keine Rücksicht auf Heizkörper-Standorte</li>
@@ -4950,7 +4839,7 @@ function getMockBlogPosts(): BlogPost[] {
       <li><strong>Minimalistisches Design:</strong> Kein sichtbares Heizsystem</li>
     </ul>
 
-    <h3>6. 💎 3–8% höherer Immobilienwert</h3>
+    <h3>3–8% höherer Immobilienwert</h3>
     <p>Laut Immobilien-Verband IVD (2024) steigert eine Fußbodenheizung den Verkaufspreis:</p>
     <ul>
       <li><strong>Neubau:</strong> +3–5% Wertsteigerung</li>
@@ -4958,16 +4847,16 @@ function getMockBlogPosts(): BlogPost[] {
       <li><strong>Beispiel 300.000 €-Haus:</strong> +9.000–24.000 € höherer Verkaufspreis</li>
     </ul>
 
-    <h3>7. ♿ Barrierefreiheit</h3>
+    <h3>Barrierefreiheit</h3>
     <ul>
       <li><strong>Keine Stolperfallen:</strong> Ideal für Senioren und Rollstuhlfahrer</li>
       <li><strong>Gleichmäßige Wärme:</strong> Auch für Menschen mit eingeschränkter Mobilität</li>
       <li><strong>KfW-Förderung:</strong> Zusätzliche 5% Zuschuss für altersgerechte Umbauten (kombinierbar mit BEG)</li>
     </ul>
 
-    <h2>❌ Die 5 größten Nachteile von Fußbodenheizungen</h2>
+    <h2>Die 5 größten Nachteile von Fußbodenheizungen</h2>
 
-    <h3>1. 💰 Höhere Anschaffungskosten</h3>
+    <h3>Höhere Anschaffungskosten</h3>
     <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
       <tr style="background-color: #0F5B78; color: white;">
         <th style="padding: 12px; text-align: left;">System</th>
@@ -4992,7 +4881,7 @@ function getMockBlogPosts(): BlogPost[] {
     </table>
     <p><strong>Amortisation:</strong> Durch 10–15% Energieeinsparung (150–250 €/Jahr) nach <strong>5–10 Jahren</strong> ausgeglichen.</p>
 
-    <h3>2. ⏱️ Träge Reaktionszeit</h3>
+    <h3>Träge Reaktionszeit</h3>
     <ul>
       <li><strong>Aufheizphase:</strong> 2–4 Stunden (vs. 20–30 Min. Heizkörper)</li>
       <li><strong>Abkühlphase:</strong> 3–6 Stunden</li>
@@ -5041,7 +4930,7 @@ function getMockBlogPosts(): BlogPost[] {
       <li><strong>Lösung Altbau:</strong> Dünnschichtsysteme (2–4 cm) oder Trockensysteme (4–8 cm)</li>
     </ul>
 
-    <h3>5. 🔧 Hohe Reparaturkosten bei Defekten</h3>
+    <h3>Hohe Reparaturkosten bei Defekten</h3>
     <ul>
       <li><strong>Leckage-Suche:</strong> 500–1.500 € (Thermografie, Druckprüfung)</li>
       <li><strong>Reparatur:</strong> 1.000–3.000 € (Estrich aufbrechen, Rohr tauschen, neu verlegen)</li>
@@ -5049,7 +4938,7 @@ function getMockBlogPosts(): BlogPost[] {
       <li><strong>Lebensdauer:</strong> Moderne Rohre 30–50 Jahre bei fachgerechter Installation</li>
     </ul>
 
-    <h2>💰 Kosten im Detail: Neubau vs. Altbau-Nachrüstung 2025</h2>
+    <h2>Kosten im Detail: Neubau vs. Altbau-Nachrüstung 2025</h2>
 
     <h3>Neubau: Fußbodenheizung von Anfang an</h3>
 
@@ -5123,7 +5012,7 @@ function getMockBlogPosts(): BlogPost[] {
       </tbody>
     </table>
 
-    <p><strong>💡 Tipp:</strong> Nachrüstung lohnt sich vor allem bei <strong>ohnehin geplanter Komplettsanierung</strong> (neuer Bodenbelag, Estrich-Erneuerung).</p>
+    <p><strong>Tipp:</strong> Nachrüstung lohnt sich vor allem bei <strong>ohnehin geplanter Komplettsanierung</strong> (neuer Bodenbelag, Estrich-Erneuerung).</p>
 
     <h3>Betriebskosten im Vergleich (150 m²-Haus, 2025)</h3>
 
@@ -5154,19 +5043,13 @@ function getMockBlogPosts(): BlogPost[] {
       </tr>
     </table>
 
-    <h2>🏗️ Nachrüstung im Altbau: So geht's</h2>
+    <h2>Nachrüstung im Altbau: So geht's</h2>
 
-    <h3>✅ Ist Nachrüstung möglich? Checkliste</h3>
+    <h3>Ist Nachrüstung möglich? Checkliste</h3>
 
     <div style="background-color: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; margin: 20px 0;">
-      <h4 style="margin-top: 0;">📋 Voraussetzungen prüfen</h4>
-      <ul style="margin-bottom: 0;">
-        <li>✅ <strong>Raumhöhe:</strong> Mind. 2,30 m nach Aufbau (sonst Dünnschichtsystem)</li>
-        <li>✅ <strong>Statik:</strong> Zusätzliche Last 30–80 kg/m² (Estrich + Dämmung) – statische Prüfung bei Holzbalkendecken!</li>
-        <li>✅ <strong>Dämmung:</strong> U-Wert Außenwände < 0,35 W/m²K (sonst zuerst dämmen)</li>
-        <li>✅ <strong>Türen:</strong> Können angehoben oder gekürzt werden?</li>
-        <li>✅ <strong>Übergänge:</strong> Zu anderen Räumen/Flur planbar?</li>
-      </ul>
+      <h4 style="margin-top: 0;">Voraussetzungen prüfen</h4>
+      <p style="margin-bottom: 0;">Folgende Punkte sollten Sie vorab klären: Die <strong>Raumhöhe</strong> sollte nach Aufbau noch mindestens 2,30 m betragen (sonst empfiehlt sich ein Dünnschichtsystem). Die <strong>Statik</strong> muss eine zusätzliche Last von 30–80 kg/m² tragen können – bei Holzbalkendecken ist eine statische Prüfung erforderlich. Die <strong>Dämmung</strong> der Außenwände sollte einen U-Wert unter 0,35 W/m²K aufweisen. Prüfen Sie auch, ob <strong>Türen</strong> angehoben oder gekürzt werden können und ob <strong>Übergänge</strong> zu anderen Räumen planbar sind.</p>
     </div>
 
     <h3>Schritt-für-Schritt-Anleitung: Nachrüstung mit Dünnschicht-System</h3>
@@ -5182,10 +5065,10 @@ function getMockBlogPosts(): BlogPost[] {
       <li><strong>Inbetriebnahme:</strong> Heizkreise anschließen, langsam aufheizen (2°C/Tag)</li>
     </ol>
 
-    <p><strong>⏱️ Dauer:</strong> 1–2 Wochen (für 150 m²-Haus)</p>
-    <p><strong>💰 Kosten:</strong> 12.000–22.500 € (inkl. Material, Installation, neuer Bodenbelag)</p>
+    <p><strong>Dauer:</strong> 1–2 Wochen (für 150 m²-Haus)</p>
+    <p><strong>Kosten:</strong> 12.000–22.500 € (inkl. Material, Installation, neuer Bodenbelag)</p>
 
-    <h2>🌿 Kombination Wärmepumpe + Fußbodenheizung: Das Traumpaar</h2>
+    <h2>Kombination Wärmepumpe + Fußbodenheizung: Das Traumpaar</h2>
 
     <h3>Warum diese Kombination ideal ist</h3>
 
@@ -5217,10 +5100,10 @@ function getMockBlogPosts(): BlogPost[] {
       </tr>
     </table>
 
-    <h3>💡 Praxisbeispiel: Gesamtkosten & Förderung</h3>
+    <h3>Praxisbeispiel: Gesamtkosten & Förderung</h3>
 
     <div style="background-color: #d4edda; padding: 20px; border-left: 4px solid #28a745; margin: 20px 0;">
-      <h4 style="margin-top: 0;">📊 150 m²-Haus, Neubau (2025)</h4>
+      <h4 style="margin-top: 0;">150 m²-Haus, Neubau (2025)</h4>
       <table style="width: 100%; margin-top: 10px;">
         <tr>
           <td><strong>Wärmepumpe (Luft-Wasser):</strong></td>
@@ -5251,80 +5134,42 @@ function getMockBlogPosts(): BlogPost[] {
       </table>
     </div>
 
-    <h2>⚠️ Die 5 häufigsten Fehler bei Fußbodenheizungen</h2>
+    <h2>Die 5 häufigsten Fehler bei Fußbodenheizungen</h2>
 
-    <h3>1. ❌ Falscher Bodenbelag</h3>
+    <h3>Falscher Bodenbelag</h3>
     <p><strong>Problem:</strong> Echtholz-Parkett auf Fußbodenheizung → Fugen, Risse, schlechte Wärmeübertragung</p>
     <p><strong>Lösung:</strong> Fliesen, Naturstein oder spezielles Vinyl/Laminat mit R-Wert < 0,15 m²K/W verwenden</p>
 
-    <h3>2. ❌ Unzureichende Dämmung</h3>
+    <h3>Unzureichende Dämmung</h3>
     <p><strong>Problem:</strong> Ohne Dämmung nach unten 30–50% Wärmeverlust (heizt Kellerdecke/Erdreich)</p>
     <p><strong>Lösung:</strong> Mind. 3–5 cm Dämmung (EPS/XPS) unter Rohrleitungen (U-Wert < 0,25 W/m²K)</p>
 
-    <h3>3. ❌ Fehlende Einzelraumregelung</h3>
+    <h3>Fehlende Einzelraumregelung</h3>
     <p><strong>Problem:</strong> Alle Räume gleich warm → Überhitzung Bad/Schlafzimmer, Verschwendung von Energie</p>
     <p><strong>Lösung:</strong> Raumthermostate + motorische Stellantriebe für jeden Heizkreis (Mehrkosten 500–1.200 €)</p>
 
-    <h3>4. ❌ Zu große Rohr-Abstände</h3>
+    <h3>Zu große Rohr-Abstände</h3>
     <p><strong>Problem:</strong> Abstände > 20 cm → "Zebrastreifen-Effekt" (abwechselnd warm/kühl auf dem Boden)</p>
     <p><strong>Lösung:</strong> Optimale Abstände: 10–15 cm (Außenbereich), 15–20 cm (Innenbereich)</p>
 
-    <h3>5. ❌ Zu schnelles Aufheizen nach Installation</h3>
+    <h3>Zu schnelles Aufheizen nach Installation</h3>
     <p><strong>Problem:</strong> Estrich reißt bei zu schnellem Aufheizen (> 5°C/Tag)</p>
     <p><strong>Lösung:</strong> "Aufheizprotokoll" einhalten: 1. Tag 25°C, dann täglich +2°C bis 45°C, 3 Tage halten, langsam abkühlen</p>
 
-    <h2>🎯 Entscheidungshilfe: Wann lohnt sich Fußbodenheizung?</h2>
+    <h2>Entscheidungshilfe: Wann lohnt sich Fußbodenheizung?</h2>
 
-    <div style="background-color: #d4edda; padding: 20px; border-left: 4px solid #28a745; margin: 20px 0;">
-      <h3 style="margin-top: 0;">✅ Fußbodenheizung SEHR SINNVOLL bei:</h3>
-      <ul style="margin-bottom: 0;">
-        <li>✅ <strong>Neubau:</strong> Minimale Mehrkosten (750–1.500 €), maximaler Komfort</li>
-        <li>✅ <strong>Wärmepumpe geplant:</strong> JAZ-Steigerung um 20–30% (200–300 €/Jahr Ersparnis)</li>
-        <li>✅ <strong>Komplettsanierung:</strong> Wenn ohnehin neuer Estrich/Bodenbelag kommt</li>
-        <li>✅ <strong>Fliesen-Bodenbelag:</strong> Beste Wärmeübertragung und Langlebigkeit</li>
-        <li>✅ <strong>Allergiker im Haushalt:</strong> Weniger Staubaufwirbelung, gesünderes Raumklima</li>
-        <li>✅ <strong>Große Fensterfronten:</strong> Verhindert Kältezonen ohne sichtbare Heizkörper</li>
-        <li>✅ <strong>Barrierefreies Wohnen:</strong> Keine Stolperfallen, gleichmäßige Wärme</li>
-      </ul>
-    </div>
+    <h3>Fußbodenheizung ist sehr sinnvoll bei:</h3>
+    <p>Ein <strong>Neubau</strong> bietet minimale Mehrkosten (750–1.500 Euro) bei maximalem Komfort. Ist eine <strong>Wärmepumpe geplant</strong>, steigert die Fußbodenheizung die JAZ um 20–30% und spart 200–300 Euro pro Jahr. Bei einer <strong>Komplettsanierung</strong> lohnt sich die Nachrüstung, wenn ohnehin neuer Estrich oder Bodenbelag kommt. <strong>Fliesen-Bodenbeläge</strong> bieten beste Wärmeübertragung und Langlebigkeit. <strong>Allergiker</strong> profitieren von weniger Staubaufwirbelung und gesünderem Raumklima. <strong>Große Fensterfronten</strong> lassen sich ohne sichtbare Heizkörper wärmen. Für <strong>barrierefreies Wohnen</strong> sind keine Stolperfallen und gleichmäßige Wärme ideal.</p>
 
-    <div style="background-color: #fff3cd; padding: 20px; border-left: 4px solid #ffc107; margin: 20px 0;">
-      <h3 style="margin-top: 0;">⚠️ Fußbodenheizung KRITISCH bei:</h3>
-      <ul style="margin-bottom: 0;">
-        <li>⚠️ <strong>Echtholz-Parkett gewünscht:</strong> Problematisch (Fugenbildung, max. 28°C Vorlauf)</li>
-        <li>⚠️ <strong>Sehr niedrige Deckenhöhe:</strong> < 2,40 m (Dünnschichtsystem nötig, höhere Kosten)</li>
-        <li>⚠️ <strong>Räume mit wechselnder Nutzung:</strong> Bad/Gästezimmer (träge Reaktionszeit 2–4 h)</li>
-        <li>⚠️ <strong>Ungedämmter Altbau:</strong> Erst dämmen (U-Wert < 0,35 W/m²K), dann Fußbodenheizung</li>
-        <li>⚠️ <strong>Holzbalkendecken ohne statische Prüfung:</strong> Zusatzlast 30–80 kg/m² klären!</li>
-      </ul>
-    </div>
+    <h3>Kritisch abwägen sollten Sie bei:</h3>
+    <p><strong>Echtholz-Parkett</strong> ist problematisch wegen Fugenbildung bei maximal 28°C Vorlauf. Bei <strong>sehr niedriger Deckenhöhe</strong> unter 2,40 m sind Dünnschichtsysteme nötig, was höhere Kosten bedeutet. <strong>Räume mit wechselnder Nutzung</strong> wie Bad oder Gästezimmer leiden unter der trägen Reaktionszeit von 2–4 Stunden. Im <strong>ungedämmten Altbau</strong> sollten Sie erst dämmen (U-Wert unter 0,35 W/m²K), dann die Fußbodenheizung installieren. Bei <strong>Holzbalkendecken</strong> muss die statische Prüfung für die Zusatzlast von 30–80 kg/m² erfolgen.</p>
 
-    <div style="background-color: #ffcccc; padding: 20px; border-left: 4px solid #dc3545; margin: 20px 0;">
-      <h3 style="margin-top: 0;">❌ Fußbodenheizung NICHT SINNVOLL bei:</h3>
-      <ul style="margin-bottom: 0;">
-        <li>❌ <strong>Nur Teilsanierung:</strong> Z.B. neuer Bodenbelag, aber Estrich bleibt → Heizkörper günstiger</li>
-        <li>❌ <strong>Sehr kleines Budget:</strong> Heizkörper 1.500 € günstiger, Alternative: Niedertemperatur-Heizkörper</li>
-        <li>❌ <strong>Mietwohnung:</strong> Vermieter muss zustimmen, hohe Investition ohne Eigentum</li>
-        <li>❌ <strong>Kurzfristiger Verkauf geplant:</strong> Amortisation 5–10 Jahre, Wertsteigerung nur 3–8%</li>
-      </ul>
-    </div>
+    <h3>Nicht sinnvoll ist Fußbodenheizung bei:</h3>
+    <p>Bei <strong>Teilsanierungen</strong>, wo nur der Bodenbelag erneuert wird und der Estrich bleibt, sind Heizkörper günstiger. Bei <strong>sehr kleinem Budget</strong> lohnen sich Heizkörper, die 1.500 Euro weniger kosten – alternativ Niedertemperatur-Heizkörper. In einer <strong>Mietwohnung</strong> muss der Vermieter zustimmen, und die hohe Investition steht ohne Eigentum. Bei <strong>kurzfristig geplantem Verkauf</strong> erreichen Sie die Amortisation von 5–10 Jahren nicht, und die Wertsteigerung beträgt nur 3–8%.</p>
 
-    <h2>✅ Fazit: Fußbodenheizung 2025 – Komfort trifft Effizienz</h2>
+    <h2>Fazit: Fußbodenheizung 2025 – Komfort trifft Effizienz</h2>
 
-    <div style="background-color: #e8f4f8; padding: 20px; border-left: 4px solid #0F5B78; margin: 20px 0;">
-      <h3 style="margin-top: 0;">🎯 Die wichtigsten Erkenntnisse</h3>
-      <ul style="margin-bottom: 0;">
-        <li>✅ <strong>10–15% Energieeinsparung</strong> gegenüber Heizkörpern (150–300 €/Jahr)</li>
-        <li>✅ <strong>Perfekt für Wärmepumpen:</strong> JAZ 4,5–5,0 (vs. 3,5 mit Heizkörpern)</li>
-        <li>✅ <strong>Höchster Wohnkomfort:</strong> Gleichmäßige Wärme, keine Zugluft, gesünder für Allergiker</li>
-        <li>✅ <strong>Wertsteigerung:</strong> 3–8% höherer Immobilienwert</li>
-        <li>✅ <strong>Nachrüstung möglich:</strong> Mit Dünnschicht-/Trockensystemen (80–150 €/m²)</li>
-        <li>✅ <strong>BEG-Förderung:</strong> Bis zu 70% in Kombination mit Wärmepumpe (max. 21.000 €)</li>
-        <li>⚠️ <strong>Höhere Investition:</strong> 750–1.500 € Mehrkosten vs. Heizkörper (Neubau)</li>
-        <li>⚠️ <strong>Träge Reaktion:</strong> 2–4 h Aufheizzeit (kontinuierlicher Betrieb empfohlen)</li>
-        <li>⚠️ <strong>Bodenbelag beachten:</strong> Fliesen ideal, Echtholz kritisch</li>
-      </ul>
-    </div>
+    <p>Die wichtigsten Erkenntnisse: Mit <strong>10–15% Energieeinsparung</strong> gegenüber Heizkörpern sparen Sie 150–300 Euro pro Jahr. <strong>Perfekt für Wärmepumpen</strong> erreichen Sie eine JAZ von 4,5–5,0 statt nur 3,5 mit Heizkörpern. Der <strong>höchste Wohnkomfort</strong> bietet gleichmäßige Wärme, keine Zugluft und ist gesünder für Allergiker. Die <strong>Wertsteigerung</strong> beträgt 3–8% des Immobilienwerts. <strong>Nachrüstung ist möglich</strong> mit Dünnschicht- oder Trockensystemen für 80–150 Euro pro Quadratmeter. Die <strong>BEG-Förderung</strong> beträgt bis zu 70% in Kombination mit Wärmepumpe (maximal 21.000 Euro). Beachten Sie jedoch: Die Investition liegt 750–1.500 Euro über Heizkörpern, die Reaktionszeit beträgt träge 2–4 Stunden, und beim Bodenbelag sind Fliesen ideal, Echtholz kritisch.</p>
 
     <h3>Unsere Empfehlung für 2025</h3>
     <ol>
@@ -5344,7 +5189,7 @@ function getMockBlogPosts(): BlogPost[] {
       </p>
     </div>
 
-    <h2>❓ Häufig gestellte Fragen (FAQ)</h2>
+    <h2>Häufig gestellte Fragen (FAQ)</h2>
 
     <h3>Was kostet eine Fußbodenheizung pro m²?</h3>
     <p><strong>Neubau:</strong> 40–70 €/m² (Nass-System). <strong>Altbau-Nachrüstung:</strong> 80–150 €/m² (Dünnschicht-/Trockensystem). Für ein 150 m²-Haus: 6.000–10.500 € (Neubau) bzw. 12.000–22.500 € (Nachrüstung).</p>
@@ -5387,7 +5232,7 @@ function getMockBlogPosts(): BlogPost[] {
     <h2>Heizung entlüften 2025: Der komplette Ratgeber</h2>
 
     <div style="background-color: #e8f4f8; padding: 20px; border-left: 4px solid #0F5B78; margin: 20px 0;">
-      <h3 style="margin-top: 0;">📊 Schnellübersicht: Heizung entlüften</h3>
+      <h3 style="margin-top: 0;">Schnellübersicht: Heizung entlüften</h3>
       <ul style="margin-bottom: 0;">
         <li><strong>Dauer:</strong> 5–10 Minuten pro Heizkörper</li>
         <li><strong>Häufigkeit:</strong> 1–2x pro Jahr (vor Heizsaison + bei Bedarf)</li>
@@ -5399,7 +5244,7 @@ function getMockBlogPosts(): BlogPost[] {
       </ul>
     </div>
 
-    <h2>❓ Warum muss man Heizungen entlüften?</h2>
+    <h2>Warum muss man Heizungen entlüften?</h2>
 
     <h3>Das Problem: Luft im Heizsystem</h3>
     <p>Luft gelangt auf verschiedenen Wegen in das Heizsystem:</p>
@@ -5450,9 +5295,9 @@ function getMockBlogPosts(): BlogPost[] {
       </tbody>
     </table>
 
-    <p><strong>💡 Fazit:</strong> Durch regelmäßiges Entlüften sparen Sie <strong>150–400 € pro Jahr</strong> und vermeiden teure Reparaturen!</p>
+    <p><strong>Fazit:</strong> Durch regelmäßiges Entlüften sparen Sie <strong>150–400 € pro Jahr</strong> und vermeiden teure Reparaturen!</p>
 
-    <h2>🔧 Werkzeug & Vorbereitung: Das brauchen Sie</h2>
+    <h2>Werkzeug & Vorbereitung: Das brauchen Sie</h2>
 
     <h3>Benötigtes Werkzeug</h3>
 
@@ -5504,11 +5349,11 @@ function getMockBlogPosts(): BlogPost[] {
     </ol>
 
     <div style="background-color: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; margin: 20px 0;">
-      <h4 style="margin-top: 0;">⚠️ Wichtig: Reihenfolge beachten!</h4>
+      <h4 style="margin-top: 0;">Wichtig: Reihenfolge beachten!</h4>
       <p style="margin-bottom: 0;">Entlüften Sie <strong>von unten nach oben</strong> (1. Stock → 2. Stock → Dachgeschoss) und im Stockwerk <strong>von der Heizung weg</strong>. So entweicht die Luft vollständig aus dem System.</p>
     </div>
 
-    <h2>📝 Schritt-für-Schritt-Anleitung: Heizung richtig entlüften</h2>
+    <h2>Schritt-für-Schritt-Anleitung: Heizung richtig entlüften</h2>
 
     <h3>Schritt 1: Entlüftungsventil finden</h3>
     <p>Das Entlüftungsventil befindet sich meist <strong>oben rechts oder links</strong> am Heizkörper (gegenüber dem Thermostat). Es ist ein kleines, rundes oder viereckiges Ventil mit Vierkant-Öffnung.</p>
@@ -5520,7 +5365,7 @@ function getMockBlogPosts(): BlogPost[] {
     <p>Setzen Sie den Entlüftungsschlüssel auf das Vierkant-Ventil und drehen Sie <strong>eine halbe bis ganze Umdrehung gegen den Uhrzeigersinn</strong> (nach links). <strong>Nicht zu weit öffnen!</strong></p>
 
     <div style="background-color: #ffcccc; padding: 15px; border-left: 4px solid #dc3545; margin: 20px 0;">
-      <h4 style="margin-top: 0;">❌ Häufiger Fehler: Ventil komplett öffnen</h4>
+      <h4 style="margin-top: 0;">Häufiger Fehler: Ventil komplett öffnen</h4>
       <p style="margin-bottom: 0;"><strong>NIEMALS das Ventil ganz herausdrehen!</strong> Es genügt eine halbe Umdrehung. Bei vollständigem Öffnen spritzt Wasser unkontrolliert heraus (Gefahr: 20–50 Liter Wasser im Raum!).</p>
     </div>
 
@@ -5574,11 +5419,11 @@ function getMockBlogPosts(): BlogPost[] {
     </ol>
 
     <div style="background-color: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; margin: 20px 0;">
-      <h4 style="margin-top: 0;">⚠️ Achtung bei Wärmepumpen!</h4>
+      <h4 style="margin-top: 0;">Achtung bei Wärmepumpen!</h4>
       <p style="margin-bottom: 0;">Wärmepumpen haben oft <strong>geschlossene Kreisläufe mit entsalztem/demineralisiertem Wasser</strong>. Das Nachfüllen mit Leitungswasser kann zu Kalkablagerungen und Korrosion führen. <strong>Lösung:</strong> Fachmann rufen oder destilliertes/entsalztes Wasser verwenden (5–10 €/Kanister).</p>
     </div>
 
-    <h2>🕐 Wie oft sollte man Heizungen entlüften?</h2>
+    <h2>Wie oft sollte man Heizungen entlüften?</h2>
 
     <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
       <tr style="background-color: #0F5B78; color: white;">
@@ -5618,40 +5463,40 @@ function getMockBlogPosts(): BlogPost[] {
       </tr>
     </table>
 
-    <h2>⚠️ Die 7 häufigsten Fehler beim Entlüften</h2>
+    <h2>Die 7 häufigsten Fehler beim Entlüften</h2>
 
-    <h3>1. ❌ Ventil zu weit öffnen</h3>
+    <h3>Ventil zu weit öffnen</h3>
     <p><strong>Problem:</strong> Ventil ganz herausdrehen → 20–50 Liter Wasser im Raum, Wasserschaden</p>
     <p><strong>Lösung:</strong> Nur <strong>1/4 bis 1/2 Umdrehung</strong> öffnen, Schlüssel festhalten</p>
 
-    <h3>2. ❌ Falsche Reihenfolge</h3>
+    <h3>Falsche Reihenfolge</h3>
     <p><strong>Problem:</strong> Von oben nach unten entlüften → Luft steigt wieder auf, mehrfache Entlüftung nötig</p>
     <p><strong>Lösung:</strong> <strong>Immer von unten nach oben</strong> (Erdgeschoss → Obergeschoss)</p>
 
-    <h3>3. ❌ Systemdruck nicht kontrollieren</h3>
+    <h3>Systemdruck nicht kontrollieren</h3>
     <p><strong>Problem:</strong> Druck sinkt auf < 0,5 bar → Heizung schaltet ab (Sicherheitsfunktion)</p>
     <p><strong>Lösung:</strong> Nach Entlüftung <strong>immer Manometer prüfen</strong>, ggf. Wasser nachfüllen</p>
 
-    <h3>4. ❌ Heizung läuft während Entlüftung</h3>
+    <h3>Heizung läuft während Entlüftung</h3>
     <p><strong>Problem:</strong> Bei älteren Anlagen wird Luft durch System gepumpt → unvollständige Entlüftung</p>
     <p><strong>Lösung:</strong> Pumpe 30–60 Min. vorher <strong>ausschalten</strong> (Luft kann aufsteigen)</p>
 
-    <h3>5. ❌ Nur problematische Heizkörper entlüften</h3>
+    <h3>Nur problematische Heizkörper entlüften</h3>
     <p><strong>Problem:</strong> Luft wandert von nicht entlüfteten Heizkörpern nach → Problem kehrt zurück</p>
     <p><strong>Lösung:</strong> <strong>ALLE Heizkörper im Haus</strong> entlüften, auch wenn nur einer gluckert</p>
 
-    <h3>6. ❌ Leitungswasser bei Wärmepumpen nachfüllen</h3>
+    <h3>Leitungswasser bei Wärmepumpen nachfüllen</h3>
     <p><strong>Problem:</strong> Kalk/Mineralien lagern sich ab → Korrosion, reduzierte Effizienz (JAZ sinkt um 0,2–0,5)</p>
     <p><strong>Lösung:</strong> <strong>Entsalztes Wasser</strong> verwenden oder Fachmann beauftragen</p>
 
-    <h3>7. ❌ Zu früh schließen (nur Tropfen statt Wasserstrahl)</h3>
+    <h3>Zu früh schließen (nur Tropfen statt Wasserstrahl)</h3>
     <p><strong>Problem:</strong> Restluft bleibt im Heizkörper → keine vollständige Entlüftung</p>
     <p><strong>Lösung:</strong> Warten, bis <strong>gleichmäßiger Wasserstrahl</strong> (nicht nur Tropfen) austritt</p>
 
-    <h2>🔎 Wann sollten Sie einen Fachmann rufen?</h2>
+    <h2>Wann sollten Sie einen Fachmann rufen?</h2>
 
     <div style="background-color: #ffcccc; padding: 20px; border-left: 4px solid #dc3545; margin: 20px 0;">
-      <h3 style="margin-top: 0;">❌ Rufen Sie einen Fachmann, wenn:</h3>
+      <h3 style="margin-top: 0;">Rufen Sie einen Fachmann, wenn:</h3>
       <ul style="margin-bottom: 0;">
         <li>Heizkörper trotz Entlüftung <strong>kalt bleiben</strong> (Thermostat defekt, Ventil klemmt, Rohrverstopfung)</li>
         <li>Sie <strong>wöchentlich entlüften</strong> müssen (Leckage im System, permanenter Lufteintritt)</li>
@@ -5665,10 +5510,10 @@ function getMockBlogPosts(): BlogPost[] {
 
     <p><strong>Kosten Fachmann:</strong> 50–100 € (Entlüftung aller Heizkörper + Systemcheck + Wasser nachfüllen). Bei schwerwiegenden Problemen (Leckage-Suche, Systemspülung): 200–800 €.</p>
 
-    <h2>✅ Checkliste: Heizung entlüften in 10 Schritten</h2>
+    <h2>Checkliste: Heizung entlüften in 10 Schritten</h2>
 
     <div style="background-color: #d4edda; padding: 20px; border-left: 4px solid #28a745; margin: 20px 0;">
-      <h3 style="margin-top: 0;">✅ Schritt-für-Schritt-Checkliste</h3>
+      <h3 style="margin-top: 0;">Schritt-für-Schritt-Checkliste</h3>
       <ol style="margin-bottom: 0;">
         <li>☐ <strong>Werkzeug bereitstellen:</strong> Entlüftungsschlüssel, Auffangbehälter, Lappen</li>
         <li>☐ <strong>Heizkörper aufdrehen:</strong> Alle Thermostate auf Stufe 5, 30–60 Min. warten</li>
@@ -5684,7 +5529,7 @@ function getMockBlogPosts(): BlogPost[] {
       </ol>
     </div>
 
-    <h2>💰 Kosten & Einsparungen</h2>
+    <h2>Kosten & Einsparungen</h2>
 
     <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
       <tr style="background-color: #0F5B78; color: white;">
@@ -5741,7 +5586,7 @@ function getMockBlogPosts(): BlogPost[] {
       </p>
     </div>
 
-    <h2>❓ Häufig gestellte Fragen (FAQ)</h2>
+    <h2>Häufig gestellte Fragen (FAQ)</h2>
 
     <h3>Wie oft muss ich meine Heizung entlüften?</h3>
     <p><strong>Mindestens 1x pro Jahr</strong> vor Beginn der Heizsaison (September/Oktober). Bei neuen Anlagen 2–3x im ersten Jahr. Sofort bei Störgeräuschen (Gluckern) oder kalten Heizkörpern.</p>
@@ -6070,7 +5915,7 @@ function getMockBlogPosts(): BlogPost[] {
 
       <h2>5. Vor- und Nachteile im Überblick</h2>
 
-      <h3>✅ Vorteile Wärmepumpe</h3>
+      <h3>Vorteile Wärmepumpe</h3>
       <ul>
         <li><strong>Sehr niedrige Betriebskosten:</strong> 50–70% günstiger als Gas (bei WP-Stromtarif)</li>
         <li><strong>Hohe Förderung:</strong> Bis zu 70% Zuschuss vom Staat</li>
@@ -6082,7 +5927,7 @@ function getMockBlogPosts(): BlogPost[] {
         <li><strong>Wertsteigerung:</strong> Erhöht Immobilienwert (Energieausweis)</li>
       </ul>
 
-      <h3>❌ Nachteile Wärmepumpe</h3>
+      <h3>Nachteile Wärmepumpe</h3>
       <ul>
         <li><strong>Hohe Anfangsinvestition:</strong> 20.000–40.000 € (vor Förderung)</li>
         <li><strong>Platzbedarf:</strong> Außeneinheit + Technikraum erforderlich</li>
@@ -6092,7 +5937,7 @@ function getMockBlogPosts(): BlogPost[] {
         <li><strong>Komplexere Installation:</strong> Fachfirma zwingend erforderlich</li>
       </ul>
 
-      <h3>✅ Vorteile Gasheizung</h3>
+      <h3>Vorteile Gasheizung</h3>
       <ul>
         <li><strong>Niedrige Anschaffung:</strong> 8.000–15.000 €</li>
         <li><strong>Bewährte Technik:</strong> Viele Installateure, einfache Wartung</li>
@@ -6101,7 +5946,7 @@ function getMockBlogPosts(): BlogPost[] {
         <li><strong>Schnelle Installation:</strong> Bei vorhandenem Gasanschluss</li>
       </ul>
 
-      <h3>❌ Nachteile Gasheizung</h3>
+      <h3>Nachteile Gasheizung</h3>
       <ul>
         <li><strong>Hohe Betriebskosten:</strong> Gas-Preis volatil (aktuell ~10–12 ct/kWh)</li>
         <li><strong>Keine Förderung:</strong> Staat unterstützt fossile Heizungen nicht mehr</li>
@@ -6116,7 +5961,7 @@ function getMockBlogPosts(): BlogPost[] {
       <h2>6. Gesetzliche Rahmenbedingungen (GEG 2024)</h2>
 
       <div style="background-color: #fff3cd; padding: 20px; border-left: 4px solid #ffc107; margin: 20px 0;">
-        <h3 style="margin-top: 0;">⚖️ Gebäudeenergiegesetz (GEG) – Was gilt ab 2024?</h3>
+        <h3 style="margin-top: 0;">Gebäudeenergiegesetz (GEG) – Was gilt ab 2024?</h3>
         <ul>
           <li><strong>Neubau in Neubaugebieten:</strong> Gasheizungen verboten, 65% erneuerbare Energie Pflicht</li>
           <li><strong>Bestandsgebäude:</strong> Ab 2024 schrittweise 65%-EE-Pflicht (je nach kommunaler Wärmeplanung)</li>
@@ -6128,7 +5973,7 @@ function getMockBlogPosts(): BlogPost[] {
 
       <h2>7. Wann lohnt sich welches System?</h2>
 
-      <h3>✅ Wärmepumpe ist ideal für:</h3>
+      <h3>Wärmepumpe ist ideal für:</h3>
       <ul>
         <li><strong>Neubauten & sanierte Altbauten</strong> (gute Dämmung)</li>
         <li><strong>Fußbodenheizung oder große Heizkörper</strong> (Vorlauf ≤55°C)</li>
@@ -6138,7 +5983,7 @@ function getMockBlogPosts(): BlogPost[] {
         <li><strong>Verfügbare Fördermittel</strong> (KfW-Antrag möglich)</li>
       </ul>
 
-      <h3>⚠️ Gasheizung kann sinnvoll sein für:</h3>
+      <h3>Gasheizung kann sinnvoll sein für:</h3>
       <ul>
         <li><strong>Sehr knappes Budget</strong> (keine Fördermittel nutzbar)</li>
         <li><strong>Altbau mit hohem Wärmebedarf</strong> (schlechte Dämmung, kleine Heizkörper)</li>
@@ -6222,7 +6067,7 @@ function getMockBlogPosts(): BlogPost[] {
       <h2>10. Fazit & Entscheidungshilfe</h2>
 
       <div style="background-color: #e8f4f8; padding: 20px; border-left: 4px solid #0F5B78; margin: 20px 0;">
-        <h3 style="margin-top: 0;">🎯 Unsere Empfehlung</h3>
+        <h3 style="margin-top: 0;">Unsere Empfehlung</h3>
         <p><strong>Wärmepumpe gewinnt in fast allen Kategorien:</strong></p>
         <ul>
           <li>✅ Niedrigere Gesamtkosten über 20 Jahre (trotz höherer Anschaffung)</li>
@@ -6270,7 +6115,7 @@ function getMockBlogPosts(): BlogPost[] {
       <h2>Wärmepumpe vs. Pelletheizung 2025: Welches System passt zu Ihnen?</h2>
 
       <div style="background-color: #e8f4f8; padding: 20px; border-left: 4px solid #0F5B78; margin: 20px 0;">
-        <h3 style="margin-top: 0;">🔥 Schnellvergleich auf einen Blick</h3>
+        <h3 style="margin-top: 0;">Schnellvergleich auf einen Blick</h3>
         <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
           <thead>
             <tr style="background-color: #0F5B78; color: white;">
@@ -6580,7 +6425,7 @@ function getMockBlogPosts(): BlogPost[] {
 
       <h2>7. Vor- und Nachteile im Überblick</h2>
 
-      <h3>✅ Vorteile Wärmepumpe</h3>
+      <h3>Vorteile Wärmepumpe</h3>
       <ul>
         <li><strong>Höchster Komfort:</strong> Vollautomatisch, keine Brennstoffbeschaffung</li>
         <li><strong>Sehr wartungsarm:</strong> Keine Asche, kein Schornstein</li>
@@ -6591,14 +6436,14 @@ function getMockBlogPosts(): BlogPost[] {
         <li><strong>Kühlfunktion möglich</strong></li>
       </ul>
 
-      <h3>❌ Nachteile Wärmepumpe</h3>
+      <h3>Nachteile Wärmepumpe</h3>
       <ul>
         <li><strong>Höhere Anschaffung:</strong> 20.000–40.000 € (vor Förderung)</li>
         <li><strong>Stromabhängigkeit:</strong> Betriebskosten steigen mit Strompreis</li>
         <li><strong>Gebäudeanforderungen:</strong> Effizient nur bei guter Dämmung</li>
       </ul>
 
-      <h3>✅ Vorteile Pelletheizung</h3>
+      <h3>Vorteile Pelletheizung</h3>
       <ul>
         <li><strong>Nachwachsender Rohstoff:</strong> Regional verfügbar</li>
         <li><strong>CO₂-neutral:</strong> Nachhaltige Verbrennung</li>
@@ -6607,7 +6452,7 @@ function getMockBlogPosts(): BlogPost[] {
         <li><strong>Heimisches Brennmaterial</strong> (keine Importe nötig)</li>
       </ul>
 
-      <h3>❌ Nachteile Pelletheizung</h3>
+      <h3>Nachteile Pelletheizung</h3>
       <ul>
         <li><strong>Hoher Wartungsaufwand:</strong> ~30–40 h Eigenarbeit/Jahr</li>
         <li><strong>Großer Platzbedarf:</strong> 9–14 m² (inkl. Pelletspeicher)</li>
@@ -6621,7 +6466,7 @@ function getMockBlogPosts(): BlogPost[] {
 
       <h2>8. Wann lohnt sich welches System?</h2>
 
-      <h3>✅ Wärmepumpe ist ideal für:</h3>
+      <h3>Wärmepumpe ist ideal für:</h3>
       <ul>
         <li><strong>Neubauten & sanierte Häuser</strong> (gute Dämmung)</li>
         <li><strong>Komfortorientierte Hausbesitzer</strong> (keine Zeit für Wartung)</li>
@@ -6631,7 +6476,7 @@ function getMockBlogPosts(): BlogPost[] {
         <li><strong>Kombination mit PV-Anlage möglich</strong></li>
       </ul>
 
-      <h3>✅ Pelletheizung ist ideal für:</h3>
+      <h3>Pelletheizung ist ideal für:</h3>
       <ul>
         <li><strong>Unsanierte Altbauten</strong> (hoher Wärmebedarf, kleine Heizkörper)</li>
         <li><strong>Großzügiger Platzbedarf vorhanden</strong> (Lagerraum 6–10 m²)</li>
@@ -6706,7 +6551,7 @@ function getMockBlogPosts(): BlogPost[] {
       <h2>Fazit: Welche Heizung passt zu Ihnen?</h2>
 
       <div style="background-color: #e8f4f8; padding: 20px; border-left: 4px solid #0F5B78; margin: 20px 0;">
-        <h3 style="margin-top: 0;">🎯 Unsere klare Empfehlung</h3>
+        <h3 style="margin-top: 0;">Unsere klare Empfehlung</h3>
         <p><strong>Wärmepumpe gewinnt in 8 von 10 Kategorien:</strong></p>
         <ul>
           <li>✅ Höherer Komfort (vollautomatisch)</li>
@@ -6757,7 +6602,7 @@ function getMockBlogPosts(): BlogPost[] {
       <h2>Klimaanlage Kosten 2025: Der komplette Kostenüberblick</h2>
 
       <div style="background-color: #e8f4f8; padding: 20px; border-left: 4px solid #0F5B78; margin: 20px 0;">
-        <h3 style="margin-top: 0;">❄️ Schnellübersicht: Klimaanlage Kosten</h3>
+        <h3 style="margin-top: 0;">Schnellübersicht: Klimaanlage Kosten</h3>
         <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
           <thead>
             <tr style="background-color: #0F5B78; color: white;">
@@ -7105,7 +6950,7 @@ function getMockBlogPosts(): BlogPost[] {
       <h2>Fazit: Was kostet eine Klimaanlage wirklich?</h2>
 
       <div style="background-color: #e8f4f8; padding: 20px; border-left: 4px solid #0F5B78; margin: 20px 0;">
-        <h3 style="margin-top: 0;">💰 Unsere Kostenempfehlung</h3>
+        <h3 style="margin-top: 0;">Unsere Kostenempfehlung</h3>
         <p><strong>Für 1 Raum (25–35 m²):</strong></p>
         <ul>
           <li>Budget: 1.500–2.000 € (Einstiegs-Split)</li>
@@ -7150,7 +6995,7 @@ function getMockBlogPosts(): BlogPost[] {
     <h2>Barrierefreies Bad 2025: Der komplette Ratgeber</h2>
 
     <div style="background-color: #e8f4f8; padding: 20px; border-left: 4px solid #0F5B78; margin: 20px 0;">
-      <h3 style="margin-top: 0;">📊 Schnellübersicht: Barrierefreies Bad</h3>
+      <h3 style="margin-top: 0;">Schnellübersicht: Barrierefreies Bad</h3>
       <ul style="margin-bottom: 0;">
         <li><strong>Kosten Komplettsanierung:</strong> 12.000–25.000 € (je nach Ausstattung)</li>
         <li><strong>Teilumbau:</strong> Ab 3.000 € (z.B. nur bodengleiche Dusche)</li>
@@ -7457,7 +7302,7 @@ function getMockBlogPosts(): BlogPost[] {
     <h2>5. Typische Planungsfehler vermeiden</h2>
 
     <div style="background-color: #f8d7da; padding: 15px; border-left: 4px solid #dc3545; margin: 20px 0;">
-      <h3 style="margin-top: 0;">❌ Die 7 häufigsten Fehler</h3>
+      <h3 style="margin-top: 0;">Die 7 häufigsten Fehler</h3>
       <ol>
         <li>
           <strong>Zu kleine Dusche:</strong> 90×90 cm reicht nicht für Rollstuhl! Mindestens 120×120 cm,
@@ -7629,7 +7474,7 @@ function getMockBlogPosts(): BlogPost[] {
     </p>
 
     <div style="background-color: #e8f4f8; padding: 20px; border-left: 4px solid #0F5B78; margin: 20px 0;">
-      <h3 style="margin-top: 0;">✅ Zusammenfassung: Barrierefreies Bad 2025</h3>
+      <h3 style="margin-top: 0;">Zusammenfassung: Barrierefreies Bad 2025</h3>
       <ul style="margin-bottom: 0;">
         <li><strong>Kosten:</strong> 3.000 € (Teilumbau) bis 25.000 € (Vollsanierung)</li>
         <li><strong>Förderung:</strong> Bis 4.000 € Pflegekasse (8.000 € bei 2 Personen) + 1.200 € Steuer</li>
