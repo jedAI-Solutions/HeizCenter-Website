@@ -1290,7 +1290,7 @@ function getMockBlogPosts(): BlogPost[] {
       id: 5,
       slug: 'pelletheizung-kosten-2025',
       title: 'Pelletheizung Kosten 2025: Anschaffung, Betrieb & Förderung',
-      excerpt: 'Was kostet eine Pelletheizung 2025? Kompletter Überblick über Anschaffung, Betriebskosten und bis zu 70% BEG-Förderung.',
+      excerpt: 'Was kostet eine Pelletheizung 2025? Kompletter Überblick über Anschaffung, Betriebskosten und bis zu 60% BEG-Förderung.',
       content: `
         <p class="text-xl text-slate-700 leading-relaxed mb-6">Sie interessieren sich für eine Pelletheizung und fragen sich, ob sich das für Ihr Haus rechnet? Die kurze Antwort: Ja, für viele Hausbesitzer ist eine Pelletheizung 2025 eine der wirtschaftlichsten Optionen – vorausgesetzt, Sie haben den Platz dafür und wissen, worauf Sie achten müssen.</p>
 
@@ -2295,7 +2295,7 @@ function getMockBlogPosts(): BlogPost[] {
             <div class="text-green-800 font-semibold mb-3">✓ Förderfähig</div>
             <ul class="space-y-2 text-sm text-green-800">
               <li>• <strong>Wärmepumpen</strong> (30-70%)</li>
-              <li>• <strong>Pelletheizungen</strong> (30-70% + 2.500 € Emissionsbonus)</li>
+              <li>• <strong>Pelletheizungen</strong> (30-60% + 2.500 € Emissionsbonus)</li>
               <li>• <strong>Solarthermie</strong> (30-70%)</li>
               <li>• <strong>Brennstoffzellen</strong> (30-70%)</li>
               <li>• <strong>Fernwärmeanschluss</strong> (30-70%)</li>
@@ -2559,333 +2559,290 @@ function getMockBlogPosts(): BlogPost[] {
     },
     {
       id: 9,
-      slug: 'badsanierung-kosten-2025',
-      title: 'Badsanierung Kosten 2025: Kompletter Preis-Leitfaden',
-      excerpt: 'Was kostet eine Badsanierung 2025? Alle Kosten für kleine, mittlere und große Bäder im Überblick. Plus: Förderungen, barrierefreier Umbau und Spartipps.',
+      slug: 'barrierefreies-bad-planen-ratgeber',
+      title: 'Barrierefreies Bad planen: Der komplette Ratgeber 2025',
+      excerpt: 'Barrierefreies Bad nach DIN 18040-2 planen: Alle Anforderungen, Maße, Kosten und Förderungen 2025. Mit Checkliste für bodengleiche Dusche, Haltegriffe und mehr.',
       content: `
-        <h2>Badsanierung Kosten 2025: Umfassender Leitfaden für Deutschland</h2>
+        <h2>Barrierefreies Bad planen: Der komplette Ratgeber 2025</h2>
 
-        <p>Die Kosten für eine Badsanierung variieren 2025 erheblich je nach Badgröße, Ausstattungsstandard und regionalen Unterschieden. Die durchschnittlichen Kosten liegen zwischen <strong>7.200 € und 35.000 €</strong>, wobei mittlere Sanierungen üblicherweise <strong>15.000 € bis 25.000 €</strong> kosten. Die Kosten pro Quadratmeter schwanken zwischen <strong>900 € und 3.500 €</strong>, je nach gewähltem Ausstattungsniveau.</p>
+        <p>Ein barrierefreies Badezimmer ist weit mehr als nur eine Anpassung für Menschen mit Behinderung. Es bietet <strong>Komfort für alle Generationen</strong>, erhöht die Sicherheit und steigert den Immobilienwert. Ob Sie jetzt schon vorsorgen oder akut umbauen müssen – dieser Ratgeber zeigt Ihnen alle wichtigen Anforderungen, Kosten und Fördermöglichkeiten.</p>
 
-        <h3>Kostenübersicht nach Badgröße</h3>
+        <div class="callout callout-info">
+          <h4>Warum jetzt planen?</h4>
+          <p>In Deutschland werden jährlich über 250.000 Stürze im Badezimmer gemeldet. Ein barrierefreies Bad reduziert dieses Risiko erheblich und ermöglicht es, möglichst lange selbstständig im eigenen Zuhause zu leben.</p>
+        </div>
 
-        <p><strong>Kleines Bad (3-6 m²):</strong></p>
+        <h3>DIN 18040-2: Die wichtigsten Anforderungen im Überblick</h3>
+
+        <p>Die DIN 18040-2 definiert die baulichen Anforderungen für barrierefreie Wohnungen. Für das Badezimmer gelten dabei zwei Stufen:</p>
+
+        <h4>Barrierefrei (Mindeststandard)</h4>
         <ul>
-          <li>Einfacher Standard: 7.000 - 12.000 €</li>
-          <li>Mittlerer Standard: 12.000 - 18.000 €</li>
-          <li>Gehobener Standard: 18.000 - 24.500 €</li>
-          <li>Handwerkerkosten: 9.000 - 12.000 €</li>
+          <li><strong>Bewegungsfläche:</strong> Mindestens 120 × 120 cm vor WC, Waschtisch und Dusche</li>
+          <li><strong>Türbreite:</strong> Mindestens 80 cm lichte Durchgangsbreite</li>
+          <li><strong>Dusche:</strong> Bodengleich, keine Schwelle über 2 cm</li>
+          <li><strong>WC-Höhe:</strong> 46-48 cm Sitzhöhe</li>
+          <li><strong>Waschtisch:</strong> Unterfahrbar mindestens 55 cm tief</li>
         </ul>
 
-        <p><strong>Mittleres Bad (7-12 m²):</strong></p>
+        <h4>Rollstuhlgerecht (R-Standard)</h4>
         <ul>
-          <li>Einfacher Standard: 9.000 - 15.000 €</li>
-          <li>Mittlerer Standard: 15.000 - 25.000 €</li>
-          <li>Gehobener Standard: 25.000 - 35.000 €</li>
-          <li>Handwerkerkosten: 21.000 - 27.000 €</li>
+          <li><strong>Bewegungsfläche:</strong> Mindestens 150 × 150 cm für Rollstuhlwendung</li>
+          <li><strong>Türbreite:</strong> Mindestens 90 cm lichte Durchgangsbreite</li>
+          <li><strong>Dusche:</strong> Mindestens 150 × 150 cm Grundfläche</li>
+          <li><strong>WC:</strong> Seitlich anfahrbar mit 90 cm Abstand zur Wand</li>
+          <li><strong>Waschtisch:</strong> Unterfahrbar 67 cm hoch, 30 cm Kniefreiheit</li>
         </ul>
 
-        <p><strong>Großes Bad (>12 m²):</strong></p>
+        <div class="cost-table">
+          <div class="cost-table-header">
+            <h4>DIN 18040-2 Mindestmaße im Vergleich</h4>
+          </div>
+          <div class="cost-table-content">
+            <table>
+              <thead>
+                <tr>
+                  <th>Element</th>
+                  <th>Barrierefrei</th>
+                  <th>Rollstuhlgerecht</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Bewegungsfläche</td>
+                  <td>120 × 120 cm</td>
+                  <td>150 × 150 cm</td>
+                </tr>
+                <tr>
+                  <td>Türbreite</td>
+                  <td>80 cm</td>
+                  <td>90 cm</td>
+                </tr>
+                <tr>
+                  <td>Duschfläche</td>
+                  <td>120 × 120 cm</td>
+                  <td>150 × 150 cm</td>
+                </tr>
+                <tr>
+                  <td>Waschtisch-Höhe</td>
+                  <td>80-85 cm</td>
+                  <td>max. 80 cm, unterfahrbar</td>
+                </tr>
+                <tr>
+                  <td>WC-Sitzhöhe</td>
+                  <td>46-48 cm</td>
+                  <td>46-48 cm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h3>Die wichtigsten Elemente eines barrierefreien Bades</h3>
+
+        <h4>1. Bodengleiche Dusche</h4>
+
+        <p>Die bodengleiche Dusche ist das Herzstück des barrierefreien Bades. Sie ermöglicht einen schwellenlosen Einstieg und kann bei Bedarf mit einem Duschsitz oder Rollstuhl befahren werden.</p>
+
+        <p><strong>Wichtige Aspekte:</strong></p>
         <ul>
-          <li>Einfacher Standard: 15.000 - 25.000 €</li>
-          <li>Mittlerer Standard: 25.000 - 40.000 €</li>
-          <li>Gehobener Standard: 40.000 - 60.000 €+</li>
-          <li>Handwerkerkosten: ab 27.000 €</li>
+          <li><strong>Gefälle:</strong> 1-2% zum Ablauf (maximal!)</li>
+          <li><strong>Ablauf:</strong> Rinnenablauf am Rand oder Punktablauf mittig</li>
+          <li><strong>Rutschsicherheit:</strong> Bewertungsgruppe B (R10) oder höher nach DIN 51097</li>
+          <li><strong>Duschabtrennung:</strong> Wegklappbar oder einhängbar für maximale Flexibilität</li>
         </ul>
 
-        <h3>Kosten pro Quadratmeter nach Ausstattungsklasse</h3>
+        <div class="callout callout-tip">
+          <h4>Praxis-Tipp</h4>
+          <p>Planen Sie für den Duschbereich eine Wandverstärkung von mindestens 15 mm Multiplex ein. So können später Haltegriffe, Klappsitze oder Duschstangen nachgerüstet werden, ohne die Fliesen zu beschädigen.</p>
+        </div>
 
-        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
-          <thead>
-            <tr style="background-color: #0F5B78; color: white;">
-              <th style="padding: 12px; text-align: left;">Ausstattungsklasse</th>
-              <th style="padding: 12px; text-align: left;">Preis pro m²</th>
-              <th style="padding: 12px; text-align: left;">Merkmale</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="background-color: #f9f9f9;">
-              <td style="padding: 10px;">Einfach</td>
-              <td style="padding: 10px;"><strong>900 - 1.200 €/m²</strong></td>
-              <td style="padding: 10px;">Standardfliesen, Basis-Armaturen, einfache Sanitärobjekte</td>
-            </tr>
-            <tr>
-              <td style="padding: 10px;">Mittel</td>
-              <td style="padding: 10px;"><strong>1.500 - 2.500 €/m²</strong></td>
-              <td style="padding: 10px;">Hochwertige Fliesen, gute Armaturen, Markensanitär</td>
-            </tr>
-            <tr style="background-color: #f9f9f9;">
-              <td style="padding: 10px;">Gehoben</td>
-              <td style="padding: 10px;"><strong>2.500 - 3.500 €/m²</strong></td>
-              <td style="padding: 10px;">Premium-Fliesen, Designer-Armaturen, Luxus-Ausstattung</td>
-            </tr>
-          </tbody>
-        </table>
+        <h4>2. Haltegriffe und Stützklappgriffe</h4>
 
-        <h3>Detaillierte Einzelkosten (Material + Montage)</h3>
+        <p>Haltegriffe geben Sicherheit beim Ein- und Aussteigen sowie beim Hinsetzen und Aufstehen. Sie müssen eine Belastung von mindestens <strong>100 kg punktuell</strong> tragen können.</p>
 
-        <p><strong>Sanitärobjekte:</strong></p>
+        <p><strong>Empfohlene Positionen:</strong></p>
         <ul>
-          <li><strong>Waschbecken:</strong> 30 - 1.500 € + 600 - 1.000 € Montage</li>
-          <li><strong>WC (Bodentoilette):</strong> 150 - 400 € + Montage</li>
-          <li><strong>WC (Wandtoilette):</strong> 1.500 - 3.000 € + Montage</li>
-          <li><strong>Duschkabine (Standard):</strong> 400 - 1.000 €</li>
-          <li><strong>Walk-in-Dusche:</strong> 1.000 - 5.000 €</li>
-          <li><strong>Bodengleiche Dusche:</strong> 3.000 - 5.000 €</li>
-          <li><strong>Badewanne (Standard):</strong> 300 - 800 €</li>
-          <li><strong>Badewanne (freistehend):</strong> 1.000 - 10.000 €</li>
+          <li><strong>WC:</strong> Beidseitig Stützklappgriffe, 15 cm über Sitzhöhe</li>
+          <li><strong>Dusche:</strong> L-förmiger Griff (90 × 40 cm) an der langen Wand</li>
+          <li><strong>Badewanne:</strong> Griff an Längsseite und am Wannenrand</li>
+          <li><strong>Waschtisch:</strong> Horizontaler Griff beidseitig optional</li>
         </ul>
 
-        <p><strong>Armaturen:</strong></p>
+        <h4>3. WC-Bereich</h4>
+
+        <p>Das barrierefreie WC unterscheidet sich deutlich vom Standard-WC:</p>
+
         <ul>
-          <li>Duscharmatur einfach: 45 - 80 €</li>
-          <li>Duscharmatur gehoben: 80 - 250 €</li>
-          <li>Duscharmatur Premium: bis 500 €</li>
-          <li>Thermostat-Wandarmatur: ca. 1.700 € inkl. Montage</li>
+          <li><strong>Sitzhöhe:</strong> 46-48 cm (Standard: 40-42 cm)</li>
+          <li><strong>Seitlicher Abstand zur Wand:</strong> Mindestens 20 cm (rollstuhlgerecht: 90 cm)</li>
+          <li><strong>Tiefspüler:</strong> Besser für Pflegesituationen als Flachspüler</li>
+          <li><strong>Spülauslösung:</strong> Leicht erreichbar, große Betätigungsplatte</li>
         </ul>
 
-        <p><strong>Fliesen und Verlegung:</strong></p>
+        <h4>4. Waschtisch</h4>
+
+        <p>Der Waschtisch muss unterfahrbar sein und darf keine scharfen Kanten haben:</p>
+
         <ul>
-          <li>Einfache Fliesen: ab 10 €/m²</li>
-          <li>Standard-Keramikfliesen: 30 - 70 €/m²</li>
-          <li>Hochwertige Fliesen: 50 - 200 €/m²</li>
-          <li>Natursteinfliesen: 100 - 200 €/m²</li>
-          <li><strong>Verlegung:</strong> 40 - 100 €/m²</li>
+          <li><strong>Kniefreiheit:</strong> Mindestens 30 cm tief, 67 cm hoch</li>
+          <li><strong>Armatur:</strong> Einhandmischbatterie mit langem Hebel oder Sensorbedienung</li>
+          <li><strong>Spiegel:</strong> Unterkante maximal 100 cm über Boden, alternativ Kippspiegel</li>
+          <li><strong>Siphon:</strong> Flach oder zur Seite geführt (Verbrühungsschutz!)</li>
         </ul>
 
-        <p><strong>Weitere Kosten:</strong></p>
+        <h3>Kosten für ein barrierefreies Bad 2025</h3>
+
+        <p>Die Kosten variieren stark je nach Ausgangssituation, Badgröße und gewählter Ausstattung:</p>
+
+        <div class="cost-table">
+          <div class="cost-table-header">
+            <h4>Kostenübersicht barrierefreies Bad</h4>
+          </div>
+          <div class="cost-table-content">
+            <table>
+              <thead>
+                <tr>
+                  <th>Umfang</th>
+                  <th>Kostenrahmen</th>
+                  <th>Enthaltene Leistungen</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Einfache Anpassung</td>
+                  <td>3.000 - 8.000 €</td>
+                  <td>Haltegriffe, erhöhtes WC, rutschfeste Matte</td>
+                </tr>
+                <tr>
+                  <td>Teilumbau</td>
+                  <td>8.000 - 18.000 €</td>
+                  <td>Bodengleiche Dusche, Haltegriffe, WC-Umbau</td>
+                </tr>
+                <tr>
+                  <td>Komplettsanierung</td>
+                  <td>18.000 - 35.000 €</td>
+                  <td>Vollständig barrierefrei nach DIN 18040-2</td>
+                </tr>
+                <tr>
+                  <td>Rollstuhlgerecht</td>
+                  <td>25.000 - 50.000 €</td>
+                  <td>R-Standard mit allen Anforderungen</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h4>Einzelkosten wichtiger Elemente</h4>
+
         <ul>
-          <li>Elektroinstallation: 1.000 - 2.500 € gesamt</li>
-          <li>Handtuchheizkörper: 60 - 2.500 €</li>
-          <li>Fußbodenheizung: 60 - 130 €/m²</li>
-          <li>Lüftungsanlage (dezentral): ca. 3.100 €</li>
-          <li>Demontage & Entsorgung: 800 - 1.500 €</li>
+          <li><strong>Bodengleiche Dusche komplett:</strong> 3.500 - 8.000 € (inkl. Fliesen, Ablauf, Montage)</li>
+          <li><strong>Stützklappgriffe (Paar):</strong> 400 - 900 €</li>
+          <li><strong>Wandgriffe L-Form:</strong> 150 - 350 € pro Stück</li>
+          <li><strong>WC erhöht mit Stützgriffen:</strong> 800 - 2.000 €</li>
+          <li><strong>Unterfahrbarer Waschtisch:</strong> 600 - 1.500 €</li>
+          <li><strong>Klappsitz für Dusche:</strong> 200 - 600 €</li>
+          <li><strong>Türverbreiterung:</strong> 800 - 2.500 €</li>
+          <li><strong>Wandverstärkungen:</strong> 300 - 800 € (je nach Umfang)</li>
         </ul>
 
-        <h3>Arbeitskosten vs. Materialkosten</h3>
+        <h3>Förderungen für barrierefreies Bad 2025</h3>
 
-        <p>Ein entscheidender Faktor: Die Gesamtkosten setzen sich zu <strong>60% aus Arbeitskosten</strong> und zu <strong>40% aus Materialkosten</strong> zusammen. Das bedeutet, dass die Handwerkerleistung den größten Kostenblock darstellt.</p>
+        <div class="callout callout-warning">
+          <h4>Wichtige Änderung 2025</h4>
+          <p>Die <strong>KfW-Förderung 455-B</strong> (Investitionszuschuss Barrierereduzierung) wurde zum <strong>01.01.2025 eingestellt</strong>. Es gibt keine direkten Zuschüsse mehr über dieses Programm!</p>
+        </div>
 
-        <p><strong>Handwerker-Stundensätze 2025:</strong></p>
+        <h4>Verfügbare Förderungen 2025:</h4>
+
+        <p><strong>1. Pflegekasse (§ 40 SGB XI)</strong></p>
         <ul>
-          <li>Sanitärinstallateur: 50 - 85 €/Std.</li>
-          <li>Fliesenleger: 45 - 75 €/Std.</li>
-          <li>Elektriker: 50 - 90 €/Std.</li>
-          <li>Maler: 40 - 70 €/Std.</li>
+          <li><strong>Zuschuss:</strong> Bis zu 4.180 € pro Maßnahme</li>
+          <li><strong>Voraussetzung:</strong> Pflegegrad 1-5</li>
+          <li><strong>Wichtig:</strong> Antrag VOR Baubeginn stellen!</li>
+          <li><strong>Kombinierbar:</strong> Ja, aber nicht für dieselbe Maßnahme</li>
         </ul>
 
-        <p><strong>Regionale Unterschiede:</strong> In Großstädten (München, Hamburg) liegen die Stundensätze bei 60-80 €, in ländlichen Regionen bei 40-60 €.</p>
-
-        <h3>Beispielrechnung: 9 m² Bad mit mittlerem Standard</h3>
-
-        <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
-          <thead>
-            <tr style="background-color: #0F5B78; color: white;">
-              <th style="padding: 12px; text-align: left;">Position</th>
-              <th style="padding: 12px; text-align: right;">Kosten</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="background-color: #f9f9f9;">
-              <td style="padding: 10px;">Abriss und Entsorgung</td>
-              <td style="padding: 10px; text-align: right;">1.200 €</td>
-            </tr>
-            <tr>
-              <td style="padding: 10px;">Sanitärinstallation</td>
-              <td style="padding: 10px; text-align: right;">4.500 €</td>
-            </tr>
-            <tr style="background-color: #f9f9f9;">
-              <td style="padding: 10px;">Fliesen und Verlegung</td>
-              <td style="padding: 10px; text-align: right;">3.600 €</td>
-            </tr>
-            <tr>
-              <td style="padding: 10px;">Elektrik und Beleuchtung</td>
-              <td style="padding: 10px; text-align: right;">1.000 €</td>
-            </tr>
-            <tr style="background-color: #f9f9f9;">
-              <td style="padding: 10px;">Malerarbeiten</td>
-              <td style="padding: 10px; text-align: right;">600 €</td>
-            </tr>
-            <tr>
-              <td style="padding: 10px;">Badmöbel und Ausstattung</td>
-              <td style="padding: 10px; text-align: right;">4.000 €</td>
-            </tr>
-            <tr style="background-color: #f9f9f9;">
-              <td style="padding: 10px;">Nebenkosten</td>
-              <td style="padding: 10px; text-align: right;">500 €</td>
-            </tr>
-            <tr style="background-color: #FFCA28; font-weight: bold;">
-              <td style="padding: 10px;">GESAMT</td>
-              <td style="padding: 10px; text-align: right;">15.400 €</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h3>Barrierefreie Badsanierung: Kosten und Anforderungen</h3>
-
-        <p>Ein barrierefreier oder altersgerechter Badumbau kostet mehr, bietet aber langfristige Vorteile:</p>
-
+        <p><strong>2. KfW-Kredit 159 "Altersgerecht Umbauen"</strong></p>
         <ul>
-          <li><strong>Basis-Umbau:</strong> 8.000 - 15.000 €</li>
-          <li><strong>Mittelklasse-Umbau:</strong> 15.000 - 25.000 €</li>
-          <li><strong>Premium-Umbau:</strong> 25.000 - 40.000 €</li>
-          <li><strong>Luxus-Umbau:</strong> ab 40.000 €</li>
+          <li><strong>Kreditbetrag:</strong> Bis zu 50.000 € pro Wohneinheit</li>
+          <li><strong>Zinssatz:</strong> Ab 3,62% effektiv (Stand: Dezember 2025)</li>
+          <li><strong>Laufzeit:</strong> 4-30 Jahre</li>
+          <li><strong>Voraussetzung:</strong> Keine, altersunabhängig</li>
         </ul>
 
-        <p><strong>Spezielle Kosten für barrierefreie Elemente:</strong></p>
+        <p><strong>3. Steuerermäßigung für Handwerkerleistungen</strong></p>
         <ul>
-          <li>Bodengleiche Dusche: 2.500 - 20.000 € (je nach Ausstattung)</li>
-          <li>Unterfahrbarer Waschtisch: ca. 945 €</li>
-          <li>Barrierefreies WC (wandhängend): ca. 1.375 €</li>
-          <li>Haltegriffe (pro Stück): 265 € inkl. Montage</li>
-          <li>Wandverstärkung für Griffe: ab 145 €</li>
-          <li>Badewanne mit Tür: 3.500 - 6.000 €</li>
-          <li>Badewannenlift: 600 - 5.000 € (je nach Typ)</li>
+          <li><strong>Abzug:</strong> 20% der Arbeitskosten (ohne Material)</li>
+          <li><strong>Maximum:</strong> 1.200 € pro Jahr</li>
+          <li><strong>Achtung:</strong> Nicht kombinierbar mit KfW oder Pflegekasse für dieselbe Maßnahme</li>
         </ul>
 
-        <p><strong>DIN 18040-2 Anforderungen:</strong></p>
+        <p><strong>4. Regionale Programme</strong></p>
+        <p>Viele Bundesländer und Kommunen bieten eigene Förderprogramme. In Bayern beispielsweise gibt es das <strong>Bayern barrierefrei</strong>-Programm mit zusätzlichen Zuschüssen.</p>
+
+        <h3>Checkliste: Barrierefreies Bad planen</h3>
+
+        <div class="pro-con-list">
+          <div class="pro-section">
+            <h4>Vor dem Umbau klären</h4>
+            <ul>
+              <li>Welcher Standard wird benötigt? (Barrierefrei vs. Rollstuhlgerecht)</li>
+              <li>Wie groß ist das vorhandene Bad? Ist Vergrößerung möglich?</li>
+              <li>Liegt bereits ein Pflegegrad vor? → Antrag bei Pflegekasse</li>
+              <li>Sind die Wasserleitungen für bodengleiche Dusche geeignet?</li>
+              <li>Ist ausreichende Stromversorgung für Notrufsystem vorhanden?</li>
+            </ul>
+          </div>
+          <div class="con-section">
+            <h4>Typische Fehler vermeiden</h4>
+            <ul>
+              <li>Zu kleine Bewegungsflächen einplanen</li>
+              <li>Schwellen vergessen (auch kleine Kanten sind gefährlich!)</li>
+              <li>Wandverstärkungen für Haltegriffe nicht vorsehen</li>
+              <li>Beleuchtung zu schwach oder blendfrei planen</li>
+              <li>Förderantrag erst nach Baubeginn stellen</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Barrierefrei planen für die Zukunft</h3>
+
+        <p>Auch wenn Sie heute noch keine Einschränkungen haben, lohnt sich vorausschauendes Planen. Folgende Maßnahmen kosten bei einem Neubau oder einer Sanierung kaum mehr, erleichtern aber eine spätere Anpassung erheblich:</p>
+
         <ul>
-          <li>Duschfläche mind. 120 x 120 cm</li>
-          <li>Bewegungsfläche mind. 120 x 120 cm</li>
-          <li>Türbreite mind. 80 cm (besser 90 cm)</li>
-          <li>Schwelle max. 2 cm hoch</li>
-          <li>Rutschfeste Bodenbeläge</li>
+          <li><strong>Wandverstärkungen:</strong> Für spätere Haltegriffe einbauen (Kosten: ~300 €)</li>
+          <li><strong>Leerrohre:</strong> Für Notruf oder elektrisch höhenverstellbare Elemente</li>
+          <li><strong>Türzargen:</strong> Von Anfang an 90 cm breite Türen planen</li>
+          <li><strong>Bodengleiche Dusche:</strong> Auch ohne Einschränkung komfortabel und modern</li>
+          <li><strong>Rutschfeste Fliesen:</strong> Bewertungsgruppe B (R10) für alle Bereiche</li>
         </ul>
 
-        <h3>Förderungen für Badsanierung 2025</h3>
+        <h3>Häufige Fragen zum barrierefreien Bad</h3>
 
-        <p><strong>⚠️ WICHTIG:</strong> Die KfW-Förderung 455-B (Barrierereduzierung - Investitionszuschuss) wurde zum 01.01.2025 eingestellt. Keine neuen Anträge mehr möglich!</p>
+        <h4>Muss ein barrierefreies Bad hässlich aussehen?</h4>
+        <p>Absolut nicht! Moderne barrierefreie Bäder sind oft nicht von "normalen" Bädern zu unterscheiden. Bodengleiche Duschen, unterfahrbare Waschtische und dezente Haltegriffe in Edelstahl oder passenden Farben fügen sich harmonisch ein. Viele Hersteller bieten designorientierte Lösungen an.</p>
 
-        <p><strong>Verfügbare Förderungen:</strong></p>
+        <h4>Kann ich auch zur Miete barrierefrei umbauen?</h4>
+        <p>Ja, als Mieter haben Sie nach § 554a BGB das Recht auf barrierefreien Umbau. Der Vermieter muss zustimmen, kann aber eine Rückbau-Vereinbarung verlangen. Die Kosten tragen Sie in der Regel selbst, können aber Förderungen beantragen.</p>
 
-        <p><strong>1. KfW-Förderkredit 159 "Altersgerecht Umbauen"</strong></p>
-        <ul>
-          <li>Bis zu 50.000 € pro Wohneinheit</li>
-          <li>Zinsgünstiger Kredit mit Tilgungszuschuss</li>
-          <li>Unabhängig vom Alter des Antragstellers</li>
-          <li>Für barrierefreie und barrierearme Umbauten</li>
-        </ul>
+        <h4>Wie lange dauert ein barrierefreier Badumbau?</h4>
+        <p>Je nach Umfang 1-4 Wochen reine Bauzeit. Bei einer Komplettsanierung mit bodengleicher Dusche müssen Sie mit 2-3 Wochen rechnen. Planen Sie zusätzlich 4-8 Wochen für Planung, Angebotseinholung und Förderanträge ein.</p>
 
-        <p><strong>2. Pflegekasse (mit Pflegegrad)</strong></p>
-        <ul>
-          <li><strong>Bis zu 4.180 € pro Person</strong></li>
-          <li>Für wohnumfeldverbessernde Maßnahmen</li>
-          <li>Ab Pflegegrad 1 bis 5</li>
-          <li>Antrag VOR Baubeginn stellen!</li>
-          <li>Kombinierbar mit anderen Förderungen (aber nicht für dieselbe Maßnahme)</li>
-        </ul>
+        <h4>Was ist der Unterschied zwischen barrierefrei und behindertengerecht?</h4>
+        <p>"Barrierefrei" nach DIN 18040-2 ist der allgemeine Standard für eingeschränkte Mobilität. "Rollstuhlgerecht" (R-Standard) geht darüber hinaus und erfüllt alle Anforderungen für Rollstuhlnutzer. Der Begriff "behindertengerecht" ist veraltet und sollte vermieden werden.</p>
 
-        <p><strong>3. Steuerbonus für Handwerkerleistungen</strong></p>
-        <ul>
-          <li>20% der Arbeitskosten (ohne Material) absetzbar</li>
-          <li>Maximum: 1.200 € Steuererstattung pro Jahr</li>
-          <li>Förderfähige Arbeitskosten bis 6.000 € jährlich</li>
-        </ul>
+        <h3>HeizCenter: Ihr Partner für barrierefreie Bäder</h3>
 
-        <p><strong>4. Regionale Förderprogramme</strong></p>
-        <p>Viele Bundesländer und Kommunen bieten zusätzliche Zuschüsse für altersgerechtes Wohnen. Informieren Sie sich bei Ihrer Kommune!</p>
-
-        <h3>Zeitaufwand: Wie lange dauert eine Badsanierung?</h3>
-
-        <p><strong>Reine Bauzeit:</strong></p>
-        <ul>
-          <li>Kleines Bad (bis 6 m²): 10 - 14 Arbeitstage</li>
-          <li>Mittleres Bad (7-12 m²): 15 - 20 Arbeitstage</li>
-          <li>Großes Bad (>12 m²): 20 - 25 Arbeitstage</li>
-        </ul>
-
-        <p><strong>Gesamtdauer inkl. Planung:</strong> 2-4 Wochen reine Bauzeit + 2-6 Wochen Planung und Koordination</p>
-
-        <p><strong>Ablauf einer Badsanierung:</strong></p>
-        <ol>
-          <li><strong>Demontage & Entsorgung</strong> (1-3 Tage)</li>
-          <li><strong>Rohinstallation</strong> Sanitär & Elektrik (1-2 Wochen)</li>
-          <li><strong>Estrich & Abdichtung</strong> (1-3 Tage + Trocknungszeit)</li>
-          <li><strong>Fliesenlegen</strong> (1-2 Wochen)</li>
-          <li><strong>Malerarbeiten</strong> (2-3 Tage)</li>
-          <li><strong>Montage Sanitärobjekte</strong> (1-2 Tage)</li>
-          <li><strong>Endmontage & Kontrolle</strong> (1-2 Tage)</li>
-        </ol>
-
-        <h3>Spartipps: So reduzieren Sie Ihre Badsanierungskosten</h3>
-
-        <p><strong>1. Frühzeitige Planung (3-6 Monate im Voraus)</strong></p>
-        <ul>
-          <li>Bessere Handwerkerpreise durch rechtzeitige Buchung</li>
-          <li>Keine Aufschläge für kurzfristige Aufträge</li>
-          <li>Potenzielle Ersparnis: 500 - 1.500 €</li>
-        </ul>
-
-        <p><strong>2. Eigenleistungen gezielt einsetzen</strong></p>
-        <ul>
-          <li>Alte Fliesen entfernen</li>
-          <li>Malerarbeiten</li>
-          <li>Accessoires anbringen</li>
-          <li>ABER: Sanitär und Elektrik nur vom Profi!</li>
-          <li>Potenzielle Ersparnis: 500 - 1.000 €</li>
-        </ul>
-
-        <p><strong>3. Förderungen ausschöpfen</strong></p>
-        <ul>
-          <li>Pflegekasse: bis 4.180 €</li>
-          <li>KfW-Kredit mit Tilgungszuschuss</li>
-          <li>Steuerbonus: bis 1.200 €/Jahr</li>
-          <li>Potenzielle Ersparnis: 4.000 - 6.000 €</li>
-        </ul>
-
-        <p><strong>4. Vergleichen Sie Angebote</strong></p>
-        <ul>
-          <li>Mindestens 3 Angebote einholen</li>
-          <li>Auf Qualifikation und Referenzen achten</li>
-          <li>Nicht nur auf den Preis achten</li>
-          <li>Potenzielle Ersparnis: 10 - 20%</li>
-        </ul>
-
-        <p><strong>5. Regionale Handwerker wählen</strong></p>
-        <ul>
-          <li>Keine hohen Anfahrtskosten</li>
-          <li>Schnell erreichbar bei Nacharbeiten</li>
-          <li>Potenzielle Ersparnis: 200 - 500 €</li>
-        </ul>
-
-        <p><strong>6. Materialwahl optimieren</strong></p>
-        <ul>
-          <li>Solide Qualität statt Luxus</li>
-          <li>Standardmaße verwenden (keine Sonderanfertigungen)</li>
-          <li>Fliesen: 30-50 €/m² statt 100+ €/m²</li>
-          <li>Potenzielle Ersparnis: 2.000 - 5.000 €</li>
-        </ul>
-
-        <h3>Teilsanierung vs. Komplettsanierung</h3>
-
-        <p><strong>Teilsanierung (3.000 - 7.000 €):</strong></p>
-        <ul>
-          <li>Nur einzelne Elemente austauschen</li>
-          <li>Neue Fliesen verlegen</li>
-          <li>Badewanne durch Dusche ersetzen</li>
-          <li>Ideal bei noch guter Grundstruktur</li>
-        </ul>
-
-        <p><strong>Komplettsanierung (15.000 - 30.000 €):</strong></p>
-        <ul>
-          <li>Grundlegende Erneuerung des gesamten Bades</li>
-          <li>Neue Rohrleitungen und Elektrik</li>
-          <li>Komplette Neugestaltung</li>
-          <li>Notwendig im Altbau mit veralteter Infrastruktur</li>
-        </ul>
-
-        <h3>HeizCenter: Ihr Partner für professionelle Badsanierung</h3>
-
-        <p>Bei HeizCenter bieten wir Ihnen eine <strong>komplette Badsanierung aus einer Hand</strong> – von der Planung über die Umsetzung bis zur Endabnahme. Unsere Leistungen umfassen:</p>
+        <p>Bei HeizCenter planen und realisieren wir barrierefreie Bäder nach DIN 18040-2 – von der ersten Beratung bis zur schlüsselfertigen Übergabe. Unsere Leistungen:</p>
 
         <ul>
-          <li>✅ Kostenlose Vor-Ort-Beratung und Kosteneinschätzung</li>
-          <li>✅ Detaillierte Planung mit 3D-Visualisierung</li>
-          <li>✅ Professionelle Sanitär-, Fliesen- und Elektroarbeiten</li>
-          <li>✅ Barrierefreie Umbauten nach DIN 18040-2</li>
+          <li>✅ Kostenlose Vor-Ort-Beratung mit Aufmaß</li>
+          <li>✅ Planung nach DIN 18040-2 (barrierefrei oder rollstuhlgerecht)</li>
           <li>✅ Unterstützung bei Förderanträgen (Pflegekasse, KfW)</li>
-          <li>✅ Koordination aller Gewerke – alles aus einer Hand</li>
-          <li>✅ Feste Terminzusagen und transparente Preise</li>
+          <li>✅ Koordination aller Gewerke aus einer Hand</li>
+          <li>✅ Hochwertige Markenprodukte von Viega, Grohe, Geberit</li>
           <li>✅ 5 Jahre Garantie auf alle Arbeiten</li>
         </ul>
 
@@ -2893,39 +2850,30 @@ function getMockBlogPosts(): BlogPost[] {
         <ul>
           <li>HeizCenter Bobingen (Augsburg Region)</li>
           <li>HeizCenter Gutenzell-Hürbel (Raum Ulm/Memmingen)</li>
+          <li>HeizCenter Klosterlechfeld (Kundenempfang und Besucherbüro)</li>
         </ul>
 
-        <div style="background-color: #0F5B78; color: white; padding: 20px; border-radius: 8px; margin: 30px 0;">
-          <h4 style="color: white; margin-top: 0;">Jetzt kostenloses Angebot für Ihre Badsanierung anfordern!</h4>
-          <p style="margin-bottom: 15px;">Lassen Sie sich von unseren Experten beraten und erhalten Sie ein individuelles, transparentes Angebot – inkl. Förderberatung!</p>
-          <p><strong>☎ Telefon: +49 8234 9665900</strong><br>
-          📧 E-Mail: service@heizcenter.de<br>
-          🌐 Online-Anfrage: <a href="/kontakt?tab=quote" style="color: #FFCA28;">Angebot anfragen</a></p>
+        <div class="cta-box">
+          <h4>Jetzt barrierefreies Bad planen lassen!</h4>
+          <p>Vereinbaren Sie einen kostenlosen Beratungstermin. Wir prüfen Ihre Fördermöglichkeiten und erstellen ein individuelles Konzept für Ihr barrierefreies Badezimmer.</p>
+          <p>
+            <strong>☎ Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
+            <strong>📧 E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+          </p>
         </div>
 
-        <h3>Fazit: Realistische Budgetierung für 2025</h3>
+        <h3>Fazit</h3>
 
-        <p>Die Kosten für eine Badsanierung 2025 in Deutschland sind vielfältig und hängen von zahlreichen Faktoren ab. Für ein durchschnittliches Bad (8-10 m²) sollten Sie <strong>15.000 - 25.000 €</strong> einplanen, wobei einfachere Varianten bei 7.000 € beginnen und gehobene Ausstattungen über 35.000 € kosten können.</p>
+        <p>Ein barrierefreies Bad ist eine <strong>Investition in Sicherheit, Komfort und Zukunftsfähigkeit</strong>. Die Kosten von 8.000 - 35.000 € für einen Umbau können durch Förderungen deutlich reduziert werden. Wichtig ist die frühzeitige Planung – idealerweise schon bei einer "normalen" Sanierung werden Wandverstärkungen und ausreichende Bewegungsflächen berücksichtigt.</p>
 
-        <p><strong>Der Schlüssel zum Erfolg:</strong></p>
-        <ul>
-          <li>✅ Frühzeitige Planung (3-6 Monate im Voraus)</li>
-          <li>✅ Realistische Budgetierung mit 10-15% Puffer</li>
-          <li>✅ Mehrere Angebote vergleichen</li>
-          <li>✅ Förderungen nutzen (Pflegekasse, KfW, Steuerbonus)</li>
-          <li>✅ Professionelle Handwerker beauftragen</li>
-        </ul>
-
-        <p>Mit durchdachter Planung und der Nutzung verfügbarer Förderungen können Sie die Kosten um <strong>20-30% reduzieren</strong> und erhalten ein hochwertiges, langlebiges Badezimmer, das Ihre Wohnqualität erheblich verbessert.</p>
-
-        <p><strong>Jetzt Beratungstermin vereinbaren und Ihr Traumbad realisieren!</strong></p>
+        <p>Lassen Sie sich von unseren Experten beraten, welche Maßnahmen für Ihre Situation sinnvoll sind und welche Förderungen Sie nutzen können. <strong>Je früher Sie planen, desto besser!</strong></p>
       `,
       category: 'Sanitär',
       author: 'HeizCenter Redaktion',
-      date: '2025-11-09',
-      readingTime: 14,
+      date: '2025-12-14',
+      readingTime: 18,
       image: '/images/HeizCenter_Badgestaltung.webp',
-      tags: ['Badsanierung', 'Kosten', 'Barrierefreies Bad', 'Förderung', 'Pflegekasse', 'KfW'],
+      tags: ['Barrierefreies Bad', 'DIN 18040-2', 'Badsanierung', 'Förderung', 'Pflegekasse', 'Altersgerecht'],
       featured: false,
     },
     {
@@ -3020,13 +2968,13 @@ function getMockBlogPosts(): BlogPost[] {
 
         <ul>
           <li><strong>30% Basisförderung</strong> für alle Wärmepumpen</li>
-          <li><strong>+5% Effizienzbonus</strong> (natürliches Kältemittel, Erdwärme)</li>
-          <li><strong>+30% Einkommensbonus</strong> (bei Einkommen <40.000 €)</li>
-          <li><strong>Maximum: 70%</strong> Förderung, bis zu 21.000 € Zuschuss</li>
+          <li><strong>+20% Klimageschwindigkeitsbonus</strong> (bei Austausch fossiler Heizung, bis Ende 2028)</li>
+          <li><strong>+30% Einkommensbonus</strong> (bei Haushaltseinkommen unter 40.000 €/Jahr)</li>
+          <li><strong>+5% Effizienzbonus</strong> (natürliches Kältemittel wie Propan oder Erdwärme/Wasser)</li>
+          <li><strong>Maximum: 70%</strong> der förderfähigen Kosten (max. 30.000 € = bis zu 21.000 € Zuschuss)</li>
         </ul>
 
-        <p><strong>Rechenbeispiel:</strong></p>
-        <p>Anschaffungskosten: 32.000 € → Mit 70% Förderung: <strong>11.000 € Eigenanteil</strong> → Günstiger als neue Gasheizung (8.000-12.000 € ohne Förderung)!</p>
+        <p><strong>Rechenbeispiel:</strong> Bei Anschaffungskosten von 32.000 € werden maximal 30.000 € gefördert. Mit 70% Förderung erhalten Sie 21.000 € Zuschuss – Ihr Eigenanteil beträgt nur <strong>11.000 €</strong>. Das ist günstiger als eine neue Gasheizung!</p>
 
         <h3>4. Langfristige Kostenersparnis über 15 Jahre</h3>
 
@@ -3413,12 +3361,20 @@ function getMockBlogPosts(): BlogPost[] {
           <li>✅ <strong>5 Jahre Garantie</strong> auf alle Arbeiten</li>
         </ul>
 
-        <div style="background-color: #0F5B78; color: white; padding: 20px; border-radius: 8px; margin: 30px 0;">
-          <h3 style="color: white; margin-top: 0;">Jetzt kostenlose Wärmepumpen-Beratung anfragen!</h3>
-          <p style="margin-bottom: 15px;">Lassen Sie sich von unseren Experten beraten und erhalten Sie ein individuelles Angebot – inkl. Förderberatung und Wirtschaftlichkeitsberechnung!</p>
-          <p><strong>☎ Telefon: +49 8234 9665900</strong><br>
-          📧 E-Mail: service@heizcenter.de<br>
-          🌐 Online-Anfrage: <a href="/kontakt?tab=quote" style="color: #FFCA28;">Angebot anfragen</a></p>
+        <p><strong>Unsere Standorte:</strong></p>
+        <ul>
+          <li>HeizCenter Bobingen (Region Augsburg)</li>
+          <li>HeizCenter Gutenzell-Hürbel (Raum Ulm/Memmingen)</li>
+          <li>HeizCenter Klosterlechfeld (Kundenempfang und Besucherbüro)</li>
+        </ul>
+
+        <div class="cta-box">
+          <h4>Jetzt kostenlose Wärmepumpen-Beratung anfragen!</h4>
+          <p>Lassen Sie sich von unseren Experten beraten und erhalten Sie ein individuelles Angebot – inkl. Förderberatung und Wirtschaftlichkeitsberechnung!</p>
+          <p>
+            <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
+            <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+          </p>
         </div>
 
         <h3>Fazit: Wärmepumpen 2025 – Die richtige Wahl?</h3>
@@ -3815,10 +3771,20 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p>Wer jetzt handelt, profitiert von hohen Förderungen, sinkenden Betriebskosten und steigender Unabhängigkeit von fossilen Energiepreisen.</p>
 
-        <div style="background-color: #0F5B78; color: white; padding: 25px; border-radius: 8px; margin: 30px 0;">
-          <h3 style="margin-top: 0; color: white;">💬 Persönliche Beratung bei HeizCenter</h3>
+        <p><strong>Unsere Standorte:</strong></p>
+        <ul>
+          <li>HeizCenter Bobingen (Region Augsburg)</li>
+          <li>HeizCenter Gutenzell-Hürbel (Raum Ulm/Memmingen)</li>
+          <li>HeizCenter Klosterlechfeld (Kundenempfang und Besucherbüro)</li>
+        </ul>
+
+        <div class="cta-box">
+          <h4>Persönliche Beratung bei HeizCenter</h4>
           <p>Sie sind unsicher, welche Heizung die richtige für Ihr Haus ist? Unsere Experten beraten Sie kostenlos und unverbindlich zu allen Optionen, Förderungen und der konkreten Umsetzung in Ihrem Gebäude.</p>
-          <p style="margin-bottom: 0;"><strong>Kontakt:</strong> ☎️ <a href="tel:+49 8234 9665900" style="color: #FFCA28;">+49 8234 9665900</a> | 📧 <a href="mailto:service@heizcenter.de" style="color: #FFCA28;">service@heizcenter.de</a> | <a href="/kontakt?tab=quote" style="color: #FFCA28; text-decoration: underline;">Jetzt Angebot anfragen</a></p>
+          <p>
+            <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
+            <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+          </p>
         </div>
 
         <p><strong>Jetzt informieren, Förderung sichern und langfristig sparen!</strong></p>
@@ -3846,7 +3812,7 @@ function getMockBlogPosts(): BlogPost[] {
           <ul style="margin-bottom: 0;">
             <li><strong>Günstigste Betriebskosten:</strong> Wärmepumpe (715 €/Jahr) & Pellets (740 €/Jahr)</li>
             <li><strong>Teuerste Betriebskosten:</strong> Fernwärme (1.245 €/Jahr) & Gas (1.180 €/Jahr)</li>
-            <li><strong>Höchste Förderung:</strong> Bis zu 70% für Wärmepumpe und Pellets (inkl. Einkommensbonus)</li>
+            <li><strong>Höchste Förderung:</strong> Bis zu 70% für Wärmepumpe, 60% für Pellets (inkl. Einkommensbonus)</li>
             <li><strong>Keine Förderung:</strong> Gas & Öl (Auslaufmodelle)</li>
             <li><strong>20-Jahre-Gesamtkosten:</strong> Wärmepumpe 45.000 € vs. Gas 65.000 €</li>
           </ul>
@@ -4381,13 +4347,20 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p><strong>Die optimale Lösung: Wärmepumpe + Photovoltaik</strong> – maximale Unabhängigkeit, minimale Kosten, 0 Emissionen, Wertsteigerung der Immobilie.</p>
 
-        <div style="background-color: #0F5B78; color: white; padding: 25px; border-radius: 8px; margin: 30px 0;">
-          <h3 style="margin-top: 0; color: white;">💬 Kostenlose Heizungsberatung bei HeizCenter</h3>
-          <p>Unsere Experten analysieren Ihr Gebäude, berechnen die genauen Kosten für alle Systeme und unterstützen Sie bei der Förderbeantragung. Profitieren Sie von unserer 20-jährigen Erfahrung und über 500 installierten Wärmepumpen.</p>
-          <p style="margin-bottom: 0;"><strong>Jetzt Kontakt aufnehmen:</strong><br>
-          ☎️ <a href="tel:+49 8234 9665900" style="color: #FFCA28;">+49 8234 9665900</a> |
-          📧 <a href="mailto:service@heizcenter.de" style="color: #FFCA28;">service@heizcenter.de</a> |
-          <a href="/kontakt?tab=quote" style="color: #FFCA28; text-decoration: underline;">Angebot anfragen</a></p>
+        <p><strong>Unsere Standorte:</strong></p>
+        <ul>
+          <li>HeizCenter Bobingen (Region Augsburg)</li>
+          <li>HeizCenter Gutenzell-Hürbel (Raum Ulm/Memmingen)</li>
+          <li>HeizCenter Klosterlechfeld (Kundenempfang und Besucherbüro)</li>
+        </ul>
+
+        <div class="cta-box">
+          <h4>Kostenlose Heizungsberatung bei HeizCenter</h4>
+          <p>Unsere Experten analysieren Ihr Gebäude, berechnen die genauen Kosten für alle Systeme und unterstützen Sie bei der Förderbeantragung. Profitieren Sie von unserer langjährigen Erfahrung.</p>
+          <p>
+            <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
+            <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+          </p>
         </div>
 
         <p><strong>Handeln Sie jetzt und sichern Sie sich die 70% Förderung – der Geschwindigkeitsbonus läuft bis Ende 2028!</strong></p>
@@ -4788,14 +4761,20 @@ function getMockBlogPosts(): BlogPost[] {
       <li><strong>NICHT empfohlen:</strong> Infrarot als Hauptheizsystem (nur als Ergänzung)</li>
     </ol>
 
-    <div style="background-color: #0F5B78; color: white; padding: 30px; text-align: center; border-radius: 10px; margin: 30px 0;">
-      <h2 style="margin-top: 0; color: white;">Sie möchten Ihre Nachtspeicherheizung ersetzen?</h2>
-      <p style="font-size: 18px; margin-bottom: 20px;">Wir beraten Sie kostenlos zu den besten Alternativen, kalkulieren Ihre Förderung und erstellen ein maßgeschneidertes Angebot.</p>
-      <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-        <a href="/kontakt?tab=quote" style="display: inline-block; background-color: #FFCA28; color: #0F5B78; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px;">Jetzt Angebot anfragen</a>
-        <a href="tel:+49 8234 9665900" style="display: inline-block; background-color: transparent; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white; font-size: 16px;">☎ +49 8234 9665900</a>
-      </div>
-      <p style="margin-top: 15px; font-size: 14px; opacity: 0.9;">HeizCenter GmbH – Ihr zertifizierter Fachbetrieb für Wärmepumpen und Heizungstausch</p>
+    <p><strong>Unsere Standorte:</strong></p>
+    <ul>
+      <li>HeizCenter Bobingen (Region Augsburg)</li>
+      <li>HeizCenter Gutenzell-Hürbel (Raum Ulm/Memmingen)</li>
+      <li>HeizCenter Klosterlechfeld (Kundenempfang und Besucherbüro)</li>
+    </ul>
+
+    <div class="cta-box">
+      <h4>Sie möchten Ihre Nachtspeicherheizung ersetzen?</h4>
+      <p>Wir beraten Sie kostenlos zu den besten Alternativen, kalkulieren Ihre Förderung und erstellen ein maßgeschneidertes Angebot.</p>
+      <p>
+        <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
+        <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+      </p>
     </div>
 
     <h2>❓ Häufig gestellte Fragen (FAQ)</h2>
@@ -4807,7 +4786,7 @@ function getMockBlogPosts(): BlogPost[] {
     <p>Im Durchschnitt <strong>1.780 € pro Jahr</strong> bei einem 150 m²-Haus (Nachtspeicher: 2.880 €/Jahr vs. Wärmepumpe: 1.100 €/Jahr). Über 20 Jahre sind das <strong>35.600 € Ersparnis</strong>.</p>
 
     <h3>Welche Förderung gibt es 2025?</h3>
-    <p>Für Wärmepumpen und Pelletheizungen: <strong>30% Grundförderung + 20% Geschwindigkeitsbonus + ggf. 30% Einkommensbonus = bis 70%</strong> (max. 21.000 €). Bei Biomasse erfordert der Klimabonus eine Kombination mit Solar/PV.</p>
+    <p>Für Wärmepumpen: <strong>30% Grundförderung + 20% Geschwindigkeitsbonus + 5% Effizienzbonus + 30% Einkommensbonus = bis 70%</strong> (max. 21.000 €). Für Pelletheizungen max. 60% (kein Effizienzbonus). Bei Biomasse erfordert der Klimabonus eine Kombination mit Solar/PV.</p>
 
     <h3>Ist eine Wärmepumpe auch im Altbau sinnvoll?</h3>
     <p><strong>Ja</strong>, wenn das Gebäude mindestens eine Dachbodendämmung hat (U-Wert < 0,24 W/m²K). Bei sehr schlechter Dämmung sollte zuerst die Gebäudehülle verbessert werden. Erdwärmepumpen funktionieren auch bei höheren Vorlauftemperaturen gut.</p>
@@ -5374,22 +5353,28 @@ function getMockBlogPosts(): BlogPost[] {
       </ul>
     </div>
 
-    <h3>👉 Unsere Empfehlung für 2025</h3>
+    <h3>Unsere Empfehlung für 2025</h3>
     <ol>
-      <li><strong>Neubau:</strong> Fußbodenheizung IMMER einplanen (minimale Mehrkosten, maximaler Nutzen)</li>
-      <li><strong>Wärmepumpe geplant:</strong> Fußbodenheizung PFLICHT für optimale Effizienz (JAZ 4,5+)</li>
+      <li><strong>Neubau:</strong> Fußbodenheizung immer einplanen (minimale Mehrkosten, maximaler Nutzen)</li>
+      <li><strong>Wärmepumpe geplant:</strong> Fußbodenheizung für optimale Effizienz (JAZ 4,5+)</li>
       <li><strong>Komplettsanierung:</strong> Fußbodenheizung nachrüsten (amortisiert sich in 5–10 Jahren)</li>
       <li><strong>Teilsanierung:</strong> Niedertemperatur-Heizkörper als Alternative</li>
     </ol>
 
-    <div style="background-color: #0F5B78; color: white; padding: 30px; text-align: center; border-radius: 10px; margin: 30px 0;">
-      <h2 style="margin-top: 0; color: white;">Fußbodenheizung perfekt mit Wärmepumpe kombinieren?</h2>
-      <p style="font-size: 18px; margin-bottom: 20px;">Wir planen Ihre ideale Heizlösung – von der Beratung über Förderantrag bis zur Installation. Profitieren Sie von bis zu 70% BEG-Förderung!</p>
-      <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-        <a href="/kontakt?tab=quote" style="display: inline-block; background-color: #FFCA28; color: #0F5B78; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px;">Jetzt Angebot anfragen</a>
-        <a href="tel:+49 8234 9665900" style="display: inline-block; background-color: transparent; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white; font-size: 16px;">☎ +49 8234 9665900</a>
-      </div>
-      <p style="margin-top: 15px; font-size: 14px; opacity: 0.9;">HeizCenter GmbH – Ihr zertifizierter Fachpartner für Wärmepumpen und Flächenheizungen</p>
+    <p><strong>Unsere Standorte:</strong></p>
+    <ul>
+      <li>HeizCenter Bobingen (Region Augsburg)</li>
+      <li>HeizCenter Gutenzell-Hürbel (Raum Ulm/Memmingen)</li>
+      <li>HeizCenter Klosterlechfeld (Kundenempfang und Besucherbüro)</li>
+    </ul>
+
+    <div class="cta-box">
+      <h4>Fußbodenheizung perfekt mit Wärmepumpe kombinieren?</h4>
+      <p>Wir planen Ihre ideale Heizlösung – von der Beratung über Förderantrag bis zur Installation. Profitieren Sie von bis zu 70% BEG-Förderung!</p>
+      <p>
+        <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
+        <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+      </p>
     </div>
 
     <h2>❓ Häufig gestellte Fragen (FAQ)</h2>
@@ -5763,30 +5748,36 @@ function getMockBlogPosts(): BlogPost[] {
 
     <p><strong>💡 ROI:</strong> Die einmalige Investition von 2–5 € amortisiert sich bereits nach <strong>einer Woche</strong> durch eingesparte Heizkosten!</p>
 
-    <h2>✅ Fazit: Heizung entlüften – einfach, schnell, effektiv</h2>
+    <h2>Fazit: Heizung entlüften – einfach, schnell, effektiv</h2>
 
-    <div style="background-color: #e8f4f8; padding: 20px; border-left: 4px solid #0F5B78; margin: 20px 0;">
-      <h3 style="margin-top: 0;">🎯 Die wichtigsten Erkenntnisse</h3>
-      <ul style="margin-bottom: 0;">
-        <li>✅ <strong>Sehr einfache DIY-Aufgabe:</strong> 5–10 Minuten pro Heizkörper, keine Vorkenntnisse nötig</li>
-        <li>✅ <strong>Hohe Einsparung:</strong> Bis zu 15% Heizkosten (150–300 €/Jahr)</li>
-        <li>✅ <strong>Regelmäßigkeit wichtig:</strong> 1x pro Jahr (vor Heizsaison) + bei Bedarf</li>
-        <li>✅ <strong>Reihenfolge beachten:</strong> Von unten nach oben, alle Heizkörper entlüften</li>
-        <li>✅ <strong>Werkzeug minimal:</strong> Entlüftungsschlüssel (2–5 €), Auffangbehälter, Lappen</li>
-        <li>✅ <strong>Systemdruck prüfen:</strong> Nach Entlüftung Wasser nachfüllen (1,5–2,0 bar)</li>
-        <li>⚠️ <strong>Ventil nicht zu weit öffnen:</strong> Nur 1/2 Umdrehung, sonst Wasserschaden</li>
-        <li>⚠️ <strong>Fachmann bei Problemen:</strong> Heizkörper bleibt kalt, häufiges Entlüften nötig, Wärmepumpe</li>
+    <div class="callout">
+      <h3>Die wichtigsten Erkenntnisse</h3>
+      <ul>
+        <li><strong>Sehr einfache DIY-Aufgabe:</strong> 5–10 Minuten pro Heizkörper, keine Vorkenntnisse nötig</li>
+        <li><strong>Hohe Einsparung:</strong> Bis zu 15% Heizkosten (150–300 €/Jahr)</li>
+        <li><strong>Regelmäßigkeit wichtig:</strong> 1x pro Jahr (vor Heizsaison) + bei Bedarf</li>
+        <li><strong>Reihenfolge beachten:</strong> Von unten nach oben, alle Heizkörper entlüften</li>
+        <li><strong>Werkzeug minimal:</strong> Entlüftungsschlüssel (2–5 €), Auffangbehälter, Lappen</li>
+        <li><strong>Systemdruck prüfen:</strong> Nach Entlüftung Wasser nachfüllen (1,5–2,0 bar)</li>
+        <li><strong>Ventil nicht zu weit öffnen:</strong> Nur 1/2 Umdrehung, sonst Wasserschaden</li>
+        <li><strong>Fachmann bei Problemen:</strong> Heizkörper bleibt kalt, häufiges Entlüften nötig, Wärmepumpe</li>
       </ul>
     </div>
 
-    <div style="background-color: #0F5B78; color: white; padding: 30px; text-align: center; border-radius: 10px; margin: 30px 0;">
-      <h2 style="margin-top: 0; color: white;">Probleme mit Ihrer Heizung?</h2>
-      <p style="font-size: 18px; margin-bottom: 20px;">Unsere Heizungsexperten helfen bei hartnäckigen Problemen, Wartung und Optimierung Ihres Heizsystems. Profitieren Sie von über 20 Jahren Erfahrung!</p>
-      <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-        <a href="/kontakt?tab=contact" style="display: inline-block; background-color: #FFCA28; color: #0F5B78; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 16px;">Jetzt Beratung anfragen</a>
-        <a href="tel:+49 8234 9665900" style="display: inline-block; background-color: transparent; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white; font-size: 16px;">☎ +49 8234 9665900</a>
-      </div>
-      <p style="margin-top: 15px; font-size: 14px; opacity: 0.9;">HeizCenter GmbH – Ihr Fachbetrieb für Heizungswartung und -optimierung</p>
+    <p><strong>Unsere Standorte:</strong></p>
+    <ul>
+      <li>HeizCenter Bobingen (Region Augsburg)</li>
+      <li>HeizCenter Gutenzell-Hürbel (Raum Ulm/Memmingen)</li>
+      <li>HeizCenter Klosterlechfeld (Kundenempfang und Besucherbüro)</li>
+    </ul>
+
+    <div class="cta-box">
+      <h4>Probleme mit Ihrer Heizung?</h4>
+      <p>Unsere Heizungsexperten helfen bei hartnäckigen Problemen, Wartung und Optimierung Ihres Heizsystems.</p>
+      <p>
+        <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
+        <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+      </p>
     </div>
 
     <h2>❓ Häufig gestellte Fragen (FAQ)</h2>
@@ -6035,6 +6026,11 @@ function getMockBlogPosts(): BlogPost[] {
             <td style="padding: 10px; border: 1px solid #ddd;">+30%</td>
             <td style="padding: 10px; border: 1px solid #ddd;">Haushaltseinkommen ≤40.000 €/Jahr</td>
           </tr>
+          <tr style="background-color: #f9f9f9;">
+            <td style="padding: 10px; border: 1px solid #ddd;">Effizienzbonus</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">+5%</td>
+            <td style="padding: 10px; border: 1px solid #ddd;">Natürliche Kältemittel (z.B. Propan) oder Erdwärme/Wasser</td>
+          </tr>
           <tr style="background-color: #e8f4f8;">
             <td style="padding: 10px; border: 1px solid #ddd;"><strong>Maximalförderung</strong></td>
             <td style="padding: 10px; border: 1px solid #ddd;"><strong>70%</strong></td>
@@ -6282,23 +6278,24 @@ function getMockBlogPosts(): BlogPost[] {
         </ul>
       </div>
 
-      <h2>Jetzt beraten lassen: HeizCenter hilft Ihnen!</h2>
+      <h2>Jetzt beraten lassen</h2>
 
-      <p>Sie sind unsicher, welches System für Ihr Haus ideal ist? Unsere Heizungsexperten analysieren Ihre Immobilie und erstellen ein individuelles Angebot – inklusive Förderberatung!</p>
+      <p>Sie sind unsicher, welches System für Ihr Haus ideal ist? Unsere Heizungsexperten analysieren Ihre Immobilie und erstellen ein individuelles Angebot – inklusive Förderberatung.</p>
 
-      <div style="background-color: #f8f9fa; padding: 25px; border-radius: 8px; margin: 30px 0;">
-        <h3 style="color: #0F5B78; margin-top: 0;">📞 Kostenlose Beratung vereinbaren</h3>
-        <p style="margin-bottom: 15px;">Unsere Heizungs-Experten beraten Sie herstellerunabhängig zu Wärmepumpen, Hybridlösungen und Förderung:</p>
-        <ul style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 10px;">📞 <strong>Telefon:</strong> <a href="tel:+49 8234 9665900" style="color: #0F5B78; text-decoration: none; font-weight: bold;">+49 8234 9665900</a></li>
-          <li style="margin-bottom: 10px;">✉️ <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de" style="color: #0F5B78; text-decoration: none;">service@heizcenter.de</a></li>
-          <li style="margin-bottom: 10px;">🌐 <strong>Online:</strong> <a href="/kontakt?tab=quote" style="color: #0F5B78; text-decoration: none;">Angebot anfragen</a></li>
-        </ul>
-        <p style="margin-bottom: 0; color: #666; font-size: 14px;"><em>Wir prüfen kostenlos, ob eine Wärmepumpe für Ihr Gebäude geeignet ist und welche Förderung Sie erhalten können!</em></p>
-      </div>
+      <p><strong>Unsere Standorte:</strong></p>
+      <ul>
+        <li>HeizCenter Bobingen (Region Augsburg)</li>
+        <li>HeizCenter Gutenzell-Hürbel (Raum Ulm/Memmingen)</li>
+        <li>HeizCenter Klosterlechfeld (Kundenempfang und Besucherbüro)</li>
+      </ul>
 
-      <div style="background-color: #d4edda; padding: 15px; border-left: 4px solid #28a745; margin: 20px 0;">
-        <p style="margin: 0;"><strong>💰 Aktuell:</strong> Sichern Sie sich bis zu 70% BEG-Förderung + Geschwindigkeitsbonus 2025! Unsere Experten unterstützen Sie beim Förderantrag.</p>
+      <div class="cta-box">
+        <h4>Kostenlose Beratung vereinbaren</h4>
+        <p>Unsere Heizungs-Experten beraten Sie herstellerunabhängig zu Wärmepumpen, Hybridlösungen und Förderung.</p>
+        <p>
+          <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
+          <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+        </p>
       </div>
       `,
       category: 'Wärmepumpe',
@@ -6531,11 +6528,11 @@ function getMockBlogPosts(): BlogPost[] {
         <li><strong>Klimageschwindigkeitsbonus:</strong> +20% beim Austausch alter Öl-/Gas-Heizungen (nur mit Solar/PV-Kombination)</li>
         <li><strong>Einkommensbonus:</strong> +30% (Haushaltseinkommen ≤40.000 €) – auch für Biomasse berechtigt!</li>
         <li><strong>Emissionsbonus:</strong> +2.500 € bei Feinstaubgrenzwert unter 2,5 mg/m³</li>
-        <li><strong>Maximal:</strong> 70% (wie bei Wärmepumpe)</li>
+        <li><strong>Maximal:</strong> 60% (kein Effizienzbonus bei Biomasse)</li>
       </ul>
 
       <div style="background-color: #d4edda; padding: 15px; border-left: 4px solid #28a745; margin: 20px 0;">
-        <p style="margin: 0;"><strong>💰 Gleiche Förderung für beide:</strong> Sowohl Wärmepumpen als auch Pelletheizungen können bis zu 70% Förderung erhalten (bei Biomasse: Klimabonus nur mit Solar/PV-Kombination).</p>
+        <p style="margin: 0;"><strong>💰 Förderung im Vergleich:</strong> Wärmepumpen bis 70%, Pelletheizungen bis 60%. Der Unterschied: Wärmepumpen können den 5% Effizienzbonus erhalten (natürliche Kältemittel), Pelletheizungen nicht.</p>
       </div>
 
       <h2>4. Platzbedarf & Lagerung</h2>
@@ -6618,8 +6615,9 @@ function getMockBlogPosts(): BlogPost[] {
       <h3>Feinstaubbelastung</h3>
       <ul>
         <li><strong>Wärmepumpe:</strong> 0 g/Jahr (keine Verbrennung)</li>
-        <li><strong>Pelletheizung:</strong> ~50–200 g/Jahr Feinstaub (PM10) – abhängig von Kesselqualität und Pellets</li>
+        <li><strong>Pelletheizung:</strong> ~500–1.500 g/Jahr Feinstaub (PM10) – abhängig von Kesselqualität und Pellets</li>
       </ul>
+      <p><em>Hinweis: Moderne Pelletkessel mit Partikelabscheider erreichen unter 15 mg/m³ Feinstaub und erfüllen damit die strengen 1. BImSchV-Grenzwerte.</em></p>
 
       <div style="background-color: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; margin: 20px 0;">
         <p style="margin: 0;"><strong>⚠️ Umweltzonen:</strong> In städtischen Gebieten können strengere Feinstaubgrenzwerte gelten. Prüfen Sie lokale Vorgaben vor Installation!</p>
@@ -6773,23 +6771,24 @@ function getMockBlogPosts(): BlogPost[] {
         </ul>
       </div>
 
-      <h2>Jetzt beraten lassen: HeizCenter hilft Ihnen!</h2>
+      <h2>Jetzt beraten lassen</h2>
 
-      <p>Unsicher, welches System für Ihr Gebäude ideal ist? Wir analysieren Ihre Situation und erstellen ein maßgeschneidertes Angebot – mit Förderberatung!</p>
+      <p>Unsicher, welches System für Ihr Gebäude ideal ist? Wir analysieren Ihre Situation und erstellen ein maßgeschneidertes Angebot – mit Förderberatung.</p>
 
-      <div style="background-color: #f8f9fa; padding: 25px; border-radius: 8px; margin: 30px 0;">
-        <h3 style="color: #0F5B78; margin-top: 0;">📞 Kostenlose Beratung vereinbaren</h3>
-        <p style="margin-bottom: 15px;">Unsere Experten beraten Sie herstellerunabhängig zu Wärmepumpen, Pelletheizungen und Hybrid-Lösungen:</p>
-        <ul style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 10px;">📞 <strong>Telefon:</strong> <a href="tel:+49 8234 9665900" style="color: #0F5B78; text-decoration: none; font-weight: bold;">+49 8234 9665900</a></li>
-          <li style="margin-bottom: 10px;">✉️ <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de" style="color: #0F5B78; text-decoration: none;">service@heizcenter.de</a></li>
-          <li style="margin-bottom: 10px;">🌐 <strong>Online:</strong> <a href="/kontakt?tab=quote" style="color: #0F5B78; text-decoration: none;">Angebot anfragen</a></li>
-        </ul>
-        <p style="margin-bottom: 0; color: #666; font-size: 14px;"><em>Wir prüfen kostenlos, welche Lösung für Ihr Haus optimal ist und welche Förderung Sie erhalten!</em></p>
-      </div>
+      <p><strong>Unsere Standorte:</strong></p>
+      <ul>
+        <li>HeizCenter Bobingen (Region Augsburg)</li>
+        <li>HeizCenter Gutenzell-Hürbel (Raum Ulm/Memmingen)</li>
+        <li>HeizCenter Klosterlechfeld (Kundenempfang und Besucherbüro)</li>
+      </ul>
 
-      <div style="background-color: #d4edda; padding: 15px; border-left: 4px solid #28a745; margin: 20px 0;">
-        <p style="margin: 0;"><strong>💰 Jetzt profitieren:</strong> Sichern Sie sich bis zu 70% BEG-Förderung für Wärmepumpen! Wir unterstützen Sie beim Antrag.</p>
+      <div class="cta-box">
+        <h4>Kostenlose Beratung vereinbaren</h4>
+        <p>Unsere Experten beraten Sie herstellerunabhängig zu Wärmepumpen, Pelletheizungen und Hybrid-Lösungen.</p>
+        <p>
+          <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
+          <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+        </p>
       </div>
       `,
       category: 'Wärmepumpe',
@@ -7117,13 +7116,14 @@ function getMockBlogPosts(): BlogPost[] {
 
       <h2>6. Förderung & Steuervorteile</h2>
 
-      <h3>KfW-Förderung</h3>
-      <p>Klimaanlagen sind <strong>nicht direkt förderfähig</strong>, aber:</p>
+      <h3>Förderung 2025</h3>
+      <p>Klimaanlagen sind grundsätzlich <strong>nicht förderfähig</strong>:</p>
       <ul>
-        <li>✅ <strong>Wärmepumpen mit Kühlfunktion</strong> erhalten BEG-Förderung über KfW (bis 70%)</li>
-        <li>✅ <strong>Reversible Split-Geräte</strong> (Kühlen + Heizen) können unter Umständen als "Luft-Luft-Wärmepumpe" gefördert werden</li>
-        <li>❌ <strong>Reine Klimageräte</strong> (nur Kühlen) sind nicht förderfähig</li>
+        <li>❌ <strong>Luft-Luft-Wärmepumpen</strong> (Split-Klimaanlagen mit Heizfunktion) sind seit 2024 <strong>nicht mehr BEG-förderfähig</strong></li>
+        <li>❌ <strong>Reine Klimageräte</strong> (nur Kühlen) waren nie förderfähig</li>
+        <li>✅ <strong>Luft-Wasser-Wärmepumpen</strong> (zentrale Heizung mit optionaler Kühlung) erhalten weiterhin BEG-Förderung (bis 70%)</li>
       </ul>
+      <p><strong>Hinweis:</strong> Split-Klimaanlagen können zwar auch heizen, zählen aber als "Luft-Luft-Wärmepumpen" und sind damit von der staatlichen Förderung ausgeschlossen.</p>
 
       <h3>Steuerliche Absetzbarkeit (§35a EStG)</h3>
       <ul>
@@ -7170,23 +7170,24 @@ function getMockBlogPosts(): BlogPost[] {
         <p><strong>Betriebskosten:</strong> 80–150 €/Jahr (Split), 200–300 €/Jahr (mobile Geräte)</p>
       </div>
 
-      <h2>Jetzt beraten lassen: HeizCenter hilft Ihnen!</h2>
+      <h2>Jetzt beraten lassen</h2>
 
-      <p>Sie möchten eine Klimaanlage installieren? Wir beraten Sie herstellerunabhängig und erstellen ein individuelles Angebot!</p>
+      <p>Sie möchten eine Klimaanlage installieren? Wir beraten Sie herstellerunabhängig und erstellen ein individuelles Angebot.</p>
 
-      <div style="background-color: #f8f9fa; padding: 25px; border-radius: 8px; margin: 30px 0;">
-        <h3 style="color: #0F5B78; margin-top: 0;">📞 Kostenlose Beratung vereinbaren</h3>
-        <p style="margin-bottom: 15px;">Unsere Klimatechnik-Experten beraten Sie zu Split-, Multisplit- und VRF-Systemen:</p>
-        <ul style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 10px;">📞 <strong>Telefon:</strong> <a href="tel:+49 8234 9665900" style="color: #0F5B78; text-decoration: none; font-weight: bold;">+49 8234 9665900</a></li>
-          <li style="margin-bottom: 10px;">✉️ <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de" style="color: #0F5B78; text-decoration: none;">service@heizcenter.de</a></li>
-          <li style="margin-bottom: 10px;">🌐 <strong>Online:</strong> <a href="/kontakt?tab=quote" style="color: #0F5B78; text-decoration: none;">Angebot anfragen</a></li>
-        </ul>
-        <p style="margin-bottom: 0; color: #666; font-size: 14px;"><em>Wir erstellen kostenlos ein auf Ihre Raumgröße und Nutzung abgestimmtes Angebot!</em></p>
-      </div>
+      <p><strong>Unsere Standorte:</strong></p>
+      <ul>
+        <li>HeizCenter Bobingen (Region Augsburg)</li>
+        <li>HeizCenter Gutenzell-Hürbel (Raum Ulm/Memmingen)</li>
+        <li>HeizCenter Klosterlechfeld (Kundenempfang und Besucherbüro)</li>
+      </ul>
 
-      <div style="background-color: #d4edda; padding: 15px; border-left: 4px solid #28a745; margin: 20px 0;">
-        <p style="margin: 0;"><strong>❄️ Sommer 2025:</strong> Frühzeitig planen und Lieferengpässe vermeiden! Jetzt Beratungstermin sichern.</p>
+      <div class="cta-box">
+        <h4>Kostenlose Beratung vereinbaren</h4>
+        <p>Unsere Klimatechnik-Experten beraten Sie zu Split-, Multisplit- und VRF-Systemen.</p>
+        <p>
+          <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
+          <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+        </p>
       </div>
       `,
       category: 'Klimaanlage',
@@ -7201,7 +7202,7 @@ function getMockBlogPosts(): BlogPost[] {
       id: 19,
       slug: 'barrierefreies-bad-kosten-planung-foerderung-2025',
       title: 'Barrierefreies Bad 2025: Kosten, Planung, Förderung & DIN-Normen',
-      excerpt: 'Barrierefreies Bad planen: Alle Kosten, DIN 18040-2 Anforderungen, KfW-Förderung bis 6.250 €, praktische Tipps für altersgerechtes Wohnen und seniorengerechte Badsanierung.',
+      excerpt: 'Barrierefreies Bad planen: Kosten, DIN 18040-2 Anforderungen, Pflegekasse bis 4.000 €, praktische Tipps für altersgerechtes Wohnen und seniorengerechte Badsanierung 2025.',
       content: `
     <h2>Barrierefreies Bad 2025: Der komplette Ratgeber</h2>
 
@@ -7210,7 +7211,8 @@ function getMockBlogPosts(): BlogPost[] {
       <ul style="margin-bottom: 0;">
         <li><strong>Kosten Komplettsanierung:</strong> 12.000–25.000 € (je nach Ausstattung)</li>
         <li><strong>Teilumbau:</strong> Ab 3.000 € (z.B. nur bodengleiche Dusche)</li>
-        <li><strong>KfW-Förderung:</strong> Bis 6.250 € Zuschuss (Programm 455-B)</li>
+        <li><strong>Pflegekasse:</strong> Bis 4.000 € Zuschuss (ab Pflegegrad 1)</li>
+        <li><strong>KfW-Kredit 159:</strong> Zinsgünstiger Kredit bis 50.000 €</li>
         <li><strong>Planungszeit:</strong> 4–8 Wochen</li>
         <li><strong>Bauzeit:</strong> 2–4 Wochen</li>
         <li><strong>Wertsteigerung:</strong> 5–10% bei altersgerechter Immobilie</li>
@@ -7389,9 +7391,15 @@ function getMockBlogPosts(): BlogPost[] {
       </p>
     </div>
 
-    <h2>3. KfW-Förderung: Bis zu 6.250 € Zuschuss</h2>
+    <h2>3. Förderung für barrierefreie Bäder 2025</h2>
 
-    <h3>Programm 455-B „Altersgerecht Umbauen – Investitionszuschuss"</h3>
+    <div style="background-color: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; margin: 20px 0;">
+      <p style="margin: 0;">
+        <strong>⚠️ Wichtiger Hinweis:</strong> Das KfW-Programm 455-B „Altersgerecht Umbauen – Investitionszuschuss" wurde zum 01.01.2025 eingestellt. Direkte Zuschüsse für barrierefreie Bäder sind daher nur noch über die Pflegekasse oder regionale Programme verfügbar. Der KfW-Kredit 159 (Darlehen) bleibt weiterhin eine Option.
+      </p>
+    </div>
+
+    <h3>Pflegekasse (§ 40 Abs. 4 SGB XI) – Wichtigste Förderung 2025</h3>
 
     <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
       <thead>
@@ -7403,27 +7411,23 @@ function getMockBlogPosts(): BlogPost[] {
       <tbody>
         <tr style="background-color: #f8f9fa;">
           <td style="padding: 10px;"><strong>Zuschusshöhe</strong></td>
-          <td style="padding: 10px;">12,5% der förderfähigen Kosten</td>
+          <td style="padding: 10px;">Bis 4.000 € pro Person mit Pflegegrad</td>
         </tr>
         <tr>
-          <td style="padding: 10px;"><strong>Max. Zuschuss</strong></td>
-          <td style="padding: 10px;">6.250 € (bei 50.000 € Investition)</td>
+          <td style="padding: 10px;"><strong>Voraussetzung</strong></td>
+          <td style="padding: 10px;">Ab Pflegegrad 1 (auch vorbeugend bei eingeschränkter Mobilität)</td>
         </tr>
         <tr style="background-color: #f8f9fa;">
-          <td style="padding: 10px;"><strong>Mindestinvestition</strong></td>
-          <td style="padding: 10px;">2.000 € (pro Antrag)</td>
+          <td style="padding: 10px;"><strong>Mehrpersonen-Haushalt</strong></td>
+          <td style="padding: 10px;">Bis 8.000 € (2 Personen mit Pflegegrad) / max. 16.000 € (4+ Personen)</td>
         </tr>
         <tr>
           <td style="padding: 10px;"><strong>Antragstellung</strong></td>
-          <td style="padding: 10px;">VOR Baubeginn im KfW-Zuschussportal</td>
+          <td style="padding: 10px;">VOR Umbaubeginn empfohlen (erhöht Erfolgschancen)</td>
         </tr>
         <tr style="background-color: #f8f9fa;">
-          <td style="padding: 10px;"><strong>Kombinierbar mit</strong></td>
-          <td style="padding: 10px;">Pflegekasse (4.000 € bei Pflegegrad), Steuervorteil (§35a EStG)</td>
-        </tr>
-        <tr>
           <td style="padding: 10px;"><strong>Förderfähige Maßnahmen</strong></td>
-          <td style="padding: 10px;">Bodengleiche Dusche, WC-Umbau, Türverbreiterung, Haltegriffe, rutschfeste Böden</td>
+          <td style="padding: 10px;">Bodengleiche Dusche, erhöhtes WC, Haltegriffe, Türverbreiterung, rutschfeste Böden</td>
         </tr>
       </tbody>
     </table>
@@ -7432,27 +7436,25 @@ function getMockBlogPosts(): BlogPost[] {
 
     <ul>
       <li>
-        <strong>💶 Pflegekasse (§ 40 Abs. 4 SGB XI):</strong> Bis zu 4.000 € pro Person mit Pflegegrad
-        (auch Pflegegrad 1) für wohnumfeldverbessernde Maßnahmen. Bei 2 Personen mit Pflegegrad: bis 8.000 €
+        <strong>🏦 KfW-Kredit 159:</strong> Zinsgünstiger Kredit bis 50.000 € für altersgerechten Umbau. Kein direkter Zuschuss, aber günstige Konditionen für größere Umbauten. Antrag VOR Baubeginn über die Hausbank.
       </li>
       <li>
-        <strong>🏛️ Regionale Förderprogramme:</strong> Viele Bundesländer & Kommunen bieten zusätzliche Zuschüsse
-        (z.B. Bayern: 10% Zuschuss über BayernLabo)
+        <strong>🏛️ Regionale Förderprogramme:</strong> Viele Bundesländer & Kommunen bieten zusätzliche Zuschüsse (z.B. Bayern: BayernLabo-Programm, Baden-Württemberg: L-Bank Förderkredite)
       </li>
       <li>
-        <strong>📋 Steuerliche Absetzbarkeit:</strong> 20% der Handwerkerkosten (max. 1.200 €/Jahr) nach §35a EStG
+        <strong>📋 Steuerliche Absetzbarkeit:</strong> 20% der Handwerkerkosten (max. 1.200 €/Jahr) nach §35a EStG – unabhängig von Pflegegrad
       </li>
       <li>
-        <strong>🏦 KfW-Kredit 159:</strong> Zinsgünstiger Kredit bis 50.000 € (ab 0,78% eff. Jahreszins)
-        für altersgerechten Umbau
+        <strong>🏥 Berufsgenossenschaft/Unfallkasse:</strong> Bei Arbeitsunfall oder Berufskrankheit übernehmen BG/UK oft 100% der Umbaukosten
       </li>
     </ul>
 
     <div style="background-color: #d4edda; padding: 15px; border-left: 4px solid #28a745; margin: 20px 0;">
       <p style="margin: 0;">
-        <strong>✅ Maximale Förderung kombinieren:</strong><br>
-        Beispiel: 15.000 € Umbaukosten → 6.250 € KfW + 4.000 € Pflegekasse + 1.200 € Steuer =
-        <strong>11.450 € Förderung (76% der Kosten!)</strong>
+        <strong>✅ Förderung optimal nutzen (2025):</strong><br>
+        Beispiel: 15.000 € Umbaukosten → 4.000 € Pflegekasse + 1.200 € Steuer =
+        <strong>5.200 € Förderung (35% der Kosten)</strong><br>
+        Bei 2 Personen mit Pflegegrad: 8.000 € Pflegekasse + 1.200 € Steuer = <strong>9.200 € (61%)</strong>
       </p>
     </div>
 
@@ -7475,9 +7477,10 @@ function getMockBlogPosts(): BlogPost[] {
 
     <h3>Schritt 3: Fördermittel beantragen</h3>
     <ul>
-      <li>✅ KfW-Antrag VOR Baubeginn einreichen (online über KfW-Portal)</li>
-      <li>✅ Pflegekasse-Antrag parallel stellen (Formular + Kostenvoranschlag)</li>
-      <li>✅ Wartezeit beachten: 4–8 Wochen für KfW-Zusage</li>
+      <li>✅ Pflegekasse-Antrag VOR Umbaubeginn stellen (Formular + Kostenvoranschlag)</li>
+      <li>✅ Bei größeren Umbauten: KfW-Kredit 159 über Hausbank prüfen</li>
+      <li>✅ Regionale Förderprogramme recherchieren (BayernLabo, L-Bank etc.)</li>
+      <li>✅ Wartezeit beachten: 2–4 Wochen für Pflegekasse-Zusage</li>
     </ul>
 
     <h3>Schritt 4: Detailplanung & Material auswählen</h3>
@@ -7498,14 +7501,14 @@ function getMockBlogPosts(): BlogPost[] {
     <h3>Schritt 6: Abnahme & Dokumentation</h3>
     <ul>
       <li>✅ Technische Abnahme durch Sanitärfachbetrieb</li>
-      <li>✅ Fotos & Rechnungen für KfW/Pflegekasse sammeln</li>
-      <li>✅ Verwendungsnachweis einreichen (innerhalb 6 Monate nach Fertigstellung)</li>
+      <li>✅ Fotos & Rechnungen für Pflegekasse sammeln</li>
+      <li>✅ Handwerkerrechnungen für Steuererstattung (§35a) aufbewahren</li>
     </ul>
 
     <h3>Schritt 7: Förderung abrufen</h3>
     <ul>
-      <li>✅ KfW: Zuschuss wird nach Verwendungsnachweis ausgezahlt (ca. 4 Wochen)</li>
-      <li>✅ Pflegekasse: Antrag auf Kostenerstattung mit Rechnungen</li>
+      <li>✅ Pflegekasse: Antrag auf Kostenerstattung mit Rechnungen einreichen</li>
+      <li>✅ Steuererklärung: Handwerkerleistungen (20%, max. 1.200 €) angeben</li>
     </ul>
 
     <h2>5. Typische Planungsfehler vermeiden</h2>
@@ -7537,8 +7540,7 @@ function getMockBlogPosts(): BlogPost[] {
           <strong>Zu glatte Fliesen:</strong> R9 reicht nicht! Mindestens R10, besser R11 in Nassbereichen
         </li>
         <li>
-          <strong>KfW-Antrag vergessen:</strong> Nach Baubeginn KEINE Förderung mehr möglich – Antrag immer
-          vorher stellen!
+          <strong>Pflegekasse-Antrag vergessen:</strong> Kostenerstattung ist einfacher, wenn der Antrag VOR Umbaubeginn gestellt wird – Nachträge sind möglich, aber aufwendiger.
         </li>
       </ol>
     </div>
@@ -7598,10 +7600,9 @@ function getMockBlogPosts(): BlogPost[] {
     <h3>Muss ein barrierefreies Bad zwingend nach DIN 18040-2 gebaut werden?</h3>
     <p>
       <strong>Nein, außer bei Neubauten mit öffentlicher Förderung oder Mietwohnungen.</strong> Für private
-      Eigenheimbesitzer ist die DIN 18040-2 eine Empfehlung, aber keine Pflicht. Allerdings: Um KfW-Förderung
-      zu erhalten, müssen Mindestanforderungen (z.B. bodengleiche Dusche, Bewegungsflächen) eingehalten werden –
-      eine 100%ige DIN-Konformität ist aber nicht zwingend erforderlich. Sprechen Sie mit Ihrem Sanitärfachbetrieb
-      über „altersgerechte" vs. „barrierefreie" Lösungen.
+      Eigenheimbesitzer ist die DIN 18040-2 eine Empfehlung, aber keine Pflicht. Für die Förderung durch die Pflegekasse
+      ist keine DIN-Konformität erforderlich – es reicht, wenn die Maßnahme die Selbstständigkeit im Alltag verbessert.
+      Sprechen Sie mit Ihrem Sanitärfachbetrieb über „altersgerechte" vs. „barrierefreie" Lösungen.
     </p>
 
     <h3>Reichen 6 m² Badgröße für ein barrierefreies Bad?</h3>
@@ -7626,13 +7627,12 @@ function getMockBlogPosts(): BlogPost[] {
       und planen Sie 1 Woche Puffer für unvorhergesehene Probleme (Wasserschäden, Rohrleitungen) ein.
     </p>
 
-    <h3>Kann ich die KfW-Förderung auch nachträglich beantragen?</h3>
+    <h3>Kann ich die Pflegekassen-Förderung auch nachträglich beantragen?</h3>
     <p>
-      <strong>Nein, der KfW-Antrag muss zwingend VOR Baubeginn gestellt werden.</strong> „Baubeginn" bedeutet:
-      Sobald der erste Handwerker mit Arbeiten beginnt oder Sie Material bestellen. Nach Baubeginn ist keine
-      Förderung mehr möglich. Einzige Ausnahme: Pflegekasse (§40 SGB XI) – hier können Sie auch nachträglich
-      Kostenerstattung beantragen, wenn die Maßnahme bereits durchgeführt wurde (aber vor Rechnungsbezahlung
-      beantragen erhöht Erfolgschancen).
+      <strong>Ja, bei der Pflegekasse ist das möglich.</strong> Anders als bei früheren KfW-Programmen können Sie bei der
+      Pflegekasse (§40 SGB XI) auch nach Abschluss des Umbaus einen Antrag auf Kostenerstattung stellen. Allerdings erhöht
+      ein Antrag VOR Umbaubeginn die Erfolgschancen deutlich, da die Pflegekasse vorab prüfen kann, ob die Maßnahme
+      förderfähig ist. Reichen Sie dazu Kostenvoranschlag + Begründung (ärztliche Bescheinigung oder Pflegedienst) ein.
     </p>
 
     <h3>Was kostet eine bodengleiche Dusche?</h3>
@@ -7686,10 +7686,10 @@ function getMockBlogPosts(): BlogPost[] {
     </p>
 
     <div style="background-color: #e8f4f8; padding: 20px; border-left: 4px solid #0F5B78; margin: 20px 0;">
-      <h3 style="margin-top: 0;">✅ Zusammenfassung: Barrierefreies Bad</h3>
+      <h3 style="margin-top: 0;">✅ Zusammenfassung: Barrierefreies Bad 2025</h3>
       <ul style="margin-bottom: 0;">
         <li><strong>Kosten:</strong> 3.000 € (Teilumbau) bis 25.000 € (Vollsanierung)</li>
-        <li><strong>Förderung:</strong> Bis 6.250 € (KfW) + 4.000 € (Pflegekasse) = max. 10.250 €</li>
+        <li><strong>Förderung:</strong> Bis 4.000 € Pflegekasse (8.000 € bei 2 Personen) + 1.200 € Steuer</li>
         <li><strong>Planung:</strong> DIN 18040-2 als Orientierung, 150 cm Wendekreis, 90 cm Türbreite</li>
         <li><strong>Must-Haves:</strong> Bodengleiche Dusche, unterfahrbarer Waschtisch, erhöhtes WC, Haltegriffe</li>
         <li><strong>Bauzeit:</strong> 2–4 Wochen</li>
@@ -7705,41 +7705,30 @@ function getMockBlogPosts(): BlogPost[] {
     </p>
 
     <ul>
-      <li>✅ <strong>Kostenloser Vor-Ort-Beratung</strong> & 3D-Planung</li>
-      <li>✅ <strong>Fördermittelberatung</strong> (KfW, Pflegekasse, regionale Programme)</li>
-      <li>✅ <strong>Komplettlösung aus einer Hand</strong> (Planung, Sanitär, Fliesen, Elektro)</li>
-      <li>✅ <strong>Barrierefreie Sanitärlösungen</strong> (bodengleiche Duschen, Dusch-WCs, höhenverstellbare Waschtische)</li>
-      <li>✅ <strong>Erfahrene Fachbetriebe</strong> mit DIN 18040-2 Know-how</li>
+      <li><strong>Kostenloser Vor-Ort-Beratung</strong> und 3D-Planung</li>
+      <li><strong>Fördermittelberatung</strong> (Pflegekasse, regionale Programme, KfW-Kredit)</li>
+      <li><strong>Komplettlösung aus einer Hand</strong> (Planung, Sanitär, Fliesen, Elektro)</li>
+      <li><strong>Barrierefreie Sanitärlösungen</strong> (bodengleiche Duschen, Dusch-WCs, höhenverstellbare Waschtische)</li>
+      <li><strong>Erfahrene Fachbetriebe</strong> mit DIN 18040-2 Know-how</li>
     </ul>
 
-    <div style="background-color: #0F5B78; color: white; padding: 30px; border-radius: 8px; margin: 30px 0; text-align: center;">
-      <h3 style="margin-top: 0; font-size: 1.8em;">Jetzt kostenlose Beratung vereinbaren!</h3>
-      <p style="font-size: 1.1em; margin: 20px 0;">
-        Unsere Sanitär-Experten planen Ihr barrierefreies Traumbad – inkl. Fördermittelcheck.
-      </p>
-      <div style="margin-top: 25px;">
-        <a href="tel:+49 8234 9665900" style="display: inline-block; background-color: #FFCA28; color: #000; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1em; margin: 10px;">
-          📞 +49 8234 9665900
-        </a>
-        <a href="mailto:service@heizcenter.de" style="display: inline-block; background-color: white; color: #0F5B78; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1em; margin: 10px;">
-          ✉️ service@heizcenter.de
-        </a>
-      </div>
-      <p style="margin-top: 20px; font-size: 0.95em;">
-        <strong>HeizCenter GmbH</strong><br>
-        Lechallee 28, 86399 Bobingen | Schlüsselbergstraße 5, 88484 Gutenzell-Hürbel<br>
-        Mo–Fr: 08:00–17:00 Uhr | Sa: 09:00–13:00 Uhr
+    <p><strong>Unsere Standorte:</strong></p>
+    <ul>
+      <li>HeizCenter Bobingen (Region Augsburg)</li>
+      <li>HeizCenter Gutenzell-Hürbel (Raum Ulm/Memmingen)</li>
+      <li>HeizCenter Klosterlechfeld (Kundenempfang und Besucherbüro)</li>
+    </ul>
+
+    <div class="cta-box">
+      <h4>Jetzt kostenlose Beratung vereinbaren</h4>
+      <p>Unsere Sanitär-Experten planen Ihr barrierefreies Traumbad – inklusive Fördermittelcheck.</p>
+      <p>
+        <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
+        <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
       </p>
     </div>
 
-    <p style="font-size: 0.9em; color: #666; margin-top: 30px;">
-      <em>
-        Dieser Ratgeber wurde mit größter Sorgfalt erstellt. Alle Angaben zu Kosten, Förderungen und
-        technischen Anforderungen sind nach bestem Wissen recherchiert (Stand: November 2025). Förderkonditionen
-        können sich ändern – bitte prüfen Sie aktuelle Bedingungen bei KfW.de und Ihrer Pflegekasse. Für
-        verbindliche Kostenvoranschläge kontaktieren Sie bitte HeizCenter direkt.
-      </em>
-    </p>
+    <p><em>Dieser Ratgeber wurde mit größter Sorgfalt erstellt. Alle Angaben zu Kosten, Förderungen und technischen Anforderungen sind nach bestem Wissen recherchiert (Stand: November 2025). Förderkonditionen können sich ändern – bitte prüfen Sie aktuelle Bedingungen bei KfW.de und Ihrer Pflegekasse.</em></p>
       `,
       category: 'Sanitär',
       author: 'HeizCenter Redaktion',
@@ -7862,11 +7851,12 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Berlin: SolarPLUS (bis 15.000 € für PV + Speicher)</li>
         </ul>
 
-        <p><strong>Einspeisevergütung (EEG 2023):</strong></p>
+        <p><strong>Einspeisevergütung (EEG 2025):</strong></p>
         <ul>
-          <li>Anlagen bis 10 kWp: 8,11 Cent/kWh (Überschusseinspeisung)</li>
-          <li>Anlagen bis 10 kWp: 12,87 Cent/kWh (Volleinspeisung)</li>
-          <li>Vergütung für 20 Jahre garantiert</li>
+          <li>Anlagen bis 10 kWp: ~7,9 Cent/kWh (Überschusseinspeisung)</li>
+          <li>Anlagen bis 10 kWp: ~12,3 Cent/kWh (Volleinspeisung)</li>
+          <li>Vergütung für 20 Jahre ab Inbetriebnahme garantiert</li>
+          <li><em>Hinweis: Die Vergütungssätze sinken halbjährlich um ca. 1%</em></li>
         </ul>
 
         <h2>Wirtschaftlichkeitsvergleich</h2>
@@ -8420,7 +8410,23 @@ function getMockBlogPosts(): BlogPost[] {
           <li><strong>Umsetzung:</strong> Nach Bewilligung starten</li>
         </ol>
 
-        <p>Benötigen Sie Unterstützung bei Planung und Antragstellung? Unsere BAFA-zertifizierten Energieberater helfen Ihnen kostenlos bei der Maximierung Ihrer Förderung und begleiten Sie durch den gesamten Prozess.</p>
+        <p>Benötigen Sie Unterstützung bei Planung und Antragstellung? Unsere BAFA-zertifizierten Energieberater helfen Ihnen bei der Maximierung Ihrer Förderung und begleiten Sie durch den gesamten Prozess.</p>
+
+        <p><strong>Unsere Standorte:</strong></p>
+        <ul>
+          <li>HeizCenter Bobingen (Region Augsburg)</li>
+          <li>HeizCenter Gutenzell-Hürbel (Raum Ulm/Memmingen)</li>
+          <li>HeizCenter Klosterlechfeld (Kundenempfang und Besucherbüro)</li>
+        </ul>
+
+        <div class="cta-box">
+          <h4>Kostenlose Förderberatung</h4>
+          <p>Wir prüfen Ihre Fördermöglichkeiten und begleiten Sie von der Planung bis zur Auszahlung.</p>
+          <p>
+            <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
+            <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+          </p>
+        </div>
       `,
       category: 'Solar',
       author: 'HeizCenter Redaktion',
@@ -8551,7 +8557,7 @@ function getMockBlogPosts(): BlogPost[] {
         <h3>Variante 3: Wasser-Wärmepumpe + Solarthermie</h3>
         <p><strong>Vorteile:</strong></p>
         <ul>
-          <li>Sehr hohe Effizienz (JAZ 5,0-6,0)</li>
+          <li>Sehr hohe Effizienz (JAZ 5,0-5,5)</li>
           <li>Konstante Temperatur</li>
           <li>Kompakte Bauweise</li>
         </ul>
@@ -8631,7 +8637,10 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Geschwindigkeitsbonus (Heizungstausch): +20%</li>
           <li>Einkommensbonus (<40.000 €): +30%</li>
           <li><strong>Maximum: 70%</strong></li>
+          <li><strong>Förderobergrenze: 30.000 € pro Wohneinheit</strong></li>
         </ul>
+
+        <div class="my-6 p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r"><p class="font-semibold text-amber-900">⚠️ Wichtig zur Förderobergrenze:</p><p class="text-slate-700">Die BAFA-Förderung ist auf maximal 30.000 € pro Wohneinheit gedeckelt. Bei 70% Fördersatz bedeutet das: Nur Investitionskosten bis 42.857 € werden voll gefördert. Bei höheren Kosten (z.B. 53.500 € für Sole-WP + Solar) bleibt der Zuschuss bei 30.000 €.</p></div>
 
         <p><strong>Beispielrechnung (Heizungstausch):</strong></p>
         <ul>
@@ -8846,6 +8855,22 @@ function getMockBlogPosts(): BlogPost[] {
         </ol>
 
         <p>Benötigen Sie professionelle Beratung für Ihre Hybrid-Heizung? Unsere Experten planen Ihre optimale Kombination aus Wärmepumpe und Solarthermie – inklusive Heizlastberechnung, Fördermittelberatung und hydraulischem Abgleich.</p>
+
+        <p><strong>Unsere Standorte:</strong></p>
+        <ul>
+          <li>HeizCenter Bobingen (Region Augsburg)</li>
+          <li>HeizCenter Gutenzell-Hürbel (Raum Ulm/Memmingen)</li>
+          <li>HeizCenter Klosterlechfeld (Kundenempfang und Besucherbüro)</li>
+        </ul>
+
+        <div class="cta-box">
+          <h4>Kostenlose Hybrid-Beratung</h4>
+          <p>Wir berechnen Ihre ideale Kombination aus Wärmepumpe und Solarthermie und maximieren Ihre Förderung.</p>
+          <p>
+            <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
+            <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+          </p>
+        </div>
       `,
       category: 'Solar',
       author: 'HeizCenter Redaktion',
@@ -8914,38 +8939,49 @@ function getMockBlogPosts(): BlogPost[] {
         <h2>Staatliche Förderung 2025</h2>
 
         <h3>BAFA-Förderung für Solarthermie</h3>
-        <p>Die Bundesförderung für effiziente Gebäude (BEG) macht Solarthermie deutlich günstiger:</p>
+        <p>Die Bundesförderung für effiziente Gebäude (BEG) unterstützt Solarthermie – allerdings mit wichtigen Einschränkungen:</p>
 
-        <p><strong>Fördersätze:</strong></p>
+        <div class="my-6 p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r"><p class="font-semibold text-amber-900">⚠️ Wichtig seit 2024:</p><p class="text-slate-700"><strong>Solarthermie allein</strong> (ohne Heizungstausch) erhält <strong>keine Basisförderung</strong> mehr. Die volle Förderung gibt es nur in Kombination mit einer neuen Heizung (z.B. Wärmepumpe) oder beim Heizungstausch.</p></div>
+
+        <p><strong>Fördersätze bei Heizungstausch (z.B. mit Wärmepumpe):</strong></p>
         <ul>
           <li>Basis-Förderung: 30% der förderfähigen Kosten</li>
           <li>Geschwindigkeitsbonus: +20% bei Heizungstausch (Öl, Gas 20+ Jahre)</li>
           <li>Einkommensbonus: +30% bei Einkommen unter 40.000 €/Jahr</li>
           <li>Maximum: 70% Förderung möglich</li>
-          <li>Förderhöchstgrenze: 60.000 € pro Wohneinheit</li>
+          <li>Förderhöchstgrenze: 30.000 € pro Wohneinheit</li>
+        </ul>
+
+        <p><strong>Solarthermie als Einzelmaßnahme (ohne Heizungstausch):</strong></p>
+        <ul>
+          <li>Keine Basisförderung (0%)</li>
+          <li>Alternative: Steuerbonus nach §35c EStG (20% über 3 Jahre)</li>
+          <li>Alternativ: KfW-Kredit 261/262 mit Tilgungszuschuss</li>
         </ul>
 
         <h3>Förderbeispiele</h3>
 
-        <p><strong>Beispiel 1: Warmwasser-Anlage (8.000 €)</strong></p>
+        <p><strong>Beispiel 1: Warmwasser-Anlage als Einzelmaßnahme (8.000 €)</strong></p>
         <ul>
           <li>Gesamtkosten: 8.000 €</li>
-          <li>Basis-Förderung 30%: 2.400 €</li>
-          <li>Eigenanteil: 5.600 €</li>
+          <li>BAFA-Förderung: 0 € (Einzelmaßnahme ohne Heizungstausch)</li>
+          <li>Alternative: Steuerbonus §35c (20% = 1.600 €)</li>
+          <li>Eigenanteil nach Steuerbonus: 6.400 €</li>
         </ul>
 
-        <p><strong>Beispiel 2: Kombi-Anlage mit Heizungstausch (18.000 €)</strong></p>
+        <p><strong>Beispiel 2: Solarthermie + Wärmepumpe (18.000 € + 22.000 € = 40.000 €)</strong></p>
         <ul>
-          <li>Gesamtkosten: 18.000 €</li>
-          <li>Förderung 50% (30% + 20% Geschwindigkeit): 9.000 €</li>
-          <li>Eigenanteil: 9.000 €</li>
+          <li>Gesamtkosten Paket: 40.000 €</li>
+          <li>Förderung 50% (30% + 20% Geschwindigkeit): 20.000 €</li>
+          <li>Eigenanteil: 20.000 €</li>
         </ul>
 
-        <p><strong>Beispiel 3: Maximale Förderung (16.000 €)</strong></p>
+        <p><strong>Beispiel 3: Maximale Förderung mit Heizungstausch (35.000 €)</strong></p>
         <ul>
-          <li>Gesamtkosten: 16.000 €</li>
-          <li>Förderung 70% (alle Boni): 11.200 €</li>
-          <li>Eigenanteil: 4.800 €</li>
+          <li>Gesamtkosten: 35.000 €</li>
+          <li>Förderung 70% rechnerisch: 24.500 €</li>
+          <li>Förderobergrenze: 30.000 € (nicht überschritten)</li>
+          <li>Eigenanteil: 10.500 €</li>
         </ul>
 
         <h2>Laufende Betriebskosten</h2>
@@ -9032,84 +9068,79 @@ function getMockBlogPosts(): BlogPost[] {
 
         <h2>Amortisationszeit</h2>
 
-        <h3>Warmwasser-Anlage</h3>
+        <h3>Warmwasser-Anlage (Einzelmaßnahme, ohne Heizungstausch)</h3>
 
-        <p><strong>Szenario 1: Basis-Förderung 30%, Gasheizung</strong></p>
+        <p><strong>Szenario 1: Keine BAFA-Förderung, Gasheizung</strong></p>
         <ul>
           <li>Investition: 8.000 €</li>
-          <li>Förderung: -2.400 €</li>
-          <li>Eigenanteil: 5.600 €</li>
+          <li>BAFA-Förderung: 0 € (Einzelmaßnahme)</li>
+          <li>Steuerbonus §35c: -1.600 € (über 3 Jahre)</li>
+          <li>Eigenanteil: 6.400 €</li>
           <li>Jährliche Einsparung: 160 €</li>
-          <li><strong>Amortisation: 35 Jahre</strong></li>
+          <li><strong>Amortisation: 40 Jahre</strong></li>
         </ul>
 
-        <p><strong>Szenario 2: Basis-Förderung 30%, Ölheizung</strong></p>
+        <p><strong>Szenario 2: Keine BAFA-Förderung, Ölheizung</strong></p>
         <ul>
           <li>Investition: 8.000 €</li>
-          <li>Förderung: -2.400 €</li>
-          <li>Eigenanteil: 5.600 €</li>
+          <li>Steuerbonus §35c: -1.600 €</li>
+          <li>Eigenanteil: 6.400 €</li>
           <li>Jährliche Einsparung: 250 €</li>
-          <li><strong>Amortisation: 22 Jahre</strong></li>
+          <li><strong>Amortisation: 26 Jahre</strong></li>
         </ul>
 
-        <p><strong>Szenario 3: 50% Förderung, Ölheizung</strong></p>
+        <div class="my-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r"><p class="font-semibold text-green-900">💡 Empfehlung:</p><p class="text-slate-700">Solarthermie lohnt sich wirtschaftlich besonders in Kombination mit einem Heizungstausch. Dann profitieren Sie von der vollen BEG-Förderung bis 70%!</p></div>
+
+        <h3>Solarthermie + Wärmepumpe (Heizungstausch)</h3>
+
+        <p><strong>Szenario 1: 50% Förderung (Basis + Geschwindigkeit)</strong></p>
         <ul>
-          <li>Investition: 8.000 €</li>
-          <li>Förderung: -4.000 €</li>
-          <li>Eigenanteil: 4.000 €</li>
-          <li>Jährliche Einsparung: 250 €</li>
-          <li><strong>Amortisation: 16 Jahre</strong></li>
+          <li>Investition Paket: 40.000 € (Solar 18.000 € + WP 22.000 €)</li>
+          <li>BAFA-Förderung 50%: -20.000 €</li>
+          <li>Eigenanteil: 20.000 €</li>
+          <li>Jährliche Einsparung vs. Öl: 1.800 €</li>
+          <li><strong>Amortisation: 11 Jahre</strong></li>
         </ul>
 
-        <h3>Kombi-Anlage mit Heizungsunterstützung</h3>
-
-        <p><strong>Szenario 1: Basis-Förderung 30%, Gasheizung</strong></p>
+        <p><strong>Szenario 2: 70% Förderung (alle Boni)</strong></p>
         <ul>
-          <li>Investition: 18.000 €</li>
-          <li>Förderung: -5.400 €</li>
-          <li>Eigenanteil: 12.600 €</li>
-          <li>Jährliche Einsparung: 280 €</li>
-          <li><strong>Amortisation: 45 Jahre</strong></li>
+          <li>Investition Paket: 40.000 €</li>
+          <li>BAFA-Förderung 70%: -28.000 €</li>
+          <li>Eigenanteil: 12.000 €</li>
+          <li>Jährliche Einsparung: 1.800 €</li>
+          <li><strong>Amortisation: 7 Jahre</strong></li>
         </ul>
 
-        <p><strong>Szenario 2: 50% Förderung, Ölheizung</strong></p>
+        <p><strong>Szenario 3: Großes System an Förderobergrenze (50.000 €)</strong></p>
         <ul>
-          <li>Investition: 18.000 €</li>
-          <li>Förderung: -9.000 €</li>
-          <li>Eigenanteil: 9.000 €</li>
-          <li>Jährliche Einsparung: 520 €</li>
-          <li><strong>Amortisation: 17 Jahre</strong></li>
-        </ul>
-
-        <p><strong>Szenario 3: 70% Förderung, Ölheizung</strong></p>
-        <ul>
-          <li>Investition: 18.000 €</li>
-          <li>Förderung: -12.600 €</li>
-          <li>Eigenanteil: 5.400 €</li>
-          <li>Jährliche Einsparung: 520 €</li>
-          <li><strong>Amortisation: 10 Jahre</strong></li>
+          <li>Investition: 50.000 €</li>
+          <li>Rechnerisch 70%: 35.000 €</li>
+          <li>Förderobergrenze: <strong>30.000 €</strong> (gedeckelt!)</li>
+          <li>Eigenanteil: 20.000 €</li>
+          <li>Jährliche Einsparung: 2.200 €</li>
+          <li><strong>Amortisation: 9 Jahre</strong></li>
         </ul>
 
         <h2>Renditeberechnung über 25 Jahre</h2>
 
-        <h3>Beispiel: Kombi-Anlage mit 50% Förderung, Ölheizung</h3>
+        <h3>Beispiel: Solarthermie + Wärmepumpe, 50% Förderung</h3>
 
         <p><strong>Cashflow-Analyse:</strong></p>
         <ul>
-          <li>Eigenanteil: -9.000 €</li>
-          <li>Jährliche Einsparung: +520 €</li>
-          <li>Wartungskosten (25 Jahre): -5.000 €</li>
-          <li>Gesamtertrag nach 25 Jahren: +13.000 € - 5.000 € = +8.000 €</li>
-          <li>Rendite: +8.000 € auf 9.000 € = 89% über 25 Jahre</li>
-          <li><strong>Jährliche Rendite: ca. 2,6% p.a.</strong></li>
+          <li>Eigenanteil: -20.000 €</li>
+          <li>Jährliche Einsparung vs. Ölheizung: +1.800 €</li>
+          <li>Wartungskosten (25 Jahre): -6.000 €</li>
+          <li>Gesamtertrag nach 25 Jahren: +45.000 € - 6.000 € = +39.000 €</li>
+          <li>Rendite: +39.000 € auf 20.000 € = 195% über 25 Jahre</li>
+          <li><strong>Jährliche Rendite: ca. 5,5% p.a.</strong></li>
         </ul>
 
-        <p><strong>Mit Preissteigerung (3% p.a. für Öl):</strong></p>
+        <p><strong>Mit Preissteigerung (3% p.a. für Öl/Strom):</strong></p>
         <ul>
-          <li>Jährliche Einsparung steigt auf durchschnittlich 650 €</li>
-          <li>Gesamtertrag nach 25 Jahren: ca. 16.250 €</li>
-          <li>Abzüglich Wartung: 11.250 € Gewinn</li>
-          <li><strong>Jährliche Rendite: ca. 4,2% p.a.</strong></li>
+          <li>Jährliche Einsparung steigt auf durchschnittlich 2.400 €</li>
+          <li>Gesamtertrag nach 25 Jahren: ca. 60.000 €</li>
+          <li>Abzüglich Wartung: 54.000 € Gewinn</li>
+          <li><strong>Jährliche Rendite: ca. 7,5% p.a.</strong></li>
         </ul>
 
         <h2>Wertsteigerung der Immobilie</h2>
@@ -9125,8 +9156,8 @@ function getMockBlogPosts(): BlogPost[] {
         <p><strong>Beispiel Einfamilienhaus (Wert 400.000 €):</strong></p>
         <ul>
           <li>Wertsteigerung 3%: +12.000 €</li>
-          <li>Investition Solarthermie (nach Förderung): -9.000 €</li>
-          <li>Netto-Wertsteigerung: +3.000 €</li>
+          <li>Investition Solarthermie+WP (nach 50% Förderung): -20.000 €</li>
+          <li>Zusätzlich Betriebskosten-Einsparung über Nutzungsdauer</li>
         </ul>
 
         <h2>Vergleich: Solarthermie vs. Photovoltaik</h2>
@@ -9250,6 +9281,22 @@ function getMockBlogPosts(): BlogPost[] {
         </ol>
 
         <p>Benötigen Sie eine detaillierte Wirtschaftlichkeitsberechnung für Ihr Projekt? Unsere Energieberater erstellen Ihnen kostenlos eine individuelle Kosten-Nutzen-Analyse – inklusive aktueller Förderungen, Einsparungspotenzial und Amortisationsrechnung.</p>
+
+        <p><strong>Unsere Standorte:</strong></p>
+        <ul>
+          <li>HeizCenter Bobingen (Region Augsburg)</li>
+          <li>HeizCenter Gutenzell-Hürbel (Raum Ulm/Memmingen)</li>
+          <li>HeizCenter Klosterlechfeld (Kundenempfang und Besucherbüro)</li>
+        </ul>
+
+        <div class="cta-box">
+          <h4>Kostenlose Wirtschaftlichkeitsberechnung</h4>
+          <p>Wir berechnen Ihre persönliche Amortisation und maximieren Ihre Förderung – unverbindlich und herstellerunabhängig.</p>
+          <p>
+            <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
+            <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+          </p>
+        </div>
       `,
       category: 'Solar',
       author: 'HeizCenter Redaktion',
@@ -9285,7 +9332,7 @@ function getMockBlogPosts(): BlogPost[] {
           <div class="bg-blue-50 border-l-4 border-blue-500 p-6 my-8">
             <h4 class="text-lg font-semibold text-blue-900 mb-3">💡 Kernvorteil</h4>
             <p class="text-blue-800 mb-0">
-              <strong>Dreifacher Nutzen:</strong> PVT-Module erzeugen bis zu 3-mal mehr Energie pro m² als reine PV-Anlagen (Strom + Wärme kombiniert). Die Kühlung der PV-Zellen steigert zudem deren elektrischen Wirkungsgrad um 5-15%.
+              <strong>Doppelte Nutzung:</strong> PVT-Module erzeugen auf gleicher Fläche sowohl Strom als auch Wärme. Der Gesamtenergieertrag liegt 50-80% höher als bei reiner PV. Die Kühlung der PV-Zellen steigert zudem deren elektrischen Wirkungsgrad um 5-10%.
             </p>
           </div>
 
@@ -9338,8 +9385,8 @@ function getMockBlogPosts(): BlogPost[] {
                 </tr>
                 <tr>
                   <td class="border border-slate-300 px-4 py-3">Gesamtwirkungsgrad</td>
-                  <td class="border border-slate-300 px-4 py-3">73-85%</td>
-                  <td class="border border-slate-300 px-4 py-3">80-93%</td>
+                  <td class="border border-slate-300 px-4 py-3">65-75%</td>
+                  <td class="border border-slate-300 px-4 py-3">70-85%</td>
                 </tr>
                 <tr class="bg-slate-50">
                   <td class="border border-slate-300 px-4 py-3">Preis pro m²</td>
@@ -9663,6 +9710,22 @@ function getMockBlogPosts(): BlogPost[] {
           <p>
             Bei ausreichend Dachfläche und nur einem Energiebedarf (Strom ODER Wärme) sind separate Systeme meist wirtschaftlicher. Eine detaillierte Bedarfsanalyse durch einen Fachbetrieb ist vor der Entscheidung unerlässlich.
           </p>
+
+          <p><strong>Unsere Standorte:</strong></p>
+          <ul>
+            <li>HeizCenter Bobingen (Region Augsburg)</li>
+            <li>HeizCenter Gutenzell-Hürbel (Raum Ulm/Memmingen)</li>
+            <li>HeizCenter Klosterlechfeld (Kundenempfang und Besucherbüro)</li>
+          </ul>
+
+          <div class="cta-box">
+            <h4>Kostenlose PVT-Beratung</h4>
+            <p>Wir prüfen, ob PVT-Kollektoren für Ihr Projekt geeignet sind und berechnen Ihren Ertrag.</p>
+            <p>
+              <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
+              <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+            </p>
+          </div>
         </div>
       `,
       category: 'Solar',
@@ -9879,7 +9942,7 @@ function getMockBlogPosts(): BlogPost[] {
                 </tr>
                 <tr class="bg-slate-50">
                   <td class="border border-slate-300 px-4 py-3">Nord</td>
-                  <td class="border border-slate-300 px-4 py-3">40-60%</td>
+                  <td class="border border-slate-300 px-4 py-3">30-50%</td>
                   <td class="border border-slate-300 px-4 py-3">❌ Nicht empfohlen</td>
                 </tr>
               </tbody>
@@ -10178,6 +10241,22 @@ function getMockBlogPosts(): BlogPost[] {
           <p>
             Eine professionelle Planung durch einen Fachbetrieb mit Simulationssoftware ist empfehlenswert. Die Investition in eine präzise Dimensionierung zahlt sich über die 20-25-jährige Lebensdauer der Anlage vielfach aus.
           </p>
+
+          <p><strong>Unsere Standorte:</strong></p>
+          <ul>
+            <li>HeizCenter Bobingen (Region Augsburg)</li>
+            <li>HeizCenter Gutenzell-Hürbel (Raum Ulm/Memmingen)</li>
+            <li>HeizCenter Klosterlechfeld (Kundenempfang und Besucherbüro)</li>
+          </ul>
+
+          <div class="cta-box">
+            <h4>Kostenlose Anlagenplanung</h4>
+            <p>Wir dimensionieren Ihre Solarthermie-Anlage optimal und berechnen Ihren Solarertrag mit professioneller Simulationssoftware.</p>
+            <p>
+              <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
+              <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+            </p>
+          </div>
         </div>
       `,
       category: 'Solar',
