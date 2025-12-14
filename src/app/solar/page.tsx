@@ -19,7 +19,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ServiceSchema } from "@/components/schema/service-schema";
 import { FAQSchema } from "@/components/schema/faq-schema";
 import { BreadcrumbSchema } from "@/components/schema/breadcrumb-schema";
-import { AnimatedProcess } from "@/components/sections/animated-process";
+import { SolarProcessSection } from "@/components/sections/solar-process-section";
 import { SolarComparisonSection } from "@/components/sections/solar-comparison";
 
 export const metadata: Metadata = {
@@ -430,8 +430,8 @@ export default function SolarPage() {
         </div>
       </section>
 
-      {/* Animated Process Section */}
-      <AnimatedProcess />
+      {/* Solar Process Section - Redesigned */}
+      <SolarProcessSection />
 
       <FAQSection
         title="Häufig gestellte Fragen zu Solarthermie"
