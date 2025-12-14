@@ -20,6 +20,7 @@ import { ServiceSchema } from "@/components/schema/service-schema";
 import { FAQSchema } from "@/components/schema/faq-schema";
 import { BreadcrumbSchema } from "@/components/schema/breadcrumb-schema";
 import { AnimatedProcess } from "@/components/sections/animated-process";
+import { SolarComparisonSection } from "@/components/sections/solar-comparison";
 
 export const metadata: Metadata = {
   title: "Solarthermie Augsburg, Ulm & Memmingen - Bis 70% KfW Förderung | HeizCenter",
@@ -352,133 +353,7 @@ export default function SolarPage() {
       </section>
 
       {/* Solarthermie vs Photovoltaik Comparison */}
-      <section className="py-16 bg-gradient-to-b from-white to-slate-50">
-        <div className="container">
-          <div className="mb-12 text-center">
-            <span className="inline-block mb-4 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold">
-              Technologie-Vergleich
-            </span>
-            <h2 className="mb-4 text-3xl md:text-4xl font-bold">Solarthermie oder Photovoltaik?</h2>
-            <p className="mx-auto max-w-2xl text-lg text-slate-600">
-              Zwei Wege, die Kraft der Sonne zu nutzen – wir zeigen Ihnen die Unterschiede
-            </p>
-          </div>
-
-          {/* Modern Card-Based Comparison */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
-            {/* Solarthermie Card */}
-            <Card className="border-2 border-orange-200 bg-gradient-to-br from-orange-50 to-amber-50 overflow-hidden">
-              <CardContent className="p-0">
-                <div className="bg-gradient-to-r from-orange-500 to-amber-500 p-6 text-white">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="p-2 bg-white/20 rounded-lg">
-                      <ThermometerSun className="h-6 w-6" />
-                    </div>
-                    <h3 className="text-2xl font-bold">Solarthermie</h3>
-                  </div>
-                  <p className="text-orange-100">Erzeugt Wärme für Warmwasser & Heizung</p>
-                </div>
-                <div className="p-6 space-y-4">
-                  <div className="flex items-center justify-between py-3 border-b border-orange-100">
-                    <span className="text-slate-600">Wirkungsgrad</span>
-                    <span className="text-2xl font-bold text-green-600">60-80%</span>
-                  </div>
-                  <div className="flex items-center justify-between py-3 border-b border-orange-100">
-                    <span className="text-slate-600">Kosten (4-Pers.)</span>
-                    <span className="font-semibold">5.000 - 10.000 €</span>
-                  </div>
-                  <div className="flex items-center justify-between py-3 border-b border-orange-100">
-                    <span className="text-slate-600">KfW-Förderung</span>
-                    <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold">Bis zu 70%</span>
-                  </div>
-                  <div className="flex items-center justify-between py-3 border-b border-orange-100">
-                    <span className="text-slate-600">Primärer Nutzen</span>
-                    <span className="font-medium text-right">Heizkosten senken</span>
-                  </div>
-                  <div className="flex items-center justify-between py-3">
-                    <span className="text-slate-600">Ideal für</span>
-                    <span className="font-medium text-right text-sm">Gas-/Ölheizung, Wärmepumpe</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Photovoltaik Card */}
-            <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
-              <CardContent className="p-0">
-                <div className="bg-gradient-to-r from-blue-500 to-indigo-500 p-6 text-white">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="p-2 bg-white/20 rounded-lg">
-                      <Zap className="h-6 w-6" />
-                    </div>
-                    <h3 className="text-2xl font-bold">Photovoltaik</h3>
-                  </div>
-                  <p className="text-blue-100">Erzeugt Strom für vielseitige Nutzung</p>
-                </div>
-                <div className="p-6 space-y-4">
-                  <div className="flex items-center justify-between py-3 border-b border-blue-100">
-                    <span className="text-slate-600">Wirkungsgrad</span>
-                    <span className="text-2xl font-bold text-slate-700">15-22%</span>
-                  </div>
-                  <div className="flex items-center justify-between py-3 border-b border-blue-100">
-                    <span className="text-slate-600">Kosten (4-Pers.)</span>
-                    <span className="font-semibold">8.000 - 15.000 €</span>
-                  </div>
-                  <div className="flex items-center justify-between py-3 border-b border-blue-100">
-                    <span className="text-slate-600">KfW-Förderung</span>
-                    <span className="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-sm font-semibold">Steuerbefreit</span>
-                  </div>
-                  <div className="flex items-center justify-between py-3 border-b border-blue-100">
-                    <span className="text-slate-600">Primärer Nutzen</span>
-                    <span className="font-medium text-right">Stromkosten senken</span>
-                  </div>
-                  <div className="flex items-center justify-between py-3">
-                    <span className="text-slate-600">Ideal für</span>
-                    <span className="font-medium text-right text-sm">Hoher Stromverbrauch, E-Auto</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Combination Recommendation */}
-          <div className="max-w-4xl mx-auto">
-            <Card className="border-2 border-primary bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 overflow-hidden">
-              <CardContent className="p-8">
-                <div className="flex flex-col md:flex-row items-center gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center">
-                      <div className="relative">
-                        <ThermometerSun className="h-8 w-8 text-orange-500 absolute -left-2 -top-1" />
-                        <Zap className="h-8 w-8 text-blue-500 absolute left-2 top-1" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex-grow text-center md:text-left">
-                    <div className="inline-block px-3 py-1 bg-primary text-white rounded-full text-xs font-bold mb-3">
-                      UNSERE EMPFEHLUNG
-                    </div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-2">Beide Systeme kombinieren!</h3>
-                    <p className="text-slate-600">
-                      <span className="font-semibold text-primary">Solarthermie für Warmwasser & Heizung</span> +
-                      <span className="font-semibold text-primary"> Wärmepumpe als Hauptheizung</span> =
-                      maximale Energieunabhängigkeit. Die Solarthermie übernimmt im Sommer komplett das Warmwasser
-                      und reduziert den Stromverbrauch Ihrer Wärmepumpe erheblich.
-                    </p>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <Button asChild size="lg" className="whitespace-nowrap">
-                      <Link href="/kontakt?tab=quote&service=solar">
-                        Jetzt beraten lassen
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <SolarComparisonSection />
 
       {/* KfW Förderung 2025 Section */}
       <section className="bg-gradient-to-br from-primary to-primary/80 py-16 text-white">
