@@ -351,72 +351,130 @@ export default function SolarPage() {
       </section>
 
       {/* Solarthermie vs Photovoltaik Comparison */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-b from-white to-slate-50">
         <div className="container">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold">Solarthermie oder Photovoltaik?</h2>
+            <span className="inline-block mb-4 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+              Technologie-Vergleich
+            </span>
+            <h2 className="mb-4 text-3xl md:text-4xl font-bold">Solarthermie oder Photovoltaik?</h2>
             <p className="mx-auto max-w-2xl text-lg text-slate-600">
-              Beide Technologien nutzen die Sonne - aber auf unterschiedliche Weise
+              Zwei Wege, die Kraft der Sonne zu nutzen – wir zeigen Ihnen die Unterschiede
             </p>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="bg-slate-100">
-                  <th className="border border-slate-300 p-4 text-left">Merkmal</th>
-                  <th className="border border-slate-300 p-4 text-left">Solarthermie</th>
-                  <th className="border border-slate-300 p-4 text-left">Photovoltaik</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border border-slate-300 p-4 font-medium">Erzeugnis</td>
-                  <td className="border border-slate-300 p-4">Wärme (für Warmwasser & Heizung)</td>
-                  <td className="border border-slate-300 p-4">Strom (vielseitig nutzbar)</td>
-                </tr>
-                <tr className="bg-slate-50">
-                  <td className="border border-slate-300 p-4 font-medium">Wirkungsgrad</td>
-                  <td className="border border-slate-300 p-4"><span className="font-semibold text-green-600">60-80%</span></td>
-                  <td className="border border-slate-300 p-4">15-22%</td>
-                </tr>
-                <tr>
-                  <td className="border border-slate-300 p-4 font-medium">Kosten (4-P-Haushalt)</td>
-                  <td className="border border-slate-300 p-4">5.000 - 10.000 €</td>
-                  <td className="border border-slate-300 p-4">8.000 - 15.000 €</td>
-                </tr>
-                <tr className="bg-slate-50">
-                  <td className="border border-slate-300 p-4 font-medium">KfW-Förderung</td>
-                  <td className="border border-slate-300 p-4"><span className="font-semibold text-green-600">Bis zu 70%</span></td>
-                  <td className="border border-slate-300 p-4">Steuerbefreit, keine direkte Förderung</td>
-                </tr>
-                <tr>
-                  <td className="border border-slate-300 p-4 font-medium">Primärer Nutzen</td>
-                  <td className="border border-slate-300 p-4">Heizkosten senken, Warmwasser</td>
-                  <td className="border border-slate-300 p-4">Stromkosten senken, E-Mobilität</td>
-                </tr>
-                <tr className="bg-slate-50">
-                  <td className="border border-slate-300 p-4 font-medium">Ideal für</td>
-                  <td className="border border-slate-300 p-4">Bestehende Gas-/Ölheizung, Wärmepumpe</td>
-                  <td className="border border-slate-300 p-4">Hoher Stromverbrauch, E-Auto</td>
-                </tr>
-                <tr>
-                  <td className="border border-slate-300 p-4 font-medium">Kombination</td>
-                  <td className="border border-slate-300 p-4" colSpan={2}>
-                    <span className="font-semibold text-primary">✓ Optimal: Beide Systeme kombinieren!</span> Solarthermie für Wärme + PV für Strom = maximale Energieunabhängigkeit
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          {/* Modern Card-Based Comparison */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+            {/* Solarthermie Card */}
+            <Card className="border-2 border-orange-200 bg-gradient-to-br from-orange-50 to-amber-50 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="bg-gradient-to-r from-orange-500 to-amber-500 p-6 text-white">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="p-2 bg-white/20 rounded-lg">
+                      <ThermometerSun className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-2xl font-bold">Solarthermie</h3>
+                  </div>
+                  <p className="text-orange-100">Erzeugt Wärme für Warmwasser & Heizung</p>
+                </div>
+                <div className="p-6 space-y-4">
+                  <div className="flex items-center justify-between py-3 border-b border-orange-100">
+                    <span className="text-slate-600">Wirkungsgrad</span>
+                    <span className="text-2xl font-bold text-green-600">60-80%</span>
+                  </div>
+                  <div className="flex items-center justify-between py-3 border-b border-orange-100">
+                    <span className="text-slate-600">Kosten (4-Pers.)</span>
+                    <span className="font-semibold">5.000 - 10.000 €</span>
+                  </div>
+                  <div className="flex items-center justify-between py-3 border-b border-orange-100">
+                    <span className="text-slate-600">KfW-Förderung</span>
+                    <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold">Bis zu 70%</span>
+                  </div>
+                  <div className="flex items-center justify-between py-3 border-b border-orange-100">
+                    <span className="text-slate-600">Primärer Nutzen</span>
+                    <span className="font-medium text-right">Heizkosten senken</span>
+                  </div>
+                  <div className="flex items-center justify-between py-3">
+                    <span className="text-slate-600">Ideal für</span>
+                    <span className="font-medium text-right text-sm">Gas-/Ölheizung, Wärmepumpe</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Photovoltaik Card */}
+            <Card className="border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="bg-gradient-to-r from-blue-500 to-indigo-500 p-6 text-white">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="p-2 bg-white/20 rounded-lg">
+                      <Zap className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-2xl font-bold">Photovoltaik</h3>
+                  </div>
+                  <p className="text-blue-100">Erzeugt Strom für vielseitige Nutzung</p>
+                </div>
+                <div className="p-6 space-y-4">
+                  <div className="flex items-center justify-between py-3 border-b border-blue-100">
+                    <span className="text-slate-600">Wirkungsgrad</span>
+                    <span className="text-2xl font-bold text-slate-700">15-22%</span>
+                  </div>
+                  <div className="flex items-center justify-between py-3 border-b border-blue-100">
+                    <span className="text-slate-600">Kosten (4-Pers.)</span>
+                    <span className="font-semibold">8.000 - 15.000 €</span>
+                  </div>
+                  <div className="flex items-center justify-between py-3 border-b border-blue-100">
+                    <span className="text-slate-600">KfW-Förderung</span>
+                    <span className="px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-sm font-semibold">Steuerbefreit</span>
+                  </div>
+                  <div className="flex items-center justify-between py-3 border-b border-blue-100">
+                    <span className="text-slate-600">Primärer Nutzen</span>
+                    <span className="font-medium text-right">Stromkosten senken</span>
+                  </div>
+                  <div className="flex items-center justify-between py-3">
+                    <span className="text-slate-600">Ideal für</span>
+                    <span className="font-medium text-right text-sm">Hoher Stromverbrauch, E-Auto</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
-          <div className="mt-8 rounded-lg bg-blue-50 p-6">
-            <h3 className="mb-3 text-xl font-bold">Unsere Empfehlung</h3>
-            <p className="text-slate-700">
-              Die ideale Lösung: <span className="font-semibold">Solarthermie für Warmwasser/Heizung + Wärmepumpe</span> als Hauptheizung.
-              Die Solarthermie übernimmt im Sommer komplett das Warmwasser und unterstützt in Übergangszeiten die Heizung.
-              Dadurch sinkt der Stromverbrauch Ihrer Wärmepumpe erheblich. Beide Systeme sind separat KfW-förderfähig!
-            </p>
+          {/* Combination Recommendation */}
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-2 border-primary bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 overflow-hidden">
+              <CardContent className="p-8">
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center">
+                      <div className="relative">
+                        <ThermometerSun className="h-8 w-8 text-orange-500 absolute -left-2 -top-1" />
+                        <Zap className="h-8 w-8 text-blue-500 absolute left-2 top-1" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex-grow text-center md:text-left">
+                    <div className="inline-block px-3 py-1 bg-primary text-white rounded-full text-xs font-bold mb-3">
+                      UNSERE EMPFEHLUNG
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-2">Beide Systeme kombinieren!</h3>
+                    <p className="text-slate-600">
+                      <span className="font-semibold text-primary">Solarthermie für Warmwasser & Heizung</span> +
+                      <span className="font-semibold text-primary"> Wärmepumpe als Hauptheizung</span> =
+                      maximale Energieunabhängigkeit. Die Solarthermie übernimmt im Sommer komplett das Warmwasser
+                      und reduziert den Stromverbrauch Ihrer Wärmepumpe erheblich.
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0">
+                    <Button asChild size="lg" className="whitespace-nowrap">
+                      <Link href="/kontakt?tab=quote&service=solar">
+                        Jetzt beraten lassen
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
