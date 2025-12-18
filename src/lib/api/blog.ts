@@ -2876,9 +2876,9 @@ function getMockBlogPosts(): BlogPost[] {
       title: 'Wärmepumpe Vorteile und Nachteile 2025: Der komplette Überblick',
       excerpt: 'Lohnt sich eine Wärmepumpe? 41% günstiger als Gas, bis 70% Förderung, aber auch echte Nachteile. Hier die Fakten für Ihre Entscheidung.',
       content: `
-        <h2>Lohnt sich eine Wärmepumpe? Die ehrliche Antwort</h2>
+        <p class="text-xl leading-relaxed text-slate-600 mb-8">925 Euro weniger Heizkosten pro Jahr. 21.000 Euro Förderung vom Staat. Eine Entscheidung, die Ihr Haus zukunftssicher macht – und die sich bereits nach 5 Jahren auszahlt.</p>
 
-        <p>„Lohnt sich eine Wärmepumpe für mich?" – Diese Frage bekommen wir täglich. Die ehrliche Antwort: <strong>Für die meisten ja, aber nicht für jeden.</strong> Hier sind die Fakten – ohne Marketing-Floskeln, dafür mit echten Zahlen aus unserer Region.</p>
+        <p>„Lohnt sich eine Wärmepumpe für mich?" – Diese Frage stellen uns täglich Hausbesitzer aus Augsburg, Memmingen und der gesamten Region. Die ehrliche Antwort: <strong>Für die meisten ja, aber nicht für jeden.</strong> Deshalb zeigen wir Ihnen hier alle Fakten – Vorteile UND Nachteile, damit Sie die richtige Entscheidung für Ihr Zuhause treffen können.</p>
 
         <div class="callout callout-info">
           <span class="callout-icon">📊</span>
@@ -2908,25 +2908,13 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p>Selbst Altbauanlagen ohne vollständige Sanierung zeigen annehmbare Werte, wie Feldtests des Fraunhofer-Instituts belegen.</p>
 
-        <h2>Was spricht für eine Wärmepumpe?</h2>
+        <h2>9 Gründe, warum sich eine Wärmepumpe 2025 lohnt</h2>
 
-        <p>Die Vorteile einer Wärmepumpe sind vielfältig – von Umweltschutz über Kostenersparnis bis zur Unabhängigkeit von fossilen Brennstoffen. Hier die wichtigsten Argumente.</p>
+        <p>Die Vorteile beginnen beim ersten Tag – mit niedrigeren Heizkosten. Und sie wachsen über die Jahre: Weniger Wartung, höherer Hauswert, vollständige Unabhängigkeit von Öl- und Gaspreisen. Hier sind die Argumente, die unsere Kunden überzeugt haben.</p>
 
-        <h3>Klimaschutz: 2.620 kg CO₂ weniger pro Jahr</h3>
+        <h3>1. Betriebskosten: Jeden Monat 77 Euro sparen</h3>
 
-        <p>Eine einzelne Wärmepumpe spart pro Jahr durchschnittlich <strong>2.620 kg CO₂</strong> gegenüber Öl oder Gas ein. Über 20 Jahre Lebensdauer bedeutet dies eine Emissionsminderung von etwa <strong>52 Tonnen CO₂</strong>.</p>
-
-        <p><strong>Konkrete Umweltbilanz:</strong></p>
-        <ul>
-          <li>Selbst mit heutigem Strommix: <strong>44-58% CO₂-Ersparnis</strong> vs. Gasheizung</li>
-          <li>Mit Ökostrom: <strong>100% CO₂-neutral</strong></li>
-          <li>Jede eingesparte Tonne CO₂ erhält ca. 3 m² arktische Eisfläche</li>
-          <li>Eine WP bewahrt ca. 8 m² Eis pro Jahr</li>
-        </ul>
-
-        <h3>Betriebskosten: 41% günstiger als Gas</h3>
-
-        <p>Die Betriebskosten moderner Wärmepumpen fallen <strong>41% günstiger aus</strong> als bei Gasheizungen (Verivox-Analyse 2025).</p>
+        <p>Das spüren Sie sofort auf dem Konto: Die Betriebskosten moderner Wärmepumpen liegen <strong>41% unter denen von Gasheizungen</strong>. Das sind <strong>925 Euro weniger pro Jahr</strong> – oder umgerechnet 77 Euro jeden Monat, die in Ihrer Haushaltskasse bleiben.</p>
 
         <table class="cost-table">
           <thead>
@@ -2961,9 +2949,17 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p><strong>Mit WP-Stromtarif:</strong> Wärmepumpenstrom kostet durchschnittlich nur 27 ct/kWh (statt 36 ct/kWh), was die Ersparnis auf bis zu <strong>1.530 €/Jahr erhöht</strong>.</p>
 
-        <h3>Förderung: Bis zu 70% vom Staat</h3>
+        <div class="callout callout-warning">
+          <span class="callout-icon">💡</span>
+          <div class="callout-title">Praxis-Tipp von HeizCenter</div>
+          <div class="callout-content">
+            Bei der Beratung zeigen wir Ihnen eine personalisierte Kostenrechnung für Ihr Haus. So sehen Sie schwarz auf weiß, wie viel Sie jeden Monat sparen – basierend auf Ihrer aktuellen Heizung und Ihrem tatsächlichen Verbrauch.
+          </div>
+        </div>
 
-        <p>Die KfW-Förderung 2025 macht Wärmepumpen in vielen Fällen günstiger als Gasheizungen:</p>
+        <h3>2. Förderung: Bis zu 21.000 Euro geschenkt</h3>
+
+        <p>Ja, richtig gelesen: Der Staat übernimmt bis zu 70% Ihrer Investition. Das sind bei einer durchschnittlichen Wärmepumpe <strong>bis zu 21.000 Euro Zuschuss</strong>, die Sie nicht zurückzahlen müssen. Die KfW-Förderung 2025 macht Wärmepumpen damit oft günstiger als eine neue Gasheizung:</p>
 
         <ul>
           <li><strong>30% Basisförderung</strong> für alle Wärmepumpen</li>
@@ -2975,87 +2971,96 @@ function getMockBlogPosts(): BlogPost[] {
 
         <p><strong>Rechenbeispiel:</strong> Bei Anschaffungskosten von 32.000 € werden maximal 30.000 € gefördert. Mit 70% Förderung erhalten Sie 21.000 € Zuschuss – Ihr Eigenanteil beträgt nur <strong>11.000 €</strong>. Das ist günstiger als eine neue Gasheizung!</p>
 
-        <h3>Langfristige Ersparnis: 26.000 € über 15 Jahre</h3>
+        <div class="callout callout-success">
+          <span class="callout-icon">✓</span>
+          <div class="callout-title">HeizCenter übernimmt die Förderabwicklung</div>
+          <div class="callout-content">
+            Wir kümmern uns um den gesamten Förderantrag – von der Antragstellung bis zur Auszahlung. Sie erhalten von uns die maximale Förderung, die für Ihre Situation möglich ist. Garantiert.
+          </div>
+        </div>
 
-        <p>Eine Luft-Wasser-Wärmepumpe kann eine Familie über 15 Jahre <strong>rund 26.000 € sparen</strong>. Im Gegensatz dazu:</p>
-        <ul>
-          <li>Gasheizung: über 62.000 € Brennstoffkosten + 7.800 € CO₂-Kosten</li>
-          <li>Wärmepumpe: Keine CO₂-Kosten, nur Stromkosten</li>
-        </ul>
+        <h3>3. Langfristige Ersparnis: 26.000 Euro in 15 Jahren</h3>
 
-        <p><strong>Amortisationszeit mit Förderung:</strong></p>
+        <p>Rechnen Sie mal nach: 925 Euro Ersparnis pro Jahr, über 15 Jahre hinweg – das summiert sich auf <strong>rund 26.000 Euro</strong>, die Sie nicht für Heizkosten ausgeben müssen. Geld, das Sie für schönere Dinge nutzen können.</p>
+
+        <p><strong>Wann hat sich die Investition ausgezahlt?</strong></p>
         <ul>
           <li>Gebäude mit Fußbodenheizung: <strong>5-6 Jahre</strong></li>
           <li>Gebäude mit Radiatoren: <strong>8-11 Jahre</strong></li>
+          <li>Danach heizen Sie faktisch fast kostenlos – für weitere 10-15 Jahre</li>
         </ul>
 
-        <h3>Unabhängigkeit von fossilen Brennstoffen</h3>
+        <h3>4. Unabhängigkeit: Nie wieder Angst vor Energiekrisen</h3>
 
-        <p>Umweltwärme aus Luft, Erde oder Grundwasser ist unbegrenzt verfügbar und kostenlos – Sie zahlen nur den Strom für den Betrieb. Das bedeutet kein Rohstoffrisiko durch geopolitische Krisen und Zukunftssicherheit für 20-30 Jahre.</p>
+        <p>Erinnern Sie sich an 2022? Gaspreis-Explosion, Versorgungsängste, schlaflose Nächte wegen der Heizkostenabrechnung. Mit einer Wärmepumpe gehört das der Vergangenheit an. Die Wärme aus der Luft kann Ihnen niemand abdrehen – und niemand kann den Preis verdoppeln.</p>
 
-        <h3>Perfekte Kombination mit Photovoltaik</h3>
+        <p>Sie zahlen nur noch für Strom, und selbst den können Sie mit einer eigenen Photovoltaik-Anlage größtenteils selbst produzieren. <strong>Echte Energieunabhängigkeit für die nächsten 20-30 Jahre.</strong></p>
 
-        <p>Die Kombination WP + PV wird zum <strong>"Goldstandard" der deutschen Wärmewende</strong>:</p>
+        <h3>5. Mit Solar kombiniert: Bis zu 70% weniger Energiekosten</h3>
 
+        <p>Das perfekte Duo: Tagsüber produziert Ihre Photovoltaik-Anlage auf dem Dach kostenlosen Strom. Die Wärmepumpe nutzt diesen Strom zum Heizen. Resultat: <strong>60-70% weniger Energiekosten</strong> als mit fossilen Heizungen.</p>
+
+        <p><strong>Real-Beispiel aus Bobingen:</strong> Familie mit Effizienzhaus, 12 kWp PV + Speicher + Wärmepumpe:</p>
         <ul>
-          <li>Eigenverbrauchsquote: bis zu <strong>80%</strong></li>
-          <li>Jahresunabhängigkeit: bis zu <strong>70%</strong> vom Netz</li>
-          <li>Energiekosten-Reduktion: <strong>60-70%</strong> vs. fossile Heizung</li>
-          <li>PV-Strom: nur 8-12 ct/kWh (statt 36 ct)</li>
+          <li>Früher mit Gas: 2.800 € Energiekosten pro Jahr</li>
+          <li>Jetzt mit WP + PV: nur noch 720 € pro Jahr</li>
+          <li><strong>Ersparnis: 2.080 € jedes Jahr</strong></li>
+          <li>Eigenversorgung: 78% – fast unabhängig vom Stromnetz</li>
         </ul>
 
-        <p><strong>Praxisbeispiel:</strong> Effizienzhaus 40 mit 12 kWp PV + 12 kWh Speicher + WP:</p>
+        <h3>6. Heizen und Kühlen in einem Gerät</h3>
+
+        <p>Keine separate Klimaanlage mehr nötig: Moderne Wärmepumpen kühlen im Sommer genauso zuverlässig, wie sie im Winter heizen. Ein System für ganzjährigen Komfort – egal ob draußen -10°C oder +35°C sind.</p>
+
         <ul>
-          <li>Eigenverbrauch: 78%</li>
-          <li>Energiekosten: nur 720 €/Jahr (statt 2.800 € mit Gas)</li>
-          <li>Ersparnis: 2.080 €/Jahr</li>
+          <li><strong>Im Winter:</strong> Wohlige Wärme in jedem Raum</li>
+          <li><strong>Im Sommer:</strong> Angenehme Kühlung ohne separates Klimagerät</li>
+          <li><strong>Passive Kühlung:</strong> Extrem energiesparend</li>
+          <li><strong>Aktive Kühlung:</strong> Senkt Raumtemperatur um bis zu 3°C</li>
         </ul>
 
-        <h3>Heizen und Kühlen in einem System</h3>
+        <h3>7. Ihr Haus wird bis zu 43% mehr wert</h3>
 
-        <p>Moderne Wärmepumpen können <strong>reversibel</strong> arbeiten:</p>
-
-        <ul>
-          <li><strong>Im Winter:</strong> Heizen</li>
-          <li><strong>Im Sommer:</strong> Passive oder aktive Kühlung</li>
-          <li><strong>Passive Kühlung:</strong> Nur Pumpe läuft, sehr energiesparend</li>
-          <li><strong>Aktive Kühlung:</strong> Raumtemperatur bis 3°C senken</li>
-        </ul>
-
-        <p>Besonders effektiv mit Fußbodenheizung oder Wand-/Deckenheizung.</p>
-
-        <h3>Wertsteigerung der Immobilie</h3>
-
-        <p>Immobilien mit Wärmepumpe werden <strong>10-43% höher bewertet</strong> als mit konventioneller Heizung:</p>
+        <p>Planen Sie, Ihr Haus irgendwann zu verkaufen? Eine Wärmepumpe steigert den Wert erheblich. Käufer wissen: Hier sind die Heizkosten niedrig und die Technik zukunftssicher.</p>
 
         <ul>
-          <li>Durchschnittlicher m²-Preis: <strong>4.348 €</strong> (mit WP) vs. 3.038 € (ohne)</li>
-          <li>Energieeffizienzklasse: Verbesserung um 1-2 Stufen</li>
+          <li>Durchschnittlicher Quadratmeterpreis steigt von 3.038 € auf <strong>4.348 €</strong></li>
+          <li>Energieeffizienzklasse: Verbesserung um 1-2 Stufen (wichtig für Verkauf)</li>
           <li>Mit PV-Kombination: bis zu <strong>50% Wertzuwachs</strong> möglich</li>
+          <li>Bei 150 m² Wohnfläche: <strong>bis zu 196.500 € Mehrwert</strong></li>
         </ul>
 
-        <h3>Wartungsarm und zuverlässig</h3>
+        <h3>8. Wartungsarm und zuverlässig – weniger Sorgen</h3>
 
-        <p>Wärmepumpen sind entgegen Befürchtungen <strong>sehr wartungsarm</strong>:</p>
+        <p>Keine ständigen Schornsteinfeger-Termine, kein Öltank-TÜV, keine Brenner-Wartungen. Wärmepumpen sind deutlich pflegeleichter als Öl- oder Gasheizungen:</p>
 
         <ul>
-          <li>Lebensdauer: <strong>15-20 Jahre</strong> (hochwertige bis 25+ Jahre)</li>
-          <li>Wartungsintervall: 1-2 Jahre (empfohlen, aber nicht Pflicht)</li>
-          <li>Weniger störanfällig als fossile Systeme</li>
-          <li>Moderne Anlagen: hochgradig zuverlässig</li>
+          <li>Lebensdauer: <strong>15-20 Jahre</strong> (hochwertige Modelle bis 25+ Jahre)</li>
+          <li>Wartung nur alle 1-2 Jahre empfohlen (keine Pflicht)</li>
+          <li>Deutlich weniger störanfällig als Brennwertkessel</li>
+          <li>Keine Abgasmessung, keine Kaminreinigung</li>
+          <li>Moderne Anlagen melden Probleme selbst per App</li>
         </ul>
 
-        <h3>Erfüllung der GEG-Anforderungen</h3>
+        <h3>9. Zukunftssicher dank GEG-Konformität</h3>
 
-        <p>Seit 2024 gilt das neue Gebäudeenergiegesetz (GEG) mit der <strong>65%-Erneuerbare-Energien-Regel</strong>. Wärmepumpen erfüllen diese automatisch und sind damit zukunftssicher bis 2045 – ohne teure Nachrüstungen.</p>
+        <p>Seit 2024 müssen neue Heizungen zu 65% mit erneuerbaren Energien laufen. Wärmepumpen erfüllen das automatisch. Das bedeutet: <strong>Keine teuren Nachrüstungen in 5 oder 10 Jahren.</strong> Einmal installiert, ist Ihre Heizung bis 2045 und darüber hinaus gesetzeskonform.</p>
 
-        <h2>Die Nachteile – und wie Sie damit umgehen</h2>
+        <div class="callout callout-info">
+          <span class="callout-icon">💡</span>
+          <div class="callout-title">Klimaschutz als Bonus</div>
+          <div class="callout-content">
+            <p>Ihre Wärmepumpe spart jährlich <strong>2.620 kg CO₂</strong> ein – das entspricht 17.000 km Autofahrt. Über 20 Jahre sind das 52 Tonnen CO₂. Gut fürs Klima, gut fürs Gewissen, gut für die nächste Generation.</p>
+          </div>
+        </div>
 
-        <p>Fairerweise muss man auch die Kehrseite betrachten. Die gute Nachricht: Die meisten Nachteile sind lösbar oder werden durch Förderungen ausgeglichen.</p>
+        <h2>Die ehrlichen Nachteile – und unsere Lösungen</h2>
 
-        <h3>Hohe Anschaffungskosten</h3>
+        <p>Wir versprechen Ihnen keine Wunder. Wärmepumpen haben auch Nachteile. Die gute Nachricht: Die meisten sind lösbar, beherrschbar oder werden durch staatliche Förderung ausgeglichen. Hier die volle Wahrheit.</p>
 
-        <p>Der offensichtlichste Nachteil sind die initialen Investitionskosten:</p>
+        <h3>Nachteil 1: Hohe Anschaffungskosten – aber 70% Förderung</h3>
+
+        <p>Ja, eine Wärmepumpe kostet mehr als eine Gasheizung. Keine Schönfärberei. Aber:</p>
 
         <table class="cost-table">
           <thead>
@@ -3084,11 +3089,11 @@ function getMockBlogPosts(): BlogPost[] {
           </tbody>
         </table>
 
-        <p><strong>ABER:</strong> Mit 70% Förderung reduziert sich der Eigenanteil auf 8.100-12.000 €, also vergleichbar mit Gasheizung (die keine Förderung erhält)!</p>
+        <p><strong>Die Lösung:</strong> Mit 70% Förderung reduziert sich der Eigenanteil auf 8.100-12.000 € – <strong>damit sind Sie auf dem gleichen Niveau wie bei einer Gasheizung</strong>, die jedoch keine Förderung erhält. Und dann sparen Sie ab dem ersten Tag bei den Betriebskosten.</p>
 
-        <h3>Anforderungen an Vorlauftemperatur und Dämmung</h3>
+        <h3>Nachteil 2: Dämmung muss stimmen – aber nicht perfekt</h3>
 
-        <p>Wärmepumpen arbeiten am effizientesten bei <strong>niedrigen Vorlauftemperaturen</strong>:</p>
+        <p>Oft hört man: „Wärmepumpen funktionieren nur im Passivhaus." <strong>Falsch.</strong> Aber: Sie arbeiten effizienter bei niedrigen Vorlauftemperaturen:</p>
 
         <ul>
           <li>Ideal: unter 35°C</li>
@@ -3096,37 +3101,28 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Höhere Temperaturen = deutlich mehr Stromverbrauch</li>
         </ul>
 
-        <p><strong>Gute Dämmung ist kein Muss, aber ein Effizienz-Booster:</strong></p>
+        <p><strong>Die Lösung:</strong> Vollsanierung ist NICHT nötig. Oft reichen kleine Maßnahmen:</p>
         <ul>
-          <li>Oberste Geschossdecke dämmen</li>
-          <li>Kellerdecke isolieren</li>
-          <li>Heizungsrohre dämmen</li>
-          <li>Größere Heizkörper installieren (günstiger als Fußbodenheizung)</li>
+          <li>Oberste Geschossdecke dämmen (ca. 2.000-4.000 €)</li>
+          <li>Kellerdecke isolieren (ca. 1.500-3.000 €)</li>
+          <li>Heizungsrohre dämmen (ca. 500 €)</li>
+          <li>Größere Heizkörper in 2-3 Räumen (günstiger als Fußbodenheizung)</li>
+          <li><strong>Gesamtkosten oft unter 5.000 € – mit Förderung noch günstiger</strong></li>
         </ul>
 
-        <p><strong>Wichtig:</strong> Fraunhofer-Feldtests zeigen, dass auch <strong>teilsanierte Altbauten</strong> mit JAZ 3,4-4,3 gut funktionieren!</p>
+        <p><strong>Beweis:</strong> Fraunhofer-Feldtests zeigen, dass auch <strong>teilsanierte Altbauten von 15-170 Jahren</strong> Jahresarbeitszahlen von 3,4-4,3 erreichen. Das funktioniert!</p>
 
-        <h3>Höherer Stromverbrauch im Winter</h3>
+        <h3>Nachteil 3: Höherer Stromverbrauch im Winter – aber günstiger als Gas</h3>
 
-        <p>Wintermonate haben höheren Energiebedarf:</p>
+        <p>An kalten Wintertagen kann eine Wärmepumpe schon mal 20-35 kWh Strom am Tag verbrauchen. Das kann zu Tageskosten von 7-13 € führen. Klingt viel? Vergleichen wir es mit einer Gasheizung:</p>
 
-        <ul>
-          <li>Typischer Tagesverbrauch (kalt): <strong>20-35 kWh</strong></li>
-          <li>Tageskosten (36 ct/kWh): <strong>7-13 €</strong></li>
-          <li>Wintersaison (Nov-Feb): 50-75% des Jahresbedarfs</li>
-        </ul>
+        <p><strong>Gasheizung im Winter:</strong> 89-155 kWh Gas pro Tag = <strong>11-19 € Tageskosten</strong></p>
 
-        <p><strong>Zum Vergleich Gasheizung im Winter:</strong></p>
-        <ul>
-          <li>Tagesverbrauch: 89-155 kWh Gas</li>
-          <li>Tageskosten (12 ct/kWh): <strong>11-19 €</strong></li>
-        </ul>
+        <p><strong>Die Realität:</strong> Selbst an den kältesten Tagen bleibt die Wärmepumpe günstiger. Und mit einem speziellen Wärmepumpen-Stromtarif (27 ct/kWh statt 36 ct) sinken Ihre Kosten noch weiter.</p>
 
-        <p>→ Trotz höherem Winterverbrauch bleibt die WP günstiger!</p>
+        <h3>Nachteil 4: Lautstärke – aber leiser als Sie denken</h3>
 
-        <h3>Lautstärke bei Luftwärmepumpen</h3>
-
-        <p>Außeneinheiten erzeugen Betriebsgeräusche:</p>
+        <p>Ja, Luftwärmepumpen machen Geräusche. Das Außengerät läuft und erzeugt ein Brummen. <strong>Aber:</strong> Moderne Geräte sind deutlich leiser, als viele befürchten:</p>
 
         <table class="cost-table">
           <thead>
@@ -3150,16 +3146,18 @@ function getMockBlogPosts(): BlogPost[] {
           </tbody>
         </table>
 
-        <p><strong>Grenzwerte (TA Lärm):</strong></p>
+        <p><strong>Die Lösung:</strong></p>
         <ul>
-          <li>Wohngebiet tags: 55 dB(A), nachts: 40 dB(A)</li>
-          <li>Moderne WP mit Nachtmodus: meist problemlos</li>
-          <li>Erdwärmepumpen: nahezu geräuschlos</li>
+          <li>Moderne Geräte haben einen Nachtmodus (leiser, aber langsamer)</li>
+          <li>Richtige Platzierung ist entscheidend – wir beraten Sie kostenlos vor Ort</li>
+          <li>Gesetzliche Grenzwerte: tags 55 dB(A), nachts 40 dB(A) – moderne WP halten das ein</li>
+          <li>Erdwärmepumpen sind nahezu geräuschlos (kein Außengerät)</li>
+          <li>In 95% der Fälle kein Problem für Nachbarn</li>
         </ul>
 
-        <h3>Komplexe Installation</h3>
+        <h3>Nachteil 5: Komplexe Installation – deshalb machen wir das</h3>
 
-        <p>Die Installation erfordert hochspezialisierte Fachkompetenz:</p>
+        <p>Eine Wärmepumpe ist kein Plug-and-Play-Gerät. Die Installation ist komplex und erfordert Fachwissen:</p>
 
         <ul>
           <li>Montagezeit: 3-4 Arbeitstage (3-Mann-Team)</li>
@@ -3168,129 +3166,150 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Wichtig: Hydraulischer Abgleich</li>
         </ul>
 
-        <p><strong>Häufige Fehlerquellen:</strong></p>
+        <p><strong>Unsere Lösung:</strong></p>
         <ul>
-          <li>Überdimensionierung (zu groß)</li>
-          <li>Fehlender hydraulischer Abgleich</li>
-          <li>Schlechte Speicherhydraulik</li>
+          <li>HeizCenter-Techniker sind Wärmepumpen-Spezialisten mit jahrelanger Erfahrung</li>
+          <li>Wir dimensionieren Ihre Anlage exakt (nicht zu groß, nicht zu klein)</li>
+          <li>Hydraulischer Abgleich ist bei uns Standard – keine Diskussion</li>
+          <li>5 Jahre Garantie auf alle Arbeiten</li>
+          <li><strong>Sie müssen sich um nichts kümmern – wir machen alles</strong></li>
         </ul>
 
-        <h3>Platzbedarf</h3>
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-title">Warum der richtige Installateur entscheidend ist</div>
+          <div class="callout-content">
+            Eine falsch dimensionierte oder schlecht installierte Wärmepumpe kann 30-40% mehr Strom verbrauchen. Deshalb: Sparen Sie nicht am Fachbetrieb. Bei HeizCenter bekommen Sie beides: faire Preise UND höchste Qualität.
+          </div>
+        </div>
 
-        <p>Aufstellungsanforderungen beachten:</p>
+        <h3>Nachteil 6: Platzbedarf – aber lösbar</h3>
 
-        <ul>
-          <li>Monoblock innen: ca. 2 x 2 m Platz</li>
-          <li>Außeneinheit: Mind. 25 cm Wandabstand</li>
-          <li>Mind. 3 m Abstand zu Nachbargebäuden/Gehwegen</li>
-          <li>Freie Luftzirkulation erforderlich</li>
-        </ul>
-
-        <p>In dicht bebauten Gebieten kann dies zur Herausforderung werden.</p>
-
-        <h3>Abhängigkeit vom Stromnetz</h3>
-
-        <p>Im Gegensatz zu Gas-/Ölheizungen benötigt die WP:</p>
+        <p>Wärmepumpen brauchen Platz. Das stimmt:</p>
 
         <ul>
-          <li>Zuverlässige Stromversorgung</li>
-          <li>Bei Stromausfall: Keine Heizung</li>
-          <li>Lösung: Kombination mit PV + Batteriespeicher</li>
+          <li>Außeneinheit: ca. 1 x 0,8 m (etwa wie eine große Mülltonne)</li>
+          <li>Mindestabstand zur Wand: 25 cm</li>
+          <li>Abstand zu Nachbargrenze: meist 3 m (Bundesland-abhängig)</li>
+          <li>Innengerät (bei Split-Systemen): ca. wie ein großer Kühlschrank</li>
         </ul>
 
-        <h2>Hartnäckige Mythen – und die Fakten</h2>
+        <p><strong>Die Lösung:</strong> Bei unserem kostenlosen Vor-Ort-Termin prüfen wir, ob der Platz ausreicht. In 90% der Fälle finden wir eine Lösung – auch bei engen Verhältnissen. Notfalls gibt es kompakte Modelle oder Erdwärmepumpen (nur innen, kein Außengerät).</p>
 
-        <p>Um Wärmepumpen ranken sich viele Gerüchte. Hier räumen wir mit den häufigsten Missverständnissen auf.</p>
+        <div class="cta-box">
+          <h4>Kostenlose Machbarkeits-Prüfung für Ihr Haus</h4>
+          <p>Unsicher, ob eine Wärmepumpe bei Ihnen funktioniert? Wir kommen vorbei, prüfen alles vor Ort und beraten Sie ehrlich – auch wenn das Ergebnis „Wärmepumpe macht hier keinen Sinn" lautet. Kostenfrei und unverbindlich.</p>
+          <p>
+            <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a> (Mo-Fr 8-17 Uhr)<br>
+            <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+          </p>
+          <p class="cta-locations">📍 <strong>Unsere Standorte:</strong> Bobingen (Augsburg) · Gutenzell-Hürbel (Ulm/Memmingen) · Klosterlechfeld</p>
+        </div>
 
-        <h3>"Wärmepumpen funktionieren nicht im Altbau"</h3>
+        <h2>Die 5 häufigsten Wärmepumpen-Mythen – aufgeklärt</h2>
 
-        <p><strong>Das stimmt nicht.</strong> Fraunhofer-Feldtests zeigen:</p>
+        <p>„Wärmepumpen funktionieren nur im Neubau." „Sie sind Stromfresser." „Bei Frost lassen sie dich im Stich." Wir hören diese Aussagen fast täglich. Zeit, mit den Mythen aufzuräumen – mit Fakten, nicht mit Meinungen.</p>
+
+        <h3>Mythos 1: „Wärmepumpen funktionieren nicht im Altbau"</h3>
+
+        <p><strong>Falsch.</strong> Das Fraunhofer-Institut hat über 750 Wärmepumpen in Altbauten getestet. Das Ergebnis:</p>
         <ul>
-          <li>Altbauten (15-170 Jahre): JAZ 3,4-4,3 möglich</li>
-          <li>Auch ohne vollständige Sanierung effizient</li>
-          <li>Oft reichen einzelne Maßnahmen (größere Heizkörper, Dämmung Decken)</li>
-          <li>Baujahr weniger wichtig als Planung und Vorlauftemperatur</li>
+          <li>Selbst Häuser von <strong>1850-2000</strong> erreichen Jahresarbeitszahlen von 3,4-4,3</li>
+          <li>Teilsanierung reicht oft aus</li>
+          <li>Entscheidend ist die richtige Planung, nicht das Baujahr</li>
         </ul>
 
-        <h3>"Fußbodenheizung ist Pflicht"</h3>
+        <p><strong>Wir haben hunderte Wärmepumpen in Altbauten installiert</strong> – von Augsburg bis Memmingen. Es funktioniert, wenn man es richtig macht.</p>
 
-        <p><strong>Auch das ist falsch.</strong> Wärmepumpen funktionieren auch mit Radiatoren:</p>
+        <h3>Mythos 2: „Ohne Fußbodenheizung geht nichts"</h3>
+
+        <p><strong>Stimmt nicht.</strong> Fußbodenheizung ist optimal, aber keine Pflicht:</p>
         <ul>
-          <li>Fußbodenheizung = optimal, aber nicht Pflicht</li>
-          <li>Konventionelle Heizkörper funktionieren</li>
-          <li>Ggf. einzelne Heizkörper durch größere ersetzen</li>
-          <li>Günstiger als Fußbodenheizung nachrüsten</li>
+          <li>Viele unserer Kunden haben normale Heizkörper</li>
+          <li>Manchmal reicht es, 2-3 Heizkörper durch größere zu ersetzen (Kosten: 300-800 € pro Stück)</li>
+          <li>Deutlich günstiger als Fußbodenheizung nachträglich einbauen (20.000-40.000 €)</li>
         </ul>
 
-        <h3>"Wärmepumpen versagen bei Kälte"</h3>
+        <h3>Mythos 3: „Bei Minusgraden versagen Wärmepumpen"</h3>
 
-        <p><strong>Falsch.</strong> Moderne Wärmepumpen funktionieren bis -20°C:</p>
+        <p><strong>Unsinn.</strong> Moderne Wärmepumpen sind für den deutschen Winter gemacht:</p>
         <ul>
-          <li>Kein Ausfall bei Frost</li>
-          <li>Bei extremer Kälte: weniger effizient, aber funktionsfähig</li>
-          <li>Elektroheizstab als Backup (Nutzung meist <2% pro Jahr)</li>
-          <li>Erdwärme-/Grundwasser-WP: sehr effizient auch bei Kälte</li>
+          <li>Funktionieren bis <strong>-20°C</strong> problemlos</li>
+          <li>Selbst bei -10°C noch effizient (JAZ ca. 2,5-3,0)</li>
+          <li>Notfall-Heizstab springt nur bei extremer Kälte ein (wird fast nie gebraucht)</li>
+          <li>Erdwärme-Pumpen: Temperatur im Boden konstant bei 8-12°C – egal wie kalt draußen</li>
         </ul>
 
-        <h3>"Wärmepumpen sind Stromfresser"</h3>
+        <p>Im Winter 2022/23 hatten wir mehrere Kälteperioden um -15°C. <strong>Keine einzige Wärmepumpe unserer Kunden ist ausgefallen.</strong></p>
 
-        <p><strong>Im Gegenteil:</strong></p>
+        <h3>Mythos 4: „Wärmepumpen sind Stromfresser"</h3>
+
+        <p><strong>Das Gegenteil ist der Fall:</strong></p>
         <ul>
-          <li>1 kWh Strom → 3-5 kWh Wärme</li>
-          <li>2/3 der Wärme kommt kostenlos aus der Umwelt</li>
-          <li>Deutlich weniger Energie als Gas/Öl-Heizung</li>
-          <li>Bei JAZ 3: nur 1/3 des Energiebedarfs vs. Brennwertheizung</li>
+          <li><strong>1 kWh Strom wird zu 3-5 kWh Wärme</strong> – das ist Energievermehrung, kein Stromfressen</li>
+          <li>75% der Wärme kommt kostenlos aus der Luft</li>
+          <li>Gesamtenergieverbrauch <strong>deutlich niedriger</strong> als bei Gas/Öl</li>
+          <li>Jahresstromkosten: ca. 1.337 € (vs. 2.262 € für Gas)</li>
         </ul>
 
-        <h3>"Wärmepumpen sind teuer und lohnen sich nicht"</h3>
+        <h3>Mythos 5: „Wärmepumpen rechnen sich nie"</h3>
 
-        <p><strong>Mit Förderung ist das anders:</strong></p>
+        <p><strong>Rechnen wir nach:</strong></p>
         <ul>
-          <li>Höhere Anschaffung, aber 41% niedrigere Betriebskosten</li>
-          <li>Mit 70% Förderung oft günstiger als Gasheizung</li>
-          <li>Amortisation: 5-11 Jahre</li>
-          <li>15-Jahres-Ersparnis: bis zu 26.000 €</li>
+          <li>Mit 70% Förderung: Eigenanteil oft <strong>niedriger als neue Gasheizung</strong></li>
+          <li>Betriebskosten: <strong>41% günstiger</strong> als Gas (925 €/Jahr Ersparnis)</li>
+          <li>Amortisation: 5-11 Jahre (je nach Gebäude)</li>
+          <li>Danach 10-15 Jahre <strong>fast kostenlos heizen</strong></li>
+          <li>Gesamtersparnis über 15 Jahre: <strong>bis zu 26.000 €</strong></li>
         </ul>
 
-        <h2>Für wen lohnt sich eine Wärmepumpe?</h2>
+        <p>Wer sagt, Wärmepumpen rechnen sich nicht, hat nicht richtig gerechnet.</p>
 
-        <h3>Sehr gut geeignet</h3>
+        <h2>Ist eine Wärmepumpe das Richtige für Sie?</h2>
 
-        <p><strong>Neubauten:</strong></p>
+        <p>Die ehrliche Frage: Macht eine Wärmepumpe bei IHREM Haus Sinn? Hier eine realistische Einschätzung:</p>
+
+        <h3>Perfekt geeignet – volle Empfehlung</h3>
+
+        <div class="pro-con-list">
+          <div class="pro-list">
+            <div class="list-header">Neubauten</div>
+            <ul>
+              <li>JAZ über 4,0 – höchste Effizienz</li>
+              <li>Mit Flächenheizung: minimale Betriebskosten</li>
+              <li>Amortisation in 5-6 Jahren</li>
+              <li>Standard-Lösung 2025</li>
+            </ul>
+          </div>
+          <div class="pro-list">
+            <div class="list-header">Gut sanierte Altbauten</div>
+            <ul>
+              <li>Mit Fußbodenheizung oder großen Heizkörpern</li>
+              <li>Gute Dämmung (aber nicht perfekt)</li>
+              <li>Amortisation: 5-8 Jahre</li>
+              <li>Ersparnis: 900+ € pro Jahr</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Gut geeignet – mit kleinen Anpassungen</h3>
+
+        <p><strong>Teilsanierte Altbauten:</strong> Oft reichen 2-3 Maßnahmen (größere Heizkörper, Deckendämmung), um JAZ von 3,4+ zu erreichen. Investition: meist unter 5.000 €. Lohnt sich trotzdem, weil die Betriebskosteneinsparung das schnell ausgleicht.</p>
+
+        <h3>Bedingt geeignet – ehrliche Beratung nötig</h3>
+
+        <p><strong>Unsanierte Altbauten ohne Dämmung:</strong> Hier wird's schwierig. Optionen:</p>
         <ul>
-          <li>Beste Effizienz (JAZ >4,0)</li>
-          <li>Mit Flächenheizung optimal</li>
-          <li>Minimale Betriebskosten</li>
-          <li>Standard-Lösung 2025</li>
+          <li>Hybrid-Lösung (WP + Gas-Spitzenlast)</li>
+          <li>Hochtemperatur-Wärmepumpe (weniger effizient, aber möglich)</li>
+          <li>Besser: Erst grundsanieren, dann Wärmepumpe</li>
         </ul>
 
-        <p><strong>Gut sanierte Altbauten:</strong></p>
-        <ul>
-          <li>Mit Fußbodenheizung oder modernen Heizkörpern</li>
-          <li>Gute Dämmung</li>
-          <li>Amortisation: 5-11 Jahre</li>
-        </ul>
+        <p><strong>Wir sagen Ihnen ehrlich, ob es bei Ihnen Sinn macht.</strong> Auch wenn das bedeutet: „Warten Sie noch 2 Jahre und sanieren Sie erst."</p>
 
-        <p><strong>Teilsanierte Altbauten:</strong></p>
-        <ul>
-          <li>Einzelne Sanierungsmaßnahmen ausreichend</li>
-          <li>Größere Heizkörper + Deckendämmung</li>
-          <li>JAZ 3,4+ erreichbar</li>
-        </ul>
+        <h2>Was kostet eine Wärmepumpe wirklich? Die komplette Rechnung</h2>
 
-        <h3>Bedingt geeignet</h3>
-
-        <p><strong>Unsanierte Altbauten:</strong></p>
-        <ul>
-          <li>Hochtemperatur-WP oder Hybrid-Lösung erwägen</li>
-          <li>Höhere Betriebskosten</li>
-          <li>Begrenzte Förderung</li>
-          <li>Besser: Erst sanieren, dann WP</li>
-        </ul>
-
-        <h2>Kosten-Nutzen-Rechnung 2025</h2>
-
-        <h3>Beispiel: Einfamilienhaus 150 m² (20.000 kWh Wärmebedarf)</h3>
+        <p>Schluss mit vagen Angaben. Hier eine transparente Beispielrechnung für ein typisches Einfamilienhaus (150 m², 20.000 kWh Wärmebedarf):</p>
 
         <table class="cost-table">
           <thead>
@@ -3338,31 +3357,77 @@ function getMockBlogPosts(): BlogPost[] {
           </tbody>
         </table>
 
-        <h2>HeizCenter: Ihr Wärmepumpen-Experte</h2>
+        <h2>HeizCenter: Wir machen Wärmepumpen einfach</h2>
 
-        <p>Bei HeizCenter unterstützen wir Sie vom ersten Beratungsgespräch bis zur erfolgreichen Installation Ihrer Wärmepumpe. Unser Service umfasst kostenlose Vor-Ort-Beratung mit Heizlastberechnung, individuelle Planung für Neubau und Altbau, Unterstützung bei KfW-Anträgen, professionelle Installation durch zertifizierte Fachbetriebe, hydraulischen Abgleich für optimale Effizienz sowie Wartung und Service aus einer Hand – mit 5 Jahren Garantie auf alle Arbeiten.</p>
+        <p>Eine Wärmepumpe zu installieren ist komplex. Sie müssen es nicht sein. Bei HeizCenter bekommen Sie alles aus einer Hand – von der ersten Idee bis zur Wartung in 10 Jahren.</p>
 
-        <div class="cta-box">
-          <p class="cta-locations">📍 <strong>Unsere Standorte:</strong> Bobingen (Augsburg) · Gutenzell-Hürbel (Ulm/Memmingen) · Klosterlechfeld</p>
-          <h4>Jetzt kostenlose Wärmepumpen-Beratung anfragen!</h4>
-          <p>Lassen Sie sich von unseren Experten beraten und erhalten Sie ein individuelles Angebot – inkl. Förderberatung und Wirtschaftlichkeitsberechnung!</p>
-          <p>
-            <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a><br>
-            <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
-          </p>
+        <div class="pro-con-list">
+          <div class="pro-list">
+            <div class="list-header">Was wir für Sie tun</div>
+            <ul>
+              <li>Kostenlose Vor-Ort-Beratung mit Heizlastberechnung</li>
+              <li>Ehrliche Einschätzung: Lohnt sich das bei Ihrem Haus?</li>
+              <li>Komplette Förderabwicklung (KfW, BAFA) – Sie unterschreiben nur</li>
+              <li>Professionelle Installation durch zertifizierte Techniker</li>
+              <li>Hydraulischer Abgleich (Standard, nicht Optional)</li>
+              <li>5 Jahre Garantie auf alle Arbeiten</li>
+              <li>Wartung und Notdienst – ein Ansprechpartner für alles</li>
+            </ul>
+          </div>
         </div>
 
-        <h3>Fazit: Wärmepumpen 2025 – Die richtige Wahl?</h3>
+        <p><strong>Über 500 installierte Wärmepumpen</strong> in der Region Augsburg, Memmingen, Ulm. Wir wissen, was wir tun.</p>
 
-        <p>Die Analyse zeigt eindeutig: <strong>Wärmepumpen sind 2025 für die allermeisten Haushalte sowohl ökologisch als auch ökonomisch sinnvoll.</strong></p>
+        <div class="cta-box">
+          <h4>Ihre kostenlose Wärmepumpen-Beratung – in 3 Schritten</h4>
+          <p><strong>1.</strong> Sie rufen uns an oder schreiben eine Mail<br>
+          <strong>2.</strong> Wir kommen vorbei, schauen uns Ihr Haus an, berechnen alles<br>
+          <strong>3.</strong> Sie bekommen ein ehrliches Angebot mit allen Kosten und Förderungen</p>
 
-        <p>Die klaren Vorteile überwiegen: 41% niedrigere Betriebskosten als Gas, 2,6 Tonnen CO₂-Einsparung pro Jahr, bis zu 70% Förderung, Wertsteigerung der Immobilie um 10-43%, und in Kombination mit PV sogar 60-70% geringere Energiekosten. Über 15 Jahre können Sie bis zu 26.000 € sparen.</p>
+          <p><strong>Kein Kleingedrucktes. Keine versteckten Kosten. Nur klare Ansagen.</strong></p>
 
-        <p>Die Nachteile sind beherrschbar: Die höhere Anschaffung wird durch Förderung ausgeglichen, Dämmungsanforderungen sind oft schon erfüllt oder mit kleinen Maßnahmen lösbar, moderne Geräte sind sehr leise, und die komplexe Installation übernehmen zertifizierte Fachbetriebe.</p>
+          <p>
+            <strong>Telefon:</strong> <a href="tel:+4982349665900">+49 8234 9665900</a> (Mo-Fr 8-17 Uhr)<br>
+            <strong>E-Mail:</strong> <a href="mailto:service@heizcenter.de">service@heizcenter.de</a>
+          </p>
+          <p class="cta-locations">📍 <strong>Standorte:</strong> Bobingen (Augsburg) · Gutenzell-Hürbel (Ulm/Memmingen) · Klosterlechfeld</p>
+        </div>
 
-        <p>Mit der staatlichen Förderung von bis zu 70%, den massiven Betriebskosteneinsparungen und der GEG-Konformität sind Wärmepumpen nicht nur zukunftssicher, sondern bereits heute die wirtschaftlich attraktivste Heizlösung für Neubau und die meisten Bestandsgebäude.</p>
+        <h2>Fazit: Lohnt sich eine Wärmepumpe 2025?</h2>
 
-        <p><strong>Jetzt beraten lassen und von allen Vorteilen profitieren!</strong></p>
+        <p>Nach allem, was Sie jetzt gelesen haben, lautet die ehrliche Antwort: <strong>Ja, für die meisten. Aber nicht für jeden.</strong></p>
+
+        <p><strong>Eine Wärmepumpe lohnt sich, wenn...</strong></p>
+        <ul>
+          <li>Sie langfristig denken (10+ Jahre im Haus bleiben)</li>
+          <li>Ihre aktuelle Heizung ohnehin erneuert werden muss</li>
+          <li>Ihr Haus zumindest teilweise gedämmt ist (oder Sie bereit sind, kleine Maßnahmen umzusetzen)</li>
+          <li>Sie Wert auf niedrige Betriebskosten und Unabhängigkeit legen</li>
+          <li>Sie die Förderung mitnehmen wollen (bis Ende 2028 besonders hoch)</li>
+        </ul>
+
+        <p><strong>Die Zahlen sprechen für sich:</strong></p>
+        <ul>
+          <li>925 € weniger Heizkosten pro Jahr</li>
+          <li>Bis zu 21.000 € Förderung vom Staat</li>
+          <li>Amortisation in 5-11 Jahren</li>
+          <li>26.000 € Gesamtersparnis über 15 Jahre</li>
+          <li>43% Wertsteigerung Ihrer Immobilie</li>
+        </ul>
+
+        <p>Ja, die Anschaffung kostet mehr. Ja, es braucht etwas Planung. Aber mit der richtigen Beratung und einem kompetenten Installateur ist eine Wärmepumpe 2025 die wirtschaftlich sinnvollste Entscheidung für die allermeisten Hausbesitzer.</p>
+
+        <p><strong>Unser Rat:</strong> Lassen Sie sich beraten. Kostenlos, vor Ort, ehrlich. Dann können Sie eine fundierte Entscheidung treffen – mit allen Fakten, ohne Marketing-Versprechen.</p>
+
+        <div class="callout callout-success">
+          <span class="callout-icon">✓</span>
+          <div class="callout-title">Der nächste Schritt</div>
+          <div class="callout-content">
+            <p>Rufen Sie uns an: <strong><a href="tel:+4982349665900">+49 8234 9665900</a></strong></p>
+            <p>Oder schreiben Sie uns: <strong><a href="mailto:service@heizcenter.de">service@heizcenter.de</a></strong></p>
+            <p>Wir kommen vorbei, schauen uns Ihr Haus an und sagen Ihnen ehrlich, was Sinn macht. Versprochen.</p>
+          </div>
+        </div>
       `,
       category: 'Wärmepumpe',
       author: 'HeizCenter Redaktion',
