@@ -1,0 +1,342 @@
+================================================================================
+HEIZCENTER VERCEL MIGRATION - DOCUMENTATION PACKAGE
+================================================================================
+
+Created: 2025-12-19
+Purpose: Complete guide for migrating HEIZcenter website to client-owned Vercel
+
+================================================================================
+DOCUMENTATION FILES CREATED
+================================================================================
+
+1. MIGRATION_README.md (18 KB)
+   - Overview of entire documentation package
+   - Navigation guide to all documents
+   - Quick decision tree
+   - Pre-migration checklist
+   - Success criteria
+   - Common questions and answers
+   
+   READ THIS FIRST for orientation
+
+2. MIGRATION_QUICK_START.md (19 KB)
+   - TL;DR 10-step migration process
+   - Phase-by-phase checklists
+   - Quick reference commands
+   - Rollback procedures
+   - Timeline at-a-glance
+   
+   USE THIS for day-to-day execution
+
+3. VERCEL_MIGRATION_GUIDE.md (26 KB)
+   - Comprehensive 50+ page guide
+   - Architecture options analysis
+   - Detailed 8-phase migration plan
+   - Troubleshooting guide
+   - Cost analysis
+   - Risk assessment
+   
+   USE THIS for detailed planning and troubleshooting
+
+4. MIGRATION_COMMANDS.md (15 KB)
+   - Git commands reference
+   - Vercel CLI commands
+   - DNS testing commands
+   - Testing scripts
+   - Monitoring commands
+   - Backup and rollback commands
+   
+   USE THIS for copy-paste during execution
+
+5. DNS_CONFIGURATION_REFERENCE.md (16 KB)
+   - DNS configuration details
+   - Strato DNS management guide
+   - Email preservation (MX records)
+   - DNS verification commands
+   - Common DNS issues and solutions
+   
+   USE THIS for DNS changes and troubleshooting
+
+================================================================================
+MIGRATION OVERVIEW
+================================================================================
+
+FROM:
+  - Code: Local (Cursor) → jedAI GitHub → jedAI Vercel
+  - Domain: heizcenter.de on Strato (old Odoo site)
+
+TO:
+  - Code: Local (Cursor) → HEIZcenter GitHub → HEIZcenter Vercel
+  - Domain: heizcenter.de pointing to Vercel (new Next.js site)
+
+TIMELINE: 2-3 weeks total
+DOWNTIME: 5-30 minutes expected
+COST: ~$22/month (Vercel Pro + domain)
+
+================================================================================
+GETTING STARTED
+================================================================================
+
+Step 1: Read MIGRATION_README.md (5 min)
+  → Understand the package and approach
+
+Step 2: Read MIGRATION_QUICK_START.md (15 min)
+  → Make key decisions, review timeline
+
+Step 3: Skim VERCEL_MIGRATION_GUIDE.md (30 min)
+  → Understand detailed process
+
+Step 4: Bookmark MIGRATION_COMMANDS.md
+  → For reference during execution
+
+Step 5: Review DNS_CONFIGURATION_REFERENCE.md (20 min)
+  → Especially if unfamiliar with DNS
+
+Step 6: Fill out decision tree in MIGRATION_QUICK_START.md
+  → Choose: repo strategy, Vercel plan, timing
+
+Step 7: Begin Phase 1 (Preparation)
+  → Create accounts, document setup, verify access
+
+================================================================================
+KEY PHASES
+================================================================================
+
+Phase 1: Preparation (Day 1-2)
+  - Create HEIZcenter Vercel account
+  - Document current setup
+  - Backup DNS records
+  
+Phase 2: Repository Migration (Day 2-3)
+  - Transfer GitHub repo to HEIZcenter
+  - Update local git remote
+  - Grant developer access
+
+Phase 3: Vercel Setup (Day 3-5)
+  - Import project to HEIZcenter Vercel
+  - Configure environment variables
+  - Test on preview URL
+
+Phase 4: DNS Preparation (Day 6)
+  - Lower DNS TTL to 300 seconds
+  - Wait 24 hours
+
+Phase 5: DNS Migration (Day 7)
+  - Update A record: @ → 76.76.21.21
+  - Update CNAME: www → cname.vercel-dns.com
+  - Monitor propagation (1-4 hours)
+
+Phase 6: Verification (Day 7-8)
+  - Test all critical paths
+  - Verify SSL certificate
+  - Test email send/receive
+  - Monitor error rates
+
+Phase 7: Monitoring (Day 7-14)
+  - Daily checks (uptime, forms, errors)
+  - Compare metrics to pre-migration
+  - Increase DNS TTL after 7 days
+
+Phase 8: Cleanup (Day 14+)
+  - Decommission old jedAI Vercel project
+  - Update documentation
+  - Archive old Strato site
+
+================================================================================
+CRITICAL SUCCESS FACTORS
+================================================================================
+
+1. Email Preservation
+   - Do NOT modify MX records during DNS migration
+   - Verify: mx01.strato.de and mx02.strato.de intact
+   - Test immediately after DNS change
+
+2. n8n Webhook Integration
+   - Verify N8N_WEBHOOK_BASE_URL in Vercel env vars
+   - Test contact form on preview before DNS change
+   - Monitor webhook delivery post-migration
+
+3. Thorough Preview Testing
+   - Test ALL critical paths on preview URL
+   - Verify forms, navigation, images
+   - Check mobile responsiveness
+   - No shortcuts - this prevents production issues
+
+4. DNS TTL Management
+   - Lower TTL 24 hours BEFORE DNS change
+   - Ensures fast propagation (5-60 min vs 4-24 hours)
+   - Don't skip this step!
+
+5. Monitoring & Communication
+   - Monitor closely first 24-48 hours
+   - Notify stakeholders of changes
+   - Have rollback plan ready
+
+================================================================================
+ROLLBACK PLAN
+================================================================================
+
+If issues arise, can rollback DNS in 5-15 minutes:
+
+1. Login to Strato DNS
+2. Change A record back to old IP (from backup)
+3. Change CNAME back to old value
+4. Monitor: DNS reverts in 5-15 minutes (due to low TTL)
+5. Verify old site loads
+
+WHEN TO ROLLBACK:
+  - Site completely down >30 minutes
+  - Email completely broken
+  - Critical functionality lost
+
+See: VERCEL_MIGRATION_GUIDE.md Section 4 for detailed rollback
+
+================================================================================
+TOOLS & RESOURCES
+================================================================================
+
+Vercel:
+  - Dashboard: https://vercel.com
+  - Docs: https://vercel.com/docs
+  - Status: https://www.vercel-status.com
+
+DNS Tools:
+  - Propagation: https://www.whatsmydns.net/#A/heizcenter.de
+  - SSL Test: https://www.ssllabs.com/ssltest
+  - DNS Lookup: https://mxtoolbox.com
+
+Commands:
+  - Check DNS: dig heizcenter.de +short
+  - Test site: curl -I https://heizcenter.de
+  - Deploy: vercel --prod
+  - View logs: vercel logs --prod
+
+================================================================================
+SUPPORT CONTACTS
+================================================================================
+
+Vercel Support: https://vercel.com/support
+Strato Support: Via customer portal (https://www.strato.de)
+Developer (You): [Your contact information]
+
+================================================================================
+MIGRATION CHECKLIST - QUICK REFERENCE
+================================================================================
+
+PRE-MIGRATION:
+  [ ] Accounts created (Vercel, GitHub org)
+  [ ] DNS records documented/screenshotted
+  [ ] Environment variables backed up
+  [ ] Migration date/time chosen
+  [ ] Stakeholders notified
+  [ ] Local dev environment working
+
+DURING MIGRATION:
+  [ ] Repo transferred to HEIZcenter
+  [ ] Vercel project imported
+  [ ] Environment variables configured
+  [ ] Preview tested thoroughly
+  [ ] DNS TTL lowered (24h wait)
+  [ ] DNS records updated
+  [ ] Propagation monitored
+  [ ] SSL certificate verified
+
+POST-MIGRATION:
+  [ ] All pages loading
+  [ ] Forms submitting
+  [ ] Email working
+  [ ] No critical errors
+  [ ] Metrics normal
+  [ ] Monitoring in place
+  [ ] Old site decommissioned (after 7-14 days)
+
+================================================================================
+TIMELINE AT-A-GLANCE
+================================================================================
+
+Day 1-2:    Preparation
+Day 2-3:    Repository migration
+Day 3-5:    Vercel setup and preview testing
+Day 6:      Lower DNS TTL, wait 24 hours
+Day 7:      DNS cutover (migration day)
+Day 7-8:    Post-migration verification
+Day 7-14:   Monitoring and stabilization
+Day 14+:    Cleanup and optimization
+
+Total: 2-3 weeks
+Active work: 10-15 hours
+Downtime: 5-30 minutes
+
+================================================================================
+SUCCESS METRICS
+================================================================================
+
+TECHNICAL:
+  - Site uptime: 99.9%+
+  - Page load: <3 seconds
+  - Lighthouse Performance: >90
+  - Core Web Vitals: All green
+  - Zero critical errors
+
+BUSINESS:
+  - Lead volume: Maintained/increased
+  - Form submissions: Same rate
+  - Search traffic: Stable
+  - Email delivery: 100%
+  - User satisfaction: High
+
+OPERATIONAL:
+  - Client ownership: Complete
+  - Developer access: Maintained
+  - Documentation: Complete
+  - Team trained: Yes
+  - Rollback tested: Yes
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+1. Start with Quick Start guide (MIGRATION_QUICK_START.md)
+2. Don't skip preview testing - catches 90% of issues
+3. Lower DNS TTL 24 hours early - ensures fast cutover
+4. Test email immediately after DNS change
+5. Monitor closely first 24-48 hours
+6. Keep old site for 7-14 days minimum
+7. Document any deviations from plan
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+1. [ ] Read MIGRATION_README.md
+2. [ ] Read MIGRATION_QUICK_START.md
+3. [ ] Make decisions (repo, plan, timing)
+4. [ ] Get stakeholder approval
+5. [ ] Set migration date
+6. [ ] Begin Phase 1: Preparation
+
+================================================================================
+QUESTIONS?
+================================================================================
+
+Check these resources in order:
+1. MIGRATION_README.md (Common Questions section)
+2. VERCEL_MIGRATION_GUIDE.md (Troubleshooting section)
+3. DNS_CONFIGURATION_REFERENCE.md (DNS issues)
+4. Vercel documentation
+5. Vercel support (for Pro accounts)
+
+================================================================================
+GOOD LUCK WITH THE MIGRATION!
+================================================================================
+
+This comprehensive documentation package provides everything you need for a
+successful, zero-downtime migration to client-owned infrastructure.
+
+Follow the guides step-by-step, test thoroughly, and don't hesitate to use
+the rollback plan if needed.
+
+Version: 1.0
+Created: 2025-12-19
+For: HEIZcenter Website Vercel Migration
+================================================================================
