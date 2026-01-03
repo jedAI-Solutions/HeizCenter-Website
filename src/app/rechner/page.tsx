@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import { Suspense } from "react";
 import { PriceCalculator } from "@/components/calculator/price-calculator";
-import { Calculator, CheckCircle, Info } from "lucide-react";
+import { Calculator, CheckCircle, Info, Loader2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Wärmepumpen-Kostenrechner | HeizCenter",
@@ -42,7 +43,16 @@ export default function RechnerPage() {
       {/* Calculator Section */}
       <section className="container py-16">
         <div className="max-w-5xl mx-auto">
-          <PriceCalculator />
+          <Suspense fallback={
+            <div className="bg-gradient-to-br from-[#0F5B78]/5 to-[#0F5B78]/10 rounded-xl p-8 border border-[#0F5B78]/20 flex items-center justify-center min-h-[400px]">
+              <div className="text-center">
+                <Loader2 className="h-12 w-12 animate-spin text-[#0F5B78] mx-auto mb-4" />
+                <p className="text-slate-600">Rechner wird geladen...</p>
+              </div>
+            </div>
+          }>
+            <PriceCalculator />
+          </Suspense>
         </div>
       </section>
 

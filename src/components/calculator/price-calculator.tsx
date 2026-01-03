@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { Calculator, TrendingDown, ArrowRight, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -15,6 +16,9 @@ import {
 import { Slider } from "@/components/ui/slider";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import Link from "next/link";
+
+// localStorage key for persisting calculator values
+const STORAGE_KEY = "heizcenter-calculator-values";
 
 interface PriceBreakdown {
   equipmentCost: number;
@@ -42,6 +46,10 @@ const FUNDING_CONSTANTS = {
 };
 
 export function PriceCalculator() {
+  const searchParams = useSearchParams();
+  const [isInitialized, setIsInitialized] = useState(false);
+
+  // Default values
   const [houseSize, setHouseSize] = useState<number>(150);
   const [heatingType, setHeatingType] = useState<string>("gas");
   const [insulation, setInsulation] = useState<string>("average");
@@ -54,6 +62,76 @@ export function PriceCalculator() {
   const [numberOfUnits, setNumberOfUnits] = useState<number>(1);
   const [breakdown, setBreakdown] = useState<PriceBreakdown | null>(null);
 
+  // Load saved values from URL params or localStorage on mount
+  useEffect(() => {
+    // Priority: URL params > localStorage > defaults
+    const urlHouseSize = searchParams.get("houseSize");
+    const urlPumpType = searchParams.get("pumpType");
+    const urlHeatingType = searchParams.get("heatingType");
+    const urlInsulation = searchParams.get("insulation");
+    const urlBuildingYear = searchParams.get("buildingYear");
+    const urlHeatingSurface = searchParams.get("heatingSurface");
+    const urlResidents = searchParams.get("residents");
+    const urlPropertyType = searchParams.get("propertyType");
+
+    // Check if we have URL params (coming from quote form)
+    if (urlHouseSize || urlPumpType) {
+      if (urlHouseSize) setHouseSize(parseInt(urlHouseSize));
+      if (urlPumpType) setPumpType(urlPumpType);
+      if (urlHeatingType) setHeatingType(urlHeatingType);
+      if (urlInsulation) setInsulation(urlInsulation);
+      if (urlBuildingYear) setBuildingYear(urlBuildingYear);
+      if (urlHeatingSurface) setHeatingSurface(urlHeatingSurface);
+      if (urlResidents) setResidents(parseInt(urlResidents));
+      if (urlPropertyType) setPropertyType(urlPropertyType);
+    } else {
+      // Try to load from localStorage
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          const values = JSON.parse(saved);
+          if (values.houseSize) setHouseSize(values.houseSize);
+          if (values.pumpType) setPumpType(values.pumpType);
+          if (values.heatingType) setHeatingType(values.heatingType);
+          if (values.insulation) setInsulation(values.insulation);
+          if (values.buildingYear) setBuildingYear(values.buildingYear);
+          if (values.heatingSurface) setHeatingSurface(values.heatingSurface);
+          if (values.residents) setResidents(values.residents);
+          if (values.propertyType) setPropertyType(values.propertyType);
+          if (values.hasIncomeBonus !== undefined) setHasIncomeBonus(values.hasIncomeBonus);
+          if (values.numberOfUnits) setNumberOfUnits(values.numberOfUnits);
+        }
+      } catch (e) {
+        console.warn("Could not load calculator values from localStorage:", e);
+      }
+    }
+    setIsInitialized(true);
+  }, [searchParams]);
+
+  // Save values to localStorage when they change (after initialization)
+  useEffect(() => {
+    if (!isInitialized) return;
+
+    try {
+      const values = {
+        houseSize,
+        pumpType,
+        heatingType,
+        insulation,
+        buildingYear,
+        heatingSurface,
+        residents,
+        propertyType,
+        hasIncomeBonus,
+        numberOfUnits,
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(values));
+    } catch (e) {
+      console.warn("Could not save calculator values to localStorage:", e);
+    }
+  }, [isInitialized, houseSize, pumpType, heatingType, insulation, buildingYear, heatingSurface, residents, propertyType, hasIncomeBonus, numberOfUnits]);
+
+  // Calculate price when values change
   useEffect(() => {
     calculatePrice();
     // eslint-disable-next-line react-hooks/exhaustive-deps

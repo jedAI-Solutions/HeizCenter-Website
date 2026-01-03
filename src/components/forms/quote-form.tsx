@@ -439,7 +439,7 @@ export function QuoteForm(props: QuoteFormProps) {
                 </h4>
               </div>
               <Link
-                href="/rechner"
+                href={`/rechner?houseSize=${houseSize || ""}&pumpType=${pumpType || ""}&heatingType=${heatingType || ""}&insulation=${insulation || ""}&buildingYear=${buildingYear || ""}&heatingSurface=${heatingSurface || ""}&residents=${residents || ""}&propertyType=${propertyType || ""}`}
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-[#0F5B78] hover:text-[#0F5B78]/80 transition-colors"
               >
                 <Pencil className="h-3.5 w-3.5" />
