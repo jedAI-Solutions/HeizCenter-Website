@@ -325,7 +325,7 @@ export function QuoteForm(props: QuoteFormProps) {
                 und Ihre Daten werden automatisch übertragen.
               </p>
               <Link
-                href="/waermepumpe#rechner"
+                href="/rechner"
                 className="inline-flex items-center gap-2 text-sm font-medium text-[#0F5B78] hover:text-[#0F5B78]/80 transition-colors"
               >
                 Zum Wärmepumpen-Rechner
