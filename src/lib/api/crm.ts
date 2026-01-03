@@ -61,15 +61,16 @@ export async function submitQuoteRequest(data: {
   propertyType?: string; // Optional - clarified in conversation
   constructionYear?: string;
   heatingArea?: string;
+  currentHeating?: string;
+  message?: string;
+  preferredContactTime?: string;
+  // Calculator-specific fields for Wärmepumpe quotes
   pumpType?: string;
   heatingSurface?: string;
-  currentHeating?: string;
   insulation?: string;
   buildingYear?: string;
   residents?: string;
   estimatedCost?: string;
-  message?: string;
-  preferredContactTime?: string;
 }): Promise<{ success: boolean; leadId?: string; error?: string }> {
   try {
     console.log('💼 Processing quote request for:', data.email);
@@ -88,6 +89,12 @@ export async function submitQuoteRequest(data: {
       currentHeating: data.currentHeating,
       message: data.message,
       preferredContactTime: data.preferredContactTime,
+      // Calculator-specific fields
+      pumpType: data.pumpType,
+      heatingSurface: data.heatingSurface,
+      insulation: data.insulation,
+      residents: data.residents,
+      estimatedCost: data.estimatedCost,
     });
 
     if (!result.success) {

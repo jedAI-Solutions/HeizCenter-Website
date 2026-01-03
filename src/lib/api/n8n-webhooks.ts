@@ -124,7 +124,29 @@ const SERVICE_TYPE_MAP: Record<string, string> = {
 const PROPERTY_TYPE_MAP: Record<string, string> = {
   einfamilienhaus: 'efh',
   mehrfamilienhaus: 'mfh',
+  wohnung: 'wohnung',
   gewerbe: 'gewerbe',
+};
+
+// Mapping from website pump types to readable values
+const PUMP_TYPE_MAP: Record<string, string> = {
+  'air-water': 'Luft-Wasser-Wärmepumpe',
+  'ground-water': 'Sole-Wasser-Wärmepumpe (Erdwärme)',
+  'water-water': 'Wasser-Wasser-Wärmepumpe',
+};
+
+// Mapping from website heating surface types to readable values
+const HEATING_SURFACE_MAP: Record<string, string> = {
+  'floor': 'Fußbodenheizung',
+  'radiators': 'Heizkörper (Radiatoren)',
+  'mixed': 'Gemischt',
+};
+
+// Mapping from website insulation types to readable values
+const INSULATION_MAP: Record<string, string> = {
+  'poor': 'Schlecht (Altbau unsaniert)',
+  'average': 'Durchschnittlich',
+  'good': 'Gut (Neubau/saniert)',
 };
 
 interface QuoteFormPayload {
@@ -141,6 +163,12 @@ interface QuoteFormPayload {
   building_year?: string;
   urgency?: string;
   message?: string;
+  // Calculator-specific fields for Wärmepumpe quotes
+  pump_type?: string;
+  heating_surface?: string;
+  insulation?: string;
+  residents?: string;
+  estimated_cost?: string;
 }
 
 /**
@@ -160,6 +188,12 @@ export async function submitQuoteToN8n(data: {
   currentHeating?: string;
   message?: string;
   preferredContactTime?: string;
+  // Calculator-specific fields
+  pumpType?: string;
+  heatingSurface?: string;
+  insulation?: string;
+  residents?: string;
+  estimatedCost?: string;
 }): Promise<{ success: boolean; leadId?: string; error?: string }> {
   // Map service type to n8n expected value
   const mappedServiceType = SERVICE_TYPE_MAP[data.serviceType] || 'other';
@@ -180,6 +214,17 @@ export async function submitQuoteToN8n(data: {
     ? urgencyMap[data.preferredContactTime] || 'flexibel'
     : undefined;
 
+  // Map calculator-specific fields to readable values
+  const mappedPumpType = data.pumpType
+    ? PUMP_TYPE_MAP[data.pumpType] || data.pumpType
+    : undefined;
+  const mappedHeatingSurface = data.heatingSurface
+    ? HEATING_SURFACE_MAP[data.heatingSurface] || data.heatingSurface
+    : undefined;
+  const mappedInsulation = data.insulation
+    ? INSULATION_MAP[data.insulation] || data.insulation
+    : undefined;
+
   const payload: QuoteFormPayload = {
     name: data.name,
     email: data.email,
@@ -194,6 +239,12 @@ export async function submitQuoteToN8n(data: {
     ...(data.constructionYear && { building_year: data.constructionYear }),
     ...(urgency && { urgency }),
     ...(data.message && { message: data.message }),
+    // Calculator-specific fields for Wärmepumpe quotes
+    ...(mappedPumpType && { pump_type: mappedPumpType }),
+    ...(mappedHeatingSurface && { heating_surface: mappedHeatingSurface }),
+    ...(mappedInsulation && { insulation: mappedInsulation }),
+    ...(data.residents && { residents: data.residents }),
+    ...(data.estimatedCost && { estimated_cost: `${parseInt(data.estimatedCost).toLocaleString('de-DE')} €` }),
   };
 
   const result = await submitToWebhook(WEBHOOK_ENDPOINTS.quote, payload as unknown as Record<string, unknown>);

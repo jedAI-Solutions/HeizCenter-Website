@@ -51,8 +51,16 @@ export async function POST(request: NextRequest) {
       propertyType: validatedData.propertyType,
       constructionYear: validatedData.constructionYear,
       heatingArea: validatedData.heatingArea,
+      currentHeating: validatedData.currentHeating,
       message: validatedData.message,
       preferredContactTime: validatedData.preferredContactTime,
+      // Calculator-specific fields for Wärmepumpe quotes
+      pumpType: validatedData.pumpType,
+      heatingSurface: validatedData.heatingSurface,
+      insulation: validatedData.insulation,
+      buildingYear: validatedData.buildingYear,
+      residents: validatedData.residents,
+      estimatedCost: validatedData.estimatedCost,
     });
 
     if (!result.success) {
