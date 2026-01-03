@@ -149,6 +149,14 @@ const INSULATION_MAP: Record<string, string> = {
   'good': 'Gut (Neubau/saniert)',
 };
 
+// Mapping from website current heating types to readable values
+const CURRENT_HEATING_MAP: Record<string, string> = {
+  'gas': 'Gasheizung',
+  'oil': 'Ölheizung',
+  'electric': 'Elektroheizung',
+  'coal': 'Kohleheizung',
+};
+
 interface QuoteFormPayload {
   name: string;
   email: string;
@@ -224,6 +232,9 @@ export async function submitQuoteToN8n(data: {
   const mappedInsulation = data.insulation
     ? INSULATION_MAP[data.insulation] || data.insulation
     : undefined;
+  const mappedCurrentHeating = data.currentHeating
+    ? CURRENT_HEATING_MAP[data.currentHeating] || data.currentHeating
+    : undefined;
 
   const payload: QuoteFormPayload = {
     name: data.name,
@@ -235,7 +246,7 @@ export async function submitQuoteToN8n(data: {
     ...(data.city && { city: data.city }),
     ...(mappedPropertyType && { property_type: mappedPropertyType }),
     ...(data.heatingArea && { heating_area: `${data.heatingArea} m²` }),
-    ...(data.currentHeating && { current_heating: data.currentHeating }),
+    ...(mappedCurrentHeating && { current_heating: mappedCurrentHeating }),
     ...(data.constructionYear && { building_year: data.constructionYear }),
     ...(urgency && { urgency }),
     ...(data.message && { message: data.message }),
