@@ -54,11 +54,11 @@ export async function submitQuoteRequest(data: {
   name: string;
   email: string;
   phone: string;
-  address: string;
+  address?: string; // Optional - PLZ/Ort is enough for initial quote
   postalCode: string;
   city: string;
   serviceType: string;
-  propertyType: string;
+  propertyType?: string; // Optional - clarified in conversation
   constructionYear?: string;
   heatingArea?: string;
   pumpType?: string;
@@ -78,11 +78,11 @@ export async function submitQuoteRequest(data: {
       name: data.name,
       email: data.email,
       phone: data.phone,
-      address: data.address,
+      address: data.address || "",
       postalCode: data.postalCode,
       city: data.city,
       serviceType: data.serviceType,
-      propertyType: data.propertyType,
+      propertyType: data.propertyType || "",
       constructionYear: data.constructionYear || data.buildingYear,
       heatingArea: data.heatingArea,
       currentHeating: data.currentHeating,

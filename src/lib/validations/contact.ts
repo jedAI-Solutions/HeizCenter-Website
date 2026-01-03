@@ -39,10 +39,12 @@ export const quoteFormSchema = z.object({
   name: z.string().min(2, "Name ist erforderlich").max(100),
   email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
   phone: z.string().min(5, "Telefonnummer ist erforderlich"),
+  // Straße ist optional - PLZ/Ort reicht für Erstanfrage
   address: z
     .string()
-    .min(5, "Adresse ist erforderlich")
-    .max(200, "Adresse ist zu lang"),
+    .max(200, "Adresse ist zu lang")
+    .optional()
+    .or(z.literal("")),
   postalCode: z
     .string()
     .regex(/^\d{5}$/, "Bitte geben Sie eine gültige PLZ ein"),
@@ -57,9 +59,8 @@ export const quoteFormSchema = z.object({
   ], {
     message: "Bitte wählen Sie eine Leistung aus",
   }),
-  propertyType: z.enum(["einfamilienhaus", "mehrfamilienhaus", "gewerbe"], {
-    message: "Bitte wählen Sie eine Objektart aus",
-  }),
+  // Objektart optional - wird bei Bedarf im Gespräch geklärt
+  propertyType: z.enum(["einfamilienhaus", "mehrfamilienhaus", "gewerbe"]).optional(),
   constructionYear: z
     .string()
     .regex(/^\d{4}$/, "Bitte geben Sie ein gültiges Jahr ein")

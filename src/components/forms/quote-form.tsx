@@ -17,7 +17,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CheckCircle2, AlertCircle, Loader2, Calculator } from "lucide-react";
+import { CheckCircle2, AlertCircle, Loader2, Calculator, ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
+import Link from "next/link";
 
 interface QuoteFormProps {
   defaultService?: string;
@@ -28,6 +29,7 @@ export function QuoteForm(props: QuoteFormProps) {
   const searchParams = useSearchParams();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasCalculatorData, setHasCalculatorData] = useState(false);
+  const [isCalculatorExpanded, setIsCalculatorExpanded] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null;
     message: string;
@@ -52,6 +54,7 @@ export function QuoteForm(props: QuoteFormProps) {
     formState: { errors },
     reset,
     control,
+    watch,
   } = useForm({
     resolver: zodResolver(quoteFormSchema),
     defaultValues: {
@@ -99,6 +102,9 @@ export function QuoteForm(props: QuoteFormProps) {
       setHasCalculatorData(true);
     }
   }, [houseSize, pumpType]);
+
+  // Watch serviceType for conditional calculator CTA
+  const watchedServiceType = watch("serviceType");
 
   const onSubmit = async (data: QuoteFormData) => {
     setIsSubmitting(true);
@@ -231,27 +237,14 @@ export function QuoteForm(props: QuoteFormProps) {
         )}
       </div>
 
-      {/* Address */}
-      <div>
-        <Label htmlFor="address">Adresse *</Label>
-        <Input
-          id="address"
-          {...register("address")}
-          placeholder="Straße und Hausnummer"
-          className={errors.address ? "border-red-500" : ""}
-        />
-        {errors.address && (
-          <p className="text-red-500 text-sm mt-1">{errors.address.message}</p>
-        )}
-      </div>
-
+      {/* Location - PLZ/Ort required, Straße optional */}
       <div className="grid md:grid-cols-2 gap-4">
         <div>
           <Label htmlFor="postalCode">PLZ *</Label>
           <Input
             id="postalCode"
             {...register("postalCode")}
-            placeholder="86150"
+            placeholder="86399"
             maxLength={5}
             className={errors.postalCode ? "border-red-500" : ""}
           />
@@ -267,13 +260,26 @@ export function QuoteForm(props: QuoteFormProps) {
           <Input
             id="city"
             {...register("city")}
-            placeholder="Augsburg"
+            placeholder="Bobingen"
             className={errors.city ? "border-red-500" : ""}
           />
           {errors.city && (
             <p className="text-red-500 text-sm mt-1">{errors.city.message}</p>
           )}
         </div>
+      </div>
+
+      <div>
+        <Label htmlFor="address">Straße (optional)</Label>
+        <Input
+          id="address"
+          {...register("address")}
+          placeholder="Musterstraße 123"
+          className={errors.address ? "border-red-500" : ""}
+        />
+        {errors.address && (
+          <p className="text-red-500 text-sm mt-1">{errors.address.message}</p>
+        )}
       </div>
 
       {/* Service Details */}
@@ -305,14 +311,39 @@ export function QuoteForm(props: QuoteFormProps) {
         )}
       </div>
 
+      {/* Calculator CTA - shows when Wärmepumpe is selected but no calculator data */}
+      {watchedServiceType === "waermepumpe" && !hasCalculatorData && (
+        <div className="bg-gradient-to-r from-[#0F5B78]/5 to-[#FFCA28]/10 border border-[#0F5B78]/20 rounded-lg p-4">
+          <div className="flex items-start gap-3">
+            <Calculator className="h-5 w-5 text-[#0F5B78] flex-shrink-0 mt-0.5" />
+            <div className="flex-1">
+              <h4 className="font-semibold text-slate-900 mb-1">
+                Wärmepumpen-Rechner nutzen?
+              </h4>
+              <p className="text-sm text-slate-600 mb-3">
+                Mit unserem kostenlosen Rechner erhalten Sie eine erste Kostenschätzung
+                und Ihre Daten werden automatisch übertragen.
+              </p>
+              <Link
+                href="/waermepumpe#rechner"
+                className="inline-flex items-center gap-2 text-sm font-medium text-[#0F5B78] hover:text-[#0F5B78]/80 transition-colors"
+              >
+                Zum Wärmepumpen-Rechner
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div>
-        <Label htmlFor="propertyType">Objektart *</Label>
+        <Label htmlFor="propertyType">Objektart (optional)</Label>
         <Controller
           name="propertyType"
           control={control}
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
-              <SelectTrigger className={errors.propertyType ? "border-red-500" : ""}>
+              <SelectTrigger>
                 <SelectValue placeholder="Bitte wählen..." />
               </SelectTrigger>
               <SelectContent>
@@ -323,11 +354,6 @@ export function QuoteForm(props: QuoteFormProps) {
             </Select>
           )}
         />
-        {errors.propertyType && (
-          <p className="text-red-500 text-sm mt-1">
-            {errors.propertyType.message}
-          </p>
-        )}
       </div>
 
       <div className="grid md:grid-cols-2 gap-4">
@@ -363,140 +389,180 @@ export function QuoteForm(props: QuoteFormProps) {
         </div>
       </div>
 
-      {/* Calculator-Specific Fields (only for heat pump quotes) */}
+      {/* Calculator-Specific Fields - Collapsible (only for heat pump quotes) */}
       {hasCalculatorData && (
-        <div className="border-t border-slate-200 pt-6 space-y-6">
-          <h4 className="font-semibold text-lg text-slate-900">
-            Details aus Wärmepumpen-Rechner
-          </h4>
-
-          <div className="grid md:grid-cols-2 gap-4">
-            <div>
-              <Label htmlFor="pumpType">Wärmepumpen-Typ (optional)</Label>
-              <Controller
-                name="pumpType"
-                control={control}
-                render={({ field }) => (
-                  <Select value={field.value} onValueChange={field.onChange}>
-                    <SelectTrigger id="pumpType">
-                      <SelectValue placeholder="Bitte wählen..." />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="air-water">Luft-Wasser-Wärmepumpe</SelectItem>
-                      <SelectItem value="ground-water">Sole-Wasser-Wärmepumpe (Erdwärme)</SelectItem>
-                      <SelectItem value="water-water">Wasser-Wasser-Wärmepumpe</SelectItem>
-                    </SelectContent>
-                  </Select>
-                )}
-              />
+        <div className="border border-[#0F5B78]/20 rounded-lg overflow-hidden">
+          {/* Collapsible Header */}
+          <button
+            type="button"
+            onClick={() => setIsCalculatorExpanded(!isCalculatorExpanded)}
+            className="w-full flex items-center justify-between p-4 bg-[#0F5B78]/5 hover:bg-[#0F5B78]/10 transition-colors"
+          >
+            <div className="flex items-center gap-3">
+              <Calculator className="h-5 w-5 text-[#0F5B78]" />
+              <div className="text-left">
+                <h4 className="font-semibold text-slate-900">
+                  Daten aus Wärmepumpen-Rechner
+                </h4>
+                <p className="text-sm text-slate-600">
+                  {houseSize && `${houseSize} m²`}
+                  {pumpType && `, ${pumpType === "air-water" ? "Luft-Wasser" : pumpType === "ground-water" ? "Erdwärme" : "Wasser-Wasser"}`}
+                  {estimatedCost && ` • ca. ${parseInt(estimatedCost).toLocaleString("de-DE")} €`}
+                </p>
+              </div>
             </div>
+            {isCalculatorExpanded ? (
+              <ChevronUp className="h-5 w-5 text-slate-500" />
+            ) : (
+              <ChevronDown className="h-5 w-5 text-slate-500" />
+            )}
+          </button>
 
-            <div>
-              <Label htmlFor="heatingSurface">Art der Heizflächen (optional)</Label>
-              <Controller
-                name="heatingSurface"
-                control={control}
-                render={({ field }) => (
-                  <Select value={field.value} onValueChange={field.onChange}>
-                    <SelectTrigger id="heatingSurface">
-                      <SelectValue placeholder="Bitte wählen..." />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="floor">Fußbodenheizung</SelectItem>
-                      <SelectItem value="radiators">Heizkörper (Radiatoren)</SelectItem>
-                      <SelectItem value="mixed">Gemischt</SelectItem>
-                    </SelectContent>
-                  </Select>
-                )}
-              />
+          {/* Collapsible Content */}
+          {isCalculatorExpanded && (
+            <div className="p-4 pt-2 space-y-4 border-t border-[#0F5B78]/10">
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="pumpType">Wärmepumpen-Typ</Label>
+                  <Controller
+                    name="pumpType"
+                    control={control}
+                    render={({ field }) => (
+                      <Select value={field.value} onValueChange={field.onChange}>
+                        <SelectTrigger id="pumpType">
+                          <SelectValue placeholder="Bitte wählen..." />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="air-water">Luft-Wasser-Wärmepumpe</SelectItem>
+                          <SelectItem value="ground-water">Sole-Wasser-Wärmepumpe (Erdwärme)</SelectItem>
+                          <SelectItem value="water-water">Wasser-Wasser-Wärmepumpe</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    )}
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="heatingSurface">Art der Heizflächen</Label>
+                  <Controller
+                    name="heatingSurface"
+                    control={control}
+                    render={({ field }) => (
+                      <Select value={field.value} onValueChange={field.onChange}>
+                        <SelectTrigger id="heatingSurface">
+                          <SelectValue placeholder="Bitte wählen..." />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="floor">Fußbodenheizung</SelectItem>
+                          <SelectItem value="radiators">Heizkörper (Radiatoren)</SelectItem>
+                          <SelectItem value="mixed">Gemischt</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    )}
+                  />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="currentHeating">Aktuelle Heizung</Label>
+                  <Controller
+                    name="currentHeating"
+                    control={control}
+                    render={({ field }) => (
+                      <Select value={field.value} onValueChange={field.onChange}>
+                        <SelectTrigger id="currentHeating">
+                          <SelectValue placeholder="Bitte wählen..." />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="gas">Gasheizung</SelectItem>
+                          <SelectItem value="oil">Ölheizung</SelectItem>
+                          <SelectItem value="electric">Elektroheizung</SelectItem>
+                          <SelectItem value="coal">Kohleheizung</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    )}
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="insulation">Dämmzustand</Label>
+                  <Controller
+                    name="insulation"
+                    control={control}
+                    render={({ field }) => (
+                      <Select value={field.value} onValueChange={field.onChange}>
+                        <SelectTrigger id="insulation">
+                          <SelectValue placeholder="Bitte wählen..." />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="poor">Schlecht (Altbau unsaniert)</SelectItem>
+                          <SelectItem value="average">Durchschnittlich</SelectItem>
+                          <SelectItem value="good">Gut (Neubau/saniert)</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    )}
+                  />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="buildingYear">Gebäude-Baujahr</Label>
+                  <Controller
+                    name="buildingYear"
+                    control={control}
+                    render={({ field }) => (
+                      <Select value={field.value} onValueChange={field.onChange}>
+                        <SelectTrigger id="buildingYear">
+                          <SelectValue placeholder="Bitte wählen..." />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="before-1980">Vor 1980</SelectItem>
+                          <SelectItem value="1980-2000">1980-2000</SelectItem>
+                          <SelectItem value="2000-2010">2000-2010</SelectItem>
+                          <SelectItem value="2010-2015">2010-2015</SelectItem>
+                          <SelectItem value="after-2015">Nach 2015</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    )}
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="residents">Anzahl Personen im Haushalt</Label>
+                  <Input
+                    id="residents"
+                    {...register("residents")}
+                    placeholder="3"
+                    className={errors.residents ? "border-red-500" : ""}
+                  />
+                </div>
+              </div>
+
+              {estimatedCost && (
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <p className="text-sm text-green-800">
+                    <strong>Geschätzte Kosten aus Rechner:</strong>{" "}
+                    {parseInt(estimatedCost).toLocaleString("de-DE")} €
+                  </p>
+                  <input type="hidden" {...register("estimatedCost")} />
+                </div>
+              )}
             </div>
-          </div>
+          )}
 
-          <div className="grid md:grid-cols-2 gap-4">
-            <div>
-              <Label htmlFor="currentHeating">Aktuelle Heizung (optional)</Label>
-              <Controller
-                name="currentHeating"
-                control={control}
-                render={({ field }) => (
-                  <Select value={field.value} onValueChange={field.onChange}>
-                    <SelectTrigger id="currentHeating">
-                      <SelectValue placeholder="Bitte wählen..." />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="gas">Gasheizung</SelectItem>
-                      <SelectItem value="oil">Ölheizung</SelectItem>
-                      <SelectItem value="electric">Elektroheizung</SelectItem>
-                      <SelectItem value="coal">Kohleheizung</SelectItem>
-                    </SelectContent>
-                  </Select>
-                )}
-              />
-            </div>
-
-            <div>
-              <Label htmlFor="insulation">Dämmzustand (optional)</Label>
-              <Controller
-                name="insulation"
-                control={control}
-                render={({ field }) => (
-                  <Select value={field.value} onValueChange={field.onChange}>
-                    <SelectTrigger id="insulation">
-                      <SelectValue placeholder="Bitte wählen..." />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="poor">Schlecht (Altbau unsaniert)</SelectItem>
-                      <SelectItem value="average">Durchschnittlich</SelectItem>
-                      <SelectItem value="good">Gut (Neubau/saniert)</SelectItem>
-                    </SelectContent>
-                  </Select>
-                )}
-              />
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-4">
-            <div>
-              <Label htmlFor="buildingYear">Gebäude-Baujahr (optional)</Label>
-              <Controller
-                name="buildingYear"
-                control={control}
-                render={({ field }) => (
-                  <Select value={field.value} onValueChange={field.onChange}>
-                    <SelectTrigger id="buildingYear">
-                      <SelectValue placeholder="Bitte wählen..." />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="before-1980">Vor 1980</SelectItem>
-                      <SelectItem value="1980-2000">1980-2000</SelectItem>
-                      <SelectItem value="2000-2010">2000-2010</SelectItem>
-                      <SelectItem value="2010-2015">2010-2015</SelectItem>
-                      <SelectItem value="after-2015">Nach 2015</SelectItem>
-                    </SelectContent>
-                  </Select>
-                )}
-              />
-            </div>
-
-            <div>
-              <Label htmlFor="residents">Anzahl Personen im Haushalt (optional)</Label>
-              <Input
-                id="residents"
-                {...register("residents")}
-                placeholder="3"
-                className={errors.residents ? "border-red-500" : ""}
-              />
-            </div>
-          </div>
-
-          {searchParams.get("estimatedCost") && (
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-              <p className="text-sm text-green-800">
-                <strong>Geschätzte Kosten aus Rechner:</strong>{" "}
-                {parseInt(searchParams.get("estimatedCost") || "0").toLocaleString("de-DE")} €
-              </p>
+          {/* Hidden inputs to preserve calculator data when collapsed */}
+          {!isCalculatorExpanded && (
+            <>
+              <input type="hidden" {...register("pumpType")} />
+              <input type="hidden" {...register("heatingSurface")} />
+              <input type="hidden" {...register("currentHeating")} />
+              <input type="hidden" {...register("insulation")} />
+              <input type="hidden" {...register("buildingYear")} />
+              <input type="hidden" {...register("residents")} />
               <input type="hidden" {...register("estimatedCost")} />
-            </div>
+            </>
           )}
         </div>
       )}

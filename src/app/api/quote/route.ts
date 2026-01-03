@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
       name: validatedData.name,
       email: validatedData.email,
       phone: validatedData.phone,
-      address: validatedData.address,
+      address: validatedData.address || "",
       postalCode: validatedData.postalCode,
       city: validatedData.city,
       serviceType: validatedData.serviceType,
