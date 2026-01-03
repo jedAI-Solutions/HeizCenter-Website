@@ -158,7 +158,7 @@ export default function NotdienstPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-2 border-[#0F5B78]/20">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-4">Service-Gebiete</h3>
                   <p className="mb-4 text-slate-600">
@@ -222,7 +222,7 @@ export default function NotdienstPage() {
                 +49 8234 9665900
               </a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#0F5B78] text-lg px-8 py-6">
+            <Button asChild size="lg" variant="outline" className="border-2 border-white !text-white hover:bg-white hover:!text-[#0F5B78] text-lg px-8 py-6">
               <Link href="/wartungsvertrag">
                 <ShieldCheck className="mr-2 h-5 w-5" />
                 Wartungsvertrag abschließen
