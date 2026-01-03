@@ -60,7 +60,7 @@ export const quoteFormSchema = z.object({
     message: "Bitte wählen Sie eine Leistung aus",
   }),
   // Objektart optional - wird bei Bedarf im Gespräch geklärt
-  propertyType: z.enum(["einfamilienhaus", "mehrfamilienhaus", "gewerbe"]).optional(),
+  propertyType: z.enum(["einfamilienhaus", "mehrfamilienhaus", "wohnung", "gewerbe"]).optional(),
   constructionYear: z
     .string()
     .regex(/^\d{4}$/, "Bitte geben Sie ein gültiges Jahr ein")

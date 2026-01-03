@@ -349,6 +349,7 @@ export function QuoteForm(props: QuoteFormProps) {
               <SelectContent>
                 <SelectItem value="einfamilienhaus">Einfamilienhaus</SelectItem>
                 <SelectItem value="mehrfamilienhaus">Mehrfamilienhaus</SelectItem>
+                <SelectItem value="wohnung">Wohnung</SelectItem>
                 <SelectItem value="gewerbe">Gewerbe</SelectItem>
               </SelectContent>
             </Select>

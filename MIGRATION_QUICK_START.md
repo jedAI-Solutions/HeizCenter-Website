@@ -1,4 +1,4 @@
-# HEIZcenter Vercel Migration - Quick Start Guide
+ # HEIZcenter Vercel Migration - Quick Start Guide
 
 **For:** Developers who want to get started quickly
 **Time to read:** 5 minutes

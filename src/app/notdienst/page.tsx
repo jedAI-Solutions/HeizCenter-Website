@@ -1,14 +1,15 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import { Phone, Clock, AlertCircle, Check } from "lucide-react";
+import Link from "next/link";
+import { Phone, Clock, AlertCircle, Check, ShieldCheck, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "24/7 Heizungsnotdienst | HeizCenter Bobingen & Gutenzell-Hürbel",
+  title: "24/7 Heizungsnotdienst für Wartungskunden | HeizCenter",
   description:
-    "Heizungsnotdienst rund um die Uhr. Schnelle Hilfe bei Heizungsausfall, Rohrbruch und anderen Notfällen. ☎ +49 8234 9665900",
-  keywords: ["Notdienst", "Heizungsnotdienst", "24/7", "Bobingen", "Gutenzell-Hürbel", "Augsburg", "Ulm", "Memmingen"],
+    "24/7 Heizungsnotdienst exklusiv für Kunden mit Wartungsvertrag. Schnelle Hilfe bei Heizungsausfall, Rohrbruch und Notfällen. ☎ +49 8234 9665900",
+  keywords: ["Notdienst", "Heizungsnotdienst", "24/7", "Wartungsvertrag", "Bobingen", "Gutenzell-Hürbel", "Augsburg"],
 };
 
 export default function NotdienstPage() {
@@ -30,22 +31,71 @@ export default function NotdienstPage() {
 
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <AlertCircle className="h-20 w-20 mx-auto mb-6" />
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              24/7 Heizungsnotdienst
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <ShieldCheck className="h-16 w-16" />
+              <AlertCircle className="h-20 w-20" />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              24/7 Notdienst
             </h1>
-            <p className="text-2xl mb-8">
+            <p className="text-xl md:text-2xl mb-2 font-semibold text-[#FFCA28]">
+              Ausschließlich für Wartungskunden
+            </p>
+            <p className="text-lg mb-8 text-white/80">
               Schnelle Hilfe bei Heizungsausfall, Rohrbruch und anderen Notfällen
             </p>
             <div className="bg-white text-[#0F5B78] inline-block px-8 py-6 rounded-xl shadow-2xl">
               <div className="flex items-center gap-4">
                 <Phone className="h-10 w-10" />
                 <div className="text-left">
-                  <div className="text-sm font-semibold">Notruf 24/7</div>
+                  <div className="text-sm font-semibold">24/7 Notdienst (nur für Wartungskunden)</div>
                   <a href="tel:+4982349665900" className="text-3xl font-bold hover:underline">
                     +49 8234 9665900
                   </a>
                 </div>
+              </div>
+            </div>
+            <p className="text-sm mt-4 text-white/70">
+              Bei lebensbedrohlichen Situationen (z.B. Gasgeruch, Wasserrohrbruch) rufen Sie bitte sofort an.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Important Notice - Wartungsvertrag Required */}
+      <section className="bg-amber-50 border-y-4 border-amber-400 py-8">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row items-start gap-6">
+              <div className="flex-shrink-0">
+                <div className="bg-amber-400 p-4 rounded-full">
+                  <FileText className="h-8 w-8 text-amber-900" />
+                </div>
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-amber-900 mb-3">
+                  Wichtiger Hinweis zum Notdienst
+                </h2>
+                <p className="text-lg text-amber-800 mb-4">
+                  Unser 24/7-Notdienst steht <strong>nur Kunden mit einem gültigen Wartungsvertrag</strong> zur Verfügung.
+                  Ohne bestehenden Wartungsvertrag können wir keinen Notdiensteinsatz übernehmen.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button asChild className="bg-[#0F5B78] hover:bg-[#0D4A5E] text-white">
+                    <Link href="/wartungsvertrag">
+                      <ShieldCheck className="mr-2 h-5 w-5" />
+                      Wartungsvertrag abschließen
+                    </Link>
+                  </Button>
+                  <Button asChild variant="outline" className="border-amber-600 text-amber-800 hover:bg-amber-100">
+                    <Link href="/kontakt">
+                      Kontakt aufnehmen
+                    </Link>
+                  </Button>
+                </div>
+                <p className="text-xs text-amber-700 mt-4">
+                  Kein Anspruch auf Notdiensteinsatz ohne Wartungsvertrag.
+                </p>
               </div>
             </div>
           </div>
@@ -79,10 +129,14 @@ export default function NotdienstPage() {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
-              <Card>
+              <Card className="border-2 border-[#0F5B78]/20">
                 <CardContent className="p-8">
-                  <Clock className="h-12 w-12 text-[#0F5B78] mb-4" />
-                  <h3 className="text-2xl font-bold mb-4">Verfügbarkeit</h3>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Clock className="h-10 w-10 text-[#0F5B78]" />
+                    <ShieldCheck className="h-8 w-8 text-[#FFCA28]" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">Verfügbarkeit</h3>
+                  <p className="text-sm text-slate-600 mb-4">Für Kunden mit Wartungsvertrag</p>
                   <ul className="space-y-3">
                     <li className="flex items-center gap-3">
                       <Check className="h-5 w-5 text-green-600" />
@@ -154,16 +208,30 @@ export default function NotdienstPage() {
       {/* CTA */}
       <section className="bg-[#0F5B78] text-white py-16">
         <div className="container text-center">
-          <h2 className="text-3xl font-bold mb-6">Notfall? Wir sind für Sie da!</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold mb-4">Notfall? Wir sind für Sie da!</h2>
+          <p className="text-lg mb-2 text-[#FFCA28] font-semibold">
+            24/7 Notdienst (nur für Wartungskunden)
+          </p>
+          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
             Rufen Sie uns jetzt an - unser Notdienst-Team ist rund um die Uhr für Sie erreichbar.
           </p>
-          <Button asChild size="lg" className="bg-[#FFCA28] hover:bg-[#F5B800] text-slate-900 text-2xl px-12 py-8 font-semibold">
-            <a href="tel:+4982349665900">
-              <Phone className="mr-3 h-8 w-8" />
-              +49 8234 9665900
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button asChild size="lg" className="bg-[#FFCA28] hover:bg-[#F5B800] text-slate-900 text-xl px-10 py-6 font-semibold">
+              <a href="tel:+4982349665900">
+                <Phone className="mr-3 h-6 w-6" />
+                +49 8234 9665900
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-[#0F5B78] text-lg px-8 py-6">
+              <Link href="/wartungsvertrag">
+                <ShieldCheck className="mr-2 h-5 w-5" />
+                Wartungsvertrag abschließen
+              </Link>
+            </Button>
+          </div>
+          <p className="text-xs text-white/60 mt-6">
+            Kein Anspruch auf Notdiensteinsatz ohne Wartungsvertrag.
+          </p>
         </div>
       </section>
     </>
