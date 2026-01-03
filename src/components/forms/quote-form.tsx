@@ -79,10 +79,17 @@ export function QuoteForm(props: QuoteFormProps) {
     },
   });
 
-  // Debug: Log form errors in development
+  // Show validation errors to user and scroll to first error
   useEffect(() => {
     if (Object.keys(errors).length > 0) {
       console.log("Form validation errors:", errors);
+      // Scroll to first error field
+      const firstErrorField = Object.keys(errors)[0];
+      const element = document.getElementById(firstErrorField);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
+        element.focus();
+      }
     }
   }, [errors]);
 
@@ -143,6 +150,21 @@ export function QuoteForm(props: QuoteFormProps) {
               Ihre Angaben aus dem Wärmepumpen-Rechner wurden automatisch in dieses Formular übertragen.
               Sie können alle Felder nach Bedarf anpassen.
             </p>
+          </div>
+        </div>
+      )}
+
+      {/* Validation Error Summary */}
+      {Object.keys(errors).length > 0 && (
+        <div className="p-4 rounded-lg flex items-start gap-3 bg-amber-50 text-amber-800 border border-amber-200">
+          <AlertCircle className="h-5 w-5 flex-shrink-0 mt-0.5" />
+          <div>
+            <p className="text-sm font-semibold">Bitte füllen Sie alle Pflichtfelder aus:</p>
+            <ul className="text-sm mt-1 list-disc list-inside">
+              {Object.entries(errors).map(([field, error]) => (
+                <li key={field}>{error?.message as string}</li>
+              ))}
+            </ul>
           </div>
         </div>
       )}
