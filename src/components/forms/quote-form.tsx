@@ -17,8 +17,46 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CheckCircle2, AlertCircle, Loader2, Calculator, ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
+import { CheckCircle2, AlertCircle, Loader2, Calculator, ArrowRight, Pencil } from "lucide-react";
 import Link from "next/link";
+
+// Helper functions to map technical values to German labels
+const PUMP_TYPE_LABELS: Record<string, string> = {
+  "air-water": "Luft-Wasser",
+  "ground-water": "Erdwärme",
+  "water-water": "Wasser-Wasser",
+};
+
+const HEATING_SURFACE_LABELS: Record<string, string> = {
+  "floor": "Fußbodenheizung",
+  "radiators": "Heizkörper",
+  "mixed": "Gemischt",
+};
+
+const CURRENT_HEATING_LABELS: Record<string, string> = {
+  "gas": "Gasheizung",
+  "oil": "Ölheizung",
+  "electric": "Elektroheizung",
+  "coal": "Kohleheizung",
+};
+
+const INSULATION_LABELS: Record<string, string> = {
+  "poor": "Schlecht",
+  "average": "Durchschnittlich",
+  "good": "Gut",
+};
+
+const BUILDING_YEAR_LABELS: Record<string, string> = {
+  "before-1980": "Vor 1980",
+  "1980-2000": "1980-2000",
+  "2000-2010": "2000-2010",
+  "2010-2020": "2010-2020",
+  "2020-2025": "2020-2025",
+  "after-2025": "Nach 2025",
+  // Legacy values for backwards compatibility
+  "2010-2015": "2010-2015",
+  "after-2015": "Nach 2015",
+};
 
 interface QuoteFormProps {
   defaultService?: string;
@@ -29,7 +67,6 @@ export function QuoteForm(props: QuoteFormProps) {
   const searchParams = useSearchParams();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasCalculatorData, setHasCalculatorData] = useState(false);
-  const [isCalculatorExpanded, setIsCalculatorExpanded] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null;
     message: string;
@@ -153,8 +190,7 @@ export function QuoteForm(props: QuoteFormProps) {
               Daten aus Rechner übernommen
             </h4>
             <p className="text-sm text-[#0F5B78]">
-              Ihre Angaben aus dem Wärmepumpen-Rechner wurden automatisch in dieses Formular übertragen.
-              Sie können alle Felder nach Bedarf anpassen.
+              Ihre Angaben aus dem Wärmepumpen-Rechner wurden automatisch übertragen.
             </p>
           </div>
         </div>
@@ -390,181 +426,91 @@ export function QuoteForm(props: QuoteFormProps) {
         </div>
       </div>
 
-      {/* Calculator-Specific Fields - Collapsible (only for heat pump quotes) */}
+      {/* Calculator-Specific Fields - Read-only Badge Display */}
       {hasCalculatorData && (
         <div className="border border-[#0F5B78]/20 rounded-lg overflow-hidden">
-          {/* Collapsible Header */}
-          <button
-            type="button"
-            onClick={() => setIsCalculatorExpanded(!isCalculatorExpanded)}
-            className="w-full flex items-center justify-between p-4 bg-[#0F5B78]/5 hover:bg-[#0F5B78]/10 transition-colors"
-          >
-            <div className="flex items-center gap-3">
-              <Calculator className="h-5 w-5 text-[#0F5B78]" />
-              <div className="text-left">
+          {/* Header with Edit Link */}
+          <div className="p-4 bg-[#0F5B78]/5">
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center gap-2">
+                <Calculator className="h-5 w-5 text-[#0F5B78]" />
                 <h4 className="font-semibold text-slate-900">
-                  Daten aus Wärmepumpen-Rechner
+                  Ihre Rechner-Angaben
                 </h4>
-                <p className="text-sm text-slate-600">
-                  {houseSize && `${houseSize} m²`}
-                  {pumpType && `, ${pumpType === "air-water" ? "Luft-Wasser" : pumpType === "ground-water" ? "Erdwärme" : "Wasser-Wasser"}`}
-                  {estimatedCost && ` • ca. ${parseInt(estimatedCost).toLocaleString("de-DE")} €`}
+              </div>
+              <Link
+                href="/rechner"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-[#0F5B78] hover:text-[#0F5B78]/80 transition-colors"
+              >
+                <Pencil className="h-3.5 w-3.5" />
+                Werte anpassen
+              </Link>
+            </div>
+
+            {/* Estimated Cost - Prominent Display */}
+            {estimatedCost && (
+              <div className="bg-green-50 border border-green-200 rounded-lg p-3 mb-4">
+                <p className="text-green-800 font-semibold">
+                  Geschätzte Kosten: {parseInt(estimatedCost).toLocaleString("de-DE")} €
                 </p>
               </div>
-            </div>
-            {isCalculatorExpanded ? (
-              <ChevronUp className="h-5 w-5 text-slate-500" />
-            ) : (
-              <ChevronDown className="h-5 w-5 text-slate-500" />
             )}
-          </button>
 
-          {/* Collapsible Content */}
-          {isCalculatorExpanded && (
-            <div className="p-4 pt-2 space-y-4 border-t border-[#0F5B78]/10">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="pumpType">Wärmepumpen-Typ</Label>
-                  <Controller
-                    name="pumpType"
-                    control={control}
-                    render={({ field }) => (
-                      <Select value={field.value} onValueChange={field.onChange}>
-                        <SelectTrigger id="pumpType">
-                          <SelectValue placeholder="Bitte wählen..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="air-water">Luft-Wasser-Wärmepumpe</SelectItem>
-                          <SelectItem value="ground-water">Sole-Wasser-Wärmepumpe (Erdwärme)</SelectItem>
-                          <SelectItem value="water-water">Wasser-Wasser-Wärmepumpe</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    )}
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="heatingSurface">Art der Heizflächen</Label>
-                  <Controller
-                    name="heatingSurface"
-                    control={control}
-                    render={({ field }) => (
-                      <Select value={field.value} onValueChange={field.onChange}>
-                        <SelectTrigger id="heatingSurface">
-                          <SelectValue placeholder="Bitte wählen..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="floor">Fußbodenheizung</SelectItem>
-                          <SelectItem value="radiators">Heizkörper (Radiatoren)</SelectItem>
-                          <SelectItem value="mixed">Gemischt</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    )}
-                  />
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="currentHeating">Aktuelle Heizung</Label>
-                  <Controller
-                    name="currentHeating"
-                    control={control}
-                    render={({ field }) => (
-                      <Select value={field.value} onValueChange={field.onChange}>
-                        <SelectTrigger id="currentHeating">
-                          <SelectValue placeholder="Bitte wählen..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="gas">Gasheizung</SelectItem>
-                          <SelectItem value="oil">Ölheizung</SelectItem>
-                          <SelectItem value="electric">Elektroheizung</SelectItem>
-                          <SelectItem value="coal">Kohleheizung</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    )}
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="insulation">Dämmzustand</Label>
-                  <Controller
-                    name="insulation"
-                    control={control}
-                    render={({ field }) => (
-                      <Select value={field.value} onValueChange={field.onChange}>
-                        <SelectTrigger id="insulation">
-                          <SelectValue placeholder="Bitte wählen..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="poor">Schlecht (Altbau unsaniert)</SelectItem>
-                          <SelectItem value="average">Durchschnittlich</SelectItem>
-                          <SelectItem value="good">Gut (Neubau/saniert)</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    )}
-                  />
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <Label htmlFor="buildingYear">Gebäude-Baujahr</Label>
-                  <Controller
-                    name="buildingYear"
-                    control={control}
-                    render={({ field }) => (
-                      <Select value={field.value} onValueChange={field.onChange}>
-                        <SelectTrigger id="buildingYear">
-                          <SelectValue placeholder="Bitte wählen..." />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="before-1980">Vor 1980</SelectItem>
-                          <SelectItem value="1980-2000">1980-2000</SelectItem>
-                          <SelectItem value="2000-2010">2000-2010</SelectItem>
-                          <SelectItem value="2010-2015">2010-2015</SelectItem>
-                          <SelectItem value="after-2015">Nach 2015</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    )}
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="residents">Anzahl Personen im Haushalt</Label>
-                  <Input
-                    id="residents"
-                    {...register("residents")}
-                    placeholder="3"
-                    className={errors.residents ? "border-red-500" : ""}
-                  />
-                </div>
-              </div>
-
-              {estimatedCost && (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <p className="text-sm text-green-800">
-                    <strong>Geschätzte Kosten aus Rechner:</strong>{" "}
-                    {parseInt(estimatedCost).toLocaleString("de-DE")} €
-                  </p>
-                  <input type="hidden" {...register("estimatedCost")} />
-                </div>
+            {/* Badge Grid */}
+            <div className="flex flex-wrap gap-2">
+              {houseSize && (
+                <span className="inline-flex items-center px-3 py-1.5 rounded-full text-sm bg-white border border-slate-200 text-slate-700">
+                  <span className="text-slate-500 mr-1.5">Fläche:</span>
+                  {houseSize} m²
+                </span>
+              )}
+              {pumpType && (
+                <span className="inline-flex items-center px-3 py-1.5 rounded-full text-sm bg-white border border-slate-200 text-slate-700">
+                  <span className="text-slate-500 mr-1.5">Typ:</span>
+                  {PUMP_TYPE_LABELS[pumpType] || pumpType}
+                </span>
+              )}
+              {heatingSurface && (
+                <span className="inline-flex items-center px-3 py-1.5 rounded-full text-sm bg-white border border-slate-200 text-slate-700">
+                  <span className="text-slate-500 mr-1.5">Heizfläche:</span>
+                  {HEATING_SURFACE_LABELS[heatingSurface] || heatingSurface}
+                </span>
+              )}
+              {heatingType && (
+                <span className="inline-flex items-center px-3 py-1.5 rounded-full text-sm bg-white border border-slate-200 text-slate-700">
+                  <span className="text-slate-500 mr-1.5">Heizung:</span>
+                  {CURRENT_HEATING_LABELS[heatingType] || heatingType}
+                </span>
+              )}
+              {insulation && (
+                <span className="inline-flex items-center px-3 py-1.5 rounded-full text-sm bg-white border border-slate-200 text-slate-700">
+                  <span className="text-slate-500 mr-1.5">Dämmung:</span>
+                  {INSULATION_LABELS[insulation] || insulation}
+                </span>
+              )}
+              {buildingYear && (
+                <span className="inline-flex items-center px-3 py-1.5 rounded-full text-sm bg-white border border-slate-200 text-slate-700">
+                  <span className="text-slate-500 mr-1.5">Baujahr:</span>
+                  {BUILDING_YEAR_LABELS[buildingYear] || buildingYear}
+                </span>
+              )}
+              {residents && (
+                <span className="inline-flex items-center px-3 py-1.5 rounded-full text-sm bg-white border border-slate-200 text-slate-700">
+                  <span className="text-slate-500 mr-1.5">Personen:</span>
+                  {residents}
+                </span>
               )}
             </div>
-          )}
+          </div>
 
-          {/* Hidden inputs to preserve calculator data when collapsed */}
-          {!isCalculatorExpanded && (
-            <>
-              <input type="hidden" {...register("pumpType")} />
-              <input type="hidden" {...register("heatingSurface")} />
-              <input type="hidden" {...register("currentHeating")} />
-              <input type="hidden" {...register("insulation")} />
-              <input type="hidden" {...register("buildingYear")} />
-              <input type="hidden" {...register("residents")} />
-              <input type="hidden" {...register("estimatedCost")} />
-            </>
-          )}
+          {/* Hidden inputs to preserve calculator data for form submission */}
+          <input type="hidden" {...register("pumpType")} />
+          <input type="hidden" {...register("heatingSurface")} />
+          <input type="hidden" {...register("currentHeating")} />
+          <input type="hidden" {...register("insulation")} />
+          <input type="hidden" {...register("buildingYear")} />
+          <input type="hidden" {...register("residents")} />
+          <input type="hidden" {...register("estimatedCost")} />
         </div>
       )}
 

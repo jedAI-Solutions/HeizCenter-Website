@@ -125,9 +125,15 @@ export function PriceCalculator() {
     } else if (buildingYear === "1980-2000") {
       baseCost *= 1.05;
       jaz -= 0.1;
-    } else if (buildingYear === "after-2015") {
+    } else if (buildingYear === "2010-2020") {
+      baseCost *= 0.95;
+      jaz += 0.15;
+    } else if (buildingYear === "2020-2025") {
       baseCost *= 0.9;
       jaz += 0.3;
+    } else if (buildingYear === "after-2025") {
+      baseCost *= 0.85;
+      jaz += 0.4;
     }
 
     // ============================================
@@ -370,8 +376,9 @@ export function PriceCalculator() {
                 <SelectItem value="before-1980">Vor 1980</SelectItem>
                 <SelectItem value="1980-2000">1980-2000</SelectItem>
                 <SelectItem value="2000-2010">2000-2010</SelectItem>
-                <SelectItem value="2010-2015">2010-2015</SelectItem>
-                <SelectItem value="after-2015">Nach 2015</SelectItem>
+                <SelectItem value="2010-2020">2010-2020</SelectItem>
+                <SelectItem value="2020-2025">2020-2025</SelectItem>
+                <SelectItem value="after-2025">Nach 2025</SelectItem>
               </SelectContent>
             </Select>
           </div>

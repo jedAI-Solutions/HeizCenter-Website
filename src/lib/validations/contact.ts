@@ -76,7 +76,7 @@ export const quoteFormSchema = z.object({
   heatingSurface: z.enum(["floor", "radiators", "mixed"]).optional(),
   currentHeating: z.enum(["gas", "oil", "electric", "coal"]).optional(),
   insulation: z.enum(["poor", "average", "good"]).optional(),
-  buildingYear: z.enum(["before-1980", "1980-2000", "2000-2010", "2010-2015", "after-2015"]).optional(),
+  buildingYear: z.enum(["before-1980", "1980-2000", "2000-2010", "2010-2020", "2020-2025", "after-2025", "2010-2015", "after-2015"]).optional(),
   residents: z.string().optional(),
   estimatedCost: z.string().optional(),
   message: z.string().max(2000, "Nachricht ist zu lang").optional(),
