@@ -26,8 +26,8 @@ const waermepumpeFAQs: FAQItem[] = [
 ];
 
 const heizungFAQs: FAQItem[] = [
-  { question: "Wann sollte ich meine Heizung austauschen?", answer: "Bei über 15 Jahren Alter, steigenden Heizkosten, häufigen Reparaturen oder vor dem 2026 Öl-/Gasheizungsverbot." },
-  { question: "Was kostet eine neue Gasheizung?", answer: "Gasbrennwerttherme ab 8.000€ inkl. Installation. Hinweis: Ab 2024 65% Erneuerbare Energie Pflicht bei Neubauten, ab 2026 schrittweise für Bestand." },
+  { question: "Wann sollte ich meine Heizung austauschen?", answer: "Bei über 15 Jahren Alter, steigenden Heizkosten, häufigen Reparaturen. Ein Öl- oder Gasheizungsverbot gibt es nicht – seit Juli 2026 gilt das GModG ohne Austauschpflicht." },
+  { question: "Was kostet eine neue Gasheizung?", answer: "Gasbrennwerttherme ab 8.000€ inkl. Installation. Hinweis: Seit Juli 2026 gilt das GModG – die 65%-Regel ist gestrichen. Neue Gasheizungen müssen ab 2029 steigende Bioanteile nachweisen (10% ab 2029 bis 60% ab 2040, § 43 GModG)." },
   { question: "Wie oft muss die Heizung gewartet werden?", answer: "Mindestens 1x jährlich empfohlen. Verlängert Lebensdauer, senkt Energiekosten um 10-15%, erhält Garantieansprüche." },
   { question: "Was tun bei Heizungsausfall im Winter?", answer: `Rufen Sie unseren 24/7-Notdienst: ${CONTACT.PHONE_DISPLAY}. Schnelle Reaktionszeit, auch an Wochenenden und Feiertagen.` },
   { question: "Welche Heizung ist zukunftssicher?", answer: "Wärmepumpen sind langfristig die beste Wahl. Alternativ: Pelletheizung oder Hybridlösungen (Gas + Wärmepumpe)." },

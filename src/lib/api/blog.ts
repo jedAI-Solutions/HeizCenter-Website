@@ -7,6 +7,25 @@
 
 import { CONTACT } from '@/lib/config/contact';
 
+/**
+ * Gemeinsamer Hinweiskasten zum Gebäudemodernisierungsgesetz (GModG).
+ * Quelle: Gesetzestext gesetze-im-internet.de, Stand 23.07.2026 (BGBl. 2026 I Nr. 226),
+ * gelesen 08.09.2026. Nur Aussagen mit § und Absatz – keine Rechtsberatung.
+ * Wird in mehreren Beiträgen eingesetzt, damit die Rechtslage an einer Stelle gepflegt wird.
+ */
+const GMODG_HINWEIS = `
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-5 my-6">
+          <p class="font-semibold text-blue-900 mb-2">⚖️ Rechtslage seit 29. Juli 2026: Gebäudemodernisierungsgesetz (GModG)</p>
+          <ul class="text-sm text-blue-800 space-y-1">
+            <li><strong>65%-Regel gestrichen</strong> – für Neubauten und Bestandsgebäude. Die Kopplung an die kommunale Wärmeplanung ist entfallen.</li>
+            <li><strong>Keine Austauschpflicht</strong> für funktionierende Heizungen; § 71 (65%-Anforderung) und § 72 (Betriebsverbot alter Kessel) sind weggefallen.</li>
+            <li><strong>Neue Gas-/Ölheizungen</strong> (Einbau nach 29.07.2026): Bioanteil ab 2029 mind. 10%, ab 2030 15%, ab 2035 30%, ab 2040 60% – oder Erfüllungsweg wie Solarthermie oder Wärmepumpen-Hybrid (§ 43 GModG).</li>
+            <li><strong>Prüfpflichten</strong> (§§ 60a–60c) nur für Gebäude ab sechs Wohneinheiten.</li>
+          </ul>
+          <p class="text-xs text-blue-600 mt-2">Stand: GModG vom 23.07.2026, gelesen 08.09.2026. Alle Details im <a href="/blog/heizungsgesetz-2024" class="underline">Ratgeber zum Heizungsgesetz 2026</a>.</p>
+        </div>
+`;
+
 // import { odooApi } from './odoo'; // TODO: Uncomment when Odoo API is ready
 
 export interface BlogPost {
@@ -458,7 +477,7 @@ function getMockBlogPosts(): BlogPost[] {
               <li>30-50% niedrigere Heizkosten</li>
               <li>Keine Abhängigkeit von Gas-/Ölpreisen</li>
               <li>Wertsteigerung der Immobilie</li>
-              <li>Erfüllt alle Anforderungen des GEG</li>
+              <li>Keine Brennstoff-Nachweispflicht nach dem GModG</li>
               <li>Kaum Wartungskosten</li>
             </ul>
           </div>
@@ -544,48 +563,36 @@ function getMockBlogPosts(): BlogPost[] {
     {
       id: 2,
       slug: 'heizungsgesetz-2024',
-      title: 'Heizungsgesetz 2024: Das gilt jetzt für Hausbesitzer',
-      excerpt: 'Alle wichtigen Änderungen durch das neue Heizungsgesetz 2024. Was müssen Sie beachten?',
+      title: 'Heizungsgesetz 2026 (GModG): Das gilt jetzt für Hausbesitzer',
+      excerpt: 'Seit 29. Juli 2026 heißt das GEG Gebäudemodernisierungsgesetz. Die 65%-Regel ist gestrichen. Was stattdessen gilt – kurz und ohne Panik.',
       content: `
-        <p class="text-xl leading-relaxed text-slate-600 mb-8">Das neue "Heizungsgesetz" sorgte 2023 für hitzige Debatten. Jetzt ist es seit Januar 2024 in Kraft – und viele Hausbesitzer fragen sich: Was bedeutet das eigentlich für mich?</p>
-
-        <p>Spoiler vorweg: Weniger als Sie vielleicht befürchten. Ihre funktionierende Heizung darf bleiben, Reparaturen sind weiterhin erlaubt, und für den Austausch gibt es großzügige Fristen. Hier die wichtigsten Punkte im Überblick.</p>
-
-        <h2>Die 65%-Regel – und wann sie wirklich greift</h2>
-
-        <p>Der Kern des Gesetzes: Neue Heizungen sollen zu mindestens 65% mit erneuerbaren Energien betrieben werden. Klingt dramatisch – ist aber deutlich entspannter, als es zunächst scheint.</p>
+        <p class="text-xl leading-relaxed text-slate-600 mb-8">Das "Heizungsgesetz" hat 2023 für hitzige Debatten gesorgt – und wurde im Sommer 2026 grundlegend geändert. Seit dem 29. Juli 2026 heißt das Gebäudeenergiegesetz offiziell <strong>Gebäudemodernisierungsgesetz (GModG)</strong>. Was bedeutet das für Ihre Heizung?</p>
 
         <div class="callout callout-info">
           <span class="callout-icon">ℹ️</span>
-          <div class="callout-title">Das Wichtigste vorab</div>
+          <div class="callout-title">Aktualisiert im September 2026</div>
           <div class="callout-content">
-            Für die meisten Bestandsgebäude gilt die 65%-Regel erst nach Abschluss der kommunalen Wärmeplanung – also frühestens Mitte 2026 in Großstädten, in kleineren Gemeinden erst ab 2028.
+            Dieser Ratgeber wurde vollständig auf die Novelle vom 23. Juli 2026 (BGBl. 2026 I Nr. 226) umgeschrieben. Die frühere 65%-Regel und die Kopplung an die kommunale Wärmeplanung stehen nicht mehr im Gesetz. Stand: GModG vom 23.07.2026, gelesen am 08.09.2026.
           </div>
         </div>
 
-        <p>Aktuell betrifft die Regel nur echte Neubaugebiete. Wer dort baut, muss ab Tag 1 die 65% erfüllen. Für alle anderen gilt: Ruhe bewahren und die Wärmeplanung der eigenen Kommune abwarten.</p>
+        <p>Spoiler vorweg: Weniger Pflichten, als Sie vielleicht befürchten. Ihre funktionierende Heizung darf bleiben, Reparaturen sind erlaubt, und beim Austausch haben Sie die freie Wahl zwischen allen im Gesetz genannten Heizungsarten. Neu ist eine Stufenregel für neue Gas- und Ölheizungen ab 2029.</p>
 
-        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 my-6">
-          <p class="font-semibold text-blue-900 mb-2">📍 Wärmeplanung in Ihrer Region</p>
-          <ul class="text-sm text-blue-800 space-y-1">
-            <li><strong>Stadt Augsburg:</strong> Wärmeplanung läuft, Abschluss voraussichtlich Mitte 2026</li>
-            <li><strong>Bobingen, Königsbrunn:</strong> Als Teil des Ballungsraums ebenfalls bis 2026</li>
-            <li><strong>Landkreis Günzburg:</strong> Kleinere Gemeinden haben bis 2028 Zeit</li>
-          </ul>
-          <p class="text-xs text-blue-600 mt-2">Stand: Dezember 2024 – Wir halten Sie auf dem Laufenden!</p>
-        </div>
+        <h2>Die 65%-Regel ist gestrichen</h2>
+
+        <p>Bis Juli 2026 galt: Neue Heizungen sollten zu mindestens 65% mit erneuerbaren Energien betrieben werden. Diese Vorgabe hat der Gesetzgeber mit der Novelle abgeschafft – für Neubauten und für Bestandsgebäude. Die Bundesregierung formuliert es so: "Die gesetzliche Vorgabe eines einheitlichen Anteils von mindestens 65 Prozent erneuerbarer Energien bei der Wärmeversorgung für alle Neu- und Bestandsbauten entfällt."</p>
+
+        <p>Auch die frühere Verknüpfung mit der kommunalen Wärmeplanung ist weg. Die Wärmeplanung Ihrer Gemeinde bleibt eine nützliche Information – etwa dazu, ob ein Wärmenetz in Ihrer Straße geplant ist –, sie löst aber keine Heizungspflicht mehr aus.</p>
 
         <h2>Was ist mit meiner bestehenden Heizung?</h2>
 
-        <p>Hier können wir Sie beruhigen: Bestehende Heizungen genießen <strong>vollen Bestandsschutz</strong>.</p>
-
-        <p>Konkret heißt das:</p>
+        <p>Hier können wir Sie beruhigen: Das GModG kennt keine allgemeine Austauschpflicht für funktionierende Heizungen. Der frühere § 72 (Betriebsverbot alter Kessel) und der frühere § 71 (65%-Anforderung) stehen im aktuellen Gesetzestext als "weggefallen".</p>
 
         <div class="pro-con-list">
           <div class="pro-list">
             <div class="list-header">Das dürfen Sie</div>
             <ul>
-              <li>Ihre Heizung weiter betreiben – egal wie alt</li>
+              <li>Ihre Heizung weiter betreiben</li>
               <li>Reparaturen durchführen lassen</li>
               <li>Verschleißteile austauschen</li>
               <li>Sich Zeit nehmen für die Planung</li>
@@ -596,132 +603,137 @@ function getMockBlogPosts(): BlogPost[] {
             <ul>
               <li>Sofort eine neue Heizung kaufen</li>
               <li>Funktionierende Anlagen stilllegen</li>
+              <li>Auf die Wärmeplanung warten</li>
               <li>Überstürzt handeln</li>
-              <li>Auf Fernwärme warten, wenn Sie nicht wollen</li>
             </ul>
           </div>
         </div>
 
-        <p>Ein Beispiel aus der Praxis: Familie Weber aus Bobingen hat eine 18 Jahre alte Gasheizung. Sie funktioniert einwandfrei und darf so lange laufen, wie sie will. Erst wenn die Heizung irreparabel defekt ist <em>und</em> die kommunale Wärmeplanung abgeschlossen wurde, greift die 65%-Regel.</p>
+        <p>Ob für ein einzelnes Gerät eine andere Vorschrift greift – etwa aus dem Immissionsschutz oder dem Landesrecht –, ist eine Einzelfallfrage. Die klären wir gern gemeinsam vor Ort.</p>
+
+        <h2>Heizung tauschen: freie Wahl beim Heizsystem</h2>
+
+        <p>Wer im Bestand eine Heizung ersetzt, wählt nach § 42 GModG frei aus diesen Systemen:</p>
+
+        <ul>
+          <li>Gas-, Heizöl- oder Flüssiggasheizung</li>
+          <li>Wärmepumpe</li>
+          <li>Solarthermie</li>
+          <li>Biomasse- oder Wasserstoffheizung</li>
+          <li>Hybridheizung (z.B. Wärmepumpe + Gas)</li>
+          <li>Kraft-Wärme-Kopplung</li>
+          <li>Stromdirektheizung</li>
+          <li>Anschluss an ein Wärmenetz</li>
+          <li>Andere innovative Heizungslösung</li>
+        </ul>
+
+        <p>Für Wärmepumpe, Pellets, Solarthermie und Wärmenetz gibt es keine gesetzlichen Nachweispflichten beim Brennstoff. Für neue Gas- und Ölheizungen gilt die Stufenregel im nächsten Abschnitt.</p>
+
+        <h2>Neue Gas- oder Ölheizung: die Bioanteil-Stufen ab 2029</h2>
+
+        <p>Wer <strong>nach dem 29. Juli 2026</strong> eine Gas-, Heizöl- oder Flüssiggasheizung in ein bestehendes Gebäude einbaut, muss nach § 43 Abs. 1 GModG sicherstellen, dass ein steigender Anteil der Wärme aus Biomethan, Bioöl, biogenem Flüssiggas oder Wasserstoff stammt:</p>
+
+        <table class="cost-table">
+          <thead>
+            <tr>
+              <th>Ab Datum</th>
+              <th>Mindestanteil Bio/Wasserstoff</th>
+              <th>Alternative Erfüllungswege (§ 43)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Januar 2029</td>
+              <td>10%</td>
+              <td rowspan="4">Solarthermie mit vorgegebener Kollektorfläche · Lüftung mit Wärmerückgewinnung (≥ 73%) · Hybrid mit Wärmepumpe (Leistung ≥ 30% bzw. ≥ 40% des Spitzenlasterzeugers) · Biomasse-Hybrid</td>
+            </tr>
+            <tr>
+              <td>1. Januar 2030</td>
+              <td>15%</td>
+            </tr>
+            <tr>
+              <td>1. Januar 2035</td>
+              <td>30%</td>
+            </tr>
+            <tr>
+              <td>1. Januar 2040</td>
+              <td>60%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Die Botschaft ist klar: Eine neue Gasheizung ist erlaubt, bringt aber ab 2029 laufende Pflichten mit. Wer ohnehin tauscht, fährt mit einer Wärmepumpe oder einer Hybridlösung meist einfacher.</p>
+
+        <div class="callout callout-warning">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-title">Angekündigt, aber noch nicht beschlossen</div>
+          <div class="callout-content">
+            Nach § 42a GModG soll die Bundesregierung bis zum 1. Dezember 2026 ein Gesetz mit einer Grüngas- und Grünheizölquote vorlegen; ab 2045 sollen Brennstoffe vollständig klimaneutral sein. Dieses Gesetz liegt noch nicht vor – wir aktualisieren diesen Ratgeber, sobald es da ist.
+          </div>
+        </div>
 
         <h2>Heizung kaputt – und jetzt?</h2>
 
-        <p>Selbst wenn Ihre Heizung ausfällt, haben Sie mehrere Optionen:</p>
+        <p><strong>Reparatur geht vor:</strong> Lässt sich die Heizung reparieren? Dann tun Sie das. Das Gesetz zwingt niemanden zum Austausch, nur weil ein Brenner getauscht werden muss.</p>
 
-        <p><strong>Reparatur geht vor:</strong> Lässt sich die Heizung reparieren? Dann tun Sie das. Das Gesetz zwingt niemanden zum Austausch, nur weil mal ein Brenner getauscht werden muss.</p>
-
-        <p><strong>Fünf Jahre Übergangsfrist:</strong> Bei einem echten Totalschaden (Fachbegriff: "Havarie") haben Sie fünf Jahre Zeit, eine 65%-konforme Heizung einzubauen. In dieser Zeit dürfen Sie sogar übergangsweise eine konventionelle Heizung nutzen.</p>
+        <p><strong>Havarie-Regel:</strong> Fällt eine Heizung irreparabel aus und wird zwischen dem 1. Januar und dem 31. Dezember 2028 eine neue Gas- oder Ölheizung eingebaut, gilt die Bioanteil-Pflicht erst zwölf Monate nach dem Einbau. Ab 2029 läuft eine bereits bestehende Pflicht bei einem Ausfall zwölf Monate weiter (§ 43 Abs. 7 GModG).</p>
 
         <div class="callout callout-warning">
           <span class="callout-icon">⚠️</span>
           <div class="callout-title">Praxis-Tipp</div>
           <div class="callout-content">
-            Bei einem Heizungsausfall im Winter: Erst mal provisorisch heizen (Heizlüfter, Gastherme), dann in Ruhe planen. Niemand erwartet, dass Sie bei -10°C eine fundierte Entscheidung über Ihr Heizsystem treffen.
+            Bei einem Heizungsausfall im Winter: Erst provisorisch heizen, dann in Ruhe planen. Niemand erwartet, dass Sie bei -10°C eine fundierte Entscheidung über Ihr Heizsystem treffen.
           </div>
         </div>
 
-        <h2>Welche Heizungen erfüllen die 65%?</h2>
-
-        <p>Falls Sie tatsächlich tauschen möchten (oder müssen) – diese Systeme erfüllen die Anforderungen:</p>
+        <h2>Welche Heizung passt jetzt?</h2>
 
         <div class="comparison-grid">
           <div class="comparison-card">
             <div class="comparison-header">Wärmepumpe</div>
             <div class="comparison-body">
               <p>Die populärste Wahl. Nutzt Umweltwärme aus Luft, Erde oder Grundwasser. Besonders effizient mit Fußbodenheizung, funktioniert aber auch mit Heizkörpern.</p>
-              <p class="mt-2 text-sm text-slate-600">→ Erfüllt 65% automatisch</p>
+              <p class="mt-2 text-sm text-slate-600">→ Keine Brennstoff-Nachweispflicht</p>
             </div>
           </div>
           <div class="comparison-card">
-            <div class="comparison-header">Fernwärme</div>
+            <div class="comparison-header">Wärmenetz</div>
             <div class="comparison-body">
-              <p>Wo verfügbar, eine bequeme Lösung. Sie müssen sich um nichts kümmern – die Kommune sorgt für erneuerbare Wärme.</p>
+              <p>Wo verfügbar, eine bequeme Lösung. Ob ein Netz in Ihrer Straße kommt, zeigt die Wärmeplanung Ihrer Gemeinde.</p>
               <p class="mt-2 text-sm text-slate-600">→ Abhängig vom lokalen Angebot</p>
             </div>
           </div>
           <div class="comparison-card">
             <div class="comparison-header">Pelletheizung</div>
             <div class="comparison-body">
-              <p>Holzpellets als Brennstoff. Gute Option für Häuser mit Platz für Pelletsilo. Fühlt sich an wie eine normale Heizung.</p>
-              <p class="mt-2 text-sm text-slate-600">→ 100% erneuerbar</p>
+              <p>Holzpellets als Brennstoff. Gute Option für Häuser mit Platz für ein Pelletsilo. Fühlt sich an wie eine normale Heizung.</p>
+              <p class="mt-2 text-sm text-slate-600">→ Keine Brennstoff-Nachweispflicht</p>
             </div>
           </div>
           <div class="comparison-card">
             <div class="comparison-header">Hybridheizung</div>
             <div class="comparison-body">
               <p>Wärmepumpe + Gaskessel für Spitzenlasten. Praktisch für unsanierte Altbauten oder wenn Sie schrittweise umsteigen wollen.</p>
-              <p class="mt-2 text-sm text-slate-600">→ Erfüllt 65% anteilig</p>
+              <p class="mt-2 text-sm text-slate-600">→ Erfüllungsweg nach § 43, wenn die Wärmepumpe groß genug ist</p>
             </div>
           </div>
         </div>
 
-        <h2>Was, wenn ich jetzt noch eine Gasheizung einbaue?</h2>
+        <h2>Prüfpflichten: erst ab sechs Wohneinheiten</h2>
 
-        <p>Das ist durchaus möglich – besonders wenn Ihre Kommune noch keine Wärmeplanung hat. Allerdings mit einer Einschränkung:</p>
-
-        <table class="cost-table">
-          <thead>
-            <tr>
-              <th>Ab Datum</th>
-              <th>Min. Anteil erneuerbar</th>
-              <th>Praktische Umsetzung</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2029</td>
-              <td>15%</td>
-              <td>z.B. Solarthermie ergänzen</td>
-            </tr>
-            <tr>
-              <td>2035</td>
-              <td>30%</td>
-              <td>Hybridlösung wird nötig</td>
-            </tr>
-            <tr>
-              <td>2040</td>
-              <td>60%</td>
-              <td>Wärmepumpe + Gas-Backup</td>
-            </tr>
-            <tr>
-              <td>2045</td>
-              <td>100%</td>
-              <td>Fossiles Gas nicht mehr erlaubt</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p>Die Botschaft ist klar: Eine neue Gasheizung heute bedeutet, dass Sie in den kommenden Jahren nachrüsten müssen. Wer ohnehin tauscht, fährt mit einer zukunftssicheren Lösung meist besser.</p>
-
-        <h2>Pflichtberatung vor Gas/Öl-Einbau</h2>
-
-        <p>Wichtig zu wissen: Wer sich 2024 noch für eine fossile Heizung entscheidet, muss vorher eine Energieberatung nachweisen. Das ist keine Schikane – es soll sicherstellen, dass Sie alle Alternativen kennen.</p>
-
-        <p>Die Beratung informiert über:</p>
+        <p>Die Prüf- und Optimierungspflichten des Gesetzes gelten nur für Gebäude mit <strong>mindestens sechs Wohnungen oder Nutzungseinheiten</strong> – also für Mehrfamilienhäuser, nicht für das typische Einfamilienhaus:</p>
 
         <ul>
-          <li>Die Wärmeplanung in Ihrer Gemeinde</li>
-          <li>Alternative Heizsysteme und deren Kosten</li>
-          <li>Fördermöglichkeiten (bis zu 70%!)</li>
-          <li>Die steigenden Anforderungen ab 2029</li>
+          <li><strong>§ 60a – Wärmepumpen</strong> (eingebaut nach dem 31.12.2023): Betriebsprüfung nach der ersten vollen Heizperiode, spätestens zwei Jahre nach Inbetriebnahme; ohne Fernkontrolle alle fünf Jahre wiederholen.</li>
+          <li><strong>§ 60b – ältere Heizungen</strong> (keine Wärmepumpe): Prüfung innerhalb eines Jahres nach Ablauf von 15 Jahren nach Einbau; bei Einbau vor dem 1. Oktober 2009 bis zum 30. September 2027. Die Prüfung kann mit der Wartung verbunden werden.</li>
+          <li><strong>§ 60c – hydraulischer Abgleich</strong> nach dem Einbau einer neuen Heizung, mit raumweiser Heizlastberechnung.</li>
         </ul>
 
-        <p>Danach dürfen Sie immer noch einbauen, was Sie wollen. Aber Sie treffen eine informierte Entscheidung.</p>
-
-        <h2>Gibt es Ausnahmen?</h2>
-
-        <p>Ja, einige. Das Gesetz ist nicht so starr, wie manche befürchten:</p>
-
-        <ul>
-          <li><strong>Denkmalschutz:</strong> Individuelle Lösungen nach Absprache mit der Behörde</li>
-          <li><strong>Technische Unmöglichkeit:</strong> Wenn eine Wärmepumpe baulich nicht machbar ist</li>
-          <li><strong>Wirtschaftliche Härte:</strong> Wenn die Kosten unverhältnismäßig wären</li>
-          <li><strong>Eigentümer über 80:</strong> Beim Verkauf muss der Käufer nachrüsten</li>
-        </ul>
+        <p>Für die Wärmepumpen-Betriebsprüfung nach § 60a nennt das Gesetz Installateure und Heizungsbauer ausdrücklich als fachkundige Personen (§ 60a Abs. 3 und 4 GModG). Sprechen Sie uns an.</p>
 
         <h2>Was bringt die Förderung?</h2>
 
-        <p>Die BEG-Förderung ist der große Pluspunkt beim Heizungstausch 2024/2025:</p>
+        <p>Die BEG-Förderung ist unabhängig vom GModG und bleibt der große Pluspunkt beim Heizungstausch:</p>
 
         <div class="highlight-quote">
           Bis zu 70% der Kosten für eine neue Wärmepumpe werden vom Staat übernommen. Das reduziert eine 35.000-€-Investition auf 10.500 €.
@@ -736,7 +748,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li><strong>5% Effizienzbonus</strong> – für Wärmepumpen mit natürlichem Kältemittel</li>
         </ul>
 
-        <p>Das Maximum liegt bei 70% – aber selbst 50% machen aus einer 35.000-€-Investition eine 17.500-€-Investition.</p>
+        <p>Das Maximum liegt bei 70% – aber selbst 50% machen aus einer 35.000-€-Investition eine 17.500-€-Investition. Alle Details im <a href="/blog/beg-foerderung-2026" class="text-[#0F5B78] font-medium hover:underline">BEG-Ratgeber</a>.</p>
 
         <h2>Was würden wir jetzt empfehlen?</h2>
 
@@ -745,7 +757,7 @@ function getMockBlogPosts(): BlogPost[] {
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
           <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
             <p class="font-bold text-slate-900 mb-2">Heizung unter 15 Jahre</p>
-            <p class="text-sm text-slate-600 mb-3">Funktioniert gut? Abwarten und beobachten. Informieren Sie sich über die Wärmeplanung in Ihrer Gemeinde.</p>
+            <p class="text-sm text-slate-600 mb-3">Funktioniert gut? Abwarten und beobachten. Behalten Sie die Wärmeplanung Ihrer Gemeinde im Blick.</p>
             <a href="/newsletter" class="text-sm text-[#0F5B78] font-medium hover:underline">Newsletter abonnieren →</a>
           </div>
           <div class="bg-[#0F5B78] text-white rounded-lg p-4">
@@ -764,15 +776,15 @@ function getMockBlogPosts(): BlogPost[] {
           <span class="callout-icon">✓</span>
           <div class="callout-title">Unser Fazit</div>
           <div class="callout-content">
-            Das Heizungsgesetz ist kein Grund zur Panik. Es gibt großzügige Übergangsfristen, attraktive Förderungen und für jeden Fall eine passende Lösung. Wer strategisch plant, profitiert sogar davon.
+            Das GModG ist kein Grund zur Panik. Keine Austauschpflicht, freie Wahl beim Heizsystem, attraktive Förderungen – und eine klar datierte Stufenregel für alle, die bei Gas oder Öl bleiben wollen. Wer strategisch plant, profitiert davon.
           </div>
         </div>
 
         <div class="bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 rounded-xl p-6 my-6">
-          <h3 class="text-lg font-bold text-slate-900 mb-3">Wie passt das Heizungsgesetz zu Ihrem Haus?</h3>
+          <h3 class="text-lg font-bold text-slate-900 mb-3">Wie passt das GModG zu Ihrem Haus?</h3>
           <p class="text-slate-600 mb-4">In 15 Minuten wissen Sie Bescheid:</p>
           <ul class="space-y-2 mb-6 text-slate-700">
-            <li class="flex items-start gap-2">✓ <span>Greift die 65%-Regel schon bei Ihnen?</span></li>
+            <li class="flex items-start gap-2">✓ <span>Gilt die Bioanteil-Stufe für Ihre geplante Heizung?</span></li>
             <li class="flex items-start gap-2">✓ <span>Welche Förderung steht Ihnen konkret zu?</span></li>
             <li class="flex items-start gap-2">✓ <span>Welche Heizung passt zu Ihrem Haus?</span></li>
           </ul>
@@ -785,46 +797,46 @@ function getMockBlogPosts(): BlogPost[] {
 
         <h2>Häufig gestellte Fragen (FAQ)</h2>
 
-        <h3>Ab wann gilt das Heizungsgesetz 2024 für mich?</h3>
-        <p>Für Bestandsgebäude gilt die 65%-Regel erst nach Abschluss der <strong>kommunalen Wärmeplanung</strong>. Großstädte (über 100.000 Einwohner) haben bis Mitte 2026 Zeit, kleinere Gemeinden bis Mitte 2028. Nur in Neubaugebieten greift die Regel bereits jetzt. Ihre bestehende Heizung hat vollen Bestandsschutz und darf weiterlaufen.</p>
+        <h3>Gilt die 65%-Regel noch?</h3>
+        <p>Nein. Mit der Novelle vom 23. Juli 2026 wurde die Vorgabe, dass neue Heizungen zu mindestens 65% erneuerbare Energien nutzen müssen, gestrichen – für Neubauten und Bestandsgebäude. Das Gesetz heißt seit dem 29. Juli 2026 Gebäudemodernisierungsgesetz (GModG).</p>
 
         <h3>Darf ich meine Gasheizung behalten und weiter nutzen?</h3>
-        <p><strong>Ja, ohne Einschränkung.</strong> Alle bestehenden Heizungen genießen Bestandsschutz – egal wie alt. Sie dürfen Ihre Gasheizung reparieren lassen, Verschleißteile tauschen und so lange betreiben, wie sie funktioniert. Niemand zwingt Sie zum Austausch einer funktionierenden Anlage.</p>
+        <p><strong>Ja.</strong> Das GModG enthält keine allgemeine Austauschpflicht und kein Betriebsverbot für alte Kessel. Sie dürfen Ihre Gasheizung reparieren lassen, Verschleißteile tauschen und weiter betreiben, solange sie funktioniert.</p>
 
         <h3>Was passiert mit meiner Ölheizung?</h3>
-        <p>Ihre Ölheizung darf ebenfalls weiterlaufen. Bei einem irreparablen Totalschaden haben Sie <strong>fünf Jahre Übergangsfrist</strong>, um eine 65%-konforme Heizung einzubauen. In dieser Zeit dürfen Sie sogar übergangsweise eine konventionelle Heizung installieren. Die pauschale Angst vor einem Ölheizungsverbot ist unbegründet.</p>
+        <p>Ihre Ölheizung darf ebenfalls weiterlaufen. Wenn Sie sie nach dem 29. Juli 2026 durch eine neue Ölheizung ersetzen, gilt die Bioanteil-Stufe: ab 2029 mindestens 10%, ab 2030 15%, ab 2035 30%, ab 2040 60% Bioöl oder Wasserstoff – oder ein Erfüllungsweg wie Solarthermie oder ein Wärmepumpen-Hybrid.</p>
 
         <h3>Bis wann muss ich meine Heizung austauschen?</h3>
-        <p>Es gibt <strong>keine generelle Austauschpflicht</strong>. Die 65%-Regel greift nur bei Neubauten oder nach Abschluss der Wärmeplanung in Ihrer Kommune – und auch dann nur, wenn Sie die Heizung <em>freiwillig</em> tauschen. Ausnahme: Heizkessel, die älter als 30 Jahre sind, müssen ausgetauscht werden (gilt aber nicht für Brennwert- und Niedertemperaturkessel).</p>
+        <p>Es gibt keine generelle Austauschpflicht. Die früheren Regeln zum Betriebsverbot alter Kessel (§ 72) sind weggefallen. Ob für ein konkretes Gerät eine andere Vorschrift greift, klären wir im Einzelfall.</p>
 
-        <h3>Welche Strafen drohen bei Nichteinhaltung?</h3>
-        <p>Für Bestandsgebäude gibt es aktuell <strong>keine Strafen</strong>, solange Ihre Heizung funktioniert. Wenn Sie nach Inkrafttreten der Wärmeplanung eine neue Heizung einbauen und dabei die 65%-Regel missachten, können theoretisch Bußgelder verhängt werden. In der Praxis betrifft das nur Neuinstallationen nach den Stichtagen – nicht bestehende Anlagen.</p>
-
-        <h3>Welche Heizungen erfüllen die 65%-Anforderung?</h3>
-        <p>Diese Systeme erfüllen die Vorgabe: <strong>Wärmepumpen</strong> jeder Art (Luft, Sole, Wasser), <strong>Pelletheizungen</strong>, <strong>Fernwärme</strong> (wo verfügbar), <strong>Hybridheizungen</strong> (Wärmepumpe + Gas), Solarthermie in Kombination mit anderen Systemen und Gasheizungen, die H2-ready sind und perspektivisch mit Wasserstoff betrieben werden können.</p>
+        <h3>Was gilt bei einem Totalschaden im Winter?</h3>
+        <p>Reparatur geht vor. Wird nach einer Havarie 2028 eine neue Gas- oder Ölheizung eingebaut, greift die Bioanteil-Pflicht erst zwölf Monate nach dem Einbau (§ 43 Abs. 7 GModG). Wer stattdessen eine Wärmepumpe oder Pelletheizung wählt, hat keine Brennstoff-Nachweispflicht.</p>
 
         <h3>Kann ich 2026 noch eine neue Gasheizung einbauen?</h3>
-        <p><strong>Ja</strong>, besonders wenn Ihre Kommune noch keine Wärmeplanung abgeschlossen hat. Allerdings müssen Sie vorher eine <strong>Energieberatung</strong> nachweisen. Zudem gilt: Ab 2029 muss die Gasheizung zu 15% mit erneuerbaren Energien betrieben werden, ab 2035 zu 30%, ab 2045 zu 100%. Wer jetzt noch Gas einbaut, muss also schrittweise nachrüsten.</p>
+        <p><strong>Ja.</strong> Der Einbau ist erlaubt. Ab dem 1. Januar 2029 müssen Sie dann steigende Bioanteile nachweisen (10/15/30/60% ab 2029/2030/2035/2040) oder einen Erfüllungsweg nutzen, etwa Solarthermie oder eine Hybridlösung mit Wärmepumpe.</p>
 
-        <h3>Gibt es Ausnahmen vom Heizungsgesetz?</h3>
-        <p>Ja. Ausnahmen gelten bei <strong>Denkmalschutz</strong>, technischer Unmöglichkeit (z.B. wenn eine Wärmepumpe baulich nicht machbar ist), wirtschaftlicher Härte (unverhältnismäßige Kosten) und für <strong>Eigentümer über 80 Jahre</strong> (beim Verkauf muss der Käufer nachrüsten). Die Behörden entscheiden im Einzelfall pragmatisch.</p>
+        <h3>Betreffen mich die Prüfpflichten nach §§ 60a–60c?</h3>
+        <p>Nur, wenn Ihr Gebäude mindestens sechs Wohnungen oder Nutzungseinheiten hat. Für Ein- und Zweifamilienhäuser gelten diese Pflichten nicht.</p>
+
+        <h3>Woher stammen die Angaben in diesem Ratgeber?</h3>
+        <p>Aus dem Gesetzestext auf gesetze-im-internet.de (Stand: zuletzt geändert durch Gesetz vom 23.07.2026, BGBl. 2026 I Nr. 226) und den Mitteilungen der Bundesregierung vom 29.07.2026, gelesen am 08.09.2026. Dieser Ratgeber ist keine Rechtsberatung – für Ihr Gebäude beraten wir Sie persönlich.</p>
       `,
       category: 'Heizung',
       author: 'HeizCenter Redaktion',
-      date: '2025-11-08',
+      date: '2026-09-09',
       readingTime: 8,
       image: '/images/Heizung_Modernisierung.webp',
-      tags: ['Heizungsgesetz', 'GEG', 'Erneuerbare Energien'],
+      tags: ['Heizungsgesetz', 'GEG', 'GModG', 'Erneuerbare Energien'],
       featured: true,
       faqs: [
-        { question: 'Ab wann gilt das Heizungsgesetz 2024 für mich?', answer: 'Für Bestandsgebäude gilt die 65%-Regel erst nach Abschluss der kommunalen Wärmeplanung. Großstädte (über 100.000 Einwohner) haben bis Mitte 2026 Zeit, kleinere Gemeinden bis Mitte 2028. Nur in Neubaugebieten greift die Regel bereits jetzt. Ihre bestehende Heizung hat vollen Bestandsschutz und darf weiterlaufen.' },
-        { question: 'Darf ich meine Gasheizung behalten und weiter nutzen?', answer: 'Ja, ohne Einschränkung. Alle bestehenden Heizungen genießen Bestandsschutz – egal wie alt. Sie dürfen Ihre Gasheizung reparieren lassen, Verschleißteile tauschen und so lange betreiben, wie sie funktioniert. Niemand zwingt Sie zum Austausch einer funktionierenden Anlage.' },
-        { question: 'Was passiert mit meiner Ölheizung?', answer: 'Ihre Ölheizung darf ebenfalls weiterlaufen. Bei einem irreparablen Totalschaden haben Sie fünf Jahre Übergangsfrist, um eine 65%-konforme Heizung einzubauen. In dieser Zeit dürfen Sie sogar übergangsweise eine konventionelle Heizung installieren. Die pauschale Angst vor einem Ölheizungsverbot ist unbegründet.' },
-        { question: 'Bis wann muss ich meine Heizung austauschen?', answer: 'Es gibt keine generelle Austauschpflicht. Die 65%-Regel greift nur bei Neubauten oder nach Abschluss der Wärmeplanung in Ihrer Kommune – und auch dann nur, wenn Sie die Heizung freiwillig tauschen. Ausnahme: Heizkessel, die älter als 30 Jahre sind, müssen ausgetauscht werden (gilt aber nicht für Brennwert- und Niedertemperaturkessel).' },
-        { question: 'Welche Strafen drohen bei Nichteinhaltung?', answer: 'Für Bestandsgebäude gibt es aktuell keine Strafen, solange Ihre Heizung funktioniert. Wenn Sie nach Inkrafttreten der Wärmeplanung eine neue Heizung einbauen und dabei die 65%-Regel missachten, können theoretisch Bußgelder verhängt werden. In der Praxis betrifft das nur Neuinstallationen nach den Stichtagen – nicht bestehende Anlagen.' },
-        { question: 'Welche Heizungen erfüllen die 65%-Anforderung?', answer: 'Diese Systeme erfüllen die Vorgabe: Wärmepumpen jeder Art (Luft, Sole, Wasser), Pelletheizungen, Fernwärme (wo verfügbar), Hybridheizungen (Wärmepumpe + Gas), Solarthermie in Kombination mit anderen Systemen und Gasheizungen, die H2-ready sind und perspektivlich mit Wasserstoff betrieben werden können.' },
-        { question: 'Kann ich 2026 noch eine neue Gasheizung einbauen?', answer: 'Ja, besonders wenn Ihre Kommune noch keine Wärmeplanung abgeschlossen hat. Allerdings müssen Sie vorher eine Energieberatung nachweisen. Zudem gilt: Ab 2029 muss die Gasheizung zu 15% mit erneuerbaren Energien betrieben werden, ab 2035 zu 30%, ab 2045 zu 100%. Wer jetzt noch Gas einbaut, muss also schrittweise nachrüsten.' },
-        { question: 'Gibt es Ausnahmen vom Heizungsgesetz?', answer: 'Ja. Ausnahmen gelten bei Denkmalschutz, technischer Unmöglichkeit (z.B. wenn eine Wärmepumpe baulich nicht machbar ist), wirtschaftlicher Härte (unverhältnismäßige Kosten) und für Eigentümer über 80 Jahre (beim Verkauf muss der Käufer nachrüsten). Die Behörden entscheiden im Einzelfall pragmatisch.' },
+        { question: 'Gilt die 65%-Regel noch?', answer: 'Nein. Mit der Novelle vom 23. Juli 2026 wurde die Vorgabe, dass neue Heizungen zu mindestens 65% erneuerbare Energien nutzen müssen, gestrichen – für Neubauten und Bestandsgebäude. Das Gesetz heißt seit dem 29. Juli 2026 Gebäudemodernisierungsgesetz (GModG).' },
+        { question: 'Darf ich meine Gasheizung behalten und weiter nutzen?', answer: 'Ja. Das GModG enthält keine allgemeine Austauschpflicht und kein Betriebsverbot für alte Kessel. Sie dürfen Ihre Gasheizung reparieren lassen, Verschleißteile tauschen und weiter betreiben, solange sie funktioniert.' },
+        { question: 'Was passiert mit meiner Ölheizung?', answer: 'Ihre Ölheizung darf ebenfalls weiterlaufen. Wenn Sie sie nach dem 29. Juli 2026 durch eine neue Ölheizung ersetzen, gilt die Bioanteil-Stufe: ab 2029 mindestens 10%, ab 2030 15%, ab 2035 30%, ab 2040 60% Bioöl oder Wasserstoff – oder ein Erfüllungsweg wie Solarthermie oder ein Wärmepumpen-Hybrid.' },
+        { question: 'Bis wann muss ich meine Heizung austauschen?', answer: 'Es gibt keine generelle Austauschpflicht. Die früheren Regeln zum Betriebsverbot alter Kessel (§ 72) sind weggefallen. Ob für ein konkretes Gerät eine andere Vorschrift greift, klären wir im Einzelfall.' },
+        { question: 'Was gilt bei einem Totalschaden im Winter?', answer: 'Reparatur geht vor. Wird nach einer Havarie 2028 eine neue Gas- oder Ölheizung eingebaut, greift die Bioanteil-Pflicht erst zwölf Monate nach dem Einbau (§ 43 Abs. 7 GModG). Wer stattdessen eine Wärmepumpe oder Pelletheizung wählt, hat keine Brennstoff-Nachweispflicht.' },
+        { question: 'Kann ich 2026 noch eine neue Gasheizung einbauen?', answer: 'Ja. Der Einbau ist erlaubt. Ab dem 1. Januar 2029 müssen Sie dann steigende Bioanteile nachweisen (10/15/30/60% ab 2029/2030/2035/2040) oder einen Erfüllungsweg nutzen, etwa Solarthermie oder eine Hybridlösung mit Wärmepumpe.' },
+        { question: 'Betreffen mich die Prüfpflichten nach §§ 60a–60c?', answer: 'Nur, wenn Ihr Gebäude mindestens sechs Wohnungen oder Nutzungseinheiten hat. Für Ein- und Zweifamilienhäuser gelten diese Pflichten nicht.' },
+        { question: 'Woher stammen die Angaben in diesem Ratgeber?', answer: 'Aus dem Gesetzestext auf gesetze-im-internet.de (Stand: zuletzt geändert durch Gesetz vom 23.07.2026, BGBl. 2026 I Nr. 226) und den Mitteilungen der Bundesregierung vom 29.07.2026, gelesen am 08.09.2026. Dieser Ratgeber ist keine Rechtsberatung – für Ihr Gebäude beraten wir Sie persönlich.' },
       ],
     },
     {
@@ -1255,9 +1267,9 @@ function getMockBlogPosts(): BlogPost[] {
           <p class="text-sm text-slate-600">Wir rechnen beide Varianten durch – Gas vs. Wärmepumpe – mit echten Zahlen für Ihr Haus. <a href="/kontakt" class="text-[#0F5B78] font-medium hover:underline">Kostenlose Beratung anfragen →</a></p>
         </div>
 
-        <h2>Heizungsgesetz 2024: Was gilt für Gasheizungen?</h2>
+        <h2>Heizungsgesetz 2026: Was gilt für Gasheizungen?</h2>
 
-        <p>Das Gebäudeenergiegesetz (GEG) hat viele verunsichert. In unserem <a href="/blog/gasheizung-verbot-2026-geg" class="text-[#0F5B78] font-medium hover:underline">ausführlichen GEG-Ratgeber</a> erklären wir alle Details. Hier die wichtigsten Fakten:</p>
+        <p>Das Gebäudeenergiegesetz hat viele verunsichert – und wurde im Juli 2026 grundlegend geändert. In unserem <a href="/blog/gasheizung-verbot-2026-geg" class="text-[#0F5B78] font-medium hover:underline">ausführlichen GModG-Ratgeber</a> erklären wir alle Details. Hier die wichtigsten Fakten:</p>
 
         <div class="pro-con-list my-8">
           <div class="bg-green-50 border border-green-200 rounded-lg p-5 mb-4">
@@ -1265,25 +1277,19 @@ function getMockBlogPosts(): BlogPost[] {
             <ul class="space-y-2 text-green-800">
               <li><strong>Bestandsschutz:</strong> Ihre funktionierende Gasheizung darf weiterlaufen</li>
               <li><strong>Reparaturen:</strong> Defekte Teile dürfen ersetzt werden</li>
-              <li><strong>Übergangsfrist:</strong> Bei Totalausfall 5 Jahre Zeit für erneuerbaren Ersatz</li>
+              <li><strong>Neue Gasheizung:</strong> Der Einbau ist erlaubt – freie Wahl beim Heizsystem</li>
             </ul>
           </div>
           <div class="bg-red-50 border border-red-200 rounded-lg p-5">
-            <h4 class="font-bold text-red-900 mb-3">✗ Was sich ändert</h4>
+            <h4 class="font-bold text-red-900 mb-3">✗ Was für eine neue Gasheizung dazukommt</h4>
             <ul class="space-y-2 text-red-800">
-              <li><strong>Neubauten:</strong> In Neubaugebieten ab 2024 mind. 65% erneuerbare Energien</li>
-              <li><strong>Städte >100.000 EW:</strong> Ab Mitte 2026 gilt die 65%-Regel auch im Bestand</li>
-              <li><strong>Kleinere Kommunen:</strong> Ab Mitte 2028 – abhängig von der Wärmeplanung</li>
-              <li><strong>30-Jahre-Regel:</strong> Heizkessel über 30 Jahre müssen getauscht werden</li>
+              <li><strong>Ab 2029:</strong> mind. 10% Biomethan oder Wasserstoff (Einbau nach 29.07.2026)</li>
+              <li><strong>Ab 2030 / 2035 / 2040:</strong> 15% / 30% / 60%</li>
+              <li><strong>Alternativ:</strong> Erfüllungsweg wie Solarthermie oder Wärmepumpen-Hybrid (§ 43 GModG)</li>
             </ul>
           </div>
         </div>
-
-        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 my-6">
-          <p class="font-semibold text-blue-900 mb-2">📍 In unserer Region (Augsburg, Landkreis, Günzburg)</p>
-          <p class="text-sm text-blue-800">Augsburg als Großstadt muss die Wärmeplanung bis Mitte 2026 vorlegen. Bobingen und der ländliche Raum haben bis 2028 Zeit. Konkret heißt das: Wenn Sie jetzt eine Gasheizung einbauen, haben Sie in den meisten Fällen noch 10-15 Jahre, bevor Handlungsbedarf entsteht.</p>
-        </div>
-
+${GMODG_HINWEIS}
         <h2>Gas vs. Alternativen: Der ehrliche Vergleich</h2>
 
         <p>Bevor Sie sich entscheiden, hier der direkte Vergleich – mit echten Zahlen aus unseren Projekten:</p>
@@ -1405,8 +1411,8 @@ function getMockBlogPosts(): BlogPost[] {
         <h3>Welche Förderung gibt es 2026 für Gasheizungen?</h3>
         <p>Reine Gasheizungen werden <strong>nicht mehr gefördert</strong> über die BEG. Nur <strong>Gas-Hybridheizungen</strong> (Gas + Wärmepumpe/Solarthermie) erhalten bis zu 70% Förderung auf den erneuerbaren Anteil. Alternativ können Sie über den Steuerbonus (§ 35c EStG) 20% der Handwerkerkosten über 3 Jahre absetzen, maximal 8.000 Euro Steuerersparnis bei 40.000 Euro Investition.</p>
 
-        <h3>Was sagt das Heizungsgesetz 2024 zu Gasheizungen?</h3>
-        <p>Bestehende Gasheizungen haben <strong>vollen Bestandsschutz</strong> und dürfen weiterlaufen. Reparaturen sind erlaubt. Die 65%-Regel für erneuerbare Energien gilt aktuell nur in Neubaugebieten. Im Bestand greift sie erst nach Abschluss der kommunalen Wärmeplanung: in Großstädten ab Mitte 2026, in kleineren Gemeinden ab Mitte 2028. Bei Totalausfall gibt es fünf Jahre Übergangsfrist.</p>
+        <h3>Was sagt das Heizungsgesetz 2026 (GModG) zu Gasheizungen?</h3>
+        <p>Bestehende Gasheizungen dürfen weiterlaufen, Reparaturen sind erlaubt, eine Austauschpflicht gibt es nicht. Die frühere 65%-Regel wurde mit der Novelle vom 23. Juli 2026 gestrichen. Wer nach dem 29. Juli 2026 eine neue Gasheizung einbaut, muss ab 2029 steigende Bioanteile nachweisen: 10% ab 2029, 15% ab 2030, 30% ab 2035, 60% ab 2040 – oder einen Erfüllungsweg wie Solarthermie oder Wärmepumpen-Hybrid nutzen (§ 43 GModG).</p>
 
         <h3>Welche Alternative zur Gasheizung ist am besten?</h3>
         <p>Die <strong>Wärmepumpe</strong> ist für die meisten Hausbesitzer 2026 die wirtschaftlichste Alternative. Anschaffung 25.000-35.000 Euro, aber mit 30-70% BEG-Förderung. Betriebskosten nur ca. 1.300 Euro pro Jahr (statt 2.900 Euro bei Gas). Auf 15 Jahre gerechnet etwa 20.000 Euro günstiger. Alternativen: Gas-Hybrid (Kombination aus beiden), Pelletheizung (wenn Platz vorhanden) oder Fernwärme (wo verfügbar).</p>
@@ -1429,7 +1435,7 @@ function getMockBlogPosts(): BlogPost[] {
         { question: 'Was kostet eine Gasheizung im laufenden Betrieb pro Jahr?', answer: 'Die jährlichen Betriebskosten liegen bei etwa 2.850 bis 2.940 Euro für ein typisches Einfamilienhaus. Das setzt sich zusammen aus Gasverbrauch (ca. 2.400 Euro), CO₂-Abgabe 2025 (ca. 220 Euro), Wartung (150-200 Euro) und Schornsteinfeger (80-120 Euro). Das entspricht etwa 240-245 Euro pro Monat.' },
         { question: 'Lohnt sich eine Gasheizung 2026 noch?', answer: 'Das hängt von Ihrer Situation ab. Eine Gasheizung hat niedrige Anschaffungskosten, aber hohe Betriebskosten (ca. 1.500 Euro mehr pro Jahr als eine Wärmepumpe). Es gibt praktisch keine Förderung mehr, nur einen Steuerbonus (max. 2.000 Euro). Auf 15 Jahre gerechnet ist eine Wärmepumpe trotz höherer Anschaffungskosten oft 20.000 Euro günstiger. Gas kann sinnvoll sein bei Notfällen, kurzfristigem Verkauf oder extremen Platzbeschränkungen.' },
         { question: 'Welche Förderung gibt es 2026 für Gasheizungen?', answer: 'Reine Gasheizungen werden nicht mehr gefördert über die BEG. Nur Gas-Hybridheizungen (Gas + Wärmepumpe/Solarthermie) erhalten bis zu 70% Förderung auf den erneuerbaren Anteil. Alternativ können Sie über den Steuerbonus (§ 35c EStG) 20% der Handwerkerkosten über 3 Jahre absetzen, maximal 8.000 Euro Steuerersparnis bei 40.000 Euro Investition.' },
-        { question: 'Was sagt das Heizungsgesetz 2024 zu Gasheizungen?', answer: 'Bestehende Gasheizungen haben vollen Bestandsschutz und dürfen weiterlaufen. Reparaturen sind erlaubt. Die 65%-Regel für erneuerbare Energien gilt aktuell nur in Neubaugebieten. Im Bestand greift sie erst nach Abschluss der kommunalen Wärmeplanung: in Großstädten ab Mitte 2026, in kleineren Gemeinden ab Mitte 2028. Bei Totalausfall gibt es fünf Jahre Übergangsfrist.' },
+        { question: 'Was sagt das Heizungsgesetz 2026 (GModG) zu Gasheizungen?', answer: 'Bestehende Gasheizungen dürfen weiterlaufen, Reparaturen sind erlaubt, eine Austauschpflicht gibt es nicht. Die frühere 65%-Regel wurde mit der Novelle vom 23. Juli 2026 gestrichen. Wer nach dem 29. Juli 2026 eine neue Gasheizung einbaut, muss ab 2029 steigende Bioanteile nachweisen: 10% ab 2029, 15% ab 2030, 30% ab 2035, 60% ab 2040 – oder einen Erfüllungsweg wie Solarthermie oder Wärmepumpen-Hybrid nutzen (§ 43 GModG).' },
         { question: 'Welche Alternative zur Gasheizung ist am besten?', answer: 'Die Wärmepumpe ist für die meisten Hausbesitzer 2026 die wirtschaftlichste Alternative. Anschaffung 25.000-35.000 Euro, aber mit 30-70% BEG-Förderung. Betriebskosten nur ca. 1.300 Euro pro Jahr (statt 2.900 Euro bei Gas). Auf 15 Jahre gerechnet etwa 20.000 Euro günstiger. Alternativen: Gas-Hybrid (Kombination aus beiden), Pelletheizung (wenn Platz vorhanden) oder Fernwärme (wo verfügbar).' },
         { question: 'Was ist eine H2-ready Gasheizung?', answer: 'Eine wasserstofffähige Gasheizung, die später auf Wasserstoff umgerüstet werden kann. Die Idee: Heute mit Erdgas heizen, künftig mit grünem Wasserstoff. In der Praxis sind diese Geräte 2025 kaum verfügbar und es ist völlig unklar, ob und wann flächendeckend Wasserstoff verfügbar sein wird. Experten raten eher zu bewährten erneuerbaren Lösungen wie Wärmepumpen.' },
         { question: 'Wie entwickelt sich die CO₂-Abgabe für Gas?', answer: 'Die CO₂-Abgabe steigt kontinuierlich: 2025: 55 Euro pro Tonne, 2026: 65 Euro, ab 2027 im Marktkorridor 55-65 Euro, danach unbegrenzt. Experten rechnen langfristig mit 100-150 Euro pro Tonne. Bei 20.000 kWh Gasverbrauch zahlen Sie 2025 etwa 220 Euro CO₂-Steuer pro Jahr, bei 100 Euro/Tonne wären das 500-600 Euro zusätzlich.' },
@@ -2999,9 +3005,9 @@ function getMockBlogPosts(): BlogPost[] {
           <li>Moderne Anlagen melden Probleme selbst per App</li>
         </ul>
 
-        <h3>9. Zukunftssicher dank GEG-Konformität</h3>
+        <h3>9. Zukunftssicher ohne gesetzliche Nachweispflichten</h3>
 
-        <p>Seit 2024 müssen neue Heizungen zu 65% mit erneuerbaren Energien laufen. Wärmepumpen erfüllen das automatisch. Das bedeutet: <strong>Keine teuren Nachrüstungen in 5 oder 10 Jahren.</strong> Einmal installiert, ist Ihre Heizung bis 2045 und darüber hinaus gesetzeskonform.</p>
+        <p>Seit dem 29. Juli 2026 gilt das Gebäudemodernisierungsgesetz (GModG): Die 65%-Regel ist gestrichen, neue Gas- und Ölheizungen müssen aber ab 2029 steigende Bioanteile nachweisen (10% bis 60% bis 2040, § 43 GModG). Für Wärmepumpen gibt es keine solche Brennstoff-Nachweispflicht. Das bedeutet: <strong>Keine Nachrüstungen wegen Bioanteil-Stufen.</strong></p>
 
         <div class="callout callout-info">
           <span class="callout-icon">💡</span>
@@ -3429,91 +3435,96 @@ function getMockBlogPosts(): BlogPost[] {
     {
       id: 11,
       slug: 'gasheizung-verbot-2026-geg',
-      title: 'Gasheizung Verbot 2026: Was das GEG wirklich bedeutet',
-      excerpt: 'Gasheizungsverbot Deutschland 2026: Alle Fakten zum GEG, Bestandsschutz, Fristen, Ausnahmen, Alternativen und Förderungen bis 70%. Keine Panik – wir klären auf!',
+      title: 'Gasheizung Verbot 2026: Was das GModG wirklich bedeutet',
+      excerpt: 'Gasheizungsverbot Deutschland 2026: Seit 29. Juli 2026 gilt das Gebäudemodernisierungsgesetz. Keine 65%-Regel mehr, keine Austauschpflicht, Bioanteil-Stufen ab 2029, Förderung bis 70%. Keine Panik – wir klären auf!',
       content: `
-        <h2>Gasheizung Verbot 2026: Das Gebäudeenergiegesetz (GEG) verständlich erklärt</h2>
+        <h2>Gasheizung Verbot 2026: Das Gebäudemodernisierungsgesetz (GModG) verständlich erklärt</h2>
 
-        <p>Das sogenannte "Gasheizungsverbot" sorgt seit Monaten für Verunsicherung bei Hausbesitzern in ganz Deutschland. <strong>Die gute Nachricht vorweg: Es gibt kein pauschales Verbot von Gasheizungen.</strong> Das Gebäudeenergiegesetz (GEG 2024) regelt vielmehr einen <strong>schrittweisen, geordneten Umstieg</strong> auf erneuerbare Energien bis 2045 – mit umfangreichem Bestandsschutz für bestehende Anlagen und großzügigen Übergangsfristen.</p>
+        <p>Das sogenannte "Gasheizungsverbot" sorgt seit Jahren für Verunsicherung bei Hausbesitzern. <strong>Die gute Nachricht vorweg: Es gibt kein Verbot von Gasheizungen.</strong> Seit dem 29. Juli 2026 gilt das Gebäudeenergiegesetz in einer grundlegend geänderten Fassung und heißt jetzt <strong>Gebäudemodernisierungsgesetz (GModG)</strong>. Die frühere 65%-Regel ist gestrichen. Stattdessen gilt für neu eingebaute Gas- und Ölheizungen eine <strong>Stufenregel für Bioanteile ab 2029</strong>.</p>
+
+        <div style="background-color: #e8f4f8; padding: 15px; border-left: 4px solid #0F5B78; margin: 20px 0;">
+          <p style="margin: 0;"><strong>Aktualisiert im September 2026.</strong> Dieser Ratgeber wurde vollständig auf die Novelle vom 23. Juli 2026 (BGBl. 2026 I Nr. 226) umgeschrieben. Stand: GModG vom 23.07.2026, gelesen am 08.09.2026. Keine Rechtsberatung.</p>
+        </div>
 
         <div style="background-color: #fff3cd; padding: 20px; border-left: 4px solid #ffc107; margin: 20px 0;">
           <h3 style="margin-top: 0;">⚡ Die wichtigsten Fakten auf einen Blick</h3>
           <ul style="margin-bottom: 0;">
-            <li><strong>Bestandsschutz:</strong> Bestehende Gasheizungen dürfen weiterlaufen und repariert werden</li>
-            <li><strong>Keine Austauschpflicht:</strong> Nur wenn die Heizung kaputt ist oder über 30 Jahre alt (Konstanttemperaturkessel)</li>
-            <li><strong>65%-Regel:</strong> Neue Heizungen müssen ab 2026/2028 zu 65% erneuerbare Energien nutzen</li>
+            <li><strong>Kein Verbot:</strong> Bestehende Gasheizungen dürfen weiterlaufen und repariert werden</li>
+            <li><strong>Keine Austauschpflicht:</strong> Die früheren Regeln zum Betriebsverbot alter Kessel (§ 72) sind weggefallen</li>
+            <li><strong>65%-Regel gestrichen:</strong> Für Neubauten und Bestandsgebäude</li>
+            <li><strong>Bioanteil-Stufen:</strong> Neue Gas-/Ölheizungen ab 2029: 10% → 2030: 15% → 2035: 30% → 2040: 60%</li>
             <li><strong>Förderung:</strong> Bis zu 70% Zuschuss für Wärmepumpen & Co. (max. 21.000 €)</li>
-            <li><strong>Zeitplan:</strong> Vollständiger Umstieg erst bis 2045 erforderlich</li>
           </ul>
         </div>
 
-        <h2>Was regelt das GEG 2024 wirklich?</h2>
+        <h2>Was regelt das GModG wirklich?</h2>
 
-        <p>Das Gebäudeenergiegesetz (GEG) ist am <strong>1. Januar 2024</strong> in seiner novellierten Fassung in Kraft getreten. Es verfolgt das Ziel, dass Deutschland bis <strong>2045 klimaneutral</strong> wird – auch im Gebäudesektor. Das Gesetz schreibt <strong>keine spezifische Heizungstechnologie</strong> vor, sondern definiert Anforderungen an den Anteil erneuerbarer Energien.</p>
+        <p>Die Novelle wurde am 23. Juli 2026 verkündet (BGBl. 2026 I Nr. 226) und gilt im Wesentlichen seit dem <strong>29. Juli 2026</strong>. Das Gesetz schreibt <strong>keine Heizungstechnologie</strong> vor: Wer im Bestand eine Heizung ersetzt, wählt nach § 42 frei zwischen Gas-, Öl- oder Flüssiggasheizung, Wärmepumpe, Solarthermie, Biomasse- oder Wasserstoffheizung, Hybridheizung, Kraft-Wärme-Kopplung, Stromdirektheizung, Wärmenetz oder einer anderen innovativen Lösung.</p>
 
-        <h3>Die 65%-Erneuerbare-Energien-Regel</h3>
+        <h3>Die 65%-Regel ist Geschichte</h3>
 
-        <p>Kernstück des GEG ist die sogenannte <strong>65%-Regel</strong>: Bei der Installation einer <strong>neuen Heizungsanlage</strong> müssen mindestens 65 Prozent der benötigten Wärmeenergie aus erneuerbaren Quellen stammen. Diese Regel gilt jedoch <strong>nicht sofort überall</strong>, sondern wird schrittweise eingeführt:</p>
+        <p>Bis Juli 2026 verlangte das GEG, dass neue Heizungen zu mindestens 65 Prozent mit erneuerbaren Energien betrieben werden – gestaffelt nach der kommunalen Wärmeplanung. Diese Vorgabe hat der Gesetzgeber gestrichen. Die Bundesregierung formuliert es so: "Die gesetzliche Vorgabe eines einheitlichen Anteils von mindestens 65 Prozent erneuerbarer Energien bei der Wärmeversorgung für alle Neu- und Bestandsbauten entfällt."</p>
+
+        <p><strong>Wichtig:</strong> Auch die Kopplung an die kommunale Wärmeplanung ist entfallen. Die Wärmeplanung Ihrer Gemeinde zeigt weiterhin, wo Wärmenetze oder Wasserstoffnetze geplant sind – eine nützliche Information für Ihre Entscheidung, aber kein Auslöser für eine Heizungspflicht mehr.</p>
+
+        <h3>Neu: Bioanteil-Stufen für neue Gas- und Ölheizungen (§ 43)</h3>
+
+        <p>Wer <strong>nach dem 29. Juli 2026</strong> eine Gas-, Heizöl- oder Flüssiggasheizung in ein bestehendes Gebäude einbaut, muss nach § 43 Abs. 1 GModG sicherstellen, dass ein steigender Anteil der Wärme aus Biomethan, Bioöl, biogenem Flüssiggas oder Wasserstoff stammt:</p>
 
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
           <thead>
             <tr style="background-color: #0F5B78; color: white;">
-              <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Gebäudetyp</th>
-              <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Ab wann gilt die 65%-Regel?</th>
+              <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Ab Datum</th>
+              <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Mindestanteil Bio/Wasserstoff</th>
             </tr>
           </thead>
           <tbody>
             <tr style="background-color: #f8f9fa;">
-              <td style="padding: 10px; border: 1px solid #ddd;"><strong>Neubau in Neubaugebiet</strong></td>
-              <td style="padding: 10px; border: 1px solid #ddd;">Seit 1. Januar 2024 (sofort)</td>
+              <td style="padding: 10px; border: 1px solid #ddd;"><strong>1. Januar 2029</strong></td>
+              <td style="padding: 10px; border: 1px solid #ddd;">10%</td>
             </tr>
             <tr>
-              <td style="padding: 10px; border: 1px solid #ddd;"><strong>Bestandsgebäude in Großstädten (>100.000 EW)</strong></td>
-              <td style="padding: 10px; border: 1px solid #ddd;">Spätestens 30. Juni 2026 (gesetzliche Frist)</td>
+              <td style="padding: 10px; border: 1px solid #ddd;"><strong>1. Januar 2030</strong></td>
+              <td style="padding: 10px; border: 1px solid #ddd;">15%</td>
             </tr>
             <tr style="background-color: #f8f9fa;">
-              <td style="padding: 10px; border: 1px solid #ddd;"><strong>Bestandsgebäude in kleineren Städten</strong></td>
-              <td style="padding: 10px; border: 1px solid #ddd;">Spätestens 30. Juni 2028 (gesetzliche Frist)</td>
+              <td style="padding: 10px; border: 1px solid #ddd;"><strong>1. Januar 2035</strong></td>
+              <td style="padding: 10px; border: 1px solid #ddd;">30%</td>
             </tr>
             <tr>
-              <td style="padding: 10px; border: 1px solid #ddd;"><strong>Neubau außerhalb Neubaugebiet</strong></td>
-              <td style="padding: 10px; border: 1px solid #ddd;">Ab 1. Juli 2026/2028 (je nach Kommune)</td>
+              <td style="padding: 10px; border: 1px solid #ddd;"><strong>1. Januar 2040</strong></td>
+              <td style="padding: 10px; border: 1px solid #ddd;">60%</td>
             </tr>
           </tbody>
         </table>
 
-        <p><strong>Wichtig:</strong> Die 65%-Regel gilt ab den genannten Fristen <strong>unabhängig davon</strong>, ob die kommunale Wärmeplanung bereits vorliegt. Die Wärmeplanung zeigt auf, wo Wärmenetze oder Wasserstoffnetze geplant sind – wichtige Informationen für Ihre Heizungsentscheidung. Nur eine <strong>Gebietsausweisung</strong> als Wärmenetz- oder Wasserstoff-Ausbaugebiet kann die 65%-Pflicht vorzeitig auslösen (§71 Abs.8 GEG).</p>
+        <p><strong>Alternative Erfüllungswege</strong> nach § 43: Solarthermie mit vorgegebener Kollektorfläche (2029–2034: 0,04 m² je m² Nutzfläche bei bis zu zwei Wohnungen, 0,03 m² bei mehr), eine Lüftungsanlage mit Wärmerückgewinnung von mindestens 73%, ein Hybrid mit Wärmepumpe (Wärmepumpenleistung mindestens 30% bzw. 40% des Spitzenlasterzeugers) oder ein Biomasse-Hybrid.</p>
+
+        <div style="background-color: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; margin: 15px 0;">
+          <p style="margin: 0;"><strong>Angekündigt, noch nicht beschlossen:</strong> Nach § 42a GModG soll die Bundesregierung bis zum 1. Dezember 2026 ein Gesetz mit einer Grüngas- und Grünheizölquote vorlegen; ab 2045 sollen Brennstoffe vollständig klimaneutral sein. Dieses Gesetz liegt noch nicht vor.</p>
+        </div>
 
         <h2>Bestandsschutz: Ihre alte Gasheizung darf bleiben</h2>
 
-        <p>Das ist die wichtigste Information für Millionen Hausbesitzer: <strong>Bestehende Gas- und Ölheizungen genießen vollständigen Bestandsschutz.</strong></p>
+        <p>Das ist die wichtigste Information für Millionen Hausbesitzer: <strong>Das GModG kennt keine allgemeine Austauschpflicht für funktionierende Heizungen.</strong></p>
 
-        <p>Konkret bedeutet das: Funktionstüchtige Heizungen dürfen unbegrenzt weiterlaufen, defekte Teile dürfen repariert und ausgetauscht werden, und nur weil die Heizung alt ist, muss sie nicht raus (Ausnahme: siehe unten). Sie haben keinen Zeitdruck und können in Ruhe planen und auf bessere Förderkonditionen warten.</p>
+        <p>Konkret bedeutet das: Funktionstüchtige Heizungen dürfen weiterlaufen, defekte Teile dürfen repariert und ausgetauscht werden. Sie haben keinen Zeitdruck und können in Ruhe planen.</p>
 
         <h3>Wann muss eine alte Gasheizung raus?</h3>
 
-        <p>Eine <strong>Austauschpflicht</strong> besteht nur in diesen Fällen:</p>
-
-        <div style="background-color: #ffe6e6; padding: 15px; border-left: 4px solid #dc3545; margin: 15px 0;">
-          <p style="margin: 0;"><strong>Austauschpflicht für Konstanttemperaturkessel</strong></p>
-          <p style="margin: 10px 0 0 0;">Heizkessel, die <strong>älter als 30 Jahre</strong> sind und als <strong>Konstanttemperaturkessel</strong> betrieben werden, müssen ausgetauscht werden. <strong>Aber:</strong> Moderne Niedertemperatur- und Brennwertkessel sind ausgenommen – diese dürfen weiterlaufen!</p>
-        </div>
-
-        <p><strong>Sonderregelung für Eigentümer:</strong> Wenn Sie Ihr Ein- oder Zweifamilienhaus am <strong>1. Februar 2002</strong> bereits selbst bewohnt haben, gilt die 30-Jahre-Austauschpflicht für Sie nicht – nur für den nächsten Käufer.</p>
+        <p>Die frühere Vorschrift zum Betriebsverbot alter Kessel (§ 72 GEG) ist mit der Novelle <strong>weggefallen</strong>; § 71 (65%-Anforderung) und § 72 stehen im aktuellen Gesetzestext als "(weggefallen)". Ob für ein konkretes Gerät eine andere Vorschrift greift – etwa aus dem Immissionsschutz oder dem Landesrecht –, ist eine Einzelfallfrage, die wir gern mit Ihnen vor Ort klären.</p>
 
         <h3>Heizung kaputt – was nun?</h3>
 
-        <p>Wenn Ihre Heizung irreparabel defekt ist, haben Sie <strong>mehrere Optionen</strong>:</p>
+        <p>Wenn Ihre Heizung irreparabel defekt ist, haben Sie diese Optionen:</p>
 
         <ol>
-          <li><strong>Übergangslösung:</strong> Sie dürfen eine <strong>gebrauchte oder gemietete Gasheizung</strong> einbauen und haben dann <strong>5 Jahre Zeit</strong>, auf ein GEG-konformes System umzusteigen</li>
-          <li><strong>Sofort GEG-konform:</strong> Sie bauen direkt eine Wärmepumpe, Pelletheizung oder andere 65%-konforme Heizung ein</li>
-          <li><strong>Gasheizung mit Biogas-Anteil:</strong> In der Übergangsphase bis zur Wärmeplanung möglich (siehe unten)</li>
+          <li><strong>Reparatur prüfen:</strong> Lässt sich die Anlage instand setzen, ist das immer erlaubt</li>
+          <li><strong>Wärmepumpe, Pellets oder Wärmenetz:</strong> Keine Brennstoff-Nachweispflicht, bis zu 70% Förderung</li>
+          <li><strong>Neue Gas- oder Ölheizung:</strong> Erlaubt – mit Bioanteil-Stufen ab 2029. Bei einer <strong>Havarie im Jahr 2028</strong> greift die Pflicht erst zwölf Monate nach dem Einbau; ab 2029 läuft eine bestehende Pflicht bei Ausfall zwölf Monate weiter (§ 43 Abs. 7)</li>
         </ol>
 
         <h2>Zeitplan: Wann gilt was?</h2>
-
-        <p>Der Umstieg auf erneuerbare Energien erfolgt <strong>schrittweise</strong>. Hier der komplette Zeitplan:</p>
 
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
           <thead>
@@ -3524,49 +3535,43 @@ function getMockBlogPosts(): BlogPost[] {
           </thead>
           <tbody>
             <tr style="background-color: #f8f9fa;">
-              <td style="padding: 10px; border: 1px solid #ddd;"><strong>1. Januar 2024</strong></td>
-              <td style="padding: 10px; border: 1px solid #ddd;">GEG tritt in Kraft – 65%-Regel gilt für Neubauten in Neubaugebieten</td>
+              <td style="padding: 10px; border: 1px solid #ddd;"><strong>29. Juli 2026</strong></td>
+              <td style="padding: 10px; border: 1px solid #ddd;">GModG in Kraft – 65%-Regel gestrichen, freie Wahl beim Heizsystem</td>
             </tr>
             <tr>
-              <td style="padding: 10px; border: 1px solid #ddd;"><strong>30. Juni 2026</strong></td>
-              <td style="padding: 10px; border: 1px solid #ddd;">Frist für Wärmeplanung in Großstädten (>100.000 EW)</td>
+              <td style="padding: 10px; border: 1px solid #ddd;"><strong>1. Dezember 2026</strong></td>
+              <td style="padding: 10px; border: 1px solid #ddd;">Frist für den Gesetzentwurf zur Grüngas-/Grünheizölquote (§ 42a) – noch nicht vorgelegt</td>
             </tr>
             <tr style="background-color: #f8f9fa;">
-              <td style="padding: 10px; border: 1px solid #ddd;"><strong>30. Juni 2028</strong></td>
-              <td style="padding: 10px; border: 1px solid #ddd;">Frist für Wärmeplanung in kleineren Kommunen</td>
+              <td style="padding: 10px; border: 1px solid #ddd;"><strong>30. September 2027</strong></td>
+              <td style="padding: 10px; border: 1px solid #ddd;">Prüfpflicht für ältere Heizungen (Einbau vor 1.10.2009) in Gebäuden ab sechs Wohneinheiten (§ 60b)</td>
             </tr>
             <tr>
               <td style="padding: 10px; border: 1px solid #ddd;"><strong>1. Januar 2029</strong></td>
-              <td style="padding: 10px; border: 1px solid #ddd;">Gasheizungen aus Übergangszeit müssen mind. 15% Biomethan nutzen</td>
+              <td style="padding: 10px; border: 1px solid #ddd;">Neue Gas-/Ölheizungen (Einbau nach 29.7.2026): mind. 10% Bio/Wasserstoff</td>
             </tr>
             <tr style="background-color: #f8f9fa;">
-              <td style="padding: 10px; border: 1px solid #ddd;"><strong>1. Januar 2035</strong></td>
-              <td style="padding: 10px; border: 1px solid #ddd;">Biomethan-Anteil steigt auf mind. 30%</td>
+              <td style="padding: 10px; border: 1px solid #ddd;"><strong>1. Januar 2030</strong></td>
+              <td style="padding: 10px; border: 1px solid #ddd;">Anteil steigt auf mind. 15%</td>
             </tr>
             <tr>
-              <td style="padding: 10px; border: 1px solid #ddd;"><strong>1. Januar 2040</strong></td>
-              <td style="padding: 10px; border: 1px solid #ddd;">Biomethan-Anteil steigt auf mind. 60%</td>
+              <td style="padding: 10px; border: 1px solid #ddd;"><strong>1. Januar 2035</strong></td>
+              <td style="padding: 10px; border: 1px solid #ddd;">Anteil steigt auf mind. 30%</td>
             </tr>
             <tr style="background-color: #f8f9fa;">
-              <td style="padding: 10px; border: 1px solid #ddd;"><strong>1. Januar 2045</strong></td>
-              <td style="padding: 10px; border: 1px solid #ddd;">Alle Heizungen müssen zu 100% mit erneuerbaren Energien betrieben werden</td>
+              <td style="padding: 10px; border: 1px solid #ddd;"><strong>1. Januar 2040</strong></td>
+              <td style="padding: 10px; border: 1px solid #ddd;">Anteil steigt auf mind. 60%</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>Sonderregelungen für Etagenheizungen</h2>
+        <h2>Prüfpflichten nur für größere Gebäude</h2>
 
-        <p>Besitzer von Mehrfamilienhäusern mit <strong>Etagenheizungen</strong> erhalten deutlich längere Fristen:</p>
-
-        <ul>
-          <li><strong>5 Jahre Übergangsfrist:</strong> Nach Austausch der ersten Etagenheizung haben Sie 5 Jahre Zeit, um zu entscheiden: zentrale Heizung oder weiter dezentral?</li>
-          <li><strong>+8 Jahre bei Zentralheizung:</strong> Wenn Sie sich für eine zentrale Heizung entscheiden, verlängert sich die Frist um bis zu 8 weitere Jahre</li>
-          <li><strong>Bis zu 13 Jahre gesamt:</strong> Maximale Übergangsfrist für komplexe Mehrfamilienhäuser</li>
-        </ul>
+        <p>Die Prüf- und Optimierungspflichten des GModG gelten nur für Gebäude mit <strong>mindestens sechs Wohnungen oder Nutzungseinheiten</strong>: Betriebsprüfung neuer Wärmepumpen nach der ersten vollen Heizperiode, spätestens zwei Jahre nach Inbetriebnahme (§ 60a), Prüfung älterer Heizungen innerhalb eines Jahres nach Ablauf von 15 Jahren nach Einbau bzw. bis 30. September 2027 bei Einbau vor Oktober 2009 (§ 60b) und ein hydraulischer Abgleich nach dem Einbau einer neuen Heizung (§ 60c). Für Ein- und Zweifamilienhäuser gelten diese Pflichten nicht.</p>
 
         <h2>Welche Alternativen zur Gasheizung gibt es?</h2>
 
-        <p>Das GEG ist <strong>technologieneutral</strong> – Sie können aus mehreren Erfüllungsoptionen wählen:</p>
+        <p>Das GModG ist <strong>technologieoffen</strong> – Sie können frei wählen. Ein Überblick über die gängigen Systeme:</p>
 
         <h3><a href="/waermepumpe" class="text-[#0F5B78] font-medium hover:underline">Wärmepumpe</a> – die häufigste Lösung</h3>
 
@@ -3596,7 +3601,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li><strong>Vorteil:</strong> Keine eigene Heizanlage, wartungsarm</li>
         </ul>
 
-        <h3>Hybridheizung als Übergangslösung</h3>
+        <h3>Hybridheizung – Wärmepumpe mit Gas für die Spitzenlast</h3>
 
         <ul>
           <li><strong>Funktion:</strong> Kombination Wärmepumpe + Gasheizung</li>
@@ -3676,17 +3681,17 @@ function getMockBlogPosts(): BlogPost[] {
 
         <h2>Häufige Irrtümer zum Gasheizungsverbot</h2>
 
-        <p>Um das GEG ranken sich viele Missverständnisse. Hier die häufigsten Mythen – und was wirklich stimmt:</p>
+        <p>Um das Heizungsgesetz ranken sich viele Missverständnisse. Hier die häufigsten Mythen – und was seit der Novelle 2026 stimmt:</p>
 
-        <p><strong>"Ab 2024 sind Gasheizungen verboten"</strong> – Falsch. Bestehende Gasheizungen dürfen weiterlaufen. Nur neue Heizungen müssen in Neubauten seit 2024 die 65%-Regel erfüllen.</p>
+        <p><strong>"Gasheizungen sind verboten"</strong> – Falsch. Bestehende Gasheizungen dürfen weiterlaufen, neue dürfen eingebaut werden. Neue Gas- und Ölheizungen müssen ab 2029 steigende Bioanteile nachweisen.</p>
 
-        <p><strong>"Ich muss sofort meine Heizung austauschen"</strong> – Falsch. Nur bei Defekt oder 30+ Jahren (Konstanttemperaturkessel). Sonst kein Zeitdruck.</p>
+        <p><strong>"Ich muss sofort meine Heizung austauschen"</strong> – Falsch. Das GModG enthält keine Austauschpflicht für funktionierende Heizungen; das frühere Betriebsverbot für alte Kessel ist weggefallen.</p>
+
+        <p><strong>"Neue Heizungen müssen 65% erneuerbar sein"</strong> – Nicht mehr. Die 65%-Regel wurde mit der Novelle vom 23. Juli 2026 gestrichen.</p>
 
         <p><strong>"Wärmepumpen brauchen Fußbodenheizung"</strong> – Falsch. Moderne Wärmepumpen funktionieren auch mit normalen Heizkörpern (evtl. Austausch einzelner Heizkörper nötig).</p>
 
         <p><strong>"Wasserstoff wird bald massenhaft verfügbar"</strong> – Unwahrscheinlich. Experten zweifeln stark daran. Wasserstoff bleibt teuer und ist für die Industrie reserviert.</p>
-
-        <p><strong>"Das Gesetz wurde abgemildert"</strong> – Falsch. Das GEG 2024 ist in vielen Punkten strenger als vorher.</p>
 
         <h2>Was sollten Sie jetzt tun?</h2>
 
@@ -3694,38 +3699,28 @@ function getMockBlogPosts(): BlogPost[] {
 
         <h3>Wenn Ihre Heizung noch funktioniert</h3>
 
-        <p>Entspannen Sie sich – durch den Bestandsschutz haben Sie keinen Handlungsdruck. Verfolgen Sie die kommunale Wärmeplanung Ihrer Stadt oder Gemeinde und informieren Sie sich über Alternativen und Förderungen. Nutzen Sie den Zeitpuffer bis 2026/2028 für eine langfristige Planung und legen Sie Geld für den späteren Austausch zurück.</p>
+        <p>Entspannen Sie sich – es gibt keinen gesetzlichen Handlungsdruck. Behalten Sie die kommunale Wärmeplanung Ihrer Stadt oder Gemeinde im Blick (Wärmenetz in Ihrer Straße?), informieren Sie sich über Alternativen und Förderungen und legen Sie Geld für den späteren Austausch zurück.</p>
 
-        <h3>Wenn Ihre Heizung bald kaputt geht oder älter als 30 Jahre ist</h3>
+        <h3>Wenn Ihre Heizung bald kaputt geht</h3>
 
         <p>Beauftragen Sie eine Energieberatung (50–80% gefördert) und holen Sie Kostenvoranschläge für Wärmepumpe, Pellets und Fernwärme ein. Bereiten Sie den Förderantrag bei der KfW vor – wichtig ist, dass dieser <em>vor</em> Vertragsschluss gestellt wird. Prüfen Sie die Gebäudedämmung, denn diese macht die Wärmepumpe effizienter. Nutzen Sie den Zeitplan: Der Geschwindigkeitsbonus läuft bis Ende 2028.</p>
 
         <h3>Wenn Ihre Heizung akut kaputt ist</h3>
 
-        <p>Sie haben zwei Optionen: Entweder eine Übergangslösung mit gebrauchter oder gemieteter Gasheizung plus 5 Jahre Frist, oder Sie steigen direkt um auf eine Wärmepumpe mit bis zu 70% Förderung. Beachten Sie die Beratungspflicht bei neuem Gas- oder Ölkessel und handeln Sie bei Förderung schnell – der Antrag muss vor Vertragsschluss gestellt werden.</p>
+        <p>Reparatur prüfen. Geht das nicht: Wärmepumpe oder Pellets mit bis zu 70% Förderung – oder eine neue Gasheizung, dann mit Bioanteil-Stufen ab 2029 und der Havarie-Regel des § 43 Abs. 7. Bei Förderung schnell handeln – der Antrag muss vor Vertragsschluss gestellt werden.</p>
 
-        <h2>Rechtliche Konsequenzen bei Verstößen</h2>
+        <h2>Bußgelder und Kontrollen</h2>
 
-        <p>Das GEG ist kein zahnloser Tiger. Bei Verstößen drohen <strong>Bußgelder bis 50.000 €</strong>:</p>
-
-        <ul>
-          <li>Verstoß gegen 65%-Regel bei Neubauten: <strong>Bis 50.000 €</strong></li>
-          <li>Nicht-Austausch 30+ Jahre alter Kessel: <strong>Bußgeld möglich</strong></li>
-          <li>Fehlender/falscher Energieausweis: <strong>5.000–10.000 €</strong></li>
-          <li>Unzureichende Rohrleitungsdämmung: <strong>Bis 5.000 €</strong></li>
-        </ul>
-
-        <p>Kontrollen führen Schornsteinfeger und Bauaufsichtsbehörden durch.</p>
-
+        <p>Ob und in welcher Höhe bei einem Verstoß Bußgelder in Betracht kommen, ist eine Einzelfallfrage – wir beziffern hier bewusst nichts. Für private Hausbesitzer mit funktionierender Heizung ergibt sich aus dem GModG keine Pflicht, die man versäumen könnte.</p>
         <h2>Warum jetzt handeln lohnt</h2>
 
         <p>Auch wenn Sie Zeit haben – es gibt gute Gründe, <strong>jetzt</strong> aktiv zu werden: Der Geschwindigkeitsbonus läuft bis Ende 2028 und bringt zusätzliche 20%. Der CO₂-Preis steigt kontinuierlich (aktuell 55 €/Tonne), was Gas jährlich teurer macht. Handwerker sind noch verfügbar ohne Engpässe durch Ansturm. Und frühzeitige Planung gibt Ihnen Sicherheit, die beste Lösung für Ihr Haus zu finden – jedes Jahr mit erneuerbarer Energie spart außerdem 2,6 Tonnen CO₂.</p>
 
-        <h2>Fazit: Kein Grund zur Panik, aber Handeln lohnt sich</h2>
+        <h2>Fazit: Kein Verbot, keine Austauschpflicht – aber Handeln lohnt sich</h2>
 
-        <p>Das sogenannte "Gasheizungsverbot" ist in Wahrheit ein <strong>geordneter, schrittweiser Übergang</strong> mit großzügigen Fristen bis 2045. Bestehende Gasheizungen genießen Bestandsschutz und dürfen weiterlaufen. Hausbesitzer haben ausreichend Zeit, sich zu informieren und die beste Lösung für ihr Gebäude zu finden.</p>
+        <p>Das sogenannte "Gasheizungsverbot" gibt es nicht. Seit der Novelle vom 23. Juli 2026 gilt: Bestehende Gasheizungen dürfen weiterlaufen, beim Austausch haben Sie die freie Wahl, und wer bei Gas oder Öl bleibt, muss ab 2029 steigende Bioanteile nachweisen.</p>
 
-        <p><strong>Die wichtigsten Eckpunkte:</strong> Keine Austauschpflicht für funktionierende Heizungen (außer Konstanttemperaturkessel über 30 Jahre). Die 65%-Regel greift erst 2026/2028 nach kommunaler Wärmeplanung. Bis zu 70% staatliche Förderung für Wärmepumpen und Co. sind verfügbar. Sie haben mehrere Erfüllungsoptionen: Wärmepumpe, Pellets, Fernwärme oder Hybrid. Der vollständige Umstieg ist erst bis 2045 erforderlich.</p>
+        <p><strong>Die wichtigsten Eckpunkte:</strong> Keine Austauschpflicht für funktionierende Heizungen. Die 65%-Regel ist gestrichen. Neue Gas- und Ölheizungen: 10% ab 2029, 15% ab 2030, 30% ab 2035, 60% ab 2040 Bio oder Wasserstoff – oder ein Erfüllungsweg wie Solarthermie oder Wärmepumpen-Hybrid. Bis zu 70% staatliche Förderung für Wärmepumpen und Co. sind verfügbar.</p>
 
         <p>Wer jetzt handelt, profitiert von hohen Förderungen, sinkenden Betriebskosten und steigender Unabhängigkeit von fossilen Energiepreisen. Lesen Sie dazu auch unseren <a href="/blog/heizung-vergleich-2026-waermepumpe-gas-oel-pellets" class="text-[#0F5B78] font-medium hover:underline">umfassenden Heizungsvergleich 2026</a> und informieren Sie sich über die <a href="/blog/gasheizung-kosten-2026" class="text-[#0F5B78] font-medium hover:underline">tatsächlichen Kosten einer Gasheizung</a>. Wir beraten Sie persönlich in <a href="/standorte/augsburg" class="text-[#0F5B78] font-medium hover:underline">Augsburg</a>, <a href="/standorte/ulm" class="text-[#0F5B78] font-medium hover:underline">Ulm</a> und <a href="/standorte/memmingen" class="text-[#0F5B78] font-medium hover:underline">Memmingen</a>.</p>
 
@@ -3744,13 +3739,16 @@ function getMockBlogPosts(): BlogPost[] {
         <h2>Häufig gestellte Fragen (FAQ)</h2>
 
         <h3>Ist die Gasheizung ab 2026 wirklich verboten?</h3>
-        <p>Nein, es gibt <strong>kein pauschales Verbot</strong>. Bestehende Gasheizungen dürfen weiterlaufen, so lange sie funktionieren. Auch Reparaturen sind erlaubt. Nur bei <strong>Neuinstallationen</strong> nach Inkrafttreten der kommunalen Wärmeplanung (Großstädte bis Mitte 2026, kleinere Gemeinden bis Mitte 2028) muss die neue Heizung zu 65% mit erneuerbaren Energien betrieben werden. Bis dahin können Sie sogar noch neue Gasheizungen einbauen – mit Beratungspflicht.</p>
+        <p>Nein, es gibt <strong>kein Verbot</strong>. Bestehende Gasheizungen dürfen weiterlaufen, so lange sie funktionieren, und dürfen repariert werden. Auch neue Gasheizungen dürfen eingebaut werden. Für Gas- und Ölheizungen, die nach dem 29. Juli 2026 eingebaut werden, gilt ab 2029 eine Stufenregel: mindestens 10% Bio/Wasserstoff, ab 2030 15%, ab 2035 30%, ab 2040 60% (§ 43 GModG).</p>
+
+        <h3>Gilt die 65%-Regel noch?</h3>
+        <p>Nein. Die Vorgabe, dass neue Heizungen zu mindestens 65% erneuerbare Energien nutzen müssen, wurde mit der Novelle vom 23. Juli 2026 gestrichen – für Neubauten und Bestandsgebäude. Auch die Kopplung an die kommunale Wärmeplanung ist entfallen.</p>
 
         <h3>Wann muss ich meine Gasheizung spätestens austauschen?</h3>
-        <p>Eine generelle Austauschpflicht gibt es nicht. Ausnahme: <strong>Konstanttemperaturkessel über 30 Jahre</strong> müssen ausgetauscht werden (gilt nicht für Brennwert- und Niedertemperaturkessel). Bei einem irreparablen Totalschaden haben Sie 5 Jahre Übergangsfrist, um eine 65%-konforme Heizung einzubauen. Bis 2045 muss jede Heizung schrittweise auf 100% erneuerbare Energien umgestellt sein.</p>
+        <p>Es gibt keine generelle Austauschpflicht. Die frühere Vorschrift zum Betriebsverbot alter Kessel (§ 72 GEG) ist weggefallen. Ob für ein konkretes Gerät eine andere Vorschrift greift, klären wir im Einzelfall.</p>
 
         <h3>Was passiert, wenn meine Gasheizung kaputt geht?</h3>
-        <p>Bei einem Totalschaden haben Sie drei Optionen: 1) <strong>5 Jahre Übergangsfrist</strong> – Sie dürfen übergangsweise eine konventionelle Heizung installieren. 2) <strong>Gebrauchte/gemietete Heizung</strong> als Überbrückung. 3) <strong>Direkter Umstieg</strong> auf Wärmepumpe/Pellets mit bis zu 70% Förderung. Eine Reparatur ist immer erlaubt, solange technisch möglich. Handlungsdruck entsteht nur, wenn eine Reparatur nicht mehr wirtschaftlich ist.</p>
+        <p>Reparatur ist immer erlaubt. Bei einem Totalschaden können Sie direkt auf Wärmepumpe oder Pellets umsteigen (bis zu 70% Förderung, keine Brennstoff-Nachweispflicht) oder eine neue Gasheizung einbauen. Wird nach einer Havarie im Jahr 2028 eine neue Gas- oder Ölheizung eingebaut, greift die Bioanteil-Pflicht erst zwölf Monate nach dem Einbau (§ 43 Abs. 7 GModG).</p>
 
         <h3>Bekomme ich noch Förderung für eine H2-ready Gasheizung?</h3>
         <p>H2-ready Gasheizungen erhalten <strong>keine direkte BEG-Förderung</strong> mehr. Gefördert werden nur die Mehrkosten gegenüber einer normalen Gasheizung (ca. 1.000-2.000 Euro). Experten raten zur Vorsicht: Die Verfügbarkeit von grünem Wasserstoff ist ungewiss und die Kosten werden vermutlich hoch sein. H2-ready lohnt sich nur, wenn Ihre Kommune ein konkretes Wasserstoff-Netz plant.</p>
@@ -3759,22 +3757,23 @@ function getMockBlogPosts(): BlogPost[] {
         <p>Gefördert werden: <strong>Wärmepumpen</strong> (bis 70%), <strong>Pelletheizungen</strong> (bis 70% + 2.500 Euro Emissionsbonus), <strong>Solarthermie</strong> (30-70%), <strong>Fernwärmeanschluss</strong> (30-70%), <strong>Brennstoffzellen</strong> (30-70%) und <strong>Hybridheizungen</strong> mit mindestens 65% erneuerbaren Energien. Die höchste Förderung erhalten Selbstnutzer mit Einkommensbonus (unter 40.000 Euro/Jahr) beim Austausch einer Öl-/Gasheizung.</p>
 
         <h3>Was bedeutet die kommunale Wärmeplanung für mich?</h3>
-        <p>Die kommunale Wärmeplanung legt fest, in welchen Gebieten Fernwärme, Wasserstoffnetze oder dezentrale Lösungen (Wärmepumpen) zum Einsatz kommen. <strong>Großstädte</strong> (über 100.000 Einwohner) müssen bis Mitte 2026 fertig sein, <strong>kleinere Gemeinden bis Mitte 2028</strong>. Erst nach Abschluss der Wärmeplanung greift die 65%-Regel bei Neuinstallationen. Bis dahin können Sie Ihre Heizung frei wählen – mit Beratungspflicht bei Gas/Öl.</p>
+        <p>Die kommunale Wärmeplanung zeigt, in welchen Gebieten Fernwärme, Wasserstoffnetze oder dezentrale Lösungen (Wärmepumpen) vorgesehen sind. Seit der Novelle 2026 löst sie <strong>keine Heizungspflicht</strong> mehr aus. Sie bleibt aber die beste Informationsquelle dafür, ob ein Wärmenetz in Ihrer Straße kommt.</p>
       `,
       category: 'Heizung',
       author: 'HeizCenter Redaktion',
-      date: '2026-02-09',
+      date: '2026-09-09',
       readingTime: 14,
       image: '/images/HeizCenter_Heizung.webp',
-      tags: ['GEG', 'Gasheizung', 'Heizungsgesetz', 'Förderung', 'Wärmepumpe', 'BEG', 'Verbot'],
+      tags: ['GEG', 'GModG', 'Gasheizung', 'Heizungsgesetz', 'Förderung', 'Wärmepumpe', 'BEG', 'Verbot'],
       featured: true,
       faqs: [
-        { question: 'Ist die Gasheizung ab 2026 wirklich verboten?', answer: 'Nein, es gibt kein pauschales Verbot. Bestehende Gasheizungen dürfen weiterlaufen, so lange sie funktionieren. Auch Reparaturen sind erlaubt. Nur bei Neuinstallationen nach Inkrafttreten der kommunalen Wärmeplanung (Großstädte bis Mitte 2026, kleinere Gemeinden bis Mitte 2028) muss die neue Heizung zu 65% mit erneuerbaren Energien betrieben werden. Bis dahin können Sie sogar noch neue Gasheizungen einbauen – mit Beratungspflicht.' },
-        { question: 'Wann muss ich meine Gasheizung spätestens austauschen?', answer: 'Eine generelle Austauschpflicht gibt es nicht. Ausnahme: Konstanttemperaturkessel über 30 Jahre müssen ausgetauscht werden (gilt nicht für Brennwert- und Niedertemperaturkessel). Bei einem irreparablen Totalschaden haben Sie 5 Jahre Übergangsfrist, um eine 65%-konforme Heizung einzubauen. Bis 2045 muss jede Heizung schrittweise auf 100% erneuerbare Energien umgestellt sein.' },
-        { question: 'Was passiert, wenn meine Gasheizung kaputt geht?', answer: 'Bei einem Totalschaden haben Sie drei Optionen: 1) 5 Jahre Übergangsfrist – Sie dürfen übergangsweise eine konventionelle Heizung installieren. 2) Gebrauchte/gemietete Heizung als Überbrückung. 3) Direkter Umstieg auf Wärmepumpe/Pellets mit bis zu 70% Förderung. Eine Reparatur ist immer erlaubt, solange technisch möglich. Handlungsdruck entsteht nur, wenn eine Reparatur nicht mehr wirtschaftlich ist.' },
+        { question: 'Ist die Gasheizung ab 2026 wirklich verboten?', answer: 'Nein, es gibt kein Verbot. Bestehende Gasheizungen dürfen weiterlaufen, so lange sie funktionieren, und dürfen repariert werden. Auch neue Gasheizungen dürfen eingebaut werden. Für Gas- und Ölheizungen, die nach dem 29. Juli 2026 eingebaut werden, gilt ab 2029 eine Stufenregel: mindestens 10% Bio/Wasserstoff, ab 2030 15%, ab 2035 30%, ab 2040 60% (§ 43 GModG).' },
+        { question: 'Gilt die 65%-Regel noch?', answer: 'Nein. Die Vorgabe, dass neue Heizungen zu mindestens 65% erneuerbare Energien nutzen müssen, wurde mit der Novelle vom 23. Juli 2026 gestrichen – für Neubauten und Bestandsgebäude. Auch die Kopplung an die kommunale Wärmeplanung ist entfallen.' },
+        { question: 'Wann muss ich meine Gasheizung spätestens austauschen?', answer: 'Es gibt keine generelle Austauschpflicht. Die frühere Vorschrift zum Betriebsverbot alter Kessel (§ 72 GEG) ist weggefallen. Ob für ein konkretes Gerät eine andere Vorschrift greift, klären wir im Einzelfall.' },
+        { question: 'Was passiert, wenn meine Gasheizung kaputt geht?', answer: 'Reparatur ist immer erlaubt. Bei einem Totalschaden können Sie direkt auf Wärmepumpe oder Pellets umsteigen (bis zu 70% Förderung, keine Brennstoff-Nachweispflicht) oder eine neue Gasheizung einbauen. Wird nach einer Havarie im Jahr 2028 eine neue Gas- oder Ölheizung eingebaut, greift die Bioanteil-Pflicht erst zwölf Monate nach dem Einbau (§ 43 Abs. 7 GModG).' },
         { question: 'Bekomme ich noch Förderung für eine H2-ready Gasheizung?', answer: 'H2-ready Gasheizungen erhalten keine direkte BEG-Förderung mehr. Gefördert werden nur die Mehrkosten gegenüber einer normalen Gasheizung (ca. 1.000-2.000 Euro). Experten raten zur Vorsicht: Die Verfügbarkeit von grünem Wasserstoff ist ungewiss und die Kosten werden vermutlich hoch sein. H2-ready lohnt sich nur, wenn Ihre Kommune ein konkretes Wasserstoff-Netz plant.' },
         { question: 'Welche Alternativen zur Gasheizung werden gefördert?', answer: 'Gefördert werden: Wärmepumpen (bis 70%), Pelletheizungen (bis 70% + 2.500 Euro Emissionsbonus), Solarthermie (30-70%), Fernwärmeanschluss (30-70%), Brennstoffzellen (30-70%) und Hybridheizungen mit mindestens 65% erneuerbaren Energien. Die höchste Förderung erhalten Selbstnutzer mit Einkommensbonus (unter 40.000 Euro/Jahr) beim Austausch einer Öl-/Gasheizung.' },
-        { question: 'Was bedeutet die kommunale Wärmeplanung für mich?', answer: 'Die kommunale Wärmeplanung legt fest, in welchen Gebieten Fernwärme, Wasserstoffnetze oder dezentrale Lösungen (Wärmepumpen) zum Einsatz kommen. Großstädte (über 100.000 Einwohner) müssen bis Mitte 2026 fertig sein, kleinere Gemeinden bis Mitte 2028. Erst nach Abschluss der Wärmeplanung greift die 65%-Regel bei Neuinstallationen. Bis dahin können Sie Ihre Heizung frei wählen – mit Beratungspflicht bei Gas/Öl.' },
+        { question: 'Was bedeutet die kommunale Wärmeplanung für mich?', answer: 'Die kommunale Wärmeplanung zeigt, in welchen Gebieten Fernwärme, Wasserstoffnetze oder dezentrale Lösungen (Wärmepumpen) vorgesehen sind. Seit der Novelle 2026 löst sie keine Heizungspflicht mehr aus. Sie bleibt aber die beste Informationsquelle dafür, ob ein Wärmenetz in Ihrer Straße kommt.' },
       ],
     },
     {
@@ -3785,7 +3784,7 @@ function getMockBlogPosts(): BlogPost[] {
       content: `
         <h2>Heizung Vergleich 2026: Der ultimative Guide für Ihre Heizungsentscheidung</h2>
 
-        <p>Die Wahl der richtigen <a href="/heizung" class="text-[#0F5B78] font-medium hover:underline">Heizung</a> ist 2026 eine der wichtigsten finanziellen und ökologischen Entscheidungen für Hausbesitzer. Mit dem Gebäudeenergiegesetz (GEG), steigenden CO₂-Preisen und <a href="/foerderung" class="text-[#0F5B78] font-medium hover:underline">staatlichen Förderungen von bis zu 70%</a> hat sich die Landschaft dramatisch verändert. <strong>Die gute Nachricht: Wärmepumpen sind seit 2022 günstiger als Gasheizungen</strong> – sowohl in den Gesamtkosten als auch langfristig. Dieser umfassende Vergleich zeigt Ihnen alle Heizsysteme im Detail.</p>
+        <p>Die Wahl der richtigen <a href="/heizung" class="text-[#0F5B78] font-medium hover:underline">Heizung</a> ist 2026 eine der wichtigsten finanziellen und ökologischen Entscheidungen für Hausbesitzer. Mit dem Gebäudemodernisierungsgesetz (GModG, seit Juli 2026), steigenden CO₂-Preisen und <a href="/foerderung" class="text-[#0F5B78] font-medium hover:underline">staatlichen Förderungen von bis zu 70%</a> hat sich die Landschaft dramatisch verändert. <strong>Die gute Nachricht: Wärmepumpen sind seit 2022 günstiger als Gasheizungen</strong> – sowohl in den Gesamtkosten als auch langfristig. Dieser umfassende Vergleich zeigt Ihnen alle Heizsysteme im Detail.</p>
 
         <div style="background-color: #e8f4f8; padding: 20px; border-left: 4px solid #0F5B78; margin: 20px 0;">
           <h3 style="margin-top: 0;">🔍 Schnellüberblick: Die Systeme im Vergleich</h3>
@@ -3807,7 +3806,7 @@ function getMockBlogPosts(): BlogPost[] {
             <tr style="background-color: #0F5B78; color: white;">
               <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">System</th>
               <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Energiequelle</th>
-              <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">GEG-konform?</th>
+              <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Gesetzliche Pflichten (GModG)?</th>
             </tr>
           </thead>
           <tbody>
@@ -3829,7 +3828,7 @@ function getMockBlogPosts(): BlogPost[] {
             <tr>
               <td style="padding: 10px; border: 1px solid #ddd;"><strong>Gasheizung</strong></td>
               <td style="padding: 10px; border: 1px solid #ddd;">Erdgas</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">❌ Nein (ab 2029: 15% Bio-Anteil, stufenweise bis 100% in 2045)</td>
+              <td style="padding: 10px; border: 1px solid #ddd;">⚠️ Bioanteil-Stufen: 10% ab 2029, 15% ab 2030, 30% ab 2035, 60% ab 2040 (§ 43 GModG)</td>
             </tr>
             <tr style="background-color: #f8f9fa;">
               <td style="padding: 10px; border: 1px solid #ddd;"><strong>Ölheizung</strong></td>
@@ -3839,12 +3838,12 @@ function getMockBlogPosts(): BlogPost[] {
             <tr>
               <td style="padding: 10px; border: 1px solid #ddd;"><strong>Fernwärme</strong></td>
               <td style="padding: 10px; border: 1px solid #ddd;">Zentral erzeugt</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">✅ Meist ja (65%+)</td>
+              <td style="padding: 10px; border: 1px solid #ddd;">✅ Keine Brennstoff-Nachweispflicht</td>
             </tr>
             <tr style="background-color: #f8f9fa;">
               <td style="padding: 10px; border: 1px solid #ddd;"><strong>Hybridheizung</strong></td>
               <td style="padding: 10px; border: 1px solid #ddd;">Kombination</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">✅ Teilweise (65%-Regel)</td>
+              <td style="padding: 10px; border: 1px solid #ddd;">✅ Erfüllungsweg nach § 43, wenn die Wärmepumpe groß genug ist</td>
             </tr>
           </tbody>
         </table>
@@ -4085,7 +4084,7 @@ function getMockBlogPosts(): BlogPost[] {
               <li>Bis zu 70% Förderung (21.000 €)</li>
               <li>0 kg CO₂ (mit Ökostrom)</li>
               <li>Kein Schornstein, kein Tank</li>
-              <li>GEG-konform bis 2045</li>
+              <li>Keine gesetzliche Brennstoff-Nachweispflicht</li>
               <li>Kombinierbar mit PV</li>
             </ul>
           </div>
@@ -4119,7 +4118,7 @@ function getMockBlogPosts(): BlogPost[] {
               <li>Hohe Betriebskosten (1.180 €/Jahr)</li>
               <li>+144 €/Jahr CO₂-Steuer (steigend)</li>
               <li>4 t CO₂/Jahr</li>
-              <li>Nicht GEG-konform (ab 2029 Biogas-Pflicht)</li>
+              <li>Bioanteil-Pflicht ab 2029 (10% → 60% bis 2040)</li>
               <li>20-Jahre-TCO: 65.000 € (teuerste Option!)</li>
             </ul>
           </div>
@@ -4135,7 +4134,7 @@ function getMockBlogPosts(): BlogPost[] {
               <li>Bis zu 70% + 2.500 € Förderung</li>
               <li>CO₂-neutral</li>
               <li>Unabhängig von Strom/Gas</li>
-              <li>GEG-konform</li>
+              <li>Keine gesetzliche Brennstoff-Nachweispflicht</li>
             </ul>
           </div>
           <div style="background-color: #f8d7da; padding: 15px; border-radius: 5px;">
@@ -4257,53 +4256,54 @@ function getMockBlogPosts(): BlogPost[] {
           <li><strong>CO₂-Bilanz:</strong> Nahezu 0 Tonnen</li>
         </ul>
 
-        <h2>🚨 GEG-Konformität: Zukunftssicher heizen</h2>
+        <h2>🚨 Gesetzliche Pflichten: Zukunftssicher heizen</h2>
 
-        <p>Das Gebäudeenergiegesetz schreibt ab 2026/2028 (je nach Kommune) vor: <strong>Neue Heizungen müssen zu 65% mit erneuerbaren Energien betrieben werden.</strong></p>
+        <p>Seit dem 29. Juli 2026 gilt das Gebäudemodernisierungsgesetz (GModG). Die frühere 65%-Regel ist gestrichen – Sie wählen frei. <strong>Neue Gas- und Ölheizungen müssen aber ab 2029 steigende Bioanteile nachweisen.</strong></p>
+${GMODG_HINWEIS}
 
         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
           <thead>
             <tr style="background-color: #0F5B78; color: white;">
               <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">System</th>
-              <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">GEG-konform bis 2045?</th>
+              <th style="padding: 12px; text-align: center; border: 1px solid #ddd;">Brennstoff-Pflichten ab 2029?</th>
               <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Hinweis</th>
             </tr>
           </thead>
           <tbody>
             <tr style="background-color: #d4edda;">
               <td style="padding: 10px; border: 1px solid #ddd;">Wärmepumpe</td>
-              <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">✅ Ja</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">Zu 100% zukunftssicher</td>
+              <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">✅ Keine</td>
+              <td style="padding: 10px; border: 1px solid #ddd;">Keine gesetzliche Nachweispflicht beim Brennstoff</td>
             </tr>
             <tr style="background-color: #d4edda;">
               <td style="padding: 10px; border: 1px solid #ddd;">Pellets</td>
-              <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">✅ Ja</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">Zu 100% zukunftssicher</td>
+              <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">✅ Keine</td>
+              <td style="padding: 10px; border: 1px solid #ddd;">Keine gesetzliche Nachweispflicht beim Brennstoff</td>
             </tr>
             <tr style="background-color: #d4edda;">
               <td style="padding: 10px; border: 1px solid #ddd;">Fernwärme</td>
-              <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">✅ Meist ja</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">Wenn zu 65%+ erneuerbar</td>
+              <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">✅ Keine</td>
+              <td style="padding: 10px; border: 1px solid #ddd;">Abhängig vom lokalen Netzangebot</td>
             </tr>
             <tr style="background-color: #fff3cd;">
               <td style="padding: 10px; border: 1px solid #ddd;">Hybridheizung</td>
-              <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">⚠️ Teilweise</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">WP muss 65% Wärme liefern</td>
+              <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">✅ Erfüllungsweg</td>
+              <td style="padding: 10px; border: 1px solid #ddd;">Wärmepumpenleistung mind. 30% bzw. 40% des Spitzenlasterzeugers (§ 43 Abs. 5 GModG)</td>
             </tr>
             <tr style="background-color: #f8d7da;">
               <td style="padding: 10px; border: 1px solid #ddd;">Gas</td>
-              <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">❌ Nein</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">Ab 2029: 15% Biogas-Pflicht, ab 2035: 30%, ab 2040: 60%</td>
+              <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">⚠️ Ja</td>
+              <td style="padding: 10px; border: 1px solid #ddd;">Einbau nach 29.07.2026: 10% ab 2029, 15% ab 2030, 30% ab 2035, 60% ab 2040 Bio/Wasserstoff</td>
             </tr>
             <tr style="background-color: #f8d7da;">
               <td style="padding: 10px; border: 1px solid #ddd;">Öl</td>
-              <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">❌ Nein</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">Auslaufmodell, teure Umrüstung nötig</td>
+              <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">⚠️ Ja</td>
+              <td style="padding: 10px; border: 1px solid #ddd;">Gleiche Bioanteil-Stufen wie Gas (Bioöl); dazu Grüngas-/Grünheizölquote angekündigt (§ 42a)</td>
             </tr>
           </tbody>
         </table>
 
-        <p><strong>Warnung:</strong> Wer 2026 eine neue Gasheizung einbaut, muss ab 2029 bereits teure Umbauten vornehmen (Biogas-Anteil) – eine Kostenfalle!</p>
+        <p><strong>Hinweis:</strong> Wer jetzt eine neue Gas- oder Ölheizung einbaut, muss ab 2029 Bioanteile nachweisen oder einen Erfüllungsweg wie Solarthermie nachrüsten – laufende Mehrkosten, die in die Entscheidung gehören.</p>
 
         <h2>Fazit: Klare Empfehlung für 2026</h2>
 
@@ -4311,10 +4311,10 @@ function getMockBlogPosts(): BlogPost[] {
 
         <div style="background-color: #d4edda; padding: 20px; border-left: 4px solid #28a745; margin: 20px 0;">
           <h3 style="margin-top: 0; color: #155724;">Wärmepumpe ist 2026 die beste Wahl</h3>
-          <p>Mit den <strong>günstigsten Betriebskosten</strong> von nur 715 Euro pro Jahr (gegenüber 1.180 Euro bei Gas) und der <strong>höchsten Förderung</strong> bis zu 21.000 Euro Zuschuss überzeugt die Wärmepumpe auf ganzer Linie. Die 20-Jahre-Gesamtkosten liegen bei 45.000 Euro – das sind <strong>20.000 Euro Ersparnis</strong> gegenüber Gas. Mit Ökostrom entstehen 0 kg CO₂ (vs. 4.000 kg Gas). Das System ist GEG-konform bis 2045, erfordert keine teuren Umbauten und amortisiert sich bereits nach 4 bis 6 Jahren.</p>
+          <p>Mit den <strong>günstigsten Betriebskosten</strong> von nur 715 Euro pro Jahr (gegenüber 1.180 Euro bei Gas) und der <strong>höchsten Förderung</strong> bis zu 21.000 Euro Zuschuss überzeugt die Wärmepumpe auf ganzer Linie. Die 20-Jahre-Gesamtkosten liegen bei 45.000 Euro – das sind <strong>20.000 Euro Ersparnis</strong> gegenüber Gas. Mit Ökostrom entstehen 0 kg CO₂ (vs. 4.000 kg Gas). Das System kennt keine gesetzliche Brennstoff-Nachweispflicht, erfordert keine teuren Umbauten und amortisiert sich bereits nach 4 bis 6 Jahren.</p>
         </div>
 
-        <p><strong>Gasheizungen sind 2026 eine Kostenfalle:</strong> Keine Förderung, steigende CO₂-Steuer, ab 2029 teure Biogas-Pflicht, höchste 20-Jahres-Kosten. Selbst die niedrigen Anschaffungskosten können die enormen Betriebskosten nicht ausgleichen.</p>
+        <p><strong>Gasheizungen sind 2026 eine Kostenfalle:</strong> Keine Förderung, steigende CO₂-Steuer, ab 2029 Bioanteil-Pflicht, höchste 20-Jahres-Kosten. Selbst die niedrigen Anschaffungskosten können die enormen Betriebskosten nicht ausgleichen.</p>
 
         <p><strong>Pelletheizungen sind die Alternative</strong> für Haushalte mit Platz und regionaler Pellet-Verfügbarkeit – besonders beliebt im ländlichen Raum wie dem <a href="/standorte/memmingen" class="text-[#0F5B78] font-medium hover:underline">Allgäu rund um Memmingen</a>. Ähnlich günstig wie Wärmepumpen, CO₂-neutral und mit hoher Förderung.</p>
 
@@ -4344,7 +4344,7 @@ function getMockBlogPosts(): BlogPost[] {
         <p>Wärmepumpen und Pelletheizungen erhalten mit <strong>bis zu 70% Förderung</strong> die höchste Unterstützung. Das entspricht maximal 21.000 Euro Zuschuss bei 30.000 Euro Investition. Die Bausteine: 30% Grundförderung + 20% Klimageschwindigkeits-Bonus + 30% Einkommensbonus (unter 40.000 Euro Einkommen) + 5% Effizienzbonus (natürliches Kältemittel). Gasheizungen erhalten seit 2024 keine Förderung mehr, Ölheizungen ebenfalls nicht.</p>
 
         <h3>Welche Heizung ist am zukunftssichersten?</h3>
-        <p>Wärmepumpen und Pelletheizungen sind zu <strong>100% GEG-konform bis 2045</strong> und erfordern keine teuren Nachrüstungen. Gasheizungen müssen ab 2029 schrittweise auf Biogas umgestellt werden (15%, ab 2035: 30%, ab 2040: 60%, ab 2045: 100%). Das wird sehr teuer. Ölheizungen sind Auslaufmodelle ohne Zukunftsperspektive. Wer jetzt eine neue Gas- oder Ölheizung einbaut, riskiert hohe Folgekosten in wenigen Jahren.</p>
+        <p>Wärmepumpen und Pelletheizungen haben nach dem GModG <strong>keine Brennstoff-Nachweispflicht</strong> und erfordern keine Nachrüstungen. Neue Gas- und Ölheizungen (Einbau nach 29.07.2026) müssen ab 2029 steigende Bioanteile nachweisen: 10% ab 2029, 15% ab 2030, 30% ab 2035, 60% ab 2040 (§ 43 GModG). Wer jetzt eine neue Gas- oder Ölheizung einbaut, muss diese laufenden Pflichten einplanen.</p>
 
         <h3>Kann ich verschiedene Heizsysteme kombinieren?</h3>
         <p>Ja, Hybridheizungen kombinieren mehrere Systeme. Beliebt sind: <strong>Wärmepumpe + Gasheizung</strong> (Gas nur für Spitzenlast), <strong>Wärmepumpe + Solarthermie</strong> (maximale Effizienz) oder <strong>Pellets + Solar</strong> (100% erneuerbar). Wichtig für die Förderung: Die Wärmepumpe muss mindestens 65% der Jahreswärme liefern. Hybridlösungen eignen sich besonders für Altbauten mit hohem Wärmebedarf, kosten aber mehr (30.000-45.000 Euro).</p>
@@ -4363,7 +4363,7 @@ function getMockBlogPosts(): BlogPost[] {
         { question: 'Welche Heizung ist auf lange Sicht am günstigsten?', answer: 'Die Wärmepumpe hat die niedrigsten Gesamtkosten über 20 Jahre mit nur 45.300 Euro (inkl. Förderung). Pelletheizungen liegen mit 43.300 Euro sogar leicht darunter, erfordern aber Platz für Lager und regelmäßiges Befüllen. Gas kommt auf 65.200 Euro, Öl auf 68.200 Euro. Mit Photovoltaik-Kombination sinken die Wärmepumpen-Kosten auf nur 38.000-42.000 Euro – unschlagbar günstig bei gleichzeitig niedrigsten Betriebskosten.' },
         { question: 'Welche Heizung ist die beste für einen Altbau?', answer: 'Für Altbauten eignen sich Luft-Wasser-Wärmepumpen am besten, da sie keine aufwendigen Erdarbeiten benötigen und auch bei höheren Vorlauftemperaturen (55-60°C) effizient arbeiten. Fraunhofer-Feldtests zeigen: Selbst teilsanierte Altbauten von 15-170 Jahren erreichen JAZ-Werte von 3,4-4,3. Wichtig ist ein hydraulischer Abgleich und eventuell größere Heizkörper in 2-3 Räumen (günstiger als Fußbodenheizung). Bei sehr schlechter Dämmung sind Pelletheizungen eine gute Alternative.' },
         { question: 'Welche Heizung hat die beste Förderung 2026?', answer: 'Wärmepumpen erhalten mit bis zu 70% Förderung die höchste Unterstützung, Pelletheizungen bis zu 60% (70% nur in Kombination mit Solar/PV/WP). Das entspricht maximal 21.000 Euro Zuschuss bei 30.000 Euro Investition. Die Bausteine: 30% Grundförderung + 20% Klimageschwindigkeits-Bonus (bei Pellets nur mit Kombinationsanlage) + 30% Einkommensbonus (unter 40.000 Euro Einkommen) + 5% Effizienzbonus (natürliches Kältemittel, nur WP). Gasheizungen erhalten seit 2024 keine Förderung mehr, Ölheizungen ebenfalls nicht.' },
-        { question: 'Welche Heizung ist am zukunftssichersten?', answer: 'Wärmepumpen und Pelletheizungen sind zu 100% GEG-konform bis 2045 und erfordern keine teuren Nachrüstungen. Gasheizungen müssen ab 2029 schrittweise auf Biogas umgestellt werden (15%, ab 2035: 30%, ab 2040: 60%, ab 2045: 100%). Das wird sehr teuer. Ölheizungen sind Auslaufmodelle ohne Zukunftsperspektive. Wer jetzt eine neue Gas- oder Ölheizung einbaut, riskiert hohe Folgekosten in wenigen Jahren.' },
+        { question: 'Welche Heizung ist am zukunftssichersten?', answer: 'Wärmepumpen und Pelletheizungen haben nach dem GModG keine Brennstoff-Nachweispflicht und erfordern keine Nachrüstungen. Neue Gas- und Ölheizungen (Einbau nach 29.07.2026) müssen ab 2029 steigende Bioanteile nachweisen: 10% ab 2029, 15% ab 2030, 30% ab 2035, 60% ab 2040 (§ 43 GModG). Wer jetzt eine neue Gas- oder Ölheizung einbaut, muss diese laufenden Pflichten einplanen.' },
         { question: 'Kann ich verschiedene Heizsysteme kombinieren?', answer: 'Ja, Hybridheizungen kombinieren mehrere Systeme. Beliebt sind: Wärmepumpe + Gasheizung (Gas nur für Spitzenlast), Wärmepumpe + Solarthermie (maximale Effizienz) oder Pellets + Solar (100% erneuerbar). Wichtig für die Förderung: Die Wärmepumpe muss mindestens 65% der Jahreswärme liefern. Hybridlösungen eignen sich besonders für Altbauten mit hohem Wärmebedarf, kosten aber mehr (30.000-45.000 Euro).' },
         { question: 'Welche Heizung hat die niedrigsten Betriebskosten?', answer: 'Wärmepumpen mit PV-Anlage haben die niedrigsten laufenden Kosten mit nur 720 Euro/Jahr bei 70% Eigenversorgung. Ohne PV liegen Wärmepumpen bei 1.337 Euro/Jahr, Pellets bei 1.215 Euro/Jahr. Gas kommt auf 2.262 Euro/Jahr, Öl auf 2.414 Euro/Jahr. Die Ersparnis von Wärmepumpe gegenüber Gas beträgt 925 Euro pro Jahr – über 20 Jahre sind das 18.500 Euro Unterschied nur bei den Betriebskosten.' },
       ],
@@ -4372,7 +4372,7 @@ function getMockBlogPosts(): BlogPost[] {
       id: 13,
       slug: 'nachtspeicherheizung-ersetzen-2026',
       title: 'Nachtspeicherheizung ersetzen 2026: Beste Alternativen & Kosten',
-      excerpt: 'Nachtspeicherheizung ersetzen? Alle Alternativen 2026, Kosten mit Förderung, gesetzliche Lage nach GEG und Schritt-für-Schritt-Anleitung für den Austausch.',
+      excerpt: 'Nachtspeicherheizung ersetzen? Alle Alternativen 2026, Kosten mit Förderung, gesetzliche Lage nach dem GModG 2026 und Schritt-für-Schritt-Anleitung für den Austausch.',
       content: `
     <h2>Nachtspeicherheizung ersetzen 2026: Der umfassende Ratgeber</h2>
 
@@ -4385,7 +4385,7 @@ function getMockBlogPosts(): BlogPost[] {
         <li><strong>Beste Alternative:</strong> Luft-Wasser-Wärmepumpe (1.100 €/Jahr Heizkosten)</li>
         <li><strong>Förderung 2026:</strong> Bis zu 70% (max. 21.000 €) für Wärmepumpe</li>
         <li><strong>Amortisation:</strong> 7–11 Jahre (mit Förderung)</li>
-        <li><strong>Gesetzeslage:</strong> Kein Austauschverbot, aber 65% Erneuerbare-Pflicht ab 2024</li>
+        <li><strong>Gesetzeslage:</strong> Kein Austauschverbot; die 65%-Regel ist seit Juli 2026 gestrichen (GModG)</li>
       </ul>
     </div>
 
@@ -4453,11 +4453,12 @@ function getMockBlogPosts(): BlogPost[] {
     <p>Die wichtigsten rechtlichen Fakten:</p>
 
     <div style="background-color: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; margin: 20px 0;">
-      <h4 style="margin-top: 0;">Gesetzeslage nach GEG 2024</h4>
+      <h4 style="margin-top: 0;">Gesetzeslage nach dem GModG (seit 29. Juli 2026)</h4>
       <ul style="margin-bottom: 0;">
         <li><strong>Bestandsschutz:</strong> Funktionierende Nachtspeicher dürfen weiterbetrieben werden</li>
         <li><strong>Keine Austauschpflicht:</strong> Auch bei Defekt kein Zwang zum Wechsel des Systems</li>
-        <li><strong>ABER:</strong> Bei Neuinstallation (ab 1.1.2024) müssen 65% erneuerbare Energien genutzt werden</li>
+        <li><strong>65%-Regel gestrichen:</strong> Bei einem Neueinbau wählen Sie frei zwischen den im Gesetz genannten Heizungsarten (§ 42 GModG)</li>
+        <li><strong>Nur bei neuer Gas-/Ölheizung:</strong> Bioanteil-Stufen ab 2029 (10% → 60% bis 2040, § 43 GModG)</li>
         <li><strong>Mietwohnungen:</strong> Vermieter können nicht zum sofortigen Austausch gezwungen werden</li>
       </ul>
     </div>
@@ -4544,7 +4545,7 @@ function getMockBlogPosts(): BlogPost[] {
     </ul>
     <p><strong>Vorteile:</strong> Bewährte Technik, moderate Anschaffungskosten, geringer Platzbedarf</p>
     <p><strong>Nachteile:</strong> Keine Förderung, fossiler Brennstoff, CO₂-Preis steigt (2025: 55 €/Tonne)</p>
-    <p><strong>Achtung:</strong> Ab 2029 65% Erneuerbare-Pflicht auch bei Austausch (Biogas erforderlich)</p>
+    <p><strong>Achtung:</strong> Bei Einbau nach dem 29.07.2026 ab 2029 Bioanteil-Pflicht: 10% ab 2029, 15% ab 2030, 30% ab 2035, 60% ab 2040 (§ 43 GModG)</p>
 
     <h3>Sole-Wasser-Wärmepumpe (Erdwärme)</h3>
     <ul>
@@ -4661,7 +4662,7 @@ function getMockBlogPosts(): BlogPost[] {
 
     <h3>Mietwohnung mit Nachtspeicher</h3>
     <ul>
-      <li><strong>Keine Austauschpflicht</strong> für Vermieter (Bestandsschutz nach GEG)</li>
+      <li><strong>Keine Austauschpflicht</strong> für Vermieter (GModG kennt keine Austauschpflicht)</li>
       <li><strong>Modernisierungsumlage:</strong> Vermieter darf max. 10% der Kosten (nach Förderung) auf Miete umlegen</li>
       <li><strong>Beispiel:</strong> 16.000 € Eigenanteil → max. 133 €/Monat Mieterhöhung (wird oft durch Heizkostensenkung ausgeglichen)</li>
       <li><strong>Mieterrechte:</strong> Bei unwirtschaftlicher Heizung kann Mietminderung geltend gemacht werden</li>
@@ -4752,7 +4753,7 @@ function getMockBlogPosts(): BlogPost[] {
     <h2>Häufig gestellte Fragen (FAQ)</h2>
 
     <h3>Muss ich meine Nachtspeicherheizung gesetzlich ersetzen?</h3>
-    <p><strong>Nein.</strong> Es gibt kein generelles Austauschverbot für Nachtspeicherheizungen. Sie dürfen funktionierende Geräte weiterbetrieben. Nur bei Neuinstallation gilt die 65%-Erneuerbare-Pflicht nach GEG 2024.</p>
+    <p><strong>Nein.</strong> Es gibt kein generelles Austauschverbot für Nachtspeicherheizungen. Sie dürfen funktionierende Geräte weiterbetrieben. Die frühere 65%-Erneuerbare-Pflicht wurde mit dem GModG im Juli 2026 gestrichen; bei einem Neueinbau wählen Sie frei.</p>
 
     <h3>Wie viel spare ich mit einer Wärmepumpe?</h3>
     <p>Im Durchschnitt <strong>1.780 € pro Jahr</strong> bei einem 150 m²-Haus (Nachtspeicher: 2.880 €/Jahr vs. Wärmepumpe: 1.100 €/Jahr). Über 20 Jahre sind das <strong>35.600 € Ersparnis</strong>.</p>
@@ -4785,7 +4786,7 @@ function getMockBlogPosts(): BlogPost[] {
       faqs: [
         {
           question: 'Muss ich meine Nachtspeicherheizung gesetzlich ersetzen?',
-          answer: 'Nein. Es gibt kein generelles Austauschverbot für Nachtspeicherheizungen. Sie dürfen funktionierende Geräte weiterbetrieben. Nur bei Neuinstallation gilt die 65%-Erneuerbare-Pflicht nach GEG 2024.',
+          answer: 'Nein. Es gibt kein generelles Austauschverbot für Nachtspeicherheizungen. Sie dürfen funktionierende Geräte weiterbetrieben. Die frühere 65%-Erneuerbare-Pflicht wurde mit dem GModG im Juli 2026 gestrichen; bei einem Neueinbau wählen Sie frei.',
         },
         {
           question: 'Wie viel spare ich mit einer Wärmepumpe?',
@@ -5876,9 +5877,9 @@ function getMockBlogPosts(): BlogPost[] {
               <td style="padding: 10px; border: 1px solid #ddd;">~4,5 t/Jahr</td>
             </tr>
             <tr>
-              <td style="padding: 10px; border: 1px solid #ddd;"><strong>Gesetzeslage 2024+</strong></td>
-              <td style="padding: 10px; border: 1px solid #ddd;">✅ GEG-konform</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">⚠️ Nur noch begrenzt zulässig</td>
+              <td style="padding: 10px; border: 1px solid #ddd;"><strong>Gesetzeslage (GModG 2026)</strong></td>
+              <td style="padding: 10px; border: 1px solid #ddd;">✅ Keine Brennstoff-Nachweispflicht</td>
+              <td style="padding: 10px; border: 1px solid #ddd;">⚠️ Erlaubt, Bioanteil-Stufen ab 2029</td>
             </tr>
             <tr style="background-color: #f9f9f9;">
               <td style="padding: 10px; border: 1px solid #ddd;"><strong>Amortisation</strong></td>
@@ -5943,7 +5944,7 @@ function getMockBlogPosts(): BlogPost[] {
       </table>
 
       <div style="background-color: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; margin: 20px 0;">
-        <p style="margin: 0;"><strong>💡 Wichtig:</strong> Ab 2024 sind reine Gasheizungen in Neubau-Gebieten verboten. In Bestandsgebäuden müssen neue Heizungen zu 65% erneuerbare Energien nutzen – Gas-Hybridlösungen oder Übergangsregelungen beachten!</p>
+        <p style="margin: 0;"><strong>💡 Wichtig:</strong> Seit dem 29. Juli 2026 gilt das Gebäudemodernisierungsgesetz (GModG). Die 65%-Regel ist gestrichen. Neue Gas- und Ölheizungen müssen ab 2029 steigende Bioanteile nachweisen (10% → 60% bis 2040) – oder einen Erfüllungsweg wie einen Wärmepumpen-Hybrid nutzen (§ 43 GModG).</p>
       </div>
 
       <h2>2. Betriebskosten: Der entscheidende Unterschied</h2>
@@ -6138,7 +6139,7 @@ function getMockBlogPosts(): BlogPost[] {
         <li><strong>Klimafreundlich:</strong> Bis zu 100% CO₂-frei mit Ökostrom</li>
         <li><strong>Keine fossilen Brennstoffe:</strong> Unabhängig von Gas-/Ölpreisen</li>
         <li><strong>Kühlfunktion im Sommer:</strong> Viele Modelle können auch kühlen</li>
-        <li><strong>Zukunftssicher:</strong> GEG-konform, keine gesetzlichen Risiken</li>
+        <li><strong>Zukunftssicher:</strong> Keine gesetzliche Brennstoff-Nachweispflicht</li>
         <li><strong>Wartungsarm:</strong> Kein Schornsteinfeger, weniger Verschleiß</li>
         <li><strong>Wertsteigerung:</strong> Erhöht Immobilienwert (Energieausweis)</li>
       </ul>
@@ -6167,25 +6168,15 @@ function getMockBlogPosts(): BlogPost[] {
         <li><strong>Hohe Betriebskosten:</strong> Gas-Preis volatil (aktuell ~10–12 ct/kWh)</li>
         <li><strong>Keine Förderung:</strong> Staat unterstützt fossile Heizungen nicht mehr</li>
         <li><strong>Hohe CO₂-Emissionen:</strong> ~4,5 Tonnen/Jahr</li>
-        <li><strong>Gesetzliche Unsicherheit:</strong> Ab 2024 stark eingeschränkt (GEG)</li>
+        <li><strong>Gesetzliche Pflichten:</strong> Bioanteil-Stufen ab 2029 bei Neueinbau (GModG § 43)</li>
         <li><strong>Gasanschluss erforderlich:</strong> Monatliche Grundgebühr (~10–20 €)</li>
         <li><strong>CO₂-Steuer steigt:</strong> Bis 2027 auf 55–65 €/Tonne → höhere Gaskosten</li>
         <li><strong>Schornsteinfeger:</strong> Jährliche Pflicht + Kosten (80–150 €)</li>
         <li><strong>Wertverlust:</strong> Fossile Heizungen senken Immobilienwert</li>
       </ul>
 
-      <h2>6. Gesetzliche Rahmenbedingungen (GEG 2024)</h2>
-
-      <div style="background-color: #fff3cd; padding: 20px; border-left: 4px solid #ffc107; margin: 20px 0;">
-        <h3 style="margin-top: 0;">Gebäudeenergiegesetz (GEG) – Was gilt ab 2024?</h3>
-        <ul>
-          <li><strong>Neubau in Neubaugebieten:</strong> Gasheizungen verboten, 65% erneuerbare Energie Pflicht</li>
-          <li><strong>Bestandsgebäude:</strong> Ab 2024 schrittweise 65%-EE-Pflicht (je nach kommunaler Wärmeplanung)</li>
-          <li><strong>Gasheizungen noch möglich:</strong> Nur als Übergangslösung oder in Hybridkombination</li>
-          <li><strong>Bestehende Gasheizungen:</strong> Dürfen weiterlaufen, Reparaturen erlaubt</li>
-          <li><strong>Ab 2045:</strong> Komplettes Verbot fossiler Heizungen</li>
-        </ul>
-      </div>
+      <h2>6. Gesetzliche Rahmenbedingungen (GModG 2026)</h2>
+${GMODG_HINWEIS}
 
       <h2>7. Wann lohnt sich welches System?</h2>
 
@@ -6265,7 +6256,7 @@ function getMockBlogPosts(): BlogPost[] {
       <p>Wärmepumpen benötigen Strom und funktionieren nicht bei Stromausfall. Gasheizungen (mit elektrischer Zündung) ebenfalls nicht. Bei kritischer Infrastruktur kann ein Notstromaggregat sinnvoll sein.</p>
 
       <h3>Kann ich meine alte Gasheizung behalten?</h3>
-      <p>Ja, bestehende Gasheizungen dürfen weiterlaufen und repariert werden. Erst bei einem Komplettausfall oder Neubau greifen die GEG-Vorgaben (65% erneuerbare Energien). Bis 2045 müssen aber alle fossilen Heizungen ersetzt werden.</p>
+      <p>Ja, bestehende Gasheizungen dürfen weiterlaufen und repariert werden; eine Austauschpflicht gibt es nach dem GModG nicht. Wer nach dem 29. Juli 2026 eine neue Gasheizung einbaut, muss ab 2029 steigende Bioanteile nachweisen (10% ab 2029, 15% ab 2030, 30% ab 2035, 60% ab 2040, § 43 GModG).</p>
 
       <h3>Lohnt sich eine Wärmepumpe trotz hoher Strompreise?</h3>
       <p>Ja, dank JAZ von 3,5–4,5 ist Wärmepumpen-Strom selbst bei 30 ct/kWh günstiger als Gas (10 ct/kWh). Mit Wärmepumpen-Tarifen (20 ct/kWh) oder PV-Anlage wird die Ersparnis noch größer.</p>
@@ -6289,7 +6280,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li>✅ Niedrigere Gesamtkosten über 20 Jahre (trotz höherer Anschaffung)</li>
           <li>✅ Bis zu 70% staatliche Förderung (Gas: 0%)</li>
           <li>✅ 50–70% niedrigere Betriebskosten</li>
-          <li>✅ Klimafreundlich & zukunftssicher (GEG-konform)</li>
+          <li>✅ Klimafreundlich & zukunftssicher (keine Brennstoff-Nachweispflicht)</li>
           <li>✅ Unabhängig von fossilen Brennstoffen</li>
         </ul>
         <p><strong>Gasheizung nur noch in Ausnahmefällen:</strong></p>
@@ -6319,7 +6310,7 @@ function getMockBlogPosts(): BlogPost[] {
       date: '2026-01-15',
       readingTime: 14,
       image: '/images/Waermepumpe.webp',
-      tags: ['Wärmepumpe', 'Gasheizung', 'Heizungsvergleich', 'BEG-Förderung', 'Heizkosten', 'Effizienz', 'GEG 2024'],
+      tags: ['Wärmepumpe', 'Gasheizung', 'Heizungsvergleich', 'BEG-Förderung', 'Heizkosten', 'Effizienz', 'GModG 2026'],
       featured: true,
       faqs: [
         {
@@ -6336,7 +6327,7 @@ function getMockBlogPosts(): BlogPost[] {
         },
         {
           question: 'Kann ich meine alte Gasheizung behalten?',
-          answer: 'Ja, bestehende Gasheizungen dürfen weiterlaufen und repariert werden. Erst bei einem Komplettausfall oder Neubau greifen die GEG-Vorgaben (65% erneuerbare Energien). Bis 2045 müssen aber alle fossilen Heizungen ersetzt werden.',
+          answer: 'Ja, bestehende Gasheizungen dürfen weiterlaufen und repariert werden; eine Austauschpflicht gibt es nach dem GModG nicht. Wer nach dem 29. Juli 2026 eine neue Gasheizung einbaut, muss ab 2029 steigende Bioanteile nachweisen (10% ab 2029, 15% ab 2030, 30% ab 2035, 60% ab 2040, § 43 GModG).',
         },
         {
           question: 'Lohnt sich eine Wärmepumpe trotz hoher Strompreise?',
@@ -6793,7 +6784,7 @@ function getMockBlogPosts(): BlogPost[] {
       <p>Theoretisch ja: Bäume binden beim Wachstum CO₂, das bei Verbrennung wieder freigesetzt wird. Praktisch entstehen jedoch Emissionen durch Transport, Trocknung und Pelletierung (~10–20% der Gesamtbilanz). Zudem entsteht Feinstaub.</p>
 
       <h3>Welches System ist zukunftssicherer?</h3>
-      <p>Wärmepumpen sind GEG-konform und werden langfristig stärker gefördert. Pelletheizungen gelten zwar als erneuerbar, aber Feinstaubgrenzwerte könnten künftig verschärft werden. Bei steigendem Strommix-Anteil erneuerbarer Energien wird die Wärmepumpe noch klimafreundlicher.</p>
+      <p>Wärmepumpen haben nach dem GModG keine Brennstoff-Nachweispflicht und werden langfristig stärker gefördert. Pelletheizungen gelten zwar als erneuerbar, aber Feinstaubgrenzwerte könnten künftig verschärft werden. Bei steigendem Strommix-Anteil erneuerbarer Energien wird die Wärmepumpe noch klimafreundlicher.</p>
 
       <h3>Kann eine Wärmepumpe auch bei -15°C heizen?</h3>
       <p>Ja! Moderne Luft-Wärmepumpen arbeiten bis -20°C (teilweise -25°C). Die Effizienz (JAZ) sinkt bei Kälte, aber die Heizleistung bleibt ausreichend. Bei extrem kalten Regionen kann ein Heizstab als Backup dienen.</p>
@@ -6810,7 +6801,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li>✅ Höhere Förderung (70% vs. 50%)</li>
           <li>✅ Niedrigere Gesamtkosten (20 Jahre: -13.500 €)</li>
           <li>✅ Kein Feinstaub</li>
-          <li>✅ Zukunftssicherer (GEG-konform)</li>
+          <li>✅ Zukunftssicherer (keine Brennstoff-Nachweispflicht)</li>
           <li>✅ Optional Kühlfunktion</li>
         </ul>
         <p><strong>Pelletheizung nur noch für:</strong></p>
@@ -6857,7 +6848,7 @@ function getMockBlogPosts(): BlogPost[] {
         },
         {
           question: 'Welches System ist zukunftssicherer?',
-          answer: 'Wärmepumpen sind GEG-konform und werden langfristig stärker gefördert. Pelletheizungen gelten zwar als erneuerbar, aber Feinstaubgrenzwerte könnten künftig verschärft werden. Bei steigendem Strommix-Anteil erneuerbarer Energien wird die Wärmepumpe noch klimafreundlicher.',
+          answer: 'Wärmepumpen haben nach dem GModG keine Brennstoff-Nachweispflicht und werden langfristig stärker gefördert. Pelletheizungen gelten zwar als erneuerbar, aber Feinstaubgrenzwerte könnten künftig verschärft werden. Bei steigendem Strommix-Anteil erneuerbarer Energien wird die Wärmepumpe noch klimafreundlicher.',
         },
         {
           question: 'Kann eine Wärmepumpe auch bei -15°C heizen?',
@@ -8152,13 +8143,13 @@ function getMockBlogPosts(): BlogPost[] {
         <ul>
           <li>PV-Modulpreise: Weiterer Rückgang um 10-15% bis 2026</li>
           <li>Batteriekosten: -25% bis 2027 erwartet</li>
-          <li>Solarthermie: Stabile Nachfrage durch Heizungsgesetz</li>
+          <li>Solarthermie: Erfüllungsweg für neue Gas-/Ölheizungen nach § 43 GModG (ab 2029)</li>
           <li>Wärmepumpen-Kombination: Wachstum um 40% jährlich</li>
         </ul>
 
         <h3>Regulatorische Änderungen</h3>
         <ul>
-          <li>Gebäudeenergiegesetz (GEG): 65% erneuerbare Energie ab 2024</li>
+          <li>Gebäudemodernisierungsgesetz (GModG, seit 29.07.2026): 65%-Regel gestrichen, Bioanteil-Stufen für neue Gas-/Ölheizungen ab 2029</li>
           <li>KfW-Förderung: Geschwindigkeitsbonus läuft 2028 aus</li>
           <li>EEG-Vergütung: Degression um 1% halbjährlich</li>
           <li>Regionale PV-Pflicht: Immer mehr Bundesländer führen sie ein</li>
@@ -8639,7 +8630,7 @@ function getMockBlogPosts(): BlogPost[] {
           <li><strong>Geringere Betriebskosten:</strong> 20-30% weniger Stromverbrauch als reine Wärmepumpe</li>
           <li><strong>Hohe Förderung:</strong> Bis zu 70% KfW-Zuschuss möglich (BEG 458)</li>
           <li><strong>Wertsteigerung:</strong> Immobilie erfüllt höchste Energiestandards</li>
-          <li><strong>Zukunftssicher:</strong> Erfüllt GEG-Anforderungen (65% erneuerbare Energie)</li>
+          <li><strong>Zukunftssicher:</strong> Wärmepumpen-Hybrid ist ein Erfüllungsweg nach § 43 GModG (Wärmepumpenleistung mind. 30% bzw. 40% des Spitzenlasterzeugers)</li>
           <li><strong>Unabhängigkeit:</strong> Reduzierte Abhängigkeit von Strompreisen</li>
         </ul>
 

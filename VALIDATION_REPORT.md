@@ -1,3 +1,38 @@
+# Content Validation Report - 2026-09-09
+
+## Website auf GModG-Stand (Heizungsgesetz-Novelle 23.07.2026)
+
+### Anlass
+Das GEG wurde am 23.07.2026 novelliert (BGBl. 2026 I Nr. 226) und heißt seit 29.07.2026 Gebäudemodernisierungsgesetz (GModG). Die 65-%-Regel, § 71 und § 72 sind weggefallen. Die Website nannte die 65-%-Pflicht, die Kopplung an die kommunale Wärmeplanung, „5 Jahre Übergangsfrist“, „Konstanttemperaturkessel über 30 Jahre“ und bezifferte Bußgelder als geltendes Recht. Zusage an den Kunden: Korrektur bis 12.09.2026.
+
+Fachliche Quelle (einzige zulässige): `heizcenter-docs/heizcenter-brain-entwurf/Regelwerke/GEG-Pflichten.md` (Primärquellen gesetze-im-internet.de, BGBl., bundesregierung.de; Abrufprotokoll 08.09.2026).
+
+### Geprüfte Änderungen
+- `src/lib/api/blog.ts`: neue Konstante `GMODG_HINWEIS` (gemeinsamer Hinweiskasten, 3× eingesetzt); Ratgeber `heizungsgesetz-2024` und `gasheizung-verbot-2026-geg` umgeschrieben (Titel, Excerpt, Inhalt, FAQ-HTML und `faqs`-Array, `date` 2026-09-09); GEG-Abschnitte in `gasheizung-kosten-2026`, `heizung-vergleich-2026-waermepumpe-gas-oel-pellets`, `waermepumpe-vs-gasheizung-vergleich-2026`, `nachtspeicherheizung-ersetzen-2026`, `waermepumpe-vorteile-nachteile-2026`, `hybrid-heizung-waermepumpe-solarthermie`, `waermepumpe-vs-pelletheizung-vergleich-2026`, `solarthermie-vs-photovoltaik-2026-vergleich`, `waermepumpe-kosten-2026` korrigiert. Förderaussagen (BEG/KfW) unverändert.
+- `src/app/faq/page.tsx`: zwei FAQ-Antworten (Gasheizung-Kosten, Heizungstausch) korrigiert.
+
+### Gate 1: Fachliche Prüfung
+- **Prüfer:** hvac-content (Auftrag: jede Zahl/jedes Datum/jeder Paragraph muss in der Note stehen; kein eigenes Wissen)
+- **Lauf 1:** REJECTED — 4 blockierend (§ 71 mit „Betriebsverbot“ verknüpft; „30-Jahre-Regel/Konstanttemperaturkessel“ als Inhalt von § 72 nicht durch die Note gedeckt, 2×; Nachbarzeile in faq/page.tsx mit „2026 Öl-/Gasheizungsverbot“), 3 klein (§ 60a Abs. 3 → Abs. 3 und 4; Bußgeld-Existenzbehauptung; § 60b-Frist verkürzt), 2 Hinweise
+- **Lauf 2 (nach Einarbeitung aller 7 Befunde):** **APPROVED**, keine offenen Befunde
+- **Anmerkungen:** Hinweise außerhalb des Gates: EnEV-Referenzen in zwei anderen Beiträgen (blog.ts ~8335, ~10002) → Quartals-Re-Audit; Aussage „Hybridheizungen förderfähig ab 65 % EE-Anteil“ ist Förderrecht, bewusst nicht angefasst → Quartals-Re-Audit.
+
+### Gate 2: Kontaktdaten-Validierung
+- **Prüfer 1:** Claude (Implementierer) — grep über hinzugefügte Diff-Zeilen auf Tel/Mail/Adresse: 0 Treffer
+- **Prüfer 2:** tester-Agent — unabhängige Gegenprüfung des Diffs gegen `contact.ts`
+- **Gefundene Kontaktdaten:** keine (weder Literale noch `${CONTACT.…}`-Referenzen in hinzugefügten Zeilen)
+- **Übereinstimmung mit contact.ts:** JA
+- **Status:** APPROVED
+
+### Technische Prüfung
+- `tsc --noEmit`: 0 Fehler · `eslint` beide Dateien: 0 Fehler · `next build`: erfolgreich
+- Render (`next start`, 5 Seiten, HTTP 200): beide Ratgeber, Gasheizung-Kosten, Heizungsvergleich, FAQ — keine alte Wärmeplanungs-Kopplung, kein „GEG-konform“ mehr; FAQPage-JSON-LD je Seite gültig (Ratgeber 1: 8 Fragen), Article-JSON-LD mit neuem Titel und Datum 2026-09-09
+
+### Ergebnis
+COMMIT FREIGEGEBEN
+
+---
+
 # Content Validation Report - 2026-02-10
 
 ## Refactoring: Zentrale Kontaktdaten (CONTACT Import)
