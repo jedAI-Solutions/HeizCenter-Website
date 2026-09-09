@@ -1431,3 +1431,21 @@ Junkers und Stiebel Eltron komplett aus der Website entfernen — sind keine HEI
 
 #### Offene Punkte
 keine
+
+## Session 2026-09-09 (aus /odoo-Session)
+
+### Completed
+- [x] GModG-Umstellung — 65-%-Regel, § 71/72, Wärmeplanungs-Kopplung, „5 Jahre Übergangsfrist", „Konstanttemperaturkessel 30 Jahre", bezifferte Bußgelder raus; §§ 42/42a/43 Bioanteil-Stufen, Havarie § 43 Abs. 7, §§ 60a–60c rein. Quelle ausschließlich `heizcenter-docs/heizcenter-brain-entwurf/Regelwerke/GEG-Pflichten.md`.
+- [x] Gate 1 `hvac-content`: Lauf 1 REJECTED (7 Befunde) → eingearbeitet → APPROVED; Gate 2 0 Kontaktdaten; tsc/eslint/build; 5 Seiten gerendert; `VALIDATION_REPORT.md`.
+- [x] Commit `8696b1c`, Push, Vercel `dpl_EHw55…` READY (78 s), Playwright-Prüfung live (Zusage an Andrej 12.09. erfüllt am 09.09.).
+
+### Offene Punkte
+- [ ] Blog-`h2` rendert seitenweit als Fließtext (16 px/400) — Vorbestand, Styling der Blog-Vorlage.
+- [ ] Quartals-Re-Audit: BEG-Aussage „Hybrid förderfähig ab 65 % EE" (Förderrecht, bewusst nicht angefasst), EnEV-Referenzen in zwei Beiträgen, `date` der beiden Ratgeber = 2026-09-09 (JSON-LD datePublished).
+
+### Geaenderte Dateien
+| Datei | Aenderung |
+|-------|-----------|
+| `src/lib/api/blog.ts` | Konstante `GMODG_HINWEIS`, 2 Ratgeber neu, 9 Beiträge korrigiert |
+| `src/app/faq/page.tsx` | 2 FAQ-Antworten |
+| `VALIDATION_REPORT.md` | Report 2026-09-09 vorangestellt |
